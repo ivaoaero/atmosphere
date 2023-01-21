@@ -1,0 +1,6 @@
+{
+  "name": "@ivaoaero/ts-config",
+  "description": "IVAO Aero typescript base config",
+  "version": "1.0.0",
+  "private": true
+}
