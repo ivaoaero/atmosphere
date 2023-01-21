@@ -6,18 +6,24 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
-    "dev": "tsup src/index.ts --watch --format cjs,esm --dts",
+    "build": "tsup src/index.tsx --format cjs,esm --dts --external react",
+    "dev": "tsup src/index.tsx --format cjs,esm --dts --external react --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@ivaoaero/eslint-config": "*",
     "@ivaoaero/tokens": "*",
     "@ivaoaero/ts-config": "*",
-    "@ivaoaero/eslint-config": "*",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "react": "^18.2.0",
     "tsup": "^6.5.0",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
   }
 }
