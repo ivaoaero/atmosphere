@@ -27,9 +27,11 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
+    "@ivaoaero/eslint-config": "*",
+    "@ivaoaero/ts-config": "*",
     "@ivaoaero/react": "*",
     "@ivaoaero/tokens": "*",
-    "@ivaoaero/eslint-config": "*",
+    "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
