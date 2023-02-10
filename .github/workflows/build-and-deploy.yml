@@ -3,7 +3,7 @@ name: Build and deploy
 on:
   push:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   build:
@@ -38,3 +38,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
+      - name: Delete artifact
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: github-pages
