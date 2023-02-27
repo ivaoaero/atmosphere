@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -30,13 +30,14 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.build-publish.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build
     permissions:
       pages: write
       id-token: write
     steps:
       - name: Deploy to GitHub Pages
+        id: build-publish
         uses: actions/deploy-pages@v1
       - name: Delete artifact
         uses: geekyeggo/delete-artifact@v2
