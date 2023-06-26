@@ -39,6 +39,10 @@ const badgeVariants = cva(
         lg: 'px-3 py-1.5 text-sm',
       },
     },
+    defaultVariants: {
+      variant: 'filled',
+      size: 'sm',
+    },
   },
 );
 
@@ -88,8 +92,8 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     {
       text,
       color,
-      size = 'sm',
-      variant = 'filled',
+      size,
+      variant,
       className,
       hasDot,
       pill,
