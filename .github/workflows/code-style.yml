@@ -1,0 +1,41 @@
+name: Code Style
+
+on:
+  pull_request:
+    types: [opened, review_requested]
+
+jobs:
+  react-components:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+          cache: 'npm'
+      - name: 'Install dependencies'
+        shell: bash
+        run: |
+          npm ci
+      - name: 'Build eslint-config package'
+        shell: bash
+        run: |
+          npm run build -w packages/eslint-config
+      - name: 'Build brand package'
+        shell: bash
+        run: |
+          npm run build -w packages/brand
+      - name: 'Run code-style check in eslint-config'
+        shell: bash
+        run: |
+          npm run lint -w packages/eslint-config
+      - name: 'Run code-style check in brand'
+        shell: bash
+        run: |
+          npm run lint -w packages/brand
+      - name: 'Run code-style check in react-components'
+        shell: bash
+        run: |
+          npm run lint -w packages/react-components

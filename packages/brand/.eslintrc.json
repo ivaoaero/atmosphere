@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@ivaoaero/eslint-config"
+  ]
+}

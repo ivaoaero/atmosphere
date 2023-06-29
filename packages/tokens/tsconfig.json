@@ -1,4 +1,0 @@
-{
-  "extends": "@ivaoaero/ts-config/base.json",
-  "include": ["src"],
-}

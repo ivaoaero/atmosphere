@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run lint -w packages/eslint-config &
+npm run lint -w packages/brand &
+npm run lint -w packages/react-components
