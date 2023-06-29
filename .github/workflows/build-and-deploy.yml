@@ -14,14 +14,24 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 19
           cache: 'npm'
-      - name: 'Build storybook'
+      - name: 'Install dependencies'
         shell: bash
         run: |
-          cd packages/react-components
           npm ci
-          npm run build-storybook
+      - name: 'Build eslint-config package'
+        shell: bash
+        run: |
+          npm run build -w packages/eslint-config
+      - name: 'Build brand package'
+        shell: bash
+        run: |
+          npm run build -w packages/brand
+      - name: 'Build react-components storybook'
+        shell: bash
+        run: |
+          npm run build-storybook -w packages/react-components
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v1.0.4
         with:
