@@ -24,8 +24,7 @@ const badgeVariants = cva(
         orange:
           'bg-orange-50 fill-orange-800 text-orange-700 ring-orange-600/20 dark:bg-orange-400/10 dark:fill-orange-400 dark:text-orange-400 dark:ring-orange-400/20',
         green:
-          // TODO: removed fill-green-500: 'bg-green-50 fill-green-500 fill-green-700 text-green-700 ring-green-600/20 dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/20',
-          'bg-green-50 fill-green-700 text-green-700 ring-green-600/20 dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/20',
+          'bg-green-50 fill-green-500 text-green-700 ring-green-600/20 dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/20',
         blue: 'bg-blue-50 fill-blue-700 text-blue-700 ring-blue-700/10 dark:bg-blue-400/10 dark:fill-blue-400 dark:text-blue-400 dark:ring-blue-400/30',
         indigo:
           'bg-indigo-50 fill-indigo-700 text-indigo-700 ring-indigo-700/10 dark:bg-indigo-400/10 dark:fill-indigo-400 dark:text-indigo-400 dark:ring-indigo-400/30',
