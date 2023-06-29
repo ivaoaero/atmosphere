@@ -1,4 +1,0 @@
-{
-  "extends": "@ivaoaero/ts-config/react.json",
-  "include": ["src"],
-}

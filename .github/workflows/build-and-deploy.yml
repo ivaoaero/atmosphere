@@ -19,13 +19,13 @@ jobs:
       - name: 'Build storybook'
         shell: bash
         run: |
-          cd packages/docs
+          cd packages/react-components
           npm ci
-          npm run build
+          npm run build-storybook
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v1.0.4
         with:
-          path: packages/docs/storybook-static
+          path: packages/react-components/storybook-static
   deploy:
     environment:
       name: github-pages
