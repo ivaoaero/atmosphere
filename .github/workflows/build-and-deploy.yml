@@ -32,7 +32,6 @@ jobs:
         shell: bash
         run: |
           npm run build-storybook -w packages/react-components
-          cp -r packages/react-components/static/ packages/react-components/storybook-static/
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v1.0.4
         with:

@@ -9,6 +9,6 @@ export default create({
 
   brandTitle: 'IVAO Atmosphere',
   brandUrl: 'https://ivao.aero',
-  brandImage: '/ivao-white.svg',
+  brandImage: 'ivao-white.svg',
   brandTarget: '_self',
 });
