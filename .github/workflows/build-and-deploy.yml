@@ -36,9 +36,11 @@ jobs:
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v1.0.4
         with:
-          path: |
-            packages/react-components/storybook-static
-            packages/react-components/static
+          path: packages/react-components/storybook-static
+      - name: 'Upload artifact'
+        uses: actions/upload-pages-artifact@v1.0.4
+        with:
+          path: packages/react-components/static
   deploy:
     environment:
       name: github-pages
