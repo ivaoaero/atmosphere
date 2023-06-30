@@ -31,16 +31,12 @@ jobs:
       - name: 'Build react-components'
         shell: bash
         run: |
-          npm run build -w packages/react-components
           npm run build-storybook -w packages/react-components
+          cp -r packages/react-components/static/ packages/react-components/storybook-static/
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v1.0.4
         with:
           path: packages/react-components/storybook-static
-      - name: 'Upload artifact'
-        uses: actions/upload-pages-artifact@v1.0.4
-        with:
-          path: packages/react-components/static
   deploy:
     environment:
       name: github-pages
