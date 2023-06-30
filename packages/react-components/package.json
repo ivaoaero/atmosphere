@@ -40,8 +40,8 @@
   "types": "./dist/react-components.d.ts",
   "style": "./src/styles/index.css",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "vite --config vite.build.config.ts",
+    "build": "tsc && vite build --config vite.build.config.ts",
     "lint-fix": "eslint src --cache --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint": "eslint src --cache --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "storybook dev -p 6006",
