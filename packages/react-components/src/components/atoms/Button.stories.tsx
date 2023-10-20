@@ -15,7 +15,7 @@ const meta = {
     },
     size: {
       name: 'Size',
-      description: 'Size of the badge.',
+      description: 'Size of the button.',
       control: 'select',
       options: ['sm', 'md', 'lg'],
     },
