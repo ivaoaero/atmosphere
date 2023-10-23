@@ -40,8 +40,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "lint": "eslint src --cache --report-unused-disable-directives --max-warnings 0",
-    "lint-fix": "eslint src --cache --report-unused-disable-directives --max-warnings 0 --fix"
+    "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
+    "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix"
   },
   "dependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.1",
@@ -58,6 +58,12 @@
     "prettier-plugin-tailwindcss": "^0.5.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.0",
+    "semantic-release": "^22.0.5",
+    "semantic-release-monorepo": "^7.0.5",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
