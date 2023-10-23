@@ -1,9 +1,12 @@
 {
   "name": "@ivaoaero/eslint-config",
   "description": "IVAO Atmosphere design system eslint and prettier config package.",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "module": "index.js",
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ivaoaero/atmosphere.git"
