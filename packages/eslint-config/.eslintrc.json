@@ -1,3 +1,9 @@
 {
-  "extends": ["./index.js"]
+  "extends": ["./index.js"],
+  "overrides": [
+    {
+      "files": ["**/*.{js,cjs}"],
+      "extends": ["plugin:@typescript-eslint/disable-type-checked"]
+    }
+  ]
 }

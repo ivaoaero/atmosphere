@@ -41,14 +41,24 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --watch --format cjs,esm --dts",
-    "lint": "eslint src --cache --ext ts --report-unused-disable-directives --max-warnings 0",
-    "lint-fix": "eslint src --cache --ext ts --report-unused-disable-directives --max-warnings 0 --fix"
+    "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
+    "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
     "@ivaoaero/eslint-config": "1.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.0",
     "eslint": "^8.52.0",
     "prettier": "^3.0.3",
+    "semantic-release": "^22.0.5",
+    "semantic-release-monorepo": "^7.0.5",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "@ivaoaero:registry": "https://npm.pkg.github.com"
   }
 }
