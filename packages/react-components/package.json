@@ -39,6 +39,9 @@
   "main": "./dist/react-components.js",
   "types": "./dist/react-components.d.ts",
   "style": "./src/styles/index.css",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite --config vite.build.config.ts",
     "build": "tsc && vite build --config vite.build.config.ts",
@@ -59,7 +62,7 @@
     "@carbon/icons-react": "^11.28.0",
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
-    "@ivaoaero/eslint-config": "^1.0.1",
+    "@ivaoaero/eslint-config": "^1.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^11.0.0",
     "@storybook/addon-docs": "^7.5.1",
