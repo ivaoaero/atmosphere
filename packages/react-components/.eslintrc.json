@@ -1,3 +1,11 @@
 {
-  "extends": ["@ivaoaero/eslint-config"]
+  "extends": ["@ivaoaero/eslint-config"],
+  "overrides": [
+    {
+      "files": ["src/main.tsx"],
+      "rules": {
+        "react-refresh/only-export-components": "off"
+      }
+    }
+  ]
 }

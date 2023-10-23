@@ -1,8 +1,7 @@
 {
   "name": "@ivaoaero/eslint-config",
   "description": "IVAO Atmosphere design system eslint and prettier config package.",
-  "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "module": "index.js",
   "repository": {
@@ -45,7 +44,7 @@
     "lint-fix": "eslint src --cache --report-unused-disable-directives --max-warnings 0 --fix"
   },
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "eslint-config-prettier": "^9.0.0",
@@ -62,7 +61,12 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
     "eslint": "^8.51.0",
     "prettier": "^3.0.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "@ivaoaero:registry": "https://npm.pkg.github.com"
   }
 }
