@@ -1,27 +1,49 @@
-name: CI
+name: Publish Packages to GitHub Packages
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
+permissions:
+  contents: read # for checkout
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build and release NPM library
+    runs-on: self-hosted
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      id-token: write # to enable use of OIDC for npm provenance
+      issues: write # to be able to comment on released issues
+      packages: write # to be able to publish a NPM package
+      pull-requests: write # to be able to comment on released pull requests
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          fetch-depth: 0
       - name: Git config user
         uses: snow-actions/git-config-user@v1.0.0
         with:
-          name: # Service Account's Name
-          email: # Service Account's Email Address
+          name: AtmospherePublishBot
+          email: atmosphere-publish@noreply.ivao.aero
       - uses: actions/setup-node@v3
         with:
           node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: node_modules
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose --production
+      - name: Rush publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IVAO_NPM_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node common/scripts/install-run-rush.js publish -a -b main -p --add-commit-details

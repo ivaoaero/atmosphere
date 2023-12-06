@@ -1,0 +1,63 @@
+name: Lint
+on:
+  pull_request:
+    types:
+      - opened
+      - ready_for_review
+      - review_requested
+
+jobs:
+  install:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: node_modules
+      - name: Rush Install
+        run: node common/scripts/install-run-rush.js install
+  change-log:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: node_modules
+      - name: Verify Change Logs
+        run: node common/scripts/install-run-rush.js change --verify
+  lint:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: node_modules
+      - name: Verify Change Logs
+        run: node common/scripts/install-run-rush.js lint
