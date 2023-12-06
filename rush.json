@@ -151,15 +151,9 @@
     // "tags": [ "1.0.0-release", "frontend-team" ]
     //    },
     {
-      "packageName": "@ivaoaero/atmosphere-brand",
-      "projectFolder": "brand",
-      "reviewCategory": "brand",
-      "shouldPublish": true
-    },
-    {
-      "packageName": "@ivaoaero/atmosphere-react",
-      "projectFolder": "components/react",
-      "reviewCategory": "react",
+      "packageName": "@ivaoaero/prettier-config",
+      "projectFolder": "tools/prettier",
+      "reviewCategory": "tools",
       "shouldPublish": true
     },
     {
@@ -169,9 +163,15 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@ivaoaero/prettier-config",
-      "projectFolder": "tools/prettier",
-      "reviewCategory": "tools",
+      "packageName": "@ivaoaero/atmosphere-brand",
+      "projectFolder": "brand",
+      "reviewCategory": "brand",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "projectFolder": "components/react",
+      "reviewCategory": "react",
       "shouldPublish": true
     }
   ]
