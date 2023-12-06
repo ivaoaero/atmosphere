@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/eslint-config",
+      "comment": "migrate to rush monorepo",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/eslint-config"
+}

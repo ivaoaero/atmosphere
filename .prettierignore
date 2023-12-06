@@ -1,3 +1,6 @@
+# Prettier reformats code blocks inside Markdown, which affects rendered output
+*.md
+
 # Logs
 *.log
 npm-debug.log*
