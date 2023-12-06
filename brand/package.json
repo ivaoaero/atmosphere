@@ -1,0 +1,56 @@
+{
+  "name": "@ivaoaero/atmosphere-brand",
+  "version": "1.0.0",
+  "description": "IVAO Atmosphere design system brand package.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivaoaero/atmosphere.git"
+  },
+  "author": {
+    "name": "IVAO",
+    "url": "https://ivao.aero"
+  },
+  "contributors": [
+    {
+      "name": "Jonas Bellmann (533870)",
+      "email": "jonas.bellmann@ivao.aero"
+    },
+    {
+      "name": "Ruy Monteiro (595866)",
+      "email": "ruy.monteiro@ivao.aero"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Jonas Bellmann (533870)",
+      "email": "jonas.bellmann@ivao.aero"
+    },
+    {
+      "name": "Ruy Monteiro (595866)",
+      "email": "ruy.monteiro@ivao.aero"
+    }
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --watch --format cjs,esm --dts",
+    "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
+    "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix"
+  },
+  "devDependencies": {
+    "@ivaoaero/eslint-config": "^1.0.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "@ivaoaero:registry": "https://npm.pkg.github.com"
+  }
+}

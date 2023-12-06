@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           npm ci
-      - name: 'Build eslint-config package'
+      - name: 'Build eslint package'
         shell: bash
         run: |
           npm run build -w packages/eslint-config
@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           npm run build -w packages/brand
-      - name: 'Run code-style check in eslint-config'
+      - name: 'Run code-style check in eslint'
         shell: bash
         run: |
           npm run lint -w packages/eslint-config
@@ -35,7 +35,7 @@ jobs:
         shell: bash
         run: |
           npm run lint -w packages/brand
-      - name: 'Run code-style check in react-components'
+      - name: 'Run code-style check in react'
         shell: bash
         run: |
           npm run lint -w packages/react-components

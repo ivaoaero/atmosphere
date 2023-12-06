@@ -20,7 +20,7 @@ jobs:
         shell: bash
         run: |
           npm ci
-      - name: 'Build eslint-config package'
+      - name: 'Build eslint package'
         shell: bash
         run: |
           npm run build -w packages/eslint-config
@@ -28,14 +28,14 @@ jobs:
         shell: bash
         run: |
           npm run build -w packages/brand
-      - name: 'Build react-components'
+      - name: 'Build react'
         shell: bash
         run: |
           npm run build-storybook -w packages/react-components
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v1.0.4
         with:
-          path: packages/react-components/storybook-static
+          path: packages/react/storybook-static
   deploy:
     environment:
       name: github-pages

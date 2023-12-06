@@ -1,0 +1,99 @@
+{
+  "name": "@ivaoaero/atmosphere-react",
+  "description": "React component library for the IVAO aero Atmosphere design system.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivaoaero/atmosphere.git"
+  },
+  "author": {
+    "name": "IVAO",
+    "url": "https://ivao.aero"
+  },
+  "contributors": [
+    {
+      "name": "Jonas Bellmann (533870)",
+      "email": "jonas.bellmann@ivao.aero"
+    },
+    {
+      "name": "Ruy Monteiro (595866)",
+      "email": "ruy.monteiro@ivao.aero"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Jonas Bellmann (533870)",
+      "email": "jonas.bellmann@ivao.aero"
+    },
+    {
+      "name": "Ruy Monteiro (595866)",
+      "email": "ruy.monteiro@ivao.aero"
+    }
+  ],
+  "type": "module",
+  "main": "./dist/react-components.js",
+  "types": "./dist/react-components.d.ts",
+  "style": "./src/styles/index.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite --config vite.build.config.ts",
+    "build": "tsc && vite build --config vite.build.config.ts",
+    "lint-fix": "eslint  --cache --fix --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint  --cache --report-unused-disable-directives --max-warnings 0",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@ivaoaero/brand": "^1.0.0",
+    "@tanstack/react-table": "^8.10.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.1.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@carbon/icons-react": "^11.31.0",
+    "@ivaoaero/eslint-config": "^1.0.0",
+    "@storybook/addon-docs": "^7.6.3",
+    "@storybook/addon-essentials": "^7.6.3",
+    "@storybook/addon-interactions": "^7.6.3",
+    "@storybook/addon-links": "^7.6.3",
+    "@storybook/addon-mdx-gfm": "^7.6.3",
+    "@storybook/addon-styling": "^1.3.7",
+    "@storybook/addons": "^7.6.3",
+    "@storybook/blocks": "^7.6.3",
+    "@storybook/builder-vite": "^7.6.3",
+    "@storybook/react": "^7.6.3",
+    "@storybook/react-vite": "^7.6.3",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/theming": "^7.6.3",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "storybook": "^7.6.3",
+    "tailwindcss": "^3.3.6",
+    "tailwindcss-radix": "^2.8.0",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.6",
+    "vite-plugin-dts": "^3.6.4",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "peerDependencies": {
+    "@carbon/icons-react": "^11.31.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "@ivaoaero:registry": "https://npm.pkg.github.com"
+  }
+}
