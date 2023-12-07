@@ -11,6 +11,11 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Git config user
+        uses: snow-actions/git-config-user@v1.0.0
+        with:
+          name: AtmospherePublishBot
+          email: atmosphere-publish@noreply.ivao.aero
       - uses: actions/setup-node@v3
         with:
           node-version: 20
@@ -26,9 +31,20 @@ jobs:
   lint:
     runs-on: self-hosted
     steps:
+      - name: wait for install
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: otto-de/github-actions-wait@v1.0
+        with:
+          step-name: install
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Git config user
+        uses: snow-actions/git-config-user@v1.0.0
+        with:
+          name: AtmospherePublishBot
+          email: atmosphere-publish@noreply.ivao.aero
       - uses: actions/setup-node@v3
         with:
           node-version: 20
@@ -39,5 +55,7 @@ jobs:
           path: |
             **/node_modules
           key: node_modules
+      - name: Rush Install
+        run: node common/scripts/install-run-rush.js install
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js lint
