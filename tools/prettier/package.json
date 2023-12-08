@@ -1,13 +1,12 @@
 {
   "name": "@ivaoaero/prettier-config",
-  "description": "IVAO Atmosphere design system eslint and prettier config package.",
+  "description": "IVAO prettier config.",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
     "dist"
   ],
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/ivaoaero/atmosphere.git"
@@ -28,22 +27,22 @@
       "email": "jonas.bellmann@ivao.aero"
     }
   ],
-  "engines": {
-    "node": ">19.0.0",
-    "npm": ">9.0.0"
-  },
-  "packageManager": "npm@9.0.0+",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "lint": "eslint  --cache --report-unused-disable-directives --max-warnings 0",
-    "lint-fix": "eslint  --cache --report-unused-disable-directives --max-warnings 0 --fix"
+    "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
+    "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix",
+    "format": "prettier . --write --cache"
   },
   "dependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.9"
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^6.13.2",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@types/node": "^20.10.4",
+    "eslint": "^8.55.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

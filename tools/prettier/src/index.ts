@@ -1,9 +1,10 @@
 import { PrettierConfig } from '@ianvs/prettier-plugin-sort-imports';
+
 import generateImportOrder from './generateImportOrder';
 
-const { plugins = [], ...orderConfig } = generateImportOrder();
+const orderConfig = generateImportOrder();
 
-export default {
+module.exports = {
   arrowParens: 'always',
   singleQuote: true,
   tabWidth: 2,
@@ -12,8 +13,4 @@ export default {
   trailingComma: 'all',
   semi: true,
   ...orderConfig,
-  plugins: [
-    ...plugins,
-    'prettier-plugin-tailwindcss',
-  ],
 } satisfies PrettierConfig;

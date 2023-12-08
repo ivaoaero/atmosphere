@@ -24,7 +24,11 @@
     },
     {
       "name": "@ivaoaero/eslint-config",
-      "allowedCategories": [ "brand", "react" ]
+      "allowedCategories": [ "brand", "react", "tools" ]
+    },
+    {
+      "name": "@ivaoaero/prettier-config",
+      "allowedCategories": [ "brand", "tools" ]
     },
     {
       "name": "@semantic-release/git",
@@ -163,6 +167,10 @@
       "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
+      "name": "prettier-config-ivaoaero",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "prettier-plugin-tailwindcss",
       "allowedCategories": [ "tools" ]
     },
@@ -208,7 +216,7 @@
     },
     {
       "name": "tsup",
-      "allowedCategories": [ "brand" ]
+      "allowedCategories": [ "brand", "tools" ]
     },
     {
       "name": "typescript",

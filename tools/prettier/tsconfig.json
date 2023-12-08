@@ -16,9 +16,6 @@
     "outDir": "./dist",
     "module": "CommonJS"
   },
-  "exclude": ["node_modules", "dist", "index.js"],
-  "include": [
-    "src",
-    ".eslintrc.json"
-  ]
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"]
 }
