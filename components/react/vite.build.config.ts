@@ -38,7 +38,7 @@ export default defineConfig({
         },
         sourcemapExcludeSources: false,
       },
-      plugins: [analyzer()],
+      plugins: [analyzer({ stdout: true })],
     },
     sourcemap: true,
     minify: true,
