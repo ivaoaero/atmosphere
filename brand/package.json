@@ -2,6 +2,12 @@
   "name": "@ivaoaero/atmosphere-brand",
   "version": "1.0.0",
   "description": "IVAO Atmosphere design system brand package.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ivaoaero/atmosphere.git"
@@ -30,21 +36,21 @@
       "email": "ruy.monteiro@ivao.aero"
     }
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
-    "dev": "tsup src/index.ts --watch --format cjs,esm --dts",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
-    "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix"
+    "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix",
+    "format": "prettier . --write --cache"
   },
   "devDependencies": {
-    "@ivaoaero/eslint-config": "^1.0.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@ivaoaero/eslint-config": "workspace:*",
+    "@ivaoaero/prettier-config": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
     "eslint": "^8.55.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-tailwindcss": "^3.13.0",
     "prettier": "^3.1.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"

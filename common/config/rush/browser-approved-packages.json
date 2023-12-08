@@ -16,7 +16,7 @@
     },
     {
       "name": "@ianvs/prettier-plugin-sort-imports",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "brand", "tools" ]
     },
     {
       "name": "@ivaoaero/brand",
@@ -100,7 +100,7 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "allowedCategories": [ "react", "tools" ]
+      "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
       "name": "@typescript-eslint/parser",
@@ -136,7 +136,7 @@
     },
     {
       "name": "eslint-plugin-prettier",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "brand", "tools" ]
     },
     {
       "name": "eslint-plugin-react",
@@ -156,7 +156,7 @@
     },
     {
       "name": "eslint-plugin-tailwindcss",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "brand", "tools" ]
     },
     {
       "name": "postcss",
