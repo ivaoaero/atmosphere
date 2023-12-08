@@ -17,8 +17,5 @@
     "module": "CommonJS"
   },
   "exclude": ["node_modules", "dist", "index.js"],
-  "include": [
-    "src",
-    ".eslintrc.json"
-  ]
+  "include": ["src", ".eslintrc"]
 }
