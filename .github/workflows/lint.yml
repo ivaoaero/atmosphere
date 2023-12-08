@@ -5,29 +5,6 @@ on:
       - main
 
 jobs:
-  install:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Git config user
-        uses: snow-actions/git-config-user@v1.0.0
-        with:
-          name: AtmospherePublishBot
-          email: atmosphere-publish@ivao.aero
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@ivaoaero'
-      - uses: actions/cache@v3
-        with:
-          path: |
-            **/node_modules
-          key: node_modules
-      - name: Rush Install
-        run: node common/scripts/install-run-rush.js install
   lint:
     runs-on: self-hosted
     steps:
@@ -51,5 +28,7 @@ jobs:
           key: node_modules
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
+      - name: Rush Install
+        run: node common/scripts/install-run-rush.js build
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js lint
