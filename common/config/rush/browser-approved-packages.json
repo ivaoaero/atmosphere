@@ -16,10 +16,10 @@
     },
     {
       "name": "@ianvs/prettier-plugin-sort-imports",
-      "allowedCategories": [ "brand", "tools" ]
+      "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
-      "name": "@ivaoaero/brand",
+      "name": "@ivaoaero/atmosphere-brand",
       "allowedCategories": [ "react" ]
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "name": "@ivaoaero/prettier-config",
-      "allowedCategories": [ "brand", "tools" ]
+      "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
       "name": "@semantic-release/git",
@@ -136,7 +136,7 @@
     },
     {
       "name": "eslint-plugin-prettier",
-      "allowedCategories": [ "brand", "tools" ]
+      "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
       "name": "eslint-plugin-react",
@@ -156,7 +156,7 @@
     },
     {
       "name": "eslint-plugin-tailwindcss",
-      "allowedCategories": [ "brand", "tools" ]
+      "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
       "name": "postcss",
