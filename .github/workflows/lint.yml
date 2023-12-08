@@ -28,7 +28,7 @@ jobs:
           key: node_modules
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
-      - name: Rush Install
+      - name: Rush Build
         run: node common/scripts/install-run-rush.js build
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js lint
