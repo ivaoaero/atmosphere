@@ -11,7 +11,7 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      exclude: ['node_modules', 'dist', 'src/stories'],
+      exclude: ['node_modules/**', 'dist/**', '**/*.stories.tsx'],
     }),
     tsconfigPaths(),
   ],
