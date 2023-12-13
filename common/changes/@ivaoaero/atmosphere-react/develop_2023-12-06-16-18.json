@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "migrate to rush monorepo",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}

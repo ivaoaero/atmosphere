@@ -1,0 +1,13 @@
+{
+  "extends": "@ivaoaero",
+  "parserOptions": {
+    "tsconfigRootDir": "./",
+    "project": ["./tsconfig.json"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{js,cjs}"],
+      "extends": ["plugin:@typescript-eslint/disable-type-checked"]
+    }
+  ]
+}
