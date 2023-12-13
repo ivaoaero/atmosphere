@@ -32,9 +32,8 @@ jobs:
           scope: '@ivaoaero'
       - uses: actions/cache@v3
         with:
-          path: |
-            **/node_modules
-          key: node_modules
+          path: common/temp/pnpm-store
+          key: common/config/rush/pnpm-lock.yaml
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
       - name: Rush Install
