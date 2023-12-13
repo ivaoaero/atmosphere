@@ -28,6 +28,6 @@ jobs:
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
       - name: Rush Build
-        run: node common/scripts/install-run-rush.js build
+        run: node common/scripts/install-run-rush.js build --to eslint-config
       - name: Rush Lint
         run: node common/scripts/install-run-rush.js lint
