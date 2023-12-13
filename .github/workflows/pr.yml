@@ -1,0 +1,22 @@
+name: Pull Request
+on:
+  pull_request:
+    types:
+      - opened
+      - ready_for_review
+      - review_requested
+
+jobs:
+  change-log:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+      - name: Verify Change Logs
+        run: node common/scripts/install-run-rush.js change --verify
