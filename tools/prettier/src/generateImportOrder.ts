@@ -13,6 +13,8 @@ export default (
     importOrder = [
       '^(react/(.*)$)|^(react$)',
       '',
+      '^(@ivaoaero/(.*)$)|^(@ivaoaero$)',
+      '',
       '<BUILTIN_MODULES>',
       '',
       '<THIRD_PARTY_MODULES>',
