@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/prettier-config",
+      "comment": "add @ivaoaero import group",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/prettier-config"
+}
