@@ -7,7 +7,8 @@ on:
       - review_requested
 
 jobs:
-  change-log:
+  prepare:
+    name: Prepare
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -18,5 +19,17 @@ jobs:
           node-version: 20
           registry-url: 'https://npm.pkg.github.com'
           scope: '@ivaoaero'
+  change-log:
+    runs-on: self-hosted
+    needs:
+      - prepare
+    steps:
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
+  build:
+    runs-on: self-hosted
+    needs:
+      - prepare
+    steps:
+      - name: Build
+        run: node common/scripts/install-run-rush.js build
