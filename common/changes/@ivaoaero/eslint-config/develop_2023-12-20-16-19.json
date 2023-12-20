@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/eslint-config",
+      "comment": "export config files to root",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ivaoaero/eslint-config"
+}
