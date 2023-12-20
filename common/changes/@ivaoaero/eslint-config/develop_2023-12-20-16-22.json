@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/eslint-config",
+      "comment": "extract tailwind config",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/eslint-config"
+}
