@@ -2,6 +2,44 @@
   "name": "@ivaoaero/prettier-config",
   "entries": [
     {
+      "version": "2.1.0",
+      "tag": "@ivaoaero/prettier-config_v2.1.0",
+      "date": "Wed, 20 Dec 2023 16:42:05 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "add @ivaoaero import group",
+            "author": "Jonas Bellmann <jonas.bellmann@ivao.aero>",
+            "commit": "803b7aeb093db06e93ce8cf3257ce8f4f4387526"
+          }
+        ],
+        "none": [
+          {
+            "comment": "add ignore file preset",
+            "author": "Jonas Bellmann <jonas.bellmann@ivao.aero>",
+            "commit": "8eaca9708f17e3971cf63c8dc87735887d2b2399"
+          },
+          {
+            "comment": "extend all eslint configs",
+            "author": "Jonas Bellmann <jonas.bellmann@ivao.aero>",
+            "commit": "d75ec70b08945f9c7c71d5903ad4a15dfd84bae0"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "add missing packages to docs",
+            "author": "Jonas Bellmann <jonas.bellmann@ivao.aero>",
+            "commit": "9501b637e0fd4ef426febb28f5ed3c8d8fcc51ac"
+          },
+          {
+            "comment": "update deps",
+            "author": "Jonas Bellmann <jonas.bellmann@ivao.aero>",
+            "commit": "6efdcd194431b576e854c9564c3c528192ae9070"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.0",
       "tag": "@ivaoaero/prettier-config_v2.0.0",
       "date": "Wed, 13 Dec 2023 10:25:01 GMT",

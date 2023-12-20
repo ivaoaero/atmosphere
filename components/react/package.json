@@ -1,7 +1,7 @@
 {
   "name": "@ivaoaero/atmosphere-react",
   "description": "React component library for the IVAO aero Atmosphere design system.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "./dist/atmosphere-react.js",
   "types": "./dist/react-components.d.ts",
