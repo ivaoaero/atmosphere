@@ -13,7 +13,7 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true,
-    "outDir": "./dist",
+    "outDir": "./",
     "module": "CommonJS"
   },
   "exclude": ["node_modules", "dist", "index.js"],

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/prettier-config",
+      "comment": "extend all eslint configs",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/prettier-config"
+}

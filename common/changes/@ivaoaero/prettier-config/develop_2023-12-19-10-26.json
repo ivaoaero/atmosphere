@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/prettier-config",
+      "comment": "add ignore file preset",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/prettier-config"
+}

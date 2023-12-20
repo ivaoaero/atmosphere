@@ -1,5 +1,9 @@
 {
-  "extends": "@ivaoaero",
+  "extends": [
+    "@ivaoaero/eslint-config",
+    "@ivaoaero/eslint-config/react",
+    "@ivaoaero/eslint-config/storybook"
+  ],
   "parserOptions": {
     "tsconfigRootDir": "./",
     "project": ["./tsconfig.json"]

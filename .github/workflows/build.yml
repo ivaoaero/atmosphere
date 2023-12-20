@@ -1,11 +1,11 @@
-name: Lint
+name: Build
 on:
   push:
-    branches-ignore:
-      - main
+    branches: [ "main", "develop" ]
 
 jobs:
-  lint:
+  build:
+    name: Build
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -20,14 +20,7 @@ jobs:
         with:
           path: common/temp/pnpm-store
           key: common/config/rush/pnpm-lock.yaml
-      - uses: actions/cache@v3
-        with:
-          path: |
-            **/.eslintcache
-          key: 'eslintcache'
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
-      - name: Rush Build
-        run: node common/scripts/install-run-rush.js build --to atmosphere-brand
-      - name: Rush Lint
-        run: node common/scripts/install-run-rush.js lint
+      - name: Rush build
+        run: node common/scripts/install-run-rush.js rebuild --verbose
