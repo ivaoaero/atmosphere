@@ -9,7 +9,7 @@ Install the following packages:
 - `prettier`
 - `@ivaoaero/prettier-config`
 
-`yarn add -D prettier @ivaoaero/prettier-config`
+`yarn add -D prettier @ivaoaero/prettier-config @ianvs/prettier-plugin-sort-imports`
 
 ### package.json
 
