@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "extend all eslint configs",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
