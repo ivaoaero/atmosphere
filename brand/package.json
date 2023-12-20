@@ -1,6 +1,6 @@
 {
   "name": "@ivaoaero/atmosphere-brand",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IVAO Atmosphere design system brand package.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
