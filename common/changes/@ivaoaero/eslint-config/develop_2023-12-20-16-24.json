@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/eslint-config",
+      "comment": "add docs",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/eslint-config"
+}
