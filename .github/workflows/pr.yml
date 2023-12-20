@@ -7,8 +7,7 @@ on:
       - review_requested
 
 jobs:
-  prepare:
-    name: Prepare
+  build:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -19,17 +18,11 @@ jobs:
           node-version: 20
           registry-url: 'https://npm.pkg.github.com'
           scope: '@ivaoaero'
-  change-log:
-    runs-on: self-hosted
-    needs:
-      - prepare
-    steps:
-      - name: Verify Change Logs
-        run: node common/scripts/install-run-rush.js change --verify
-  build:
-    runs-on: self-hosted
-    needs:
-      - prepare
-    steps:
+      - uses: actions/cache@v3
+        with:
+          path: common/temp/pnpm-store
+          key: common/config/rush/pnpm-lock.yaml
+      - name: Rush Install
+        run: node common/scripts/install-run-rush.js install
       - name: Build
         run: node common/scripts/install-run-rush.js build
