@@ -132,7 +132,7 @@
     },
     {
       "name": "eslint-plugin-jsx-a11y",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "react", "tools" ]
     },
     {
       "name": "eslint-plugin-prettier",
@@ -140,19 +140,19 @@
     },
     {
       "name": "eslint-plugin-react",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "react", "tools" ]
     },
     {
       "name": "eslint-plugin-react-hooks",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "react", "tools" ]
     },
     {
       "name": "eslint-plugin-react-refresh",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "react", "tools" ]
     },
     {
       "name": "eslint-plugin-storybook",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "react", "tools" ]
     },
     {
       "name": "eslint-plugin-tailwindcss",
