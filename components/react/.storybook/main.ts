@@ -15,6 +15,7 @@ const config: StorybookConfig = {
   },
   core: {
     builder: '@storybook/builder-vite',
+    disableTelemetry: true,
   },
   docs: {
     autodocs: 'tag',
