@@ -36,16 +36,16 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@typescript-eslint/parser": "6.15.0",
-    "@typescript-eslint/eslint-plugin": "6.15.0",
-    "@types/node": "20.10.5",
+    "@typescript-eslint/parser": "6.19.0",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@types/node": "20.11.5",
     "eslint": "8.56.0",
-    "eslint-plugin-prettier": "5.1.0",
-    "typescript": "^5.3.3"
+    "eslint-plugin-prettier": "5.1.3",
+    "typescript": "5.3.3"
   },
   "peerDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "prettier": "^3.1.1"
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "prettier": "3.1.1"
   },
   "publishConfig": {
     "access": "public",

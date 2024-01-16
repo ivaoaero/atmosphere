@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/prettier-config",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/prettier-config"
+}
