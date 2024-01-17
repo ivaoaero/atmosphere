@@ -31,6 +31,10 @@
       "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
+      "name": "@radix-ui/react-alert-dialog",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@semantic-release/git",
       "allowedCategories": [ "brand", "react", "tools" ]
     },
