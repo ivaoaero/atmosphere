@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@ivaoaero/atmosphere-brand": "workspace:*",
+    "@radix-ui/react-alert-dialog": "1.0.5",
     "@tanstack/react-table": "8.11.6",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",

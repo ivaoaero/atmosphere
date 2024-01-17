@@ -15,3 +15,4 @@ export {
   Subtle,
   UL,
 } from '@components/atoms/typography';
+export { AlertDialog } from '@components/atoms/alert-dialog';
