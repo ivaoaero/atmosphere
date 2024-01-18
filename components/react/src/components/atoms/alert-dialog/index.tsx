@@ -1,6 +1,16 @@
 import { ComponentProps, PropsWithChildren } from 'react';
 
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import {
+  Action,
+  Cancel,
+  Content,
+  Description,
+  Overlay,
+  Portal,
+  Root,
+  Title,
+  Trigger,
+} from '@radix-ui/react-alert-dialog';
 import { clsx } from 'clsx';
 
 import { Button } from '../button';
@@ -23,13 +33,11 @@ export const AlertDialog = ({
   cancelText = 'Cancel',
   cancelButtonProps,
 }: PropsWithChildren<AlertDialogProps>) => (
-  <AlertDialogPrimitive.Root defaultOpen={false}>
-    <AlertDialogPrimitive.Trigger asChild>
-      {children}
-    </AlertDialogPrimitive.Trigger>
-    <AlertDialogPrimitive.Portal>
-      <AlertDialogPrimitive.Overlay className={'fixed inset-0 z-20 bg-fuselage-900/75'} />
-      <AlertDialogPrimitive.Content
+  <Root defaultOpen={false}>
+    <Trigger asChild>{children}</Trigger>
+    <Portal>
+      <Overlay className={'fixed inset-0 z-20 bg-fuselage-900/75'} />
+      <Content
         className={clsx(
           'fixed z-50',
           'w-[95vw] max-w-md rounded-md p-6 md:w-full',
@@ -38,26 +46,30 @@ export const AlertDialog = ({
           'border border-fuselage-50/50 dark:border-fuselage-600/50',
         )}
       >
-        <AlertDialogPrimitive.Title className={'font-bold text-fuselage-700 dark:text-fuselage-50'}>
+        <Title className={'font-bold text-fuselage-700 dark:text-fuselage-50'}>
           {title}
-        </AlertDialogPrimitive.Title>
-        <AlertDialogPrimitive.Description className={'mt-2 text-sm font-normal text-fuselage-700 dark:text-fuselage-200'}>
+        </Title>
+        <Description
+          className={
+            'mt-2 text-sm font-normal text-fuselage-700 dark:text-fuselage-200'
+          }
+        >
           {description}
-        </AlertDialogPrimitive.Description>
+        </Description>
         <div className={'mt-4 flex justify-end space-x-2'}>
-          <AlertDialogPrimitive.Cancel asChild>
+          <Cancel asChild>
             <Button variant={'destructive'} {...cancelButtonProps}>
               {cancelText}
             </Button>
-          </AlertDialogPrimitive.Cancel>
-          <AlertDialogPrimitive.Action asChild>
+          </Cancel>
+          <Action asChild>
             <Button variant={'primary'} {...confirmButtonProps}>
               {confirmText}
             </Button>
-          </AlertDialogPrimitive.Action>
+          </Action>
         </div>
-      </AlertDialogPrimitive.Content>
-    </AlertDialogPrimitive.Portal>
-  </AlertDialogPrimitive.Root>
+      </Content>
+    </Portal>
+  </Root>
 );
 AlertDialog.displayName = 'AlertDialog';
