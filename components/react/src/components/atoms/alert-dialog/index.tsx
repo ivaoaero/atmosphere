@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { ComponentProps, PropsWithChildren } from 'react';
 
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import { clsx } from 'clsx';
@@ -9,9 +9,9 @@ interface AlertDialogProps {
   title: string;
   description?: string;
   confirmText?: string;
-  confirmButtonProps?: React.ComponentProps<typeof Button>;
+  confirmButtonProps?: ComponentProps<typeof Button>;
   cancelText?: string;
-  cancelButtonProps?: React.ComponentProps<typeof Button>;
+  cancelButtonProps?: ComponentProps<typeof Button>;
 }
 
 export const AlertDialog = ({
@@ -28,7 +28,7 @@ export const AlertDialog = ({
       {children}
     </AlertDialogPrimitive.Trigger>
     <AlertDialogPrimitive.Portal>
-      <AlertDialogPrimitive.Overlay className="fixed inset-0 z-20 bg-fuselage-900/75" />
+      <AlertDialogPrimitive.Overlay className={'fixed inset-0 z-20 bg-fuselage-900/75'} />
       <AlertDialogPrimitive.Content
         className={clsx(
           'fixed z-50',
@@ -38,20 +38,20 @@ export const AlertDialog = ({
           'border border-fuselage-50/50 dark:border-fuselage-600/50',
         )}
       >
-        <AlertDialogPrimitive.Title className="font-bold text-fuselage-700 dark:text-fuselage-50">
+        <AlertDialogPrimitive.Title className={'font-bold text-fuselage-700 dark:text-fuselage-50'}>
           {title}
         </AlertDialogPrimitive.Title>
-        <AlertDialogPrimitive.Description className="mt-2 text-sm font-normal text-fuselage-700 dark:text-fuselage-200">
+        <AlertDialogPrimitive.Description className={'mt-2 text-sm font-normal text-fuselage-700 dark:text-fuselage-200'}>
           {description}
         </AlertDialogPrimitive.Description>
-        <div className="mt-4 flex justify-end space-x-2">
+        <div className={'mt-4 flex justify-end space-x-2'}>
           <AlertDialogPrimitive.Cancel asChild>
-            <Button variant="destructive" {...cancelButtonProps}>
+            <Button variant={'destructive'} {...cancelButtonProps}>
               {cancelText}
             </Button>
           </AlertDialogPrimitive.Cancel>
           <AlertDialogPrimitive.Action asChild>
-            <Button variant="primary" {...confirmButtonProps}>
+            <Button variant={'primary'} {...confirmButtonProps}>
               {confirmText}
             </Button>
           </AlertDialogPrimitive.Action>
