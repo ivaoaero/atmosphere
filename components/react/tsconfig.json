@@ -31,10 +31,10 @@
       "@stories/*": ["stories/*"],
       "@styles/*": ["styles/*"],
       "src/*": ["./*"],
-      "static/*": ["../static/*"]
-    }
+      "static/*": ["../static/*"],
+    },
   },
   "include": ["src", "*.config.ts", "*.config.js"],
   "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
 }
