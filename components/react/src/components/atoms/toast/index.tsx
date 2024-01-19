@@ -35,7 +35,9 @@ export const Toast = ({
     {...toastProps}
   >
     <div className={'text-sm'}>
-      <ToastPrimitive.Title className={'font-bold text-fuselage-700 dark:text-fuselage-100'}>
+      <ToastPrimitive.Title
+        className={'font-bold text-fuselage-700 dark:text-fuselage-100'}
+      >
         {title}
       </ToastPrimitive.Title>
       <ToastPrimitive.Description>{description}</ToastPrimitive.Description>
@@ -73,7 +75,11 @@ export const ToastProvider = ({ children }: PropsWithChildren) => {
         {toasts.map((toastProps, index) => (
           <Toast {...toastProps} key={index} />
         ))}
-        <ToastPrimitive.Viewport className={'fixed bottom-0 right-0 flex flex-col p-6 gap-3 w-fit max-w-xl m-0 list-none z-[999] outline-none'} />
+        <ToastPrimitive.Viewport
+          className={
+            'fixed bottom-0 right-0 flex flex-col p-6 gap-3 w-fit max-w-xl m-0 list-none z-[999] outline-none'
+          }
+        />
       </ToastPrimitive.Provider>
     </ToastContext.Provider>
   );
