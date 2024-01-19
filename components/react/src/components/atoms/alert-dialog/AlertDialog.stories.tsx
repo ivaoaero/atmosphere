@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AlertDialog } from '@components/atoms/alert-dialog/index';
-
-import { Button } from '../button';
+import { Button } from '@components/atoms/button';
+import { AlertDialog } from '@components/molecules/alert-dialog/index';
 
 const meta: Meta = {
   title: 'Components/AlertDialog',
@@ -50,8 +49,7 @@ const meta: Meta = {
   },
 };
 export default meta;
-
-type Story = StoryObj;
+type Story = StoryObj<typeof AlertDialog>;
 
 export const AlertDialogStory: Story = {
   name: 'AlertDialog',

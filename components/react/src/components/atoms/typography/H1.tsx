@@ -1,10 +1,10 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { forwardRef, HTMLAttributes } from 'react';
 
 import { cn } from '@utils/styles';
 
 export const H1 = forwardRef<
   HTMLHeadingElement,
-  ComponentPropsWithoutRef<'h1'>
+  HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h1
     ref={ref}

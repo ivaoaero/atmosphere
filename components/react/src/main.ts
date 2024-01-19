@@ -15,4 +15,5 @@ export {
   Subtle,
   UL,
 } from '@components/atoms/typography';
-export { AlertDialog } from '@components/atoms/alert-dialog';
+export { CodeBlock } from '@components/molecules/typography';
+export { AlertDialog } from '@components/molecules/alert-dialog';
