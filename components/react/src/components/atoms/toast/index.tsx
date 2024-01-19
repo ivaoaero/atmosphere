@@ -34,8 +34,8 @@ export const Toast = ({
     duration={duration}
     {...toastProps}
   >
-    <div className="text-sm">
-      <ToastPrimitive.Title className="font-bold text-fuselage-700 dark:text-fuselage-100">
+    <div className={'text-sm'}>
+      <ToastPrimitive.Title className={'font-bold text-fuselage-700 dark:text-fuselage-100'}>
         {title}
       </ToastPrimitive.Title>
       <ToastPrimitive.Description>{description}</ToastPrimitive.Description>
@@ -45,7 +45,7 @@ export const Toast = ({
         {action}
       </ToastPrimitive.Action>
     )}
-    <ToastPrimitive.Close aria-label="Close">
+    <ToastPrimitive.Close aria-label={'Close'}>
       <span aria-hidden>x</span>
     </ToastPrimitive.Close>
   </ToastPrimitive.Root>
@@ -68,12 +68,12 @@ export const ToastProvider = ({ children }: PropsWithChildren) => {
 
   return (
     <ToastContext.Provider value={{ toast }}>
-      <ToastPrimitive.Provider swipeDirection="right">
+      <ToastPrimitive.Provider swipeDirection={'right'}>
         {children}
         {toasts.map((toastProps, index) => (
           <Toast {...toastProps} key={index} />
         ))}
-        <ToastPrimitive.Viewport className="fixed bottom-0 right-0 flex flex-col p-6 gap-3 w-fit max-w-xl m-0 list-none z-[999] outline-none" />
+        <ToastPrimitive.Viewport className={'fixed bottom-0 right-0 flex flex-col p-6 gap-3 w-fit max-w-xl m-0 list-none z-[999] outline-none'} />
       </ToastPrimitive.Provider>
     </ToastContext.Provider>
   );
