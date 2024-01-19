@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-brand",
+      "comment": "add colors and set defaults",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-brand"
+}
