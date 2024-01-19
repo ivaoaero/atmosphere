@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '@components/atoms/button';
-import { AlertDialog } from '@components/molecules/alert-dialog/index';
+import { AlertDialog } from '@components/molecules/alert-dialog';
 
 const meta: Meta = {
   title: 'Components/AlertDialog',
@@ -10,9 +9,9 @@ const meta: Meta = {
   args: {
     title: 'This is a title',
     description: 'This is a description',
+    triggerText: 'Open',
     confirmText: 'Confirm',
     cancelText: 'Cancel',
-    children: <Button>Open</Button>,
   },
   argTypes: {
     title: {
