@@ -1,30 +1,28 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { BlockQuote } from '@components/atoms/typography/BlockQuote';
-import { H1 } from '@components/atoms/typography/H1';
-import { H2 } from '@components/atoms/typography/H2';
-import { H3 } from '@components/atoms/typography/H3';
-import { H4 } from '@components/atoms/typography/H4';
-import { InlineCode } from '@components/atoms/typography/InlineCode';
-import { Large } from '@components/atoms/typography/Large';
-import { Lead } from '@components/atoms/typography/Lead';
-import { OL } from '@components/atoms/typography/OL';
-import { P } from '@components/atoms/typography/P';
-import { Small } from '@components/atoms/typography/Small';
-import { Subtle } from '@components/atoms/typography/Subtle';
-import { TD } from '@components/atoms/typography/TD';
-import { TH } from '@components/atoms/typography/TH';
-import { TR } from '@components/atoms/typography/TR';
-import { UL } from '@components/atoms/typography/UL';
+import {
+  BlockQuote,
+  H1,
+  H2,
+  H3,
+  H4,
+  InlineCode,
+  Large,
+  Lead,
+  OL,
+  P,
+  Small,
+  Subtle,
+  TD,
+  TH,
+  TR,
+  UL,
+} from '@components/atoms/typography';
+import { CodeBlock } from '@components/molecules/typography';
 
-const meta: Meta = {
-  title: 'Theme/Typography',
-  // TODO: Fix
-  // tags: ["autodocs"],
-  argTypes: {},
-};
+const meta: Meta = { title: 'Theme/Typography' };
+
 export default meta;
-
 type Story = StoryObj;
 
 export const H1Story: Story = {
@@ -137,6 +135,18 @@ export const ListOLStory: Story = {
 export const InlineCodeStory: Story = {
   name: 'InlineCode',
   render: () => <InlineCode>IVAO Aero: As real as it gets</InlineCode>,
+  args: {},
+};
+
+export const CodeBlockStory: Story = {
+  name: 'CodeBlock',
+  render: () => (
+    <CodeBlock>
+      npx create-next-app@latest --typescript --tailwind --experimental-app
+      --eslint contentlayer-example aa aaaaa a a a a a a aa a a a a a a a a a a
+      a aaaaa a a a a a a aa a a a a a a a a a a a
+    </CodeBlock>
+  ),
   args: {},
 };
 

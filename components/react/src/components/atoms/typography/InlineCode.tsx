@@ -1,17 +1,18 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { forwardRef, HTMLAttributes } from 'react';
+
+import { VariantProps } from 'class-variance-authority';
+
+import { inlineCodeVariants } from '@components/atoms/typography/inlineCodeVariants';
 
 import { cn } from '@utils/styles';
 
 export const InlineCode = forwardRef<
   HTMLElement,
-  ComponentPropsWithoutRef<'code'>
->(({ className, ...props }, ref) => (
+  HTMLAttributes<HTMLElement> & VariantProps<typeof inlineCodeVariants>
+>(({ className, background, ...props }, ref) => (
   <code
     ref={ref}
-    className={cn(
-      'relative rounded bg-fuselage-50/50 px-2 py-1 font-mono text-sm dark:bg-fuselage-700',
-      className,
-    )}
+    className={cn(inlineCodeVariants({ background }), className)}
     {...props}
   />
 ));
