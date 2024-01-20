@@ -1,8 +1,8 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { forwardRef, HTMLAttributes } from 'react';
 
 import { cn } from '@utils/styles';
 
-export const Small = forwardRef<HTMLElement, ComponentPropsWithoutRef<'small'>>(
+export const Small = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(
   ({ className, ...props }, ref) => (
     <small
       ref={ref}
