@@ -5,6 +5,8 @@ import {
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
   AlertDialogOverlay,
   AlertDialogPortal,
   AlertDialogRoot,
@@ -51,11 +53,13 @@ export const AlertDialog = ({
     <AlertDialogPortal>
       <AlertDialogOverlay />
       <AlertDialogContent>
-        <AlertDialogTitle>{title}</AlertDialogTitle>
-        {description && (
-          <AlertDialogDescription>{description}</AlertDialogDescription>
-        )}
-        <div className={'mt-4 flex justify-end space-x-2'}>
+        <AlertDialogHeader>
+          <AlertDialogTitle>{title}</AlertDialogTitle>
+          {description && (
+            <AlertDialogDescription>{description}</AlertDialogDescription>
+          )}
+        </AlertDialogHeader>
+        <AlertDialogFooter>
           <AlertDialogCancel>
             <Button
               variant={'outline'}
@@ -70,7 +74,7 @@ export const AlertDialog = ({
               {confirmText}
             </Button>
           </AlertDialogAction>
-        </div>
+        </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialogPortal>
   </AlertDialogRoot>
