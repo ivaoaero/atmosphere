@@ -2,6 +2,8 @@ export { AlertDialogAction } from '@components/atoms/alert-dialog/AlertDialogAct
 export { AlertDialogCancel } from '@components/atoms/alert-dialog/AlertDialogCancel';
 export { AlertDialogContent } from '@components/atoms/alert-dialog/AlertDialogContent';
 export { AlertDialogDescription } from '@components/atoms/alert-dialog/AlertDialogDescription';
+export { AlertDialogFooter } from '@components/atoms/alert-dialog/AlertDialogFooter';
+export { AlertDialogHeader } from '@components/atoms/alert-dialog/AlertDialogHeader';
 export { AlertDialogOverlay } from '@components/atoms/alert-dialog/AlertDialogOverlay';
 export { AlertDialogPortal } from '@components/atoms/alert-dialog/AlertDialogPortal';
 export { AlertDialogRoot } from '@components/atoms/alert-dialog/AlertDialogRoot';

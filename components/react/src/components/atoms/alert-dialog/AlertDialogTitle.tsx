@@ -10,10 +10,7 @@ export const AlertDialogTitle = forwardRef<
 >(({ className, ...props }, ref) => (
   <Title
     {...props}
-    className={cn(
-      'font-bold text-fuselage-800 dark:text-fuselage-200',
-      className,
-    )}
+    className={cn('text-lg font-semibold', className)}
     ref={ref}
   />
 ));
