@@ -1,10 +1,10 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { forwardRef, HTMLProps } from 'react';
 
 import { cn } from '@utils/styles';
 
 export const P = forwardRef<
   HTMLParagraphElement,
-  ComponentPropsWithoutRef<'p'>
+  HTMLProps<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}

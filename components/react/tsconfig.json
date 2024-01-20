@@ -28,6 +28,7 @@
     "paths": {
       "@components/*": ["components/*"],
       "@utils/*": ["lib/utils/*"],
+      "@hooks/*": ["lib/hooks/*"],
       "@stories/*": ["stories/*"],
       "@styles/*": ["styles/*"],
       "src/*": ["./*"],
