@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority';
 
 export const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fuselage-700 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-fuselage-550',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fuselage-700 dark:focus-visible:ring-fuselage-550 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -15,7 +15,7 @@ export const buttonVariants = cva(
           'border border-fuselage-200 bg-transparent text-fuselage-600 shadow-sm hover:bg-fuselage-200 dark:border-fuselage-700 dark:text-fuselage-250 dark:hover:bg-fuselage-700',
         ghost:
           'text-fuselage-550 hover:bg-fuselage-200 hover:text-fuselage-700 dark:text-fuselage-450 dark:hover:bg-fuselage-700 dark:hover:text-fuselage-250',
-        link: 'text-fuselage-600 underline-offset-4 hover:underline dark:text-fuselage-250',
+        link: 'text-atmos-600 underline-offset-4 hover:underline dark:text-semantic-green-400',
       },
       size: {
         sm: 'h-8 px-3 text-xs',
