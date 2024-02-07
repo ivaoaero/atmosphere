@@ -42,7 +42,11 @@ const RemoveButton = forwardRef<HTMLButtonElement, RemoveButtonProps>(
       ref={ref}
     >
       <span className={'sr-only'}>Remove</span>
-      <Close className={'h-3.5 w-3.5 scale-95 stroke-fuselage-450/50 transition-colors group-hover:stroke-fuselage-450 dark:stroke-white/20 group-hover:dark:stroke-fuselage-200'} />
+      <Close
+        className={
+          'h-3.5 w-3.5 scale-95 stroke-fuselage-450/50 transition-colors group-hover:stroke-fuselage-450 dark:stroke-white/20 group-hover:dark:stroke-fuselage-200'
+        }
+      />
       <span className={'absolute -inset-1'} />
     </button>
   ),
