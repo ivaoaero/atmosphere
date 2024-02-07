@@ -68,36 +68,68 @@ export const TableStory: Story = {
       <table className={'w-full'}>
         <thead>
           <TR className={'m-0 border-t p-0'}>
-            <TH className={'border px-4 py-2 text-left font-bold [&[align=right]]:text-right'}>
+            <TH
+              className={
+                'border px-4 py-2 text-left font-bold [&[align=right]]:text-right'
+              }
+            >
               King&apos;s Treasury
             </TH>
-            <TH className={'border px-4 py-2 text-left font-bold [&[align=right]]:text-right'}>
+            <TH
+              className={
+                'border px-4 py-2 text-left font-bold [&[align=right]]:text-right'
+              }
+            >
               People&apos;s happiness
             </TH>
           </TR>
         </thead>
         <tbody>
           <TR className={'m-0 border-t p-0'}>
-            <TD className={'border px-4 py-2 text-left [&[align=right]]:text-right'}>
+            <TD
+              className={
+                'border px-4 py-2 text-left [&[align=right]]:text-right'
+              }
+            >
               Empty
             </TD>
-            <TD className={'border px-4 py-2 text-left [&[align=right]]:text-right'}>
+            <TD
+              className={
+                'border px-4 py-2 text-left [&[align=right]]:text-right'
+              }
+            >
               Overflowing
             </TD>
           </TR>
           <TR className={'m-0 border-t p-0'}>
-            <TD className={'border px-4 py-2 text-left [&[align=right]]:text-right'}>
+            <TD
+              className={
+                'border px-4 py-2 text-left [&[align=right]]:text-right'
+              }
+            >
               Modest
             </TD>
-            <TD className={'border px-4 py-2 text-left [&[align=right]]:text-right'}>
+            <TD
+              className={
+                'border px-4 py-2 text-left [&[align=right]]:text-right'
+              }
+            >
               Satisfied
             </TD>
           </TR>
           <TR className={'m-0 border-t p-0'}>
-            <TD className={'border px-4 py-2 text-left [&[align=right]]:text-right'}>
+            <TD
+              className={
+                'border px-4 py-2 text-left [&[align=right]]:text-right'
+              }
+            >
               Full
             </TD>
-            <TD className={'border px-4 py-2 text-left [&[align=right]]:text-right'}>
+            <TD
+              className={
+                'border px-4 py-2 text-left [&[align=right]]:text-right'
+              }
+            >
               Ecstatic
             </TD>
           </TR>
