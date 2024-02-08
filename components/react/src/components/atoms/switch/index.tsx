@@ -1,16 +1,16 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
-import { Root } from '@components/atoms/switch/Root';
-import { Thumb } from '@components/atoms/switch/Thumb';
+import { SwitchRoot } from '@components/atoms/switch/SwitchRoot';
+import { SwitchThumb } from '@components/atoms/switch/SwitchThumb';
 
 export const Switch = forwardRef<
-  ElementRef<typeof Root>,
-  ComponentPropsWithoutRef<typeof Root>
+  ElementRef<typeof SwitchRoot>,
+  ComponentPropsWithoutRef<typeof SwitchRoot>
 >(({ ...props }, ref) => (
-  <Root {...props} ref={ref}>
-    <Thumb />
-  </Root>
+  <SwitchRoot {...props} ref={ref}>
+    <SwitchThumb />
+  </SwitchRoot>
 ));
-Switch.displayName = Root.displayName;
+Switch.displayName = SwitchRoot.displayName;
 
-export { Root as SwitchRoot, Thumb as SwitchThumb };
+export { SwitchRoot, SwitchThumb };

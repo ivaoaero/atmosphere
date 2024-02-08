@@ -4,7 +4,7 @@ import { Thumb as RadixThumb } from '@radix-ui/react-switch';
 
 import { cn } from '@utils/styles';
 
-export const Thumb = forwardRef<
+export const SwitchThumb = forwardRef<
   ElementRef<typeof RadixThumb>,
   ComponentPropsWithoutRef<typeof RadixThumb>
 >(({ className, ...props }, ref) => (
@@ -17,4 +17,4 @@ export const Thumb = forwardRef<
     ref={ref}
   />
 ));
-Thumb.displayName = RadixThumb.displayName;
+SwitchThumb.displayName = RadixThumb.displayName;

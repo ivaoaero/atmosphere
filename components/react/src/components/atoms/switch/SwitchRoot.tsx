@@ -4,7 +4,7 @@ import { Root as RadixRoot } from '@radix-ui/react-switch';
 
 import { cn } from '@utils/styles';
 
-export const Root = forwardRef<
+export const SwitchRoot = forwardRef<
   ElementRef<typeof RadixRoot>,
   ComponentPropsWithoutRef<typeof RadixRoot>
 >(({ className, ...props }, ref) => (
@@ -17,4 +17,4 @@ export const Root = forwardRef<
     ref={ref}
   />
 ));
-Root.displayName = RadixRoot.displayName;
+SwitchRoot.displayName = RadixRoot.displayName;
