@@ -19,6 +19,11 @@ export {
 export { AlertDialog } from '@components/molecules/alert-dialog';
 export { Input } from '@components/atoms/input';
 export { Label } from '@components/atoms/label';
+export {
+  Root as SwitchRoot,
+  Thumb as SwitchThumb,
+} from '@components/atoms/switch';
+export { Switch } from '@components/molecules/switch';
 export { Toast } from '@components/molecules/toast';
 export { ToastProvider } from 'src/lib/contexts/ToastContext';
 export { useToast } from '@hooks/useToast';
