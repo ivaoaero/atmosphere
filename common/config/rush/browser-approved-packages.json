@@ -35,6 +35,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-label",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@semantic-release/git",
       "allowedCategories": [ "brand", "react", "tools" ]
     },
