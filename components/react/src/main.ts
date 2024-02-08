@@ -17,3 +17,4 @@ export {
 } from '@components/atoms/typography';
 export { CodeBlock } from '@components/molecules/typography';
 export { AlertDialog } from '@components/molecules/alert-dialog';
+export { Input } from '@components/atoms/input';
