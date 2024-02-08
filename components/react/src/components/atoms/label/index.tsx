@@ -1,25 +1,21 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef, forwardRef } from 'react';
 
-import * as LabelPrimitive from '@radix-ui/react-label';
+import { Root } from '@radix-ui/react-label';
 
 import { cn } from '@utils/styles';
 
-export interface LabelProps
-  extends React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> {}
+export interface LabelProps extends ComponentPropsWithoutRef<typeof Root> {}
 
-const Label = React.forwardRef<
-  React.ElementRef<typeof LabelPrimitive.Root>,
-  LabelProps
->(({ className, ...props }, ref) => (
-  <LabelPrimitive.Root
-    ref={ref}
-    className={cn(
-      'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-      className,
-    )}
-    {...props}
-  />
-));
+export const Label = forwardRef<React.ElementRef<typeof Root>, LabelProps>(
+  ({ className, ...props }, ref) => (
+    <Root
+      ref={ref}
+      className={cn(
+        'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+        className,
+      )}
+      {...props}
+    />
+  ),
+);
 Label.displayName = 'Label';
-
-export { Label };
