@@ -10,6 +10,10 @@ export default {
   content: ['./src/components/**/*.{js,jsx,ts,tsx}'],
   safelist: ['dark'],
   theme: {
+    screens: {
+      xs: '400px',
+      ...defaultTheme.screens,
+    },
     container: {
       center: true,
       padding: '2rem',
