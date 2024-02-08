@@ -10,8 +10,13 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      insertTypesEntry: true,
-      exclude: ['node_modules/**', 'dist/**', '**/*.stories.tsx'],
+      rollupTypes: true,
+      exclude: [
+        'node_modules/**',
+        'dist/**',
+        '**/*.stories.tsx',
+        './*.config.ts',
+      ],
     }),
     tsconfigPaths(),
   ],
