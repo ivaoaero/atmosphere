@@ -9,7 +9,6 @@ import {
 
 import { Provider } from '@radix-ui/react-toast';
 
-import { Button } from '@components/atoms/button';
 import { ToastViewport } from '@components/atoms/toast';
 import { Toast, ToastProps } from '@components/molecules/toast';
 
