@@ -19,5 +19,8 @@ export {
 export { AlertDialog } from '@components/molecules/alert-dialog';
 export { Input } from '@components/atoms/input';
 export { Label } from '@components/atoms/label';
-export { Toast, ToastProvider } from '@components/atoms/toast';
-export { useToast } from '@components/atoms/toast/useToast';
+export { Toast } from '@components/molecules/toast';
+export { ToastProvider } from 'src/lib/contexts/ToastContext';
+export { useToast } from '@hooks/useToast';
+export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
+export { useTheme } from '@hooks/useTheme';
