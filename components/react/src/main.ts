@@ -7,6 +7,7 @@ export {
   H3,
   H4,
   InlineCode,
+  CodeBlock,
   Large,
   Lead,
   OL,
@@ -15,7 +16,6 @@ export {
   Subtle,
   UL,
 } from '@components/atoms/typography';
-export { CodeBlock } from '@components/molecules/typography';
 export { AlertDialog } from '@components/molecules/alert-dialog';
 export { Input } from '@components/atoms/input';
 export { Label } from '@components/atoms/label';
