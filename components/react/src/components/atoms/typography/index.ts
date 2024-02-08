@@ -4,6 +4,7 @@ export { H2 } from '@components/atoms/typography/H2';
 export { H3 } from '@components/atoms/typography/H3';
 export { H4 } from '@components/atoms/typography/H4';
 export { InlineCode } from '@components/atoms/typography/InlineCode';
+export { CodeBlock } from '@components/atoms/typography/CodeBlock';
 export { Large } from '@components/atoms/typography/Large';
 export { Lead } from '@components/atoms/typography/Lead';
 export { OL } from '@components/atoms/typography/OL';

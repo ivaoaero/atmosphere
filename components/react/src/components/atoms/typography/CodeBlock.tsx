@@ -8,7 +8,7 @@ import {
 
 import { Checkmark, Copy } from '@carbon/icons-react';
 
-import { InlineCode } from '@components/atoms/typography';
+import { InlineCode } from '@components/atoms/typography/index';
 
 import { cn } from '@utils/styles';
 
