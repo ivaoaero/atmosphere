@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import {
   BlockQuote,
+  CodeBlock,
   H1,
   H2,
   H3,
@@ -18,7 +19,6 @@ import {
   TR,
   UL,
 } from '@components/atoms/typography';
-import { CodeBlock } from '@components/molecules/typography';
 
 const meta: Meta = { title: 'Theme/Typography' };
 
