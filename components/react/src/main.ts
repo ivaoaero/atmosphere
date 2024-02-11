@@ -32,3 +32,23 @@ export {
   CheckboxIndicator,
   CheckboxCheck,
 } from '@components/atoms/checkbox';
+export {
+  Select,
+  SelectPortal,
+  SelectContent,
+  SelectViewport,
+  SelectGroup,
+  SelectIcon,
+  SelectItem,
+  SelectItemIndicator,
+  SelectItemText,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectChevronUp,
+  SelectChevronDown,
+  SelectCheck,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from '@components/atoms/select';
