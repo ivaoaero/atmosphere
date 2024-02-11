@@ -9,7 +9,7 @@ import { SelectSeparator } from './SelectSeparator';
 import { SelectIcon, SelectTrigger } from './SelectTrigger';
 import { SelectViewport } from './SelectViewport';
 
-const Select = SelectPrimitive.Root;
+const SelectRoot = SelectPrimitive.Root;
 
 const SelectGroup = SelectPrimitive.Group;
 
@@ -18,7 +18,7 @@ const SelectValue = SelectPrimitive.Value;
 const SelectPortal = SelectPrimitive.Portal;
 
 export {
-  Select,
+  SelectRoot,
   SelectPortal,
   SelectContent,
   SelectViewport,

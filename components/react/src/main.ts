@@ -33,7 +33,7 @@ export {
   CheckboxCheck,
 } from '@components/atoms/checkbox';
 export {
-  Select,
+  SelectRoot,
   SelectPortal,
   SelectContent,
   SelectViewport,
@@ -52,3 +52,4 @@ export {
   SelectTrigger,
   SelectValue,
 } from '@components/atoms/select';
+export { Select, SelectItemGroup } from '@components/molecules/select';
