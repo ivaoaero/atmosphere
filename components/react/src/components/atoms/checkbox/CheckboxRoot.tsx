@@ -4,7 +4,7 @@ import { Root as RadixRoot } from '@radix-ui/react-checkbox';
 
 import { cn } from '@utils/styles';
 
-const CheckboxRoot = forwardRef<
+export const CheckboxRoot = forwardRef<
   ElementRef<typeof RadixRoot>,
   ComponentPropsWithoutRef<typeof RadixRoot>
 >(({ className, ...props }, ref) => (
@@ -18,5 +18,3 @@ const CheckboxRoot = forwardRef<
   />
 ));
 CheckboxRoot.displayName = RadixRoot.displayName;
-
-export { CheckboxRoot };

@@ -9,9 +9,7 @@ const Checkbox = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CheckboxRoot>
 >(({ ...props }, ref) => (
   <CheckboxRoot ref={ref} {...props}>
-    <CheckboxIndicator>
-      <CheckboxCheck />
-    </CheckboxIndicator>
+    <CheckboxIndicator checked={props.checked} />
   </CheckboxRoot>
 ));
 Checkbox.displayName = CheckboxRoot.displayName;
