@@ -44,7 +44,7 @@ const CopyToClipboardButton: ComponentType<{ text: string }> = ({ text }) => {
 
   return (
     <button
-      type="button"
+      type={'button'}
       className={cn(
         'absolute top-1.5 right-2 p-2 rounded-md backdrop-blur-sm transition-colors duration-300 z-10',
         copied
