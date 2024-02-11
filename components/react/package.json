@@ -49,12 +49,14 @@
   "dependencies": {
     "@ivaoaero/atmosphere-brand": "workspace:*",
     "@radix-ui/react-alert-dialog": "1.0.5",
+    "@radix-ui/react-checkbox": "1.0.4",
     "@radix-ui/react-label": "2.0.2",
     "@radix-ui/react-switch": "1.0.3",
     "@radix-ui/react-toast": "1.1.5",
     "@tanstack/react-table": "8.11.8",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
+    "lucide-react": "0.323.0",
     "tailwind-merge": "2.2.1",
     "tailwindcss-animate": "1.0.7"
   },
