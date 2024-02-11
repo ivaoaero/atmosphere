@@ -7,7 +7,6 @@ const meta = {
   component: Checkbox,
   args: {
     disabled: false,
-    checked: false,
   },
   argTypes: {
     disabled: {
@@ -22,4 +21,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Checkbox>;
 
-export const Default = {} satisfies Story;
+export const Uncontrolled = {} satisfies Story;
+export const Controlled = {
+  args: {
+    checked: true,
+  },
+} satisfies Story;
