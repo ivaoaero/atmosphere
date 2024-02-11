@@ -39,6 +39,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-switch",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-toast",
       "allowedCategories": [ "react" ]
     },
