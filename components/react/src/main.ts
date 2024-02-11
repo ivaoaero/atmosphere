@@ -24,3 +24,4 @@ export { ToastProvider } from 'src/lib/contexts/ToastContext';
 export { useToast } from '@hooks/useToast';
 export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
 export { useTheme } from '@hooks/useTheme';
+export { Textarea } from '@components/atoms/textarea';
