@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "add shadcn tailwind config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
