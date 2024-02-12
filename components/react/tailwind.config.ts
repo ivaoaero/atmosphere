@@ -23,6 +23,11 @@ export default {
     },
     extend: {
       colors: colors,
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
       fontFamily: {
         head: [fonts.head],
         sans: [fonts.sans, ...defaultTheme.fontFamily.sans],
