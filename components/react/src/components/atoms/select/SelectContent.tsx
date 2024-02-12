@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Content as RadixContent } from '@radix-ui/react-select';
 
@@ -7,9 +7,9 @@ import { cn } from '@utils/styles';
 import { SelectScrollDownButton, SelectScrollUpButton } from './SelectScrolls';
 import { SelectViewport } from './SelectViewport';
 
-const SelectContent = React.forwardRef<
-  React.ElementRef<typeof RadixContent>,
-  React.ComponentPropsWithoutRef<typeof RadixContent>
+const SelectContent = forwardRef<
+  ElementRef<typeof RadixContent>,
+  ComponentPropsWithoutRef<typeof RadixContent>
 >(({ className, children, position = 'popper', ...props }, ref) => (
   <RadixContent
     ref={ref}

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import {
   Content as RadixContent,
@@ -7,10 +7,10 @@ import {
 
 import { cn } from '@utils/styles';
 
-const SelectViewport = React.forwardRef<
-  React.ElementRef<typeof RadixViewport>,
-  React.ComponentPropsWithoutRef<typeof RadixViewport> &
-    Pick<React.ComponentPropsWithoutRef<typeof RadixContent>, 'position'>
+const SelectViewport = forwardRef<
+  ElementRef<typeof RadixViewport>,
+  ComponentPropsWithoutRef<typeof RadixViewport> &
+    Pick<ComponentPropsWithoutRef<typeof RadixContent>, 'position'>
 >(({ className, children, position = 'popper', ...props }, ref) => (
   <RadixViewport
     ref={ref}

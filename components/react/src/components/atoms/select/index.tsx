@@ -1,4 +1,9 @@
-import * as SelectPrimitive from '@radix-ui/react-select';
+import {
+  Group as RadixGroup,
+  Portal as RadixPortal,
+  Root as RadixRoot,
+  Value as RadixValue,
+} from '@radix-ui/react-select';
 
 import { SelectContent } from './SelectContent';
 import { SelectCheck, SelectChevronDown, SelectChevronUp } from './SelectIcons';
@@ -9,13 +14,13 @@ import { SelectSeparator } from './SelectSeparator';
 import { SelectIcon, SelectTrigger } from './SelectTrigger';
 import { SelectViewport } from './SelectViewport';
 
-const SelectRoot = SelectPrimitive.Root;
+const SelectRoot = RadixRoot;
 
-const SelectGroup = SelectPrimitive.Group;
+const SelectGroup = RadixGroup;
 
-const SelectValue = SelectPrimitive.Value;
+const SelectValue = RadixValue;
 
-const SelectPortal = SelectPrimitive.Portal;
+const SelectPortal = RadixPortal;
 
 export {
   SelectRoot,

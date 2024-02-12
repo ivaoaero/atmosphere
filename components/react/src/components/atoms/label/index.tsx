@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Root } from '@radix-ui/react-label';
 
@@ -6,7 +6,7 @@ import { cn } from '@utils/styles';
 
 export interface LabelProps extends ComponentPropsWithoutRef<typeof Root> {}
 
-export const Label = forwardRef<React.ElementRef<typeof Root>, LabelProps>(
+export const Label = forwardRef<ElementRef<typeof Root>, LabelProps>(
   ({ className, ...props }, ref) => (
     <Root
       ref={ref}

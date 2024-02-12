@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import {
   ScrollDownButton as RadixScrollDownButton,
@@ -9,9 +9,9 @@ import { cn } from '@utils/styles';
 
 import { SelectChevronDown, SelectChevronUp } from './SelectIcons';
 
-const SelectScrollUpButton = React.forwardRef<
-  React.ElementRef<typeof RadixScrollUpButton>,
-  React.ComponentPropsWithoutRef<typeof RadixScrollUpButton>
+const SelectScrollUpButton = forwardRef<
+  ElementRef<typeof RadixScrollUpButton>,
+  ComponentPropsWithoutRef<typeof RadixScrollUpButton>
 >(({ className, ...props }, ref) => (
   <RadixScrollUpButton
     ref={ref}
@@ -26,9 +26,9 @@ const SelectScrollUpButton = React.forwardRef<
 ));
 SelectScrollUpButton.displayName = RadixScrollUpButton.displayName;
 
-const SelectScrollDownButton = React.forwardRef<
-  React.ElementRef<typeof RadixScrollDownButton>,
-  React.ComponentPropsWithoutRef<typeof RadixScrollDownButton>
+const SelectScrollDownButton = forwardRef<
+  ElementRef<typeof RadixScrollDownButton>,
+  ComponentPropsWithoutRef<typeof RadixScrollDownButton>
 >(({ className, ...props }, ref) => (
   <RadixScrollDownButton
     ref={ref}
