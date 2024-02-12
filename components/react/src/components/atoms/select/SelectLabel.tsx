@@ -1,12 +1,12 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Label as RadixLabel } from '@radix-ui/react-select';
 
 import { cn } from '@utils/styles';
 
-const SelectLabel = React.forwardRef<
-  React.ElementRef<typeof RadixLabel>,
-  React.ComponentPropsWithoutRef<typeof RadixLabel>
+const SelectLabel = forwardRef<
+  ElementRef<typeof RadixLabel>,
+  ComponentPropsWithoutRef<typeof RadixLabel>
 >(({ className, ...props }, ref) => (
   <RadixLabel
     ref={ref}
