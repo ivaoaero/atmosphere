@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-brand",
+      "comment": "add ShadCN colors",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-brand"
+}

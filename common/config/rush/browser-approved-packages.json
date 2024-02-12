@@ -35,6 +35,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-checkbox",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-label",
       "allowedCategories": [ "react" ]
     },
@@ -173,6 +177,10 @@
     {
       "name": "eslint-plugin-tailwindcss",
       "allowedCategories": [ "brand", "react", "tools" ]
+    },
+    {
+      "name": "lucide-react",
+      "allowedCategories": [ "react" ]
     },
     {
       "name": "postcss",
