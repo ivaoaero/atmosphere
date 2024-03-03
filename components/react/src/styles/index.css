@@ -85,7 +85,9 @@
 
   body {
     @apply bg-semantic-blue-50 dark:bg-fuselage-900 text-fuselage-800 dark:text-fuselage-50 font-sans; /* TODO: bg-background = bg-semantic-blue-50; bg-background.dark = dark:bg-fuselage-900; text-foreground = text-fuselage-800; text-foreground.dark = dark:text-fuselage-50 */
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
   }
 
   ::-webkit-scrollbar {
