@@ -1,12 +1,6 @@
 import { colors } from '@ivaoaero/atmosphere-brand';
 
-
-
 import { writeFileSync } from 'fs';
-
-
-
-
 
 interface Color {
   [key: string]: string | Color;
