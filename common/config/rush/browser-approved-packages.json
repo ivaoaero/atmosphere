@@ -239,8 +239,16 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "ts-node",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "tsup",
       "allowedCategories": [ "brand", "tools" ]
+    },
+    {
+      "name": "tsx",
+      "allowedCategories": [ "react" ]
     },
     {
       "name": "typescript",
