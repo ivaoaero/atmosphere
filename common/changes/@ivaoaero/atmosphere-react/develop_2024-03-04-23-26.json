@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "generate colors css file",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
