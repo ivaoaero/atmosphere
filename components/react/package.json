@@ -39,7 +39,7 @@
   ],
   "scripts": {
     "dev": "vite --config vite.build.config.ts",
-    "build": "pnpm build:color-css && tsc && vite build --config vite.build.config.ts",
+    "build": "tsc && vite build --config vite.build.config.ts",
     "build:color-css": "node --loader ts-node/esm generate-colors-css.ts",
     "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
     "lint-fix": "eslint . --cache --fix --report-unused-disable-directives --max-warnings 0",
