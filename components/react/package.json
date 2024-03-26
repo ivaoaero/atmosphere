@@ -7,7 +7,9 @@
   "types": "./dist/react-components.d.ts",
   "style": "./src/styles/index.css",
   "files": [
-    "dist"
+    "dist",
+    "src/styles/colors.css",
+    "src/styles/index.css"
   ],
   "repository": {
     "type": "git",
