@@ -1,7 +1,7 @@
 import path from 'node:path';
 
 import react from '@vitejs/plugin-react';
-import analyzer from 'rollup-plugin-analyzer';
+// import analyzer from 'rollup-plugin-analyzer';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import tsconfigPaths from 'vite-tsconfig-paths';
@@ -43,7 +43,8 @@ export default defineConfig({
         },
         sourcemapExcludeSources: false,
       },
-      plugins: [analyzer({ stdout: true })],
+      // TODO: type error
+      // plugins: [analyzer()],
     },
     sourcemap: true,
     minify: true,

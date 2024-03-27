@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "vite plugin build error",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
