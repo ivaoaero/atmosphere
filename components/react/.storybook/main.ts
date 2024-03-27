@@ -10,8 +10,7 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-mdx-gfm',
-    '@storybook/addon-styling',
+    '@storybook/addon-themes',
   ],
   framework: {
     name: '@storybook/react-vite',
@@ -24,9 +23,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
     defaultName: 'Documentation',
-  },
-  features: {
-    storyStoreV7: true,
   },
   typescript: {
     check: true,

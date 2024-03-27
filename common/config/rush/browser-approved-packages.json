@@ -83,6 +83,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@storybook/addon-themes",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@storybook/addons",
       "allowedCategories": [ "react" ]
     },
@@ -92,6 +96,10 @@
     },
     {
       "name": "@storybook/builder-vite",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "@storybook/manager-api",
       "allowedCategories": [ "react" ]
     },
     {
