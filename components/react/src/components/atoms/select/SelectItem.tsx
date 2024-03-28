@@ -1,0 +1,36 @@
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+
+import {
+  Item as RadixItem,
+  ItemIndicator as SelectItemIndicator,
+  ItemText as SelectItemText,
+} from '@radix-ui/react-select';
+
+import { SelectCheck } from '@components/atoms/select/SelectIcons';
+
+import { cn } from '@utils/styles';
+
+const SelectItem = forwardRef<
+  ElementRef<typeof RadixItem>,
+  ComponentPropsWithoutRef<typeof RadixItem>
+>(({ className, children, ...props }, ref) => (
+  <RadixItem
+    ref={ref}
+    className={cn(
+      'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      className,
+    )}
+    {...props}
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <SelectItemIndicator>
+        <SelectCheck />
+      </SelectItemIndicator>
+    </span>
+
+    <SelectItemText>{children}</SelectItemText>
+  </RadixItem>
+));
+SelectItem.displayName = RadixItem.displayName;
+
+export { SelectItem, SelectItemIndicator, SelectItemText };
