@@ -64,7 +64,6 @@ type Story = StoryObj<typeof Toast>;
 export const ToastStory = {
   name: 'Toast',
   render: (args) => {
-    /* eslint-disable-next-line react-hooks/rules-of-hooks */
     const toast = useToast();
     return <Button onClick={() => toast(args)}>Add Toast</Button>;
   },
@@ -76,7 +75,6 @@ export const PermanentToastStory = {
     duration: 99999999,
   },
   render: (args) => {
-    /* eslint-disable-next-line react-hooks/rules-of-hooks */
     const toast = useToast();
     return <Button onClick={() => toast(args)}>Add Toast</Button>;
   },

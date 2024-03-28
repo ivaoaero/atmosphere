@@ -4,105 +4,64 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --background: var(--fuselage-50);
+    --foreground: var(--fuselage-800);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --card: var(--fuselage-50);
+    --card-foreground: var(--fuselage-800);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
+    --popover: var(--fuselage-50);
+    --popover-foreground: var(--fuselage-800);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --primary: var(--atmos-500);
+    --primary-foreground: var(--atmos-100);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--fuselage-100);
+    --secondary-foreground: var(--fuselage-800);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --muted: var(--fuselage-250);
+    --muted-foreground: var(--fuselage-500);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--fuselage-250);
+    --accent-foreground: var(--fuselage-500);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: var(--semantic-red-500);
+    --destructive-foreground: var(--semantic-red-50);
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
+    --border: var(--fuselage-150);
+    --input: var(--fuselage-150);
+    --ring: var(--fuselage-200);
 
-    --ring: 215 20.2% 65.1%;
-
-    --radius: 0.5rem;
+    --radius: 0.6rem;
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --background: var(--fuselage-950);
+    --foreground: var(--fuselage-100);
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
+    --card: var(--fuselage-950);
+    --card-foreground: var(--fuselage-200);
 
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
+    --popover: var(--fuselage-950);
+    --popover-foreground: var(--fuselage-200);
 
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
+    --primary: var(--fuselage-50);
+    --primary-foreground: var(--fuselage-800);
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --secondary: var(--fuselage-800);
+    --secondary-foreground: var(--fuselage-100);
 
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
+    --muted: var(--fuselage-900);
+    --muted-foreground: var(--fuselage-500);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
+    --accent: var(--fuselage-800);
+    --accent-foreground: var(--fuselage-300);
 
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
+    --destructive: var(--semantic-red-600);
+    --destructive-foreground: var(--semantic-red-50);
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 216 34% 17%;
-
-    --radius: 0.5rem;
-  }
-
-  * {
-    @apply box-border border-fuselage-50 dark:border-fuselage-800; /* TODO: border-border = border-fuselage-50 in light */
-  }
-
-  *:not(input, [data-radix-menu-content]) {
-    @apply focus-visible:outline-ocean-500 dark:focus-visible:outline-semantic-green-500 focus-visible:outline-dashed focus-visible:outline-offset-2 focus-visible:outline-2;
-  }
-
-  html,
-  body,
-  #root {
-    @apply min-h-full scroll-smooth;
-  }
-
-  body {
-    @apply bg-semantic-blue-50 dark:bg-fuselage-900 text-fuselage-800 dark:text-fuselage-50 font-sans; /* TODO: bg-background = bg-semantic-blue-50; bg-background.dark = dark:bg-fuselage-900; text-foreground = text-fuselage-800; text-foreground.dark = dark:text-fuselage-50 */
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
-  ::-webkit-scrollbar {
-    @apply w-1 h-0;
-  }
-
-  ::-webkit-scrollbar,
-  ::-webkit-scrollbar-track {
-    @apply bg-transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-fuselage-50 dark:bg-fuselage-700;
-  }
-
-  ::-webkit-scrollbar,
-  ::-webkit-scrollbar-track {
-    @apply bg-transparent;
+    --border: var(--fuselage-900);
+    --input: var(--fuselage-900);
+    --ring: var(--fuselage-800);
   }
 }

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-brand",
+      "comment": "dependency updates",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-brand"
+}

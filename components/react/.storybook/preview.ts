@@ -1,8 +1,10 @@
-import { withThemeByClassName } from '@storybook/addon-styling';
+import { withThemeByClassName } from '@storybook/addon-themes';
 import { themes } from '@storybook/theming';
 
-import type { Preview } from '@storybook/react';
+import type { Preview, ReactRenderer } from '@storybook/react';
 
+import '../src/styles/storybook.css';
+import '../src/styles/colors.css';
 import '../src/styles/index.css';
 
 const preview: Preview = {
@@ -21,7 +23,7 @@ const preview: Preview = {
 };
 
 export const decorators = [
-  withThemeByClassName({
+  withThemeByClassName<ReactRenderer>({
     themes: {
       light: '',
       dark: 'dark',
