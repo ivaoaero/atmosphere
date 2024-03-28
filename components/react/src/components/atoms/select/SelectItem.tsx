@@ -2,16 +2,13 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import {
   Item as RadixItem,
-  ItemIndicator as RadixItemIndicator,
-  ItemText as RadixItemText,
+  ItemIndicator as SelectItemIndicator,
+  ItemText as SelectItemText,
 } from '@radix-ui/react-select';
 
+import { SelectCheck } from '@components/atoms/select/SelectIcons';
+
 import { cn } from '@utils/styles';
-
-import { SelectCheck } from './SelectIcons';
-
-const SelectItemIndicator = RadixItemIndicator;
-const SelectItemText = RadixItemText;
 
 const SelectItem = forwardRef<
   ElementRef<typeof RadixItem>,

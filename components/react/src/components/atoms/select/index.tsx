@@ -1,26 +1,32 @@
 import {
-  Group as RadixGroup,
-  Portal as RadixPortal,
-  Root as RadixRoot,
-  Value as RadixValue,
+  Group as SelectGroup,
+  Portal as SelectPortal,
+  Root as SelectRoot,
+  Value as SelectValue,
 } from '@radix-ui/react-select';
 
-import { SelectContent } from './SelectContent';
-import { SelectCheck, SelectChevronDown, SelectChevronUp } from './SelectIcons';
-import { SelectItem, SelectItemIndicator, SelectItemText } from './SelectItem';
-import { SelectLabel } from './SelectLabel';
-import { SelectScrollDownButton, SelectScrollUpButton } from './SelectScrolls';
-import { SelectSeparator } from './SelectSeparator';
-import { SelectIcon, SelectTrigger } from './SelectTrigger';
-import { SelectViewport } from './SelectViewport';
-
-const SelectRoot = RadixRoot;
-
-const SelectGroup = RadixGroup;
-
-const SelectValue = RadixValue;
-
-const SelectPortal = RadixPortal;
+import { SelectContent } from '@components/atoms/select/SelectContent';
+import {
+  SelectCheck,
+  SelectChevronDown,
+  SelectChevronUp,
+} from '@components/atoms/select/SelectIcons';
+import {
+  SelectItem,
+  SelectItemIndicator,
+  SelectItemText,
+} from '@components/atoms/select/SelectItem';
+import { SelectLabel } from '@components/atoms/select/SelectLabel';
+import {
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+} from '@components/atoms/select/SelectScrollButtons';
+import { SelectSeparator } from '@components/atoms/select/SelectSeparator';
+import {
+  SelectIcon,
+  SelectTrigger,
+} from '@components/atoms/select/SelectTrigger';
+import { SelectViewport } from '@components/atoms/select/SelectViewport';
 
 export {
   SelectRoot,
