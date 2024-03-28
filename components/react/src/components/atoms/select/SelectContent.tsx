@@ -2,12 +2,15 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Content as RadixContent } from '@radix-ui/react-select';
 
+import {
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+} from '@components/atoms/select/SelectScrollButtons';
+import { SelectViewport } from '@components/atoms/select/SelectViewport';
+
 import { cn } from '@utils/styles';
 
-import { SelectScrollDownButton, SelectScrollUpButton } from './SelectScrolls';
-import { SelectViewport } from './SelectViewport';
-
-const SelectContent = forwardRef<
+export const SelectContent = forwardRef<
   ElementRef<typeof RadixContent>,
   ComponentPropsWithoutRef<typeof RadixContent>
 >(({ className, children, position = 'popper', ...props }, ref) => (
@@ -28,5 +31,3 @@ const SelectContent = forwardRef<
   </RadixContent>
 ));
 SelectContent.displayName = RadixContent.displayName;
-
-export { SelectContent };

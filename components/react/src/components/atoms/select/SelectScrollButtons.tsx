@@ -5,9 +5,12 @@ import {
   ScrollUpButton as RadixScrollUpButton,
 } from '@radix-ui/react-select';
 
-import { cn } from '@utils/styles';
+import {
+  SelectChevronDown,
+  SelectChevronUp,
+} from '@components/atoms/select/SelectIcons';
 
-import { SelectChevronDown, SelectChevronUp } from './SelectIcons';
+import { cn } from '@utils/styles';
 
 const SelectScrollUpButton = forwardRef<
   ElementRef<typeof RadixScrollUpButton>,

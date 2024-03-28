@@ -5,9 +5,9 @@ import {
   Trigger as RadixTrigger,
 } from '@radix-ui/react-select';
 
-import { cn } from '@utils/styles';
+import { SelectChevronDown } from '@components/atoms/select/SelectIcons';
 
-import { SelectChevronDown } from './SelectIcons';
+import { cn } from '@utils/styles';
 
 const SelectIcon = RadixIcon;
 
