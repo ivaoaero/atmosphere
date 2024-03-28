@@ -14,8 +14,8 @@
     "skipLibCheck": true,
     "strict": true,
     "outDir": "./",
-    "module": "CommonJS",
+    "module": "CommonJS"
   },
   "exclude": ["node_modules", "dist", "index.js"],
-  "include": ["src", ".eslintrc"],
+  "include": ["src", ".eslintrc"]
 }
