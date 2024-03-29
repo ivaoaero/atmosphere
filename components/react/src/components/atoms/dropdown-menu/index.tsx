@@ -5,6 +5,7 @@ export {
   Portal as DropdownMenuPortal,
   Sub as DropdownMenuSub,
   RadioGroup as DropdownMenuRadioGroup,
+  ItemIndicator as DropdownMenuItemIndicator,
 } from '@radix-ui/react-dropdown-menu';
 export { DropdownMenuCheckboxItem } from '@components/atoms/dropdown-menu/DropdownMenuCheckboxItem';
 export { DropdownMenuContent } from '@components/atoms/dropdown-menu/DropdownMenuContent';
