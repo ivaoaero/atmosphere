@@ -1,6 +1,4 @@
-import { ComponentProps } from 'react';
-
-import { Link } from 'react-router-dom';
+import { ComponentProps, ComponentType, PropsWithChildren } from 'react';
 
 import {
   NavigationMenuContent,
@@ -39,6 +37,9 @@ type NavigationMenuSectionType =
 interface NavigationMenuProps
   extends Omit<ComponentProps<typeof NavigationMenuRoot>, 'children'> {
   sections: NavigationMenuSectionType[];
+  asLink?: ComponentType<
+    PropsWithChildren<{ className?: string; href: string }>
+  >;
 }
 
 const instanceOfMultipleLinksSections = (
@@ -47,7 +48,12 @@ const instanceOfMultipleLinksSections = (
   return 'links' in object;
 };
 
-export const NavigationMenu = ({ sections, ...props }: NavigationMenuProps) => {
+export const NavigationMenu = ({
+  sections,
+  asLink,
+  ...props
+}: NavigationMenuProps) => {
+  const LinkComponent = asLink || 'a';
   return (
     <NavigationMenuRoot {...props}>
       <NavigationMenuList>
@@ -62,7 +68,7 @@ export const NavigationMenu = ({ sections, ...props }: NavigationMenuProps) => {
                       <NavigationMenuListItem
                         key={link.title}
                         title={link.title}
-                        to={link.href}
+                        href={link.href}
                       >
                         {link.description}
                       </NavigationMenuListItem>
@@ -71,11 +77,11 @@ export const NavigationMenu = ({ sections, ...props }: NavigationMenuProps) => {
                 </NavigationMenuContent>
               </>
             ) : (
-              <Link to={section.href}>
+              <LinkComponent href={section.href}>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   {section.title}
                 </NavigationMenuLink>
-              </Link>
+              </LinkComponent>
             )}
           </NavigationMenuItem>
         ))}
