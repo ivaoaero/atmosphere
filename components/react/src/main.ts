@@ -43,6 +43,7 @@ export {
   SelectValue,
 } from '@components/atoms/select';
 export { Select, SelectItemGroup } from '@components/molecules/select';
+export { Skeleton } from '@components/atoms/skeleton';
 export { SwitchRoot, SwitchThumb, Switch } from '@components/atoms/switch';
 export { Textarea } from '@components/atoms/textarea';
 export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
