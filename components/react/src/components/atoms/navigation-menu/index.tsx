@@ -6,5 +6,6 @@ export { NavigationMenuRoot } from '@components/atoms/navigation-menu/Navigation
 export { NavigationMenuContent } from '@components/atoms/navigation-menu/NavigationMenuContent';
 export { NavigationMenuIndicator } from '@components/atoms/navigation-menu/NavigationMenuIndicator';
 export { NavigationMenuList } from '@components/atoms/navigation-menu/NavigationMenuList';
+export { NavigationMenuListItem } from '@components/atoms/navigation-menu/NavigationMenuListItem';
 export { NavigationMenuTrigger } from '@components/atoms/navigation-menu/NavigationMenuTrigger';
 export { NavigationMenuViewport } from '@components/atoms/navigation-menu/NavigationMenuViewport';

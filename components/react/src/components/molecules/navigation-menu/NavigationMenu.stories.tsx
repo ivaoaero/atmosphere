@@ -1,0 +1,90 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import type { Meta, StoryObj } from '@storybook/react';
+
+import { NavigationMenu } from '@components/molecules/navigation-menu';
+
+const meta: Meta = {
+  title: 'Components/NavigationMenu',
+  component: NavigationMenu,
+  decorators: (Story) => {
+    const router = createBrowserRouter([
+      {
+        path: '*',
+        element: <Story />,
+      },
+    ]);
+    return <RouterProvider router={router} />;
+  },
+  tags: ['autodocs'],
+  args: {
+    sections: [
+      {
+        title: 'Getting Started',
+        links: [
+          {
+            title: 'Installation',
+            href: '/docs/getting-started/installation',
+            description: 'Learn how to install the package.',
+          },
+          {
+            title: 'Usage',
+            href: '/docs/getting-started/usage',
+            description: 'Learn how to use the package.',
+          },
+        ],
+      },
+      {
+        title: 'Components',
+        links: [
+          {
+            title: 'Alert Dialog',
+            href: '/docs/primitives/alert-dialog',
+            description:
+              'A modal dialog that interrupts the user with important content and expects a response.',
+          },
+          {
+            title: 'Hover Card',
+            href: '/docs/primitives/hover-card',
+            description:
+              'For sighted users to preview content available behind a link.',
+          },
+          {
+            title: 'Progress',
+            href: '/docs/primitives/progress',
+            description:
+              'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+          },
+          {
+            title: 'Scroll-area',
+            href: '/docs/primitives/scroll-area',
+            description: 'Visually or semantically separates content.',
+          },
+          {
+            title: 'Tabs',
+            href: '/docs/primitives/tabs',
+            description:
+              'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+          },
+          {
+            title: 'Tooltip',
+            href: '/docs/primitives/tooltip',
+            description:
+              'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+          },
+        ],
+      },
+      {
+        title: 'Documentation',
+        href: '/docs',
+      },
+    ],
+  },
+};
+export default meta;
+type Story = StoryObj<typeof NavigationMenu>;
+
+export const NavigationMenuStory: Story = {
+  name: 'NavigationMenu',
+  args: {},
+};

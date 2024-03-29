@@ -28,11 +28,13 @@ export {
   NavigationMenuContent,
   NavigationMenuIndicator,
   NavigationMenuList,
+  NavigationMenuListItem,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from '@components/atoms/navigation-menu';
+export { NavigationMenu } from '@components/molecules/navigation-menu';
 export {
   SelectRoot,
   SelectPortal,
