@@ -22,6 +22,17 @@ export {
 } from '@components/atoms/checkbox';
 export { Input } from '@components/atoms/input';
 export { Label } from '@components/atoms/label';
+export { navigationMenuTriggerStyle } from '@components/atoms/navigation-menu/navigationMenuTriggerStyle';
+export {
+  NavigationMenuRoot,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from '@components/atoms/navigation-menu';
 export {
   SelectRoot,
   SelectPortal,
