@@ -1,3 +1,9 @@
+export { alertVariants } from '@components/atoms/alert/alertVariants';
+export {
+  AlertRoot,
+  AlertTitle,
+  AlertDescription,
+} from '@components/atoms/alert';
 export {
   AlertDialogAction,
   AlertDialogCancel,
