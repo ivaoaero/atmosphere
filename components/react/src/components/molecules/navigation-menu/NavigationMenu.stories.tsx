@@ -1,5 +1,3 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { NavigationMenu } from '@components/molecules/navigation-menu';
@@ -7,15 +5,6 @@ import { NavigationMenu } from '@components/molecules/navigation-menu';
 const meta: Meta = {
   title: 'Components/NavigationMenu',
   component: NavigationMenu,
-  decorators: (Story) => {
-    const router = createBrowserRouter([
-      {
-        path: '*',
-        element: <Story />,
-      },
-    ]);
-    return <RouterProvider router={router} />;
-  },
   tags: ['autodocs'],
   args: {
     sections: [

@@ -183,10 +183,6 @@
       "allowedCategories": [ "react" ]
     },
     {
-      "name": "react-router-dom",
-      "allowedCategories": [ "react" ]
-    },
-    {
       "name": "rollup-plugin-analyzer",
       "allowedCategories": [ "react" ]
     },
