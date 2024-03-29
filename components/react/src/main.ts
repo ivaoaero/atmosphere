@@ -4,6 +4,7 @@ export {
   AlertTitle,
   AlertDescription,
 } from '@components/atoms/alert';
+export { Alert } from '@components/molecules/alert';
 export {
   AlertDialogAction,
   AlertDialogCancel,
