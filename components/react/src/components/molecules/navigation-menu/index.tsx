@@ -75,7 +75,7 @@ type NavigationMenuSectionType =
   | NavigationMenuMultipleLinksSectionProps;
 
 interface NavigationMenuProps
-  extends ComponentProps<typeof NavigationMenuRoot> {
+  extends Omit<ComponentProps<typeof NavigationMenuRoot>, 'children'> {
   sections: NavigationMenuSectionType[];
 }
 
@@ -85,9 +85,9 @@ const instanceOfMultipleLinksSections = (
   return 'links' in object;
 };
 
-export const NavigationMenu = ({ sections }: NavigationMenuProps) => {
+export const NavigationMenu = ({ sections, ...props }: NavigationMenuProps) => {
   return (
-    <NavigationMenuRoot>
+    <NavigationMenuRoot {...props}>
       <NavigationMenuList>
         {sections.map((section) => (
           <NavigationMenuItem key={section.title}>
