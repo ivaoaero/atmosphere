@@ -15,6 +15,14 @@ export { AlertDialog } from '@components/molecules/alert-dialog';
 export { Badge } from '@components/atoms/badge';
 export { Button } from '@components/atoms/button';
 export {
+  CardRoot,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@components/atoms/card';
+export {
   Checkbox,
   CheckboxRoot,
   CheckboxIndicator,
