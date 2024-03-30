@@ -100,7 +100,7 @@ const meta: Meta = {
         href: '/docs',
       },
     ],
-    Component: NavLinkComponent,
+    asLink: NavLinkComponent,
   },
 };
 
