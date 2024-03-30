@@ -1,4 +1,4 @@
-import { ComponentProps, ComponentType, PropsWithChildren } from 'react';
+import { ComponentProps, ComponentType } from 'react';
 
 import {
   NavigationMenuContent,
@@ -9,10 +9,12 @@ import {
   NavigationMenuRoot,
   NavigationMenuTrigger,
 } from '@components/atoms/navigation-menu';
+import { NavigationMenuAsLinkProps } from '@components/atoms/navigation-menu/NavigationMenuLink';
 import { navigationMenuTriggerStyle } from '@components/atoms/navigation-menu/navigationMenuTriggerStyle';
 
 interface NavigationMenuBaseSectionProps {
   title: string;
+  asLink: ComponentType<NavigationMenuAsLinkProps>;
 }
 
 interface NavigationMenuSimpleLinkSectionProps
@@ -37,9 +39,7 @@ type NavigationMenuSectionType =
 interface NavigationMenuProps
   extends Omit<ComponentProps<typeof NavigationMenuRoot>, 'children'> {
   sections: NavigationMenuSectionType[];
-  asLink?: ComponentType<
-    PropsWithChildren<{ className?: string; href: string }>
-  >;
+  asLink: ComponentType<NavigationMenuAsLinkProps>;
 }
 
 const instanceOfMultipleLinksSections = (
@@ -48,12 +48,12 @@ const instanceOfMultipleLinksSections = (
   return 'links' in object;
 };
 
-export const NavigationMenu = ({
+export const NavigationMenu: ComponentType<NavigationMenuProps> = ({
   sections,
   asLink,
   ...props
-}: NavigationMenuProps) => {
-  const LinkComponent = asLink || 'a';
+}) => {
+  const LinkComponent = asLink ?? 'a';
   return (
     <NavigationMenuRoot {...props}>
       <NavigationMenuList>
@@ -69,6 +69,7 @@ export const NavigationMenu = ({
                         key={link.title}
                         title={link.title}
                         href={link.href}
+                        asLink={link.asLink ?? section.asLink ?? LinkComponent}
                       >
                         {link.description}
                       </NavigationMenuListItem>
@@ -77,11 +78,13 @@ export const NavigationMenu = ({
                 </NavigationMenuContent>
               </>
             ) : (
-              <LinkComponent href={section.href}>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  {section.title}
-                </NavigationMenuLink>
-              </LinkComponent>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                asLink={section.asLink ?? LinkComponent}
+                href={section.href}
+              >
+                {section.title}
+              </NavigationMenuLink>
             )}
           </NavigationMenuItem>
         ))}

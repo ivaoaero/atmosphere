@@ -1,6 +1,38 @@
+import { AnchorHTMLAttributes, ElementRef, forwardRef } from 'react';
+
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { NavigationMenuAsLinkProps } from '@components/atoms/navigation-menu/NavigationMenuLink';
 import { NavigationMenu } from '@components/molecules/navigation-menu';
+
+import { cn } from '@utils/styles';
+
+interface ReactRouterLinkProps
+  extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+  to: string;
+}
+
+const ReactRouterLink = forwardRef<HTMLAnchorElement, ReactRouterLinkProps>(
+  ({ to, ...props }, ref) => <a href={to} ref={ref} {...props} />,
+);
+ReactRouterLink.displayName = 'ReactRouterLink';
+
+const NavLinkComponent = forwardRef<
+  ElementRef<typeof ReactRouterLink>,
+  NavigationMenuAsLinkProps
+>(({ href, className, onClick, ...props }, ref) => (
+  <ReactRouterLink
+    ref={ref}
+    to={href}
+    onClick={(event) => {
+      console.log('clicked a link');
+      onClick?.(event);
+    }}
+    className={cn(className, 'text-destructive')}
+    {...props}
+  />
+));
+NavLinkComponent.displayName = ReactRouterLink.displayName;
 
 const meta: Meta = {
   title: 'Components/NavigationMenu',
@@ -68,8 +100,10 @@ const meta: Meta = {
         href: '/docs',
       },
     ],
+    asLink: NavLinkComponent,
   },
 };
+
 export default meta;
 type Story = StoryObj<typeof NavigationMenu>;
 
