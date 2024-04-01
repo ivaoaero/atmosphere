@@ -5,7 +5,7 @@ import {
   useState,
 } from 'react';
 
-interface ISidebarContext {
+export interface ISidebarContext {
   isSidebarOpen: boolean;
   setIsSidebarOpen: (value: boolean) => void;
   toggleSidebar: () => void;
