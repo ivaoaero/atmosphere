@@ -14,12 +14,12 @@ type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 export type SidebarAsLinkProps = PropsWithRef<AnchorProps> &
   Required<Pick<AnchorProps, 'href'>>;
 
-interface SidebarItemProps extends HTMLAttributes<HTMLAnchorElement> {
+export interface SidebarItemProps extends HTMLAttributes<HTMLAnchorElement> {
   title: string;
   description: string;
   icon: React.ReactNode;
   href: string;
-  asLink: ComponentType<SidebarAsLinkProps>;
+  asLink?: ComponentType<SidebarAsLinkProps>;
   isActive?: boolean;
 }
 
