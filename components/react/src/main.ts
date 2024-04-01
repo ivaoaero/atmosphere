@@ -29,6 +29,7 @@ export {
   CheckboxCheck,
 } from '@components/atoms/checkbox';
 export { Input } from '@components/atoms/input';
+export { IVAOLogo } from '@components/atoms/ivao-logo';
 export { Label } from '@components/atoms/label';
 export {
   SelectRoot,
