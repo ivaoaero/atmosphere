@@ -56,6 +56,7 @@ export {
   SidebarCollapseButton,
   SidebarItem,
 } from '@components/atoms/sidebar';
+export { Sidebar } from '@components/molecules/sidebar';
 export {
   SidebarContext,
   SidebarProvider,
