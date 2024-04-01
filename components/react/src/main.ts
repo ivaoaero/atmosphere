@@ -51,6 +51,16 @@ export {
   SelectValue,
 } from '@components/atoms/select';
 export { Select, SelectItemGroup } from '@components/molecules/select';
+export {
+  SidebarContainer,
+  SidebarCollapseButton,
+  SidebarItem,
+} from '@components/atoms/sidebar';
+export {
+  SidebarContext,
+  SidebarProvider,
+} from 'src/lib/contexts/SidebarContext';
+export { useSidebar } from '@hooks/useSidebar';
 export { Skeleton } from '@components/atoms/skeleton';
 export { SwitchRoot, SwitchThumb, Switch } from '@components/atoms/switch';
 export { Textarea } from '@components/atoms/textarea';
