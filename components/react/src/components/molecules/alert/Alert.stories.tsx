@@ -12,12 +12,16 @@ const meta = {
     title: 'Alert title',
     description: 'Alert description',
     variant: 'default',
-    icon: <Terminal className="h-4 w-4" />,
+    icon: <Terminal />,
   },
   argTypes: {
     variant: {
       control: 'select',
       options: ['default', 'destructive'],
+    },
+    icon: {
+      control: 'none',
+      description: 'Default classNames: "h-4 w-4"',
     },
   },
 } satisfies Meta<typeof Alert>;
@@ -30,6 +34,15 @@ export const Default = {} satisfies Story;
 export const Destructive = {
   args: {
     variant: 'destructive',
-    icon: <AlertCircle className="h-4 w-4" />,
+    icon: <AlertCircle />,
+  },
+} satisfies Story;
+
+export const Minimal = {
+  args: {
+    title: 'Alert title',
+    description: undefined,
+    icon: undefined,
+    variant: undefined,
   },
 } satisfies Story;
