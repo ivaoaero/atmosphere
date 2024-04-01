@@ -28,6 +28,7 @@ export {
   CheckboxIndicator,
   CheckboxCheck,
 } from '@components/atoms/checkbox';
+export { IconButton } from '@components/atoms/icon-button';
 export { Input } from '@components/atoms/input';
 export { Label } from '@components/atoms/label';
 export {
