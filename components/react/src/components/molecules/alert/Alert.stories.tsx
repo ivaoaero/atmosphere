@@ -1,4 +1,4 @@
-import { AlertCircle, Terminal } from 'lucide-react';
+import { AlertCircle, Check, Terminal } from 'lucide-react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -17,7 +17,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'destructive'],
+      options: ['default', 'success', 'destructive'],
     },
     icon: {
       control: 'none',
@@ -30,6 +30,13 @@ export default meta;
 type Story = StoryObj<typeof Alert>;
 
 export const Default = {} satisfies Story;
+
+export const Success = {
+  args: {
+    variant: 'success',
+    icon: <Check />,
+  },
+} satisfies Story;
 
 export const Destructive = {
   args: {
