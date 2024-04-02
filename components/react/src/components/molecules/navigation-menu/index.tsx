@@ -14,7 +14,7 @@ import { navigationMenuTriggerStyle } from '@components/atoms/navigation-menu/na
 
 interface NavigationMenuBaseSectionProps {
   title: string;
-  asLink: ComponentType<NavigationMenuAsLinkProps>;
+  asLink?: ComponentType<NavigationMenuAsLinkProps>;
 }
 
 interface NavigationMenuSimpleLinkSectionProps
@@ -32,18 +32,18 @@ interface NavigationMenuMultipleLinksSectionProps
   links: NavigationMenuExtendedLinkProps[];
 }
 
-type NavigationMenuSectionType =
+type NavigationMenuSectionProps =
   | NavigationMenuSimpleLinkSectionProps
   | NavigationMenuMultipleLinksSectionProps;
 
 interface NavigationMenuProps
   extends Omit<ComponentProps<typeof NavigationMenuRoot>, 'children'> {
-  sections: NavigationMenuSectionType[];
-  asLink: ComponentType<NavigationMenuAsLinkProps>;
+  sections: NavigationMenuSectionProps[];
+  asLink?: ComponentType<NavigationMenuAsLinkProps>;
 }
 
 const instanceOfMultipleLinksSections = (
-  object: NavigationMenuSectionType,
+  object: NavigationMenuSectionProps,
 ): object is NavigationMenuMultipleLinksSectionProps => {
   return 'links' in object;
 };
@@ -53,7 +53,8 @@ export const NavigationMenu: ComponentType<NavigationMenuProps> = ({
   asLink,
   ...props
 }) => {
-  const LinkComponent = asLink ?? 'a';
+  const LinkComponent =
+    asLink ?? ('a' as unknown as ComponentType<NavigationMenuAsLinkProps>);
   return (
     <NavigationMenuRoot {...props}>
       <NavigationMenuList>
