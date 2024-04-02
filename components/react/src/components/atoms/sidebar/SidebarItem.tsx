@@ -5,8 +5,7 @@ import {
   PropsWithRef,
 } from 'react';
 
-import clsx from 'clsx';
-
+import { cn } from '@utils/styles';
 import { useSidebar } from '@hooks/useSidebar';
 
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
@@ -30,6 +29,7 @@ export const SidebarItem = ({
   href,
   asLink,
   isActive,
+  className,
   ...props
 }: SidebarItemProps) => {
   const { isSidebarOpen } = useSidebar();
@@ -42,11 +42,14 @@ export const SidebarItem = ({
   return (
     <LinkComponent
       href={href}
-      className="flex dark:text-fuselage-400 text-fuselage-300 group"
+      className={cn(
+        'flex dark:text-fuselage-400 text-fuselage-300 group',
+        className,
+      )}
       {...props}
     >
       <div
-        className={clsx(
+        className={cn(
           'rounded-md p-2 transition-all',
           isActive
             ? 'bg-semantic-green-500 text-white dark:bg-semantic-green-500/10 dark:text-semantic-green-500'
@@ -57,7 +60,7 @@ export const SidebarItem = ({
       </div>
 
       <div
-        className={clsx(
+        className={cn(
           'transition-all flex flex-col items-start shrink-0 whitespace-nowrap',
           isSidebarOpen ? 'w-48 opacity-100 ml-4' : 'w-0 opacity-0 invisible',
         )}
