@@ -47,38 +47,38 @@ interface DropdownMenuRadioItemsProps
   items: DropdownMenuRadionItemProps[];
 }
 
-type DropdownMenuItemsType =
+type DropdownMenuItemsProps =
   | DropdownMenuButtonItemProps[]
   | DropdownMenuCheckboxItemsProps
   | DropdownMenuRadioItemsProps
-  | DropdownMenuItemsType[];
+  | DropdownMenuItemsProps[];
 
 interface DropdownMenuProps
   extends Omit<ComponentProps<typeof DropdownMenuRoot>, 'children'> {
   trigger: React.ReactNode;
   label?: string;
-  items: DropdownMenuItemsType;
+  items: DropdownMenuItemsProps;
 }
 
 const instanceOfButtonItem = (
-  items: DropdownMenuItemsType,
+  items: DropdownMenuItemsProps,
 ): items is DropdownMenuButtonItemProps[] =>
   Array.isArray(items) &&
   items.every((item) => typeof item === 'object' && 'label' in item);
 
 const instanceOfGroupedItemsArray = (
-  items: DropdownMenuItemsType,
-): items is DropdownMenuItemsType[] =>
+  items: DropdownMenuItemsProps,
+): items is DropdownMenuItemsProps[] =>
   Array.isArray(items) &&
   items.every(
     (item: unknown) =>
-      instanceOfButtonItem(item as DropdownMenuItemsType) ||
-      instanceOfCheckboxItems(item as DropdownMenuItemsType) ||
-      instanceOfRadioItems(item as DropdownMenuItemsType),
+      instanceOfButtonItem(item as DropdownMenuItemsProps) ||
+      instanceOfCheckboxItems(item as DropdownMenuItemsProps) ||
+      instanceOfRadioItems(item as DropdownMenuItemsProps),
   );
 
 const instanceOfCheckboxItems = (
-  items: DropdownMenuItemsType,
+  items: DropdownMenuItemsProps,
 ): items is DropdownMenuCheckboxItemsProps =>
   typeof items === 'object' &&
   'type' in items &&
@@ -88,7 +88,7 @@ const instanceOfCheckboxItems = (
   items.items.every((item) => 'label' in item);
 
 const instanceOfRadioItems = (
-  items: DropdownMenuItemsType,
+  items: DropdownMenuItemsProps,
 ): items is DropdownMenuRadioItemsProps =>
   typeof items === 'object' &&
   'type' in items &&
@@ -100,7 +100,7 @@ const instanceOfRadioItems = (
 const DropdownMenuItems = ({
   items,
 }: {
-  items: DropdownMenuItemsType;
+  items: DropdownMenuItemsProps;
 }): ReactNode => {
   if (instanceOfButtonItem(items))
     return items.map(({ icon, label, shortcut, subItems, ...props }, index) =>
