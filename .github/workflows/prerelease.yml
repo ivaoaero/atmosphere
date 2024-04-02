@@ -46,4 +46,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           IVAO_NPM_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node common/scripts/install-run-rush.js publish -a -b develop -p --add-commit-details --prerelease-name next --partial-prerelease
+        run: node common/scripts/install-run-rush.js publish -a -b develop -p --add-commit-details --prerelease-name next-${CI_COMMIT_SHORT_SHA} --partial-prerelease
