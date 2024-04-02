@@ -14,7 +14,7 @@ export type NavigationMenuAsLinkProps = PropsWithRef<AnchorProps> &
   Required<Pick<AnchorProps, 'href'>>;
 
 export interface NavigationMenuLinkRootProps extends NavigationMenuAsLinkProps {
-  asLink: ComponentType<NavigationMenuAsLinkProps>;
+  asLink?: ComponentType<NavigationMenuAsLinkProps>;
 }
 
 export const NavigationMenuLink = forwardRef<
