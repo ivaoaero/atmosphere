@@ -8,7 +8,7 @@ import {
 
 import { SidebarProvider } from 'src/lib/contexts/SidebarContext';
 
-interface SidebarProps extends Pick<SidebarItemProps, 'asLink'> {
+export interface SidebarProps extends Pick<SidebarItemProps, 'asLink'> {
   /**
    * If true, the sidebar will be open by default
    * Default: true
