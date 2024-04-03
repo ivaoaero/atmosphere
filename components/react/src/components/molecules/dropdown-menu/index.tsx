@@ -47,13 +47,13 @@ interface DropdownMenuRadioItemsProps
   items: DropdownMenuRadionItemProps[];
 }
 
-type DropdownMenuItemsProps =
+export type DropdownMenuItemsProps =
   | DropdownMenuButtonItemProps[]
   | DropdownMenuCheckboxItemsProps
   | DropdownMenuRadioItemsProps
   | DropdownMenuItemsProps[];
 
-interface DropdownMenuProps
+export interface DropdownMenuProps
   extends Omit<ComponentProps<typeof DropdownMenuRoot>, 'children'> {
   trigger: React.ReactNode;
   label?: string;
