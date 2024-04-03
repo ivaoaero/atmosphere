@@ -16,7 +16,7 @@ export type SidebarAsLinkProps = PropsWithRef<AnchorProps> &
 export interface SidebarItemProps extends HTMLAttributes<HTMLAnchorElement> {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: ComponentType;
   href: string;
   asLink?: ComponentType<SidebarAsLinkProps>;
   isActive?: boolean;
@@ -25,7 +25,7 @@ export interface SidebarItemProps extends HTMLAttributes<HTMLAnchorElement> {
 export const SidebarItem = ({
   title,
   description,
-  icon,
+  icon: Icon, // maybe rename the property? we need it uppercase for jsx reasons...
   href,
   asLink,
   isActive,
@@ -56,7 +56,7 @@ export const SidebarItem = ({
             : 'bg-fuselage-50/40 text-fuselage-300 dark:text-fuselage-400 dark:bg-fuselage-700 group-hover:text-fuselage-400 group-hover:bg-fuselage-50/75 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
         )}
       >
-        {icon}
+        <Icon />
       </div>
 
       <div
