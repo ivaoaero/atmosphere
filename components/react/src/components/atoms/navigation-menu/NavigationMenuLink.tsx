@@ -13,13 +13,13 @@ type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 export type NavigationMenuAsLinkProps = PropsWithRef<AnchorProps> &
   Required<Pick<AnchorProps, 'href'>>;
 
-export interface NavigationMenuLinkRootProps extends NavigationMenuAsLinkProps {
+export interface NavigationMenuLinkProps extends NavigationMenuAsLinkProps {
   asLink?: ComponentType<NavigationMenuAsLinkProps>;
 }
 
 export const NavigationMenuLink = forwardRef<
   ElementRef<typeof RadixLink>,
-  NavigationMenuLinkRootProps
+  NavigationMenuLinkProps
 >(({ asLink, ...props }, ref) => {
   const LinkComponent = asLink ?? 'a';
   return (
