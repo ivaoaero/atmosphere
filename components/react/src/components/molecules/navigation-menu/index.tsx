@@ -32,11 +32,11 @@ interface NavigationMenuMultipleLinksSectionProps
   links: NavigationMenuExtendedLinkProps[];
 }
 
-type NavigationMenuSectionProps =
+export type NavigationMenuSectionProps =
   | NavigationMenuSimpleLinkSectionProps
   | NavigationMenuMultipleLinksSectionProps;
 
-interface NavigationMenuProps
+export interface NavigationMenuProps
   extends Omit<ComponentProps<typeof NavigationMenuRoot>, 'children'> {
   sections: NavigationMenuSectionProps[];
   asLink?: ComponentType<NavigationMenuAsLinkProps>;

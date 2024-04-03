@@ -7,3 +7,8 @@ export { NavigationMenuList } from '@components/atoms/navigation-menu/Navigation
 export { NavigationMenuListItem } from '@components/atoms/navigation-menu/NavigationMenuListItem';
 export { NavigationMenuTrigger } from '@components/atoms/navigation-menu/NavigationMenuTrigger';
 export { NavigationMenuViewport } from '@components/atoms/navigation-menu/NavigationMenuViewport';
+
+export type {
+  NavigationMenuAsLinkProps,
+  NavigationMenuLinkProps,
+} from '@components/atoms/navigation-menu/NavigationMenuLink';

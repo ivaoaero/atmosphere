@@ -34,6 +34,14 @@ export {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from '@components/atoms/navigation-menu';
+export type {
+  NavigationMenuAsLinkProps,
+  NavigationMenuLinkProps,
+} from '@components/atoms/navigation-menu';
+export type {
+  NavigationMenuSectionProps,
+  NavigationMenuProps,
+} from '@components/molecules/navigation-menu';
 export { NavigationMenu } from '@components/molecules/navigation-menu';
 export {
   SelectRoot,

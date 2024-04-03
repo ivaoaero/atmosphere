@@ -2,14 +2,14 @@ import { ElementRef, forwardRef } from 'react';
 
 import {
   NavigationMenuLink,
-  NavigationMenuLinkRootProps,
+  NavigationMenuLinkProps,
 } from '@components/atoms/navigation-menu/NavigationMenuLink';
 
 import { cn } from '@utils/styles';
 
 export const NavigationMenuListItem = forwardRef<
   ElementRef<typeof NavigationMenuLink>,
-  NavigationMenuLinkRootProps
+  NavigationMenuLinkProps
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
