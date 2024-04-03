@@ -39,6 +39,10 @@ export {
   DropdownMenuSubTrigger,
 } from '@components/atoms/dropdown-menu';
 export { DropdownMenu } from '@components/molecules/dropdown-menu';
+export type {
+  DropdownMenuProps,
+  DropdownMenuItemsProps,
+} from '@components/molecules/dropdown-menu';
 export { Input } from '@components/atoms/input';
 export { Label } from '@components/atoms/label';
 export {
