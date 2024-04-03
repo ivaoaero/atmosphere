@@ -21,20 +21,20 @@ const meta = {
       {
         title: 'Dashboard',
         description: 'Dashboard',
-        icon: <Home />,
+        Icon: Home,
         href: '/dashboard',
         isActive: true,
       },
       {
         title: 'Users',
         description: 'Users',
-        icon: <UsersIcon />,
+        Icon: UsersIcon,
         href: '/users',
       },
       {
         title: 'Settings',
         description: 'Settings',
-        icon: <SettingsIcon />,
+        Icon: SettingsIcon,
         href: '/settings',
       },
     ],
