@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "add Skeleton atom",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
