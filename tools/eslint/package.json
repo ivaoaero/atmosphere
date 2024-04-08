@@ -1,7 +1,7 @@
 {
   "name": "@ivaoaero/eslint-config",
   "description": "IVAO eslint config.",
-  "version": "1.1.0-next-18101c6b2262f81bf74a0c0440e7885a57340a68",
+  "version": "1.1.0-next-ac0e5aa404d5acfd81f4c7afa42847695b5ce00a",
   "main": "index.js",
   "module": "index.js",
   "files": [
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.2.1",
-    "@ivaoaero/prettier-config": "workspace:2.1.0-next-18101c6b2262f81bf74a0c0440e7885a57340a68",
+    "@ivaoaero/prettier-config": "workspace:2.1.0-next-ac0e5aa404d5acfd81f4c7afa42847695b5ce00a",
     "@types/eslint": "8.56.6",
     "@types/node": "20.11.30",
     "prettier": "3.2.5"
