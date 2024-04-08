@@ -39,6 +39,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-navigation-menu",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-select",
       "allowedCategories": [ "react" ]
     },
