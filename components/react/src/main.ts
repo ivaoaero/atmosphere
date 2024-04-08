@@ -104,6 +104,22 @@ export {
   SelectValue,
 } from '@components/atoms/select';
 export { Select, SelectItemGroup } from '@components/molecules/select';
+export {
+  SidebarContainer,
+  SidebarCollapseButton,
+  SidebarItem,
+} from '@components/atoms/sidebar';
+export type {
+  SidebarItemProps,
+  SidebarAsLinkProps,
+} from '@components/atoms/sidebar';
+export { Sidebar } from '@components/molecules/sidebar';
+export type { SidebarProps } from '@components/molecules/sidebar';
+export {
+  SidebarContext,
+  SidebarProvider,
+} from 'src/lib/contexts/SidebarContext';
+export { useSidebar } from '@hooks/useSidebar';
 export { Skeleton } from '@components/atoms/skeleton';
 export { SwitchRoot, SwitchThumb, Switch } from '@components/atoms/switch';
 export { Textarea } from '@components/atoms/textarea';
