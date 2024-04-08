@@ -1,7 +1,7 @@
 {
   "name": "@ivaoaero/prettier-config",
   "description": "IVAO prettier config.",
-  "version": "2.1.0-next",
+  "version": "2.1.0-next-18101c6b2262f81bf74a0c0440e7885a57340a68",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
