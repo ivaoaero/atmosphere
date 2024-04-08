@@ -1,3 +1,11 @@
+export { alertVariants } from '@components/atoms/alert/alertVariants';
+export {
+  AlertRoot,
+  AlertTitle,
+  AlertDescription,
+} from '@components/atoms/alert';
+export { Alert } from '@components/molecules/alert';
+export type { AlertProps } from '@components/molecules/alert';
 export {
   AlertDialogAction,
   AlertDialogCancel,
