@@ -1,4 +1,4 @@
-import { AlertCircle, Terminal } from 'lucide-react';
+import { AlertCircle, Check, Terminal } from 'lucide-react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -12,14 +12,14 @@ const meta = {
     title: 'Alert title',
     description: 'Alert description',
     variant: 'default',
-    icon: <Terminal />,
+    Icon: Terminal,
   },
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'destructive'],
+      options: ['default', 'success', 'destructive'],
     },
-    icon: {
+    Icon: {
       control: 'none',
       description: 'Default classNames: "h-4 w-4"',
     },
@@ -31,10 +31,17 @@ type Story = StoryObj<typeof Alert>;
 
 export const Default = {} satisfies Story;
 
+export const Success = {
+  args: {
+    variant: 'success',
+    Icon: Check,
+  },
+} satisfies Story;
+
 export const Destructive = {
   args: {
     variant: 'destructive',
-    icon: <AlertCircle />,
+    Icon: AlertCircle,
   },
 } satisfies Story;
 
@@ -42,7 +49,7 @@ export const Minimal = {
   args: {
     title: 'Alert title',
     description: undefined,
-    icon: undefined,
+    Icon: undefined,
     variant: undefined,
   },
 } satisfies Story;
