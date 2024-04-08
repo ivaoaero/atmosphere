@@ -1,3 +1,11 @@
+export { alertVariants } from '@components/atoms/alert/alertVariants';
+export {
+  AlertRoot,
+  AlertTitle,
+  AlertDescription,
+} from '@components/atoms/alert';
+export { Alert } from '@components/molecules/alert';
+export type { AlertProps } from '@components/molecules/alert';
 export {
   AlertDialogAction,
   AlertDialogCancel,
@@ -54,6 +62,27 @@ export type {
 export { Input } from '@components/atoms/input';
 export { IVAOLogo } from '@components/atoms/ivao-logo';
 export { Label } from '@components/atoms/label';
+export { navigationMenuTriggerStyle } from '@components/atoms/navigation-menu/navigationMenuTriggerStyle';
+export {
+  NavigationMenuRoot,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuList,
+  NavigationMenuListItem,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from '@components/atoms/navigation-menu';
+export type {
+  NavigationMenuAsLinkProps,
+  NavigationMenuLinkProps,
+} from '@components/atoms/navigation-menu';
+export type {
+  NavigationMenuSectionProps,
+  NavigationMenuProps,
+} from '@components/molecules/navigation-menu';
+export { NavigationMenu } from '@components/molecules/navigation-menu';
 export {
   SelectRoot,
   SelectPortal,
