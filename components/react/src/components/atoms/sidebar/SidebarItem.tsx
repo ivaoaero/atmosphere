@@ -25,7 +25,7 @@ export interface SidebarItemProps extends HTMLAttributes<HTMLAnchorElement> {
 export const SidebarItem = ({
   title,
   description,
-  Icon, // maybe rename the property? we need it uppercase for jsx reasons...
+  Icon,
   href,
   asLink,
   isActive,
