@@ -31,7 +31,15 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-dropdown-menu",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-label",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "@radix-ui/react-navigation-menu",
       "allowedCategories": [ "react" ]
     },
     {
