@@ -36,6 +36,7 @@ export {
   CheckboxIndicator,
   CheckboxCheck,
 } from '@components/atoms/checkbox';
+export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 export {
   DropdownMenuRoot,
   DropdownMenuTrigger,
@@ -59,6 +60,7 @@ export type {
   DropdownMenuProps,
   DropdownMenuItemsProps,
 } from '@components/molecules/dropdown-menu';
+export { IconButton } from '@components/atoms/icon-button';
 export { Input } from '@components/atoms/input';
 export { IVAOLogo } from '@components/atoms/ivao-logo';
 export { Label } from '@components/atoms/label';
