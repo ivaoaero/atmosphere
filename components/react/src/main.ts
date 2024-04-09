@@ -36,6 +36,7 @@ export {
   CheckboxIndicator,
   CheckboxCheck,
 } from '@components/atoms/checkbox';
+export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 export {
   DropdownMenuRoot,
   DropdownMenuTrigger,
