@@ -38,6 +38,21 @@ export {
 } from '@components/atoms/checkbox';
 export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 export {
+  DialogRoot,
+  DialogTrigger,
+  DialogTopRightClose,
+  DialogPortal,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogTitle,
+} from '@components/atoms/dialog';
+export { Dialog } from '@components/molecules/dialog';
+export type { DialogProps } from '@components/molecules/dialog';
+export {
   DropdownMenuRoot,
   DropdownMenuTrigger,
   DropdownMenuGroup,
