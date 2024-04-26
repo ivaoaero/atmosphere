@@ -14,10 +14,10 @@ importers:
         specifier: 4.2.1
         version: 4.2.1(prettier@3.2.5)
       '@ivaoaero/eslint-config':
-        specifier: workspace:1.1.0-next-c858aaaa6acc390c4460fc267f9b7687f1fb2f54
+        specifier: workspace:1.1.0-next-a3ce143d60c29e70d82b3b91914afe9371f18fae
         version: link:../tools/eslint
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-c858aaaa6acc390c4460fc267f9b7687f1fb2f54
+        specifier: workspace:2.1.0-next-a3ce143d60c29e70d82b3b91914afe9371f18fae
         version: link:../tools/prettier
       '@typescript-eslint/eslint-plugin':
         specifier: 7.4.0
@@ -47,7 +47,7 @@ importers:
         specifier: 11.37.0
         version: 11.37.0(react@18.2.0)
       '@ivaoaero/atmosphere-brand':
-        specifier: workspace:1.1.0-next-c858aaaa6acc390c4460fc267f9b7687f1fb2f54
+        specifier: workspace:1.1.0-next-a3ce143d60c29e70d82b3b91914afe9371f18fae
         version: link:../../brand
       '@radix-ui/react-alert-dialog':
         specifier: 1.0.5
@@ -105,10 +105,10 @@ importers:
         specifier: 4.2.1
         version: 4.2.1(prettier@3.2.5)
       '@ivaoaero/eslint-config':
-        specifier: workspace:1.1.0-next-c858aaaa6acc390c4460fc267f9b7687f1fb2f54
+        specifier: workspace:1.1.0-next-a3ce143d60c29e70d82b3b91914afe9371f18fae
         version: link:../../tools/eslint
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-c858aaaa6acc390c4460fc267f9b7687f1fb2f54
+        specifier: workspace:2.1.0-next-a3ce143d60c29e70d82b3b91914afe9371f18fae
         version: link:../../tools/prettier
       '@storybook/addon-essentials':
         specifier: 8.0.4
@@ -262,7 +262,7 @@ importers:
         specifier: 4.2.1
         version: 4.2.1(prettier@3.2.5)
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-c858aaaa6acc390c4460fc267f9b7687f1fb2f54
+        specifier: workspace:2.1.0-next-a3ce143d60c29e70d82b3b91914afe9371f18fae
         version: link:../prettier
       '@types/eslint':
         specifier: 8.56.6
