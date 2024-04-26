@@ -87,6 +87,8 @@ export type {
   NavigationMenuProps,
 } from '@components/molecules/navigation-menu';
 export { NavigationMenu } from '@components/molecules/navigation-menu';
+export { RadioGroupRoot, RadioGroupItem } from '@components/atoms/radio-group';
+export { RadioGroup } from '@components/molecules/radio-group';
 export {
   SelectRoot,
   SelectPortal,
