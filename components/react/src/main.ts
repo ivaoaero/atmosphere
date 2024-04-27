@@ -87,6 +87,18 @@ export type {
   NavigationMenuProps,
 } from '@components/molecules/navigation-menu';
 export { NavigationMenu } from '@components/molecules/navigation-menu';
+export {
+  PaginationRoot,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@components/atoms/pagination';
+export type { PaginationLinkProps } from '@components/atoms/pagination/PaginationLink';
+export { Pagination } from '@components/molecules/pagination';
+export type { PaginationProps } from '@components/molecules/pagination';
 export { RadioGroupRoot, RadioGroupItem } from '@components/atoms/radio-group';
 export { RadioGroup } from '@components/molecules/radio-group';
 export {
