@@ -128,6 +128,23 @@ export {
 export { useSidebar } from '@hooks/useSidebar';
 export { Skeleton } from '@components/atoms/skeleton';
 export { SwitchRoot, SwitchThumb, Switch } from '@components/atoms/switch';
+export {
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRoot,
+  TableRow,
+} from '@components/atoms/table';
+export { Table } from '@components/molecules/table';
+export type {
+  TableColumnProps,
+  TableCellProps,
+  TableRowProps,
+  TableProps,
+} from '@components/molecules/table';
 export { Textarea } from '@components/atoms/textarea';
 export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
 export { useTheme } from '@hooks/useTheme';
