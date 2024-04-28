@@ -6,7 +6,7 @@ import { buttonVariants } from '@components/atoms/button/buttonVariants';
 
 import { cn } from '@utils/styles';
 
-interface ButtonProps
+export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {}
 
