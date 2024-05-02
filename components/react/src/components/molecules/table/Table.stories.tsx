@@ -9,9 +9,9 @@ const meta = {
   args: {
     caption: 'Table caption',
     columns: [
-      { label: 'Column 1' },
-      { label: 'Column 2' },
-      { label: 'Column 3' },
+      { label: 'Column 1', key: '1' },
+      { label: 'Column 2', key: '2' },
+      { label: 'Column 3', key: '3' },
     ],
     rows: [
       {
