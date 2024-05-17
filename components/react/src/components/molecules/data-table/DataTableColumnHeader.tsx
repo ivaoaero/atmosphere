@@ -1,3 +1,5 @@
+import { HTMLAttributes } from 'react';
+
 import { Column } from '@tanstack/react-table';
 import { ArrowDownIcon, ArrowDownUp, ArrowUpIcon, EyeOff } from 'lucide-react';
 
@@ -13,7 +15,7 @@ import {
 import { cn } from '@utils/styles';
 
 export interface DataTableColumnHeaderProps<TData, TValue>
-  extends React.HTMLAttributes<HTMLDivElement> {
+  extends HTMLAttributes<HTMLDivElement> {
   column: Column<TData, TValue>;
   title: string;
 }
