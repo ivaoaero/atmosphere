@@ -1,4 +1,4 @@
-import { ComponentProps, Key, ReactNode } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 
 import {
   TableBody,
@@ -11,9 +11,8 @@ import {
 } from '@components/atoms/table';
 
 export interface TableColumnProps
-  extends Omit<ComponentProps<typeof TableHead>, 'children' | 'key'> {
+  extends Omit<ComponentProps<typeof TableHead>, 'children'> {
   label: ReactNode;
-  key: Key;
 }
 
 export interface TableCellProps
@@ -22,9 +21,8 @@ export interface TableCellProps
 }
 
 export interface TableRowProps
-  extends Omit<ComponentProps<typeof TableRow>, 'children' | 'key'> {
+  extends Omit<ComponentProps<typeof TableRow>, 'children'> {
   columns: TableCellProps[];
-  key: Key;
 }
 
 export interface TableProps
@@ -40,8 +38,8 @@ export const Table = ({ caption, columns, rows, ...props }: TableProps) => {
       {caption && <TableCaption>{caption}</TableCaption>}
       <TableHeader>
         <TableRow>
-          {columns.map(({ key, label, ...props }) => (
-            <TableHead key={key} {...props}>
+          {columns.map(({ key: columnKey, label, ...props }, colIdx) => (
+            <TableHead key={columnKey ?? `col-${colIdx}`} {...props}>
               {label}
             </TableHead>
           ))}
