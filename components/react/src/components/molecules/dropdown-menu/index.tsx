@@ -97,7 +97,7 @@ const instanceOfRadioItems = (
   Array.isArray(items.items) &&
   items.items.every((item) => 'value' in item);
 
-const DropdownMenuItems = ({
+export const DropdownMenuItems = ({
   items,
 }: {
   items: DropdownMenuItemsProps;

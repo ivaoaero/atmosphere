@@ -145,6 +145,22 @@ export type {
   TableRowProps,
   TableProps,
 } from '@components/molecules/table';
+export {
+  DataTable,
+  DataTableColumnHeader,
+  DataTablePagination,
+  DataTableViewOptions,
+  DataTableRowActions,
+  DataTableToolbar,
+} from '@components/molecules/data-table';
+export type {
+  DataTableProps,
+  DataTableColumnHeaderProps,
+  DataTablePaginationProps,
+  DataTableViewOptionsProps,
+  DataTableRowActionsProps,
+  DataTableToolbarProps,
+} from '@components/molecules/data-table';
 export { Textarea } from '@components/atoms/textarea';
 export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
 export { useTheme } from '@hooks/useTheme';
