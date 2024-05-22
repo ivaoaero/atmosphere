@@ -142,6 +142,7 @@ export {
   SelectValue,
 } from '@components/atoms/select';
 export { Select, SelectItemGroup } from '@components/molecules/select';
+export { Separator } from '@components/atoms/separator';
 export {
   SidebarContainer,
   SidebarCollapseButton,
@@ -207,6 +208,8 @@ export { useTheme } from '@hooks/useTheme';
 export { Toast } from '@components/molecules/toast';
 export { ToastProvider } from 'src/lib/contexts/ToastContext';
 export { useToast } from '@hooks/useToast';
+export { Toggle } from '@components/atoms/toggle';
+export { toggleVariants } from '@components/atoms/toggle/toggleVariants';
 export {
   BlockQuote,
   H1,
