@@ -67,6 +67,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-tooltip",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@storybook/addon-essentials",
       "allowedCategories": [ "react" ]
     },

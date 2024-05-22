@@ -201,6 +201,14 @@ export { Toast } from '@components/molecules/toast';
 export { ToastProvider } from 'src/lib/contexts/ToastContext';
 export { useToast } from '@hooks/useToast';
 export {
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
+  TooltipContent,
+} from '@components/atoms/tooltip';
+export { Tooltip } from '@components/molecules/tooltip';
+export type { TooltipProps } from '@components/molecules/tooltip';
+export {
   BlockQuote,
   H1,
   H2,
