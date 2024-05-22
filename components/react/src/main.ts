@@ -142,6 +142,7 @@ export {
   SelectValue,
 } from '@components/atoms/select';
 export { Select, SelectItemGroup } from '@components/molecules/select';
+export { Separator } from '@components/atoms/separator';
 export {
   SidebarContainer,
   SidebarCollapseButton,
