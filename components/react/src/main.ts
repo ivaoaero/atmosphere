@@ -211,6 +211,14 @@ export { useToast } from '@hooks/useToast';
 export { Toggle } from '@components/atoms/toggle';
 export { toggleVariants } from '@components/atoms/toggle/toggleVariants';
 export {
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
+  TooltipContent,
+} from '@components/atoms/tooltip';
+export { Tooltip } from '@components/molecules/tooltip';
+export type { TooltipProps } from '@components/molecules/tooltip';
+export {
   BlockQuote,
   H1,
   H2,
