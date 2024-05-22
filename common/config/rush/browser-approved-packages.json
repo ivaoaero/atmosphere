@@ -63,6 +63,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-tabs",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-toast",
       "allowedCategories": [ "react" ]
     },

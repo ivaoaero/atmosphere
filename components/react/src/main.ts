@@ -194,6 +194,14 @@ export type {
   DataTableRowActionsProps,
   DataTableToolbarProps,
 } from '@components/molecules/data-table';
+export {
+  TabsRoot,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@components/atoms/tabs';
+export { Tabs } from '@components/molecules/tabs';
+export type { TabsProps } from '@components/molecules/tabs';
 export { Textarea } from '@components/atoms/textarea';
 export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
 export { useTheme } from '@hooks/useTheme';
