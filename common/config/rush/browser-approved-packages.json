@@ -59,6 +59,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-slider",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-switch",
       "allowedCategories": [ "react" ]
     },
