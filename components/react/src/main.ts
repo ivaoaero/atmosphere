@@ -194,12 +194,22 @@ export type {
   DataTableRowActionsProps,
   DataTableToolbarProps,
 } from '@components/molecules/data-table';
+export {
+  TabsRoot,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@components/atoms/tabs';
+export { Tabs } from '@components/molecules/tabs';
+export type { TabsProps } from '@components/molecules/tabs';
 export { Textarea } from '@components/atoms/textarea';
 export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
 export { useTheme } from '@hooks/useTheme';
 export { Toast } from '@components/molecules/toast';
 export { ToastProvider } from 'src/lib/contexts/ToastContext';
 export { useToast } from '@hooks/useToast';
+export { Toggle } from '@components/atoms/toggle';
+export { toggleVariants } from '@components/atoms/toggle/toggleVariants';
 export {
   TooltipProvider,
   TooltipRoot,
