@@ -122,6 +122,15 @@ export type {
   RadioGroupItemProps,
 } from '@components/molecules/radio-group';
 export {
+  ScrollAreaCorner,
+  ScrollAreaScrollbar,
+  ScrollAreaThumb,
+  ScrollAreaViewport,
+  ScrollAreaRoot,
+  ScrollBar,
+} from '@components/atoms/scroll-area';
+export { ScrollArea } from '@components/molecules/scroll-area';
+export {
   SelectRoot,
   SelectPortal,
   SelectContent,
