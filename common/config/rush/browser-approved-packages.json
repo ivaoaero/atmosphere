@@ -51,6 +51,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-scroll-area",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-select",
       "allowedCategories": [ "react" ]
     },
