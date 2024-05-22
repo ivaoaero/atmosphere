@@ -67,6 +67,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-toggle",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@storybook/addon-essentials",
       "allowedCategories": [ "react" ]
     },
