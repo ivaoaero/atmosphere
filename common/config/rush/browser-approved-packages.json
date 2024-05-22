@@ -55,6 +55,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-separator",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-switch",
       "allowedCategories": [ "react" ]
     },
@@ -64,6 +68,10 @@
     },
     {
       "name": "@radix-ui/react-toast",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "@radix-ui/react-toggle",
       "allowedCategories": [ "react" ]
     },
     {
