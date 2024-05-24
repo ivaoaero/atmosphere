@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "added slider component",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
