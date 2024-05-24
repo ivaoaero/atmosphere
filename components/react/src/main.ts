@@ -167,6 +167,13 @@ export {
   SidebarContext,
   SidebarProvider,
 } from 'src/lib/contexts/SidebarContext';
+export { Slider } from '@components/molecules/slider';
+export {
+  SliderRoot,
+  SliderTrack,
+  SliderThumb,
+  SliderRange,
+} from '@components/atoms/slider';
 export { useSidebar } from '@hooks/useSidebar';
 export { Skeleton } from '@components/atoms/skeleton';
 export { SwitchRoot, SwitchThumb, Switch } from '@components/atoms/switch';
