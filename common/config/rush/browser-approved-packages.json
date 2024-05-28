@@ -83,6 +83,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-toggle-group",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-tooltip",
       "allowedCategories": [ "react" ]
     },
