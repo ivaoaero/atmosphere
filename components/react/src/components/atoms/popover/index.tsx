@@ -1,4 +1,5 @@
 export { Popover } from './Popover';
 export { PopoverAnchor } from './PopoverAnchor';
+export { PopoverContent } from './PopoverContent';
 export { PopoverPortal } from './PopoverPortal';
 export { PopoverTrigger } from './PopoverTrigger';
