@@ -20,6 +20,7 @@ export const ToggleGroup = forwardRef<
   ElementRef<typeof ToggleGroupRoot>,
   ToggleGroupProps
 >(({ items, ...props }, ref) => (
+  // @ts-expect-error for some reason there is a collision between ToggleGroupSingleProps and ToggleGroupMultipleProps
   <ToggleGroupRoot ref={ref} {...props}>
     {items.map(({ label, ...item }) => (
       <ToggleGroupItem key={item.value} {...item}>
