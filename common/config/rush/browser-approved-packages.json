@@ -163,6 +163,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "cmdk",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "eslint",
       "allowedCategories": [ "brand", "react", "tools" ]
     },
