@@ -37,6 +37,13 @@ export {
   CheckboxIndicator,
   CheckboxCheck,
 } from '@components/atoms/checkbox';
+export {
+  CollapsibleRoot,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from '@components/atoms/collapsible';
+export { Collapsible } from '@components/molecules/collapsible';
+export type { CollapsibleProps } from '@components/molecules/collapsible';
 export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 export {
   DialogRoot,
