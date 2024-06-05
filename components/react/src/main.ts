@@ -32,6 +32,16 @@ export {
   CardContent,
 } from '@components/atoms/card';
 export {
+  CarouselRoot,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  CarouselContent,
+} from '@components/atoms/carousel';
+export type { CarouselApi } from '@components/atoms/carousel';
+export { Carousel } from '@components/molecules/carousel';
+export type { CarouselProps } from '@components/molecules/carousel';
+export {
   Checkbox,
   CheckboxRoot,
   CheckboxIndicator,
