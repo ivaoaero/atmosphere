@@ -47,6 +47,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-progress",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-radio-group",
       "allowedCategories": [ "react" ]
     },
