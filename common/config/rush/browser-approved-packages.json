@@ -163,6 +163,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "date-fns",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "eslint",
       "allowedCategories": [ "brand", "react", "tools" ]
     },
@@ -212,6 +216,10 @@
     },
     {
       "name": "react",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "react-day-picker",
       "allowedCategories": [ "react" ]
     },
     {
