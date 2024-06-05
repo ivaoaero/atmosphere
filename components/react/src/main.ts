@@ -37,6 +37,28 @@ export {
   CheckboxIndicator,
   CheckboxCheck,
 } from '@components/atoms/checkbox';
+export {
+  CommandRoot,
+  CommandDialogRoot,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from '@components/atoms/command';
+export { Command, CommandDialog } from '@components/molecules/command';
+export type { CommandProps } from '@components/molecules/command/Command';
+export type { CommandDialogProps } from '@components/molecules/command/CommandDialog';
+export type {
+  CommandItemProps,
+  CommandGroupProps,
+} from '@components/molecules/command/CommandGroupContent';
+export type {
+  CommandSeparatorProps,
+  CommandContentProps,
+} from '@components/molecules/command/CommandContent';
 export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 export {
   DialogRoot,
