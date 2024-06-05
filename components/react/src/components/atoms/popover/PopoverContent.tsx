@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Content as RadixContent } from '@radix-ui/react-popover';
 
-import { PopoverPortal } from '@components/atoms/popover/PopoverPortal';
+import { PopoverPortal } from '@components/atoms/popover';
 
 import { cn } from '@utils/styles';
 

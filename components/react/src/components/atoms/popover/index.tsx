@@ -1,5 +1,5 @@
-export { Popover } from './Popover';
-export { PopoverAnchor } from './PopoverAnchor';
+export { Root as PopoverRoot } from '@radix-ui/react-popover';
+export { Anchor as PopoverAnchor } from '@radix-ui/react-popover';
 export { PopoverContent } from './PopoverContent';
-export { PopoverPortal } from './PopoverPortal';
-export { PopoverTrigger } from './PopoverTrigger';
+export { Portal as PopoverPortal } from '@radix-ui/react-popover';
+export { Trigger as PopoverTrigger } from '@radix-ui/react-popover';
