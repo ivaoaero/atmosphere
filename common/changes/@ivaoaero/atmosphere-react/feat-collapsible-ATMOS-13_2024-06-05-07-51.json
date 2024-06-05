@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "add Collapsible atoms and molecule",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
