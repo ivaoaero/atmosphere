@@ -115,6 +115,15 @@ export {
 export type { PaginationLinkProps } from '@components/atoms/pagination/PaginationLink';
 export { Pagination } from '@components/molecules/pagination';
 export type { PaginationProps } from '@components/molecules/pagination';
+export {
+  PopoverAnchor,
+  PopoverContent,
+  PopoverRoot,
+  PopoverPortal,
+  PopoverTrigger,
+} from '@components/atoms/popover';
+export { Popover } from '@components/molecules/popover';
+export type { PopoverProps } from '@components/molecules/popover';
 export { RadioGroupRoot, RadioGroupItem } from '@components/atoms/radio-group';
 export { RadioGroup } from '@components/molecules/radio-group';
 export type {

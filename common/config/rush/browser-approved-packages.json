@@ -47,6 +47,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-popover",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-radio-group",
       "allowedCategories": [ "react" ]
     },
