@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "added `popover` atoms",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
