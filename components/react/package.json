@@ -53,6 +53,7 @@
     "@ivaoaero/atmosphere-brand": "workspace:1.1.0-next-4d764dac43863e8320ac4bba4caf9db08187eb9c",
     "@radix-ui/react-alert-dialog": "1.0.5",
     "@radix-ui/react-checkbox": "1.0.4",
+    "@radix-ui/react-collapsible": "1.0.3",
     "@radix-ui/react-dialog": "1.0.5",
     "@radix-ui/react-dropdown-menu": "2.0.6",
     "@radix-ui/react-label": "2.0.2",
