@@ -115,6 +115,15 @@ export {
 export type { PaginationLinkProps } from '@components/atoms/pagination/PaginationLink';
 export { Pagination } from '@components/molecules/pagination';
 export type { PaginationProps } from '@components/molecules/pagination';
+export {
+  PopoverAnchor,
+  PopoverContent,
+  PopoverRoot,
+  PopoverPortal,
+  PopoverTrigger,
+} from '@components/atoms/popover';
+export { Popover } from '@components/molecules/popover';
+export type { PopoverProps } from '@components/molecules/popover';
 export { Progress } from '@components/atoms/progress';
 export { RadioGroupRoot, RadioGroupItem } from '@components/atoms/radio-group';
 export { RadioGroup } from '@components/molecules/radio-group';
@@ -227,6 +236,16 @@ export { ToastProvider } from 'src/lib/contexts/ToastContext';
 export { useToast } from '@hooks/useToast';
 export { Toggle } from '@components/atoms/toggle';
 export { toggleVariants } from '@components/atoms/toggle/toggleVariants';
+export {
+  ToggleGroupRoot,
+  ToggleGroupItem,
+} from '@components/atoms/toggle-group';
+export { ToggleGroupContext } from '@components/atoms/toggle-group/ToggleGroupContext';
+export { ToggleGroup } from '@components/molecules/toggle-group';
+export type {
+  ToggleGroupProps,
+  ToggleGroupItemProps,
+} from '@components/molecules/toggle-group';
 export {
   TooltipProvider,
   TooltipRoot,

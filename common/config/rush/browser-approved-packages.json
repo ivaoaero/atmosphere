@@ -47,6 +47,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-popover",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-progress",
       "allowedCategories": [ "react" ]
     },
@@ -84,6 +88,10 @@
     },
     {
       "name": "@radix-ui/react-toggle",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "@radix-ui/react-toggle-group",
       "allowedCategories": [ "react" ]
     },
     {
