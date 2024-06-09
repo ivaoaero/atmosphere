@@ -124,6 +124,7 @@ export {
 } from '@components/atoms/popover';
 export { Popover } from '@components/molecules/popover';
 export type { PopoverProps } from '@components/molecules/popover';
+export { Progress } from '@components/atoms/progress';
 export { RadioGroupRoot, RadioGroupItem } from '@components/atoms/radio-group';
 export { RadioGroup } from '@components/molecules/radio-group';
 export type {
