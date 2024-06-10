@@ -14,10 +14,10 @@ importers:
         specifier: 4.2.1
         version: 4.2.1(prettier@3.2.5)
       '@ivaoaero/eslint-config':
-        specifier: workspace:1.1.0-next-4d764dac43863e8320ac4bba4caf9db08187eb9c
+        specifier: workspace:1.1.0-next-ba507a3bbac80c1ea7c39175a4d98d5cfc9e7460
         version: link:../tools/eslint
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-4d764dac43863e8320ac4bba4caf9db08187eb9c
+        specifier: workspace:2.1.0-next-ba507a3bbac80c1ea7c39175a4d98d5cfc9e7460
         version: link:../tools/prettier
       '@typescript-eslint/eslint-plugin':
         specifier: 7.4.0
@@ -47,7 +47,7 @@ importers:
         specifier: 11.37.0
         version: 11.37.0(react@18.2.0)
       '@ivaoaero/atmosphere-brand':
-        specifier: workspace:1.1.0-next-4d764dac43863e8320ac4bba4caf9db08187eb9c
+        specifier: workspace:1.1.0-next-ba507a3bbac80c1ea7c39175a4d98d5cfc9e7460
         version: link:../../brand
       '@radix-ui/react-alert-dialog':
         specifier: 1.0.5
@@ -138,10 +138,10 @@ importers:
         specifier: 4.2.1
         version: 4.2.1(prettier@3.2.5)
       '@ivaoaero/eslint-config':
-        specifier: workspace:1.1.0-next-4d764dac43863e8320ac4bba4caf9db08187eb9c
+        specifier: workspace:1.1.0-next-ba507a3bbac80c1ea7c39175a4d98d5cfc9e7460
         version: link:../../tools/eslint
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-4d764dac43863e8320ac4bba4caf9db08187eb9c
+        specifier: workspace:2.1.0-next-ba507a3bbac80c1ea7c39175a4d98d5cfc9e7460
         version: link:../../tools/prettier
       '@storybook/addon-essentials':
         specifier: 8.0.4
@@ -295,7 +295,7 @@ importers:
         specifier: 4.2.1
         version: 4.2.1(prettier@3.2.5)
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-4d764dac43863e8320ac4bba4caf9db08187eb9c
+        specifier: workspace:2.1.0-next-ba507a3bbac80c1ea7c39175a4d98d5cfc9e7460
         version: link:../prettier
       '@types/eslint':
         specifier: 8.56.6
@@ -2540,7 +2540,7 @@ packages:
       '@types/react-dom':
         optional: true
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.24.7
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.72)(react@18.2.0)
       '@radix-ui/react-context': 1.0.1(@types/react@18.2.72)(react@18.2.0)
