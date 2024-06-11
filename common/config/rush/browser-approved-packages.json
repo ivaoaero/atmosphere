@@ -31,6 +31,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-collapsible",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-dialog",
       "allowedCategories": [ "react" ]
     },
@@ -44,6 +48,14 @@
     },
     {
       "name": "@radix-ui/react-navigation-menu",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "@radix-ui/react-popover",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "@radix-ui/react-progress",
       "allowedCategories": [ "react" ]
     },
     {
@@ -80,6 +92,10 @@
     },
     {
       "name": "@radix-ui/react-toggle",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "@radix-ui/react-toggle-group",
       "allowedCategories": [ "react" ]
     },
     {
@@ -163,6 +179,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "date-fns",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "embla-carousel-react",
       "allowedCategories": [ "react" ]
     },
@@ -216,6 +236,10 @@
     },
     {
       "name": "react",
+      "allowedCategories": [ "react" ]
+    },
+    {
+      "name": "react-day-picker",
       "allowedCategories": [ "react" ]
     },
     {
