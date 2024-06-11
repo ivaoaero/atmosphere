@@ -183,6 +183,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "embla-carousel-react",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "eslint",
       "allowedCategories": [ "brand", "react", "tools" ]
     },
