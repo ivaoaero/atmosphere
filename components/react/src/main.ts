@@ -23,6 +23,8 @@ export { AlertDialog } from '@components/molecules/alert-dialog';
 export { Badge } from '@components/atoms/badge';
 export { Button } from '@components/atoms/button';
 export type { ButtonProps } from '@components/atoms/button';
+export { Calendar } from '@components/atoms/calendar';
+export type { CalendarProps } from '@components/atoms/calendar';
 export {
   CardRoot,
   CardHeader,
