@@ -48,6 +48,7 @@ export {
   CommandRoot,
   CommandDialogRoot,
   CommandEmpty,
+  CommandLoading,
   CommandGroup,
   CommandInput,
   CommandItem,

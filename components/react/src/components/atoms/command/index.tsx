@@ -1,3 +1,7 @@
+import { Command } from 'cmdk';
+
+export const CommandLoading = Command.Loading;
+
 export { CommandRoot } from '@components/atoms/command/CommandRoot';
 export { CommandDialogRoot } from '@components/atoms/command/CommandDialog';
 export { CommandEmpty } from '@components/atoms/command/CommandEmpty';
