@@ -11,13 +11,26 @@ export interface CommandProps
     Omit<ComponentPropsWithoutRef<typeof CommandRoot>, 'children'> {}
 
 export const Command = forwardRef<ElementRef<typeof CommandRoot>, CommandProps>(
-  ({ placeholder, emptyResult, inputProps, groups, ...props }, ref) => (
+  (
+    {
+      placeholder,
+      emptyResult,
+      inputProps,
+      groups,
+      isLoading,
+      loadingText,
+      ...props
+    },
+    ref,
+  ) => (
     <CommandRoot ref={ref} {...props}>
       <CommandContent
         placeholder={placeholder}
         emptyResult={emptyResult}
         inputProps={inputProps}
         groups={groups}
+        isLoading={isLoading}
+        loadingText={loadingText}
       />
     </CommandRoot>
   ),

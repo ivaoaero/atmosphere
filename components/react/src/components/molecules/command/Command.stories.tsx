@@ -46,3 +46,10 @@ export default meta;
 type Story = StoryObj<typeof Command>;
 
 export const Default = {} satisfies Story;
+
+export const Loading = {
+  args: {
+    isLoading: true,
+    loadingText: 'Loading...',
+  },
+} satisfies Story;
