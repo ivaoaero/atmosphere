@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/eslint-config",
+      "comment": "update dependencies",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ivaoaero/eslint-config"
+}

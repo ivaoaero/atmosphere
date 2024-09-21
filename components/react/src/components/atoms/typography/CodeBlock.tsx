@@ -6,7 +6,7 @@ import {
   useState,
 } from 'react';
 
-import { Checkmark, Copy } from '@carbon/icons-react';
+import { Check, Copy } from 'lucide-react';
 
 import { InlineCode } from '@components/atoms/typography/index';
 
@@ -53,7 +53,7 @@ const CopyToClipboardButton: ComponentType<{ text: string }> = ({ text }) => {
       )}
       onClick={handleCopy}
     >
-      {copied ? <Checkmark /> : <Copy />}
+      {copied ? <Check /> : <Copy />}
     </button>
   );
 };

@@ -3,10 +3,6 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
-      "name": "@carbon/icons-react",
-      "allowedCategories": [ "react" ]
-    },
-    {
       "name": "@ianvs/prettier-plugin-sort-imports",
       "allowedCategories": [ "brand", "react", "tools" ]
     },

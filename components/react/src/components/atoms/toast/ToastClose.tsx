@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
-import { CloseLarge } from '@carbon/icons-react';
 import { Close } from '@radix-ui/react-toast';
+import { X } from 'lucide-react';
 
 import { cn } from '@utils/styles';
 
@@ -26,7 +26,7 @@ export const ToastClose = forwardRef<
     >
       {children || (
         <span aria-hidden>
-          <CloseLarge className={'h-4 w-4'} />
+          <X className={'h-4 w-4'} />
         </span>
       )}
     </Close>

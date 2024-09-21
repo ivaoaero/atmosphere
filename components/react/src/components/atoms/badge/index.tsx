@@ -1,8 +1,8 @@
 import { ComponentType, forwardRef, Ref } from 'react';
 
-import { Close } from '@carbon/icons-react';
 import { VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
+import { X } from 'lucide-react';
 
 import { badgeVariants } from '@components/atoms/badge/badgeVariants';
 
@@ -42,7 +42,7 @@ const RemoveButton = forwardRef<HTMLButtonElement, RemoveButtonProps>(
       ref={ref}
     >
       <span className={'sr-only'}>Remove</span>
-      <Close
+      <X
         className={
           'h-3.5 w-3.5 scale-95 stroke-fuselage-450/50 transition-colors group-hover:stroke-fuselage-450 dark:stroke-white/20 group-hover:dark:stroke-fuselage-200'
         }
