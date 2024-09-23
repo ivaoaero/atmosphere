@@ -1,9 +1,10 @@
-import { ESLint } from 'eslint';
+import tailwind from 'eslint-plugin-tailwindcss';
+import tseslint from 'typescript-eslint';
 
-module.exports = {
-  extends: ['plugin:tailwindcss/recommended'],
-  plugins: ['tailwindcss'],
+import type { Config } from 'typescript-eslint';
+
+export default tseslint.config(...tailwind.configs['flat/recommended'], {
   rules: {
     'tailwindcss/classnames-order': 'error',
   },
-} satisfies ESLint.ConfigData;
+}) as Config[];

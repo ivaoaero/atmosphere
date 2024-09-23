@@ -1,26 +1,23 @@
-import { ESLint } from 'eslint';
+import { type Config } from 'typescript-eslint';
 
-module.exports = {
-  ignorePatterns: [
-    'node_modules/**/*',
-    'dist/**/*',
-    'build/**/*',
-    'storybook-static/**/*',
-  ],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:prettier/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    sourceType: 'module',
-    tsconfigRootDir: './',
-    project: ['./tsconfig.json'],
+import base from './base';
+import prettier from './prettier';
+import react from './react';
+import storybook from './storybook';
+import tailwind from './tailwind';
+
+export default {
+  configs: {
+    base,
+    prettier,
+    react,
+    storybook,
+    tailwind,
   },
-  plugins: ['@typescript-eslint', 'prettier'],
-  rules: {
-    'prettier/prettier': 'error',
+  setups: {
+    reactRecommended: [...base, ...prettier, ...react, ...tailwind],
   },
-} satisfies ESLint.ConfigData;
+} as {
+  configs: Record<'base' | 'react' | 'storybook' | 'tailwind', Config[]>;
+  setups: Record<'reactRecommended', Config[]>;
+};

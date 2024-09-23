@@ -5,17 +5,14 @@
     "declarationMap": false,
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "inlineSources": false,
-    "isolatedModules": true,
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
     "strict": true,
-    "outDir": "./",
-    "module": "CommonJS"
+    "module": "ESNext"
   },
-  "exclude": ["node_modules", "dist", "index.js"],
-  "include": ["src", ".eslintrc"]
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"]
 }

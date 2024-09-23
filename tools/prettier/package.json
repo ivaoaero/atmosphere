@@ -3,7 +3,17 @@
   "description": "IVAO prettier config.",
   "version": "2.1.0-next-9e7f354d26098c34101ef16b1c9163f25ef715c8",
   "main": "dist/index.js",
-  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./generateImportOrder": {
+      "types": "./dist/generateImportOrder.d.ts",
+      "default": "./dist/generateImportOrder.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -35,16 +45,15 @@
     "format": "prettier . --write --cache"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "7.18.0",
-    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@ivaoaero/eslint-config": "workspace:1.1.0-next-9e7f354d26098c34101ef16b1c9163f25ef715c8",
     "@types/node": "22.5.5",
-    "eslint": "8.57.1",
-    "eslint-plugin-prettier": "5.2.1",
+    "eslint": "9.11.0",
     "typescript": "5.6.2"
   },
   "peerDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.3.1",
-    "prettier": "3.3.3"
+    "prettier": "3.3.3",
+    "prettier-plugin-tailwindcss": "0.6.6"
   },
   "publishConfig": {
     "access": "public",

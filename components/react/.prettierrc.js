@@ -1,19 +1,15 @@
-import { default as ivaoPrettierConfig } from '@ivaoaero/prettier-config';
-import { default as generateImportOrder } from '@ivaoaero/prettier-config/dist/generateImportOrder.js';
+import { generateImportOrder } from '@ivaoaero/prettier-config/generateImportOrder';
 
-export default {
-  ...ivaoPrettierConfig,
-  ...generateImportOrder.default([
-    '@components',
-    '',
-    '@utils',
-    '@hooks',
-    '',
-    '@styles',
-    '',
-    'src',
-    'static',
-    '',
-    '@stories',
-  ]),
-};
+export default generateImportOrder([
+  '@components',
+  '',
+  '@utils',
+  '@hooks',
+  '',
+  '@styles',
+  '',
+  'src',
+  'static',
+  '',
+  '@stories',
+]);
