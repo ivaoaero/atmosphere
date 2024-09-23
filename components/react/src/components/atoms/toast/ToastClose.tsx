@@ -26,7 +26,7 @@ export const ToastClose = forwardRef<
     >
       {children || (
         <span aria-hidden>
-          <X className={'h-4 w-4'} />
+          <X className={'size-4'} />
         </span>
       )}
     </Close>

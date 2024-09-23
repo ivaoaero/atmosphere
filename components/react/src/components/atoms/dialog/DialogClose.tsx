@@ -18,8 +18,8 @@ export const DialogTopRightClose = forwardRef<
       )}
       {...props}
     >
-      <X className="h-4 w-4" />
-      <span className="sr-only">Close</span>
+      <X className={'size-4'} />
+      <span className={'sr-only'}>Close</span>
     </Close>
   );
 });

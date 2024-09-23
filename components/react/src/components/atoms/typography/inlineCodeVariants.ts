@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority';
 
 export const inlineCodeVariants = cva(
-  'relative rounded px-2 py-1 font-mono text-sm ',
+  'relative rounded px-2 py-1 font-mono text-sm',
   {
     variants: {
       background: {

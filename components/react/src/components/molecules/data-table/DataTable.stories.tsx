@@ -102,15 +102,15 @@ const columns: ColumnDef<Task>[] = [
           (table.getIsSomePageRowsSelected() && 'indeterminate')
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-        className="translate-y-[2px]"
+        aria-label={'Select all'}
+        className={'translate-y-[2px]'}
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
+        aria-label={'Select row'}
         className="translate-y-[2px]"
       />
     ),
@@ -161,7 +161,7 @@ const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex w-[100px] items-center">
           {status.icon && (
-            <status.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+            <status.icon className="mr-2 size-4 text-muted-foreground" />
           )}
           <span>{status.label}</span>
         </div>
@@ -188,7 +188,7 @@ const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex items-center">
           {priority.icon && (
-            <priority.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+            <priority.icon className="mr-2 size-4 text-muted-foreground" />
           )}
           <span>{priority.label}</span>
         </div>

@@ -6,7 +6,7 @@ import { IconButton } from '@components/atoms/icon-button';
 
 import { useTheme } from '@hooks/useTheme';
 
-interface DarkModeToggleProps extends ComponentProps<typeof IconButton> {}
+type DarkModeToggleProps = ComponentProps<typeof IconButton>;
 
 export const DarkModeToggle: ComponentType<DarkModeToggleProps> = (props) => {
   const { toggleTheme, theme } = useTheme();
