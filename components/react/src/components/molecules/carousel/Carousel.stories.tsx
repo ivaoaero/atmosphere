@@ -7,7 +7,7 @@ const meta = {
   component: Carousel,
   tags: ['autodocs'],
   decorators: (Story) => (
-    <div className="max-w-md m-auto">
+    <div className={'m-auto max-w-md'}>
       <Story />
     </div>
   ),

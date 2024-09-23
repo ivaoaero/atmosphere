@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useId, useState } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -28,14 +28,19 @@ export const DefaultActivePage = {
 export const ActivePageManaged = {
   decorators: (Story) => {
     const [activePage, setActivePage] = useState(5);
+    const id = useId();
+
     return (
       <div>
         <div className="flex justify-center gap-2">
-          <label className="mr-2">Active page:</label>
+          <label htmlFor={id} className="mr-2">
+            Active page:
+          </label>
           <input
+            id={id}
             type="number"
             value={activePage}
-            className="w-12 h-8 text-center"
+            className="h-8 w-12 text-center"
             onChange={(e) => setActivePage(parseInt(e.currentTarget.value))}
           />
         </div>

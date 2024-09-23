@@ -16,10 +16,10 @@ export const CodeBlock = forwardRef<
   HTMLElement,
   ComponentPropsWithoutRef<'code'>
 >(({ ...props }, ref) => (
-  <div className={'w-full relative flex '}>
+  <div className={'relative flex w-full'}>
     <div
       className={
-        'relative p-3 font-mono text-sm grow overflow-x-auto rounded bg-fuselage-200/10 dark:bg-fuselage-800'
+        'relative grow overflow-x-auto rounded bg-fuselage-200/10 p-3 font-mono text-sm dark:bg-fuselage-800'
       }
     >
       <InlineCode
@@ -46,10 +46,10 @@ const CopyToClipboardButton: ComponentType<{ text: string }> = ({ text }) => {
     <button
       type={'button'}
       className={cn(
-        'absolute top-1.5 right-2 p-2 rounded-md backdrop-blur-sm transition-colors duration-300 z-10',
+        'absolute right-2 top-1.5 z-10 rounded-md p-2 backdrop-blur-sm transition-colors duration-300',
         copied
-          ? 'text-white bg-semantic-green-500 dark:text-semantic-green-500 dark:bg-semantic-green-500/10'
-          : 'text-fuselage-250 dark:text-fuselage-600 hover:text-fuselage-400 hover:dark:text-fuselage-250 bg-fuselage-200/10 hover:bg-fuselage-200/75 dark:bg-fuselage-800/80 hover:dark:bg-fuselage-700',
+          ? 'bg-semantic-green-500 text-white dark:bg-semantic-green-500/10 dark:text-semantic-green-500'
+          : 'bg-fuselage-200/10 text-fuselage-250 hover:bg-fuselage-200/75 hover:text-fuselage-400 dark:bg-fuselage-800/80 dark:text-fuselage-600 hover:dark:bg-fuselage-700 hover:dark:text-fuselage-250',
       )}
       onClick={handleCopy}
     >

@@ -48,44 +48,44 @@ export const GroupedWithIconsAndShortcuts = {
       [
         {
           label: 'Profile',
-          icon: <User className="mr-2 h-4 w-4" />,
+          icon: <User className="mr-2 size-4" />,
           shortcut: '⇧⌘P',
         },
         {
           label: 'Billing',
-          icon: <CreditCard className="mr-2 h-4 w-4" />,
+          icon: <CreditCard className="mr-2 size-4" />,
           shortcut: '⇧⌘B',
         },
         {
           label: 'Settings',
-          icon: <Settings className="mr-2 h-4 w-4" />,
+          icon: <Settings className="mr-2 size-4" />,
           shortcut: '⌘S',
         },
       ],
       [
         {
           label: 'Team',
-          icon: <Users className="mr-2 h-4 w-4" />,
+          icon: <Users className="mr-2 size-4" />,
         },
         {
           label: 'Invite Users',
-          icon: <UserPlus className="mr-2 h-4 w-4" />,
+          icon: <UserPlus className="mr-2 size-4" />,
           subItems: [
             {
               label: 'Email',
 
-              icon: <Mail className="mr-2 h-4 w-4" />,
+              icon: <Mail className="mr-2 size-4" />,
             },
             {
               label: 'Message',
 
-              icon: <MessageSquare className="mr-2 h-4 w-4" />,
+              icon: <MessageSquare className="mr-2 size-4" />,
             },
           ],
         },
         {
           label: 'New Team',
-          icon: <Plus className="mr-2 h-4 w-4" />,
+          icon: <Plus className="mr-2 size-4" />,
           shortcut: '⌘+T',
           disabled: true,
         },
@@ -146,27 +146,27 @@ export const Mixed = {
       [
         {
           label: 'Team',
-          icon: <Users className="mr-2 h-4 w-4" />,
+          icon: <Users className="mr-2 size-4" />,
         },
         {
           label: 'Invite Users',
-          icon: <UserPlus className="mr-2 h-4 w-4" />,
+          icon: <UserPlus className="mr-2 size-4" />,
           subItems: [
             {
               label: 'Email',
 
-              icon: <Mail className="mr-2 h-4 w-4" />,
+              icon: <Mail className="mr-2 size-4" />,
             },
             {
               label: 'Message',
 
-              icon: <MessageSquare className="mr-2 h-4 w-4" />,
+              icon: <MessageSquare className="mr-2 size-4" />,
             },
           ],
         },
         {
           label: 'New Team',
-          icon: <Plus className="mr-2 h-4 w-4" />,
+          icon: <Plus className="mr-2 size-4" />,
           shortcut: '⌘+T',
           disabled: true,
         },

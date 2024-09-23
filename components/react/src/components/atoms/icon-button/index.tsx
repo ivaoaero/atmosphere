@@ -14,9 +14,9 @@ export const IconButton = forwardRef<
 >(({ children, className, ...props }, ref) => (
   <Button
     ref={ref}
-    type="button"
+    type={'button'}
     className={cn(
-      'dark:text-fuselage-300 text-ocean-100 hover:text-ocean-50 hover:bg-ocean-600 flex gap-1 items-center dark:hover:bg-fuselage-700 dark:hover:text-fuselage-100 rounded-md p-1.5 transition-all',
+      'flex items-center gap-1 rounded-md p-1.5 text-ocean-100 transition-all hover:bg-ocean-600 hover:text-ocean-50 dark:text-fuselage-300 dark:hover:bg-fuselage-700 dark:hover:text-fuselage-100',
       className,
     )}
     {...props}
