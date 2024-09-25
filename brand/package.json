@@ -1,7 +1,7 @@
 {
   "name": "@ivaoaero/atmosphere-brand",
   "description": "IVAO Atmosphere design system brand package.",
-  "version": "1.1.0-next-9e7f354d26098c34101ef16b1c9163f25ef715c8",
+  "version": "1.1.0-next-1b6579981ec4e7ceb08715a0bb1af1ade8c10544",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -43,8 +43,8 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.3.1",
-    "@ivaoaero/eslint-config": "workspace:1.1.0-next-9e7f354d26098c34101ef16b1c9163f25ef715c8",
-    "@ivaoaero/prettier-config": "workspace:2.1.0-next-9e7f354d26098c34101ef16b1c9163f25ef715c8",
+    "@ivaoaero/eslint-config": "workspace:2.0.0-next-1b6579981ec4e7ceb08715a0bb1af1ade8c10544",
+    "@ivaoaero/prettier-config": "workspace:2.1.0-next-1b6579981ec4e7ceb08715a0bb1af1ade8c10544",
     "eslint": "9.11.0",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.6",
