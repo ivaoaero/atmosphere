@@ -16,8 +16,9 @@ export default {
   },
   setups: {
     reactRecommended: [...base, ...prettier, ...react, ...tailwind],
+    reactRecommendedNoPrettier: [...base, ...react, ...tailwind],
   },
 } as {
-  configs: Record<'base' | 'react' | 'storybook' | 'tailwind', Config[]>;
+  configs: Record<'base' | 'prettier' | 'react' | 'storybook' | 'tailwind', Config[]>;
   setups: Record<'reactRecommended', Config[]>;
 };
