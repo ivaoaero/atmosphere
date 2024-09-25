@@ -35,13 +35,13 @@ export const Dialog = ({
       {trigger && (
         <DialogTrigger asChild>
           {typeof trigger === 'string' ? (
-            <Button variant="outline">{trigger}</Button>
+            <Button variant={'outline'}>{trigger}</Button>
           ) : (
             trigger
           )}
         </DialogTrigger>
       )}
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className={'sm:max-w-md'}>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
           {description && <DialogDescription>{description}</DialogDescription>}

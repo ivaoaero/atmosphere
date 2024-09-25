@@ -3,8 +3,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
-      "name": "@carbon/icons-react",
-      "allowedCategories": [ "react" ]
+      "name": "@eslint/compat",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "@eslint/js",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "@ianvs/prettier-plugin-sort-imports",
@@ -16,7 +20,7 @@
     },
     {
       "name": "@ivaoaero/eslint-config",
-      "allowedCategories": [ "brand", "react" ]
+      "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
       "name": "@ivaoaero/prettier-config",
@@ -223,6 +227,10 @@
       "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
+      "name": "globals",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "lucide-react",
       "allowedCategories": [ "react" ]
     },
@@ -232,6 +240,10 @@
     },
     {
       "name": "prettier",
+      "allowedCategories": [ "brand", "react", "tools" ]
+    },
+    {
+      "name": "prettier-plugin-tailwindcss",
       "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
@@ -276,11 +288,15 @@
     },
     {
       "name": "tsup",
-      "allowedCategories": [ "brand" ]
+      "allowedCategories": [ "brand", "tools" ]
     },
     {
       "name": "typescript",
       "allowedCategories": [ "brand", "react", "tools" ]
+    },
+    {
+      "name": "typescript-eslint",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "vite",

@@ -20,10 +20,10 @@ export function DataTableRowActions({ actions }: DataTableRowActionsProps) {
     <DropdownMenuRoot>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="ghost"
-          className="flex h-8 w-8 p-0 data-[state=open]:bg-muted"
+          variant={'ghost'}
+          className="flex size-8 p-0 data-[state=open]:bg-muted"
         >
-          <Ellipsis className="h-4 w-4" />
+          <Ellipsis className="size-4" />
           <span className="sr-only">Open actions</span>
         </Button>
       </DropdownMenuTrigger>
