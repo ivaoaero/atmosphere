@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "migrate to eslintv9",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}

@@ -17,7 +17,7 @@ export const Progress = forwardRef<
     {...props}
   >
     <Indicator
-      className="h-full w-full flex-1 bg-primary transition-all"
+      className={'size-full flex-1 bg-primary transition-all'}
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />
   </Root>

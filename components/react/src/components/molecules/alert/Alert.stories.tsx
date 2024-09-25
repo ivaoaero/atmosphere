@@ -20,7 +20,6 @@ const meta = {
       options: ['default', 'success', 'destructive'],
     },
     Icon: {
-      control: 'none',
       description: 'Default classNames: "h-4 w-4"',
     },
   },

@@ -17,8 +17,8 @@ export function DataTableToolbar<TData>({
 }: DataTableToolbarProps<TData>) {
   if (!enableViewOptions && !ToolbarContent) return <></>;
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex flex-1 items-center space-x-2">
+    <div className={'flex items-center justify-between'}>
+      <div className={'flex flex-1 items-center space-x-2'}>
         {ToolbarContent && <ToolbarContent table={table} />}
       </div>
       {enableViewOptions && <DataTableViewOptions table={table} />}

@@ -9,13 +9,13 @@ export const PaginationEllipsis = ({
   ...props
 }: ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
-    aria-label="Go to next page"
+    aria-label={'Go to next page'}
     className={className}
-    size="icon"
+    size={'icon'}
     {...props}
   >
-    <MoreHorizontal className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
+    <MoreHorizontal className={'size-4'} />
+    <span className={'sr-only'}>More pages</span>
   </PaginationLink>
 );
 PaginationEllipsis.displayName = 'PaginationEllipsis';

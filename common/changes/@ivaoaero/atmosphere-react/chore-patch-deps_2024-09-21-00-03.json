@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/atmosphere-react",
+      "comment": "update dependencies",
+      "type": "major"
+    }
+  ],
+  "packageName": "@ivaoaero/atmosphere-react"
+}
