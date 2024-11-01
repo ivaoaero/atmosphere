@@ -1,3 +1,14 @@
+export {
+  AccordionRoot,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@components/atoms/accordion';
+export { Accordion } from '@components/molecules/accordion';
+export type {
+  AccordionProps,
+  AccordionItemProps,
+} from '@components/molecules/accordion';
 export { alertVariants } from '@components/atoms/alert/alertVariants';
 export {
   AlertRoot,
