@@ -51,5 +51,6 @@ export const Loading = {
   args: {
     isLoading: true,
     loadingText: 'Loading...',
+    groups: [],
   },
 } satisfies Story;
