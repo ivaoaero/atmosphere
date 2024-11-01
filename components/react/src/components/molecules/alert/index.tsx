@@ -15,7 +15,7 @@ export interface AlertProps
 
 export const Alert = ({ title, description, Icon, ...props }: AlertProps) => (
   <AlertRoot {...props}>
-    {Icon && <Icon className="h-4 w-4" />}
+    {Icon && <Icon className={'size-4'} />}
     <AlertTitle>{title}</AlertTitle>
     {description && <AlertDescription>{description}</AlertDescription>}
   </AlertRoot>

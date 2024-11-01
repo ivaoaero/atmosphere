@@ -35,11 +35,11 @@ export function DataTableViewOptions<TData>({
     <DropdownMenuRoot>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="outline"
+          variant={'outline'}
           size="sm"
           className="ml-auto hidden h-8 lg:flex"
         >
-          <Settings2 className="mr-2 h-4 w-4" />
+          <Settings2 className="mr-2 size-4" />
           View
         </Button>
       </DropdownMenuTrigger>

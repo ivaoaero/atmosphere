@@ -38,7 +38,6 @@ const meta = {
     },
     onClick: {
       action: 'clicked',
-      control: 'none',
     },
   },
 } satisfies Meta<typeof Button>;

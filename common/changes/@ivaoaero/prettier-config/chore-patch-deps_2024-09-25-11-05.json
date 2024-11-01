@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ivaoaero/prettier-config",
+      "comment": "migrate to eslintv9",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ivaoaero/prettier-config"
+}

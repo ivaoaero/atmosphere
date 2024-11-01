@@ -36,7 +36,6 @@ const meta = {
     action: {
       name: 'Action',
       description: 'Action to trigger a toast.',
-      control: 'none',
     },
     actionAltText: {
       name: 'Action Alt Text',
@@ -53,7 +52,6 @@ const meta = {
       name: 'Toast Props',
       description:
         'Props to pass to the toast. See https://www.radix-ui.com/primitives/docs/components/toast#root for more details.',
-      control: 'none',
     },
   },
 } satisfies Meta<typeof Toast>;
