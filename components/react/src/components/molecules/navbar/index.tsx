@@ -14,13 +14,13 @@ export const Navbar: ComponentType<PropsWithChildren<NavbarProps>> = ({
 }) => {
   return (
     <NavbarContainer>
-      <div className="flex items-center gap-3">
-        <IVAOLogo color="white" />
-        <div className="dark:bg-fuselage-200 bg-atmos-50 h-6 w-0.5" />
-        <span className="text-lg font-semibold text-white">{title}</span>
+      <div className={'flex items-center gap-3'}>
+        <IVAOLogo color={'white'} />
+        <div className={'h-6 w-0.5 bg-atmos-50 dark:bg-fuselage-200'} />
+        <span className={'text-lg font-semibold text-white'}>{title}</span>
       </div>
 
-      <div className="flex items-center gap-1">{children}</div>
+      <div className={'flex items-center gap-1'}>{children}</div>
     </NavbarContainer>
   );
 };

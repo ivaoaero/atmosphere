@@ -22,7 +22,7 @@ interface DropdownMenuButtonItemProps
   extends Omit<ComponentProps<typeof DropdownMenuItem>, 'children'> {
   label: ReactNode;
   shortcut?: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   subItems?: DropdownMenuButtonItemProps[];
 }
 
@@ -55,8 +55,8 @@ export type DropdownMenuItemsProps =
 
 export interface DropdownMenuProps
   extends Omit<ComponentProps<typeof DropdownMenuRoot>, 'children'> {
-  trigger: React.ReactNode;
-  label?: string;
+  trigger: ReactNode;
+  label?: ReactNode;
   items: DropdownMenuItemsProps;
 }
 

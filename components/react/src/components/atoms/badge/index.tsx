@@ -1,8 +1,8 @@
 import { ComponentType, forwardRef, Ref } from 'react';
 
-import { Close } from '@carbon/icons-react';
 import { VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
+import { X } from 'lucide-react';
 
 import { badgeVariants } from '@components/atoms/badge/badgeVariants';
 
@@ -24,7 +24,7 @@ interface RemoveButtonProps {
 
 const Dot: ComponentType = () => {
   return (
-    <svg className={'h-1.5 w-1.5'} viewBox={'0 0 6 6'} aria-hidden={'true'}>
+    <svg className={'size-1.5'} viewBox={'0 0 6 6'} aria-hidden={'true'}>
       <circle cx={3} cy={3} r={3} />
     </svg>
   );
@@ -36,15 +36,15 @@ const RemoveButton = forwardRef<HTMLButtonElement, RemoveButtonProps>(
       type={'button'}
       onClick={callback}
       className={clsx(
-        'group relative -mr-0.5 h-3.5 w-3.5 hover:bg-fuselage-500/10 dark:hover:bg-white/5',
+        'group relative -mr-0.5 size-3.5 hover:bg-fuselage-500/10 dark:hover:bg-white/5',
         isPill ? 'rounded-full' : 'rounded-sm',
       )}
       ref={ref}
     >
       <span className={'sr-only'}>Remove</span>
-      <Close
+      <X
         className={
-          'h-3.5 w-3.5 scale-95 stroke-fuselage-450/50 transition-colors group-hover:stroke-fuselage-450 dark:stroke-white/20 group-hover:dark:stroke-fuselage-200'
+          'size-3.5 scale-95 stroke-fuselage-450/50 transition-colors group-hover:stroke-fuselage-450 dark:stroke-white/20 group-hover:dark:stroke-fuselage-200'
         }
       />
       <span className={'absolute -inset-1'} />

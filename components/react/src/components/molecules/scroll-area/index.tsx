@@ -18,7 +18,7 @@ export const ScrollArea = forwardRef<
     className={cn('relative overflow-hidden', className)}
     {...props}
   >
-    <ScrollAreaViewport className="h-full w-full rounded-[inherit]">
+    <ScrollAreaViewport className={'size-full rounded-[inherit]'}>
       {children}
     </ScrollAreaViewport>
     <ScrollBar />

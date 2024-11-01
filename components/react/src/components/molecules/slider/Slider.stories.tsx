@@ -17,7 +17,7 @@ const meta = {
     defaultValue: {
       name: 'defaultValue',
       description: 'The default value of the slider.',
-      control: { type: 'array' },
+      // control: { type: 'array' },
     },
     min: {
       name: 'min',

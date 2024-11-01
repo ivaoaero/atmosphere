@@ -35,7 +35,7 @@
       "static/*": ["../static/*"]
     }
   },
-  "include": ["src", "*.config.ts", "*.config.js", "generate-colors-css.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -43,7 +43,7 @@ export const SidebarItem = ({
     <LinkComponent
       href={href}
       className={cn(
-        'flex dark:text-fuselage-400 text-fuselage-300 group',
+        'group flex text-fuselage-300 dark:text-fuselage-400',
         className,
       )}
       {...props}
@@ -53,7 +53,7 @@ export const SidebarItem = ({
           'rounded-md p-2 transition-all',
           isActive
             ? 'bg-semantic-green-500 text-white dark:bg-semantic-green-500/10 dark:text-semantic-green-500'
-            : 'bg-fuselage-50/40 text-fuselage-300 dark:text-fuselage-400 dark:bg-fuselage-700 group-hover:text-fuselage-400 group-hover:bg-fuselage-50/75 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
+            : 'bg-fuselage-50/40 text-fuselage-300 group-hover:bg-fuselage-50/75 group-hover:text-fuselage-400 dark:bg-fuselage-700 dark:text-fuselage-400 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
         )}
       >
         <Icon />
@@ -61,14 +61,18 @@ export const SidebarItem = ({
 
       <div
         className={cn(
-          'transition-all flex flex-col items-start shrink-0 whitespace-nowrap',
-          isSidebarOpen ? 'w-48 opacity-100 ml-4' : 'w-0 opacity-0 invisible',
+          'flex shrink-0 flex-col items-start whitespace-nowrap transition-all',
+          isSidebarOpen ? 'ml-4 w-48 opacity-100' : 'invisible w-0 opacity-0',
         )}
       >
-        <span className="font-semibold font-head dark:text-fuselage-50 text-fuselage-500 leading-tight">
+        <span
+          className={
+            'font-head font-semibold leading-tight text-fuselage-500 dark:text-fuselage-50'
+          }
+        >
           {title}
         </span>
-        <span className="text-sm">{description}</span>
+        <span className={'text-sm'}>{description}</span>
       </div>
     </LinkComponent>
   );

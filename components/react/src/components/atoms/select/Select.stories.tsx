@@ -23,7 +23,6 @@ const meta = {
     items: {
       name: 'Items',
       description: 'List of items to select from.',
-      control: 'none',
     },
     open: {
       name: 'Open',

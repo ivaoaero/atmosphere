@@ -23,6 +23,9 @@ export { AlertDialog } from '@components/molecules/alert-dialog';
 export { Badge } from '@components/atoms/badge';
 export { Button } from '@components/atoms/button';
 export type { ButtonProps } from '@components/atoms/button';
+export { Calendar } from '@components/atoms/calendar';
+export type { DateRange } from 'react-day-picker';
+export type { CalendarProps } from '@components/atoms/calendar';
 export {
   CardRoot,
   CardHeader,
@@ -31,6 +34,16 @@ export {
   CardDescription,
   CardContent,
 } from '@components/atoms/card';
+export {
+  CarouselRoot,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  CarouselContent,
+} from '@components/atoms/carousel';
+export type { CarouselApi } from '@components/atoms/carousel';
+export { Carousel } from '@components/molecules/carousel';
+export type { CarouselProps } from '@components/molecules/carousel';
 export {
   Checkbox,
   CheckboxRoot,

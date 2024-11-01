@@ -190,3 +190,8 @@ Temporary Items
 # build outputs
 dist
 build
+
+/index.js
+/react.js
+/storybook.js
+/tailwind.js

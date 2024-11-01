@@ -11,12 +11,12 @@ export const PaginationPrevious = ({
   ...props
 }: ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
-    aria-label="Go to previous page"
+    aria-label={'Go to previous page'}
     className={cn('gap-1 pl-2.5', className)}
-    size="md"
+    size={'md'}
     {...props}
   >
-    <ChevronLeft className="h-4 w-4" />
+    <ChevronLeft className={'size-4'} />
     <span>Previous</span>
   </PaginationLink>
 );
@@ -27,13 +27,13 @@ export const PaginationNext = ({
   ...props
 }: ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
-    aria-label="Go to next page"
+    aria-label={'Go to next page'}
     className={cn('gap-1 pr-2.5', className)}
-    size="md"
+    size={'md'}
     {...props}
   >
     <span>Next</span>
-    <ChevronRight className="h-4 w-4" />
+    <ChevronRight className={'size-4'} />
   </PaginationLink>
 );
 PaginationNext.displayName = 'PaginationNext';

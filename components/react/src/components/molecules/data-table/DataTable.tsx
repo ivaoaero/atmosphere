@@ -53,13 +53,13 @@ export const DataTable = <TData,>({
   });
 
   return (
-    <div className="space-y-4">
+    <div className={'space-y-4'}>
       <DataTableToolbar
         table={table}
         ToolbarContent={ToolbarContent}
         displayViewOptions={displayViewOptions}
       />
-      <div className="rounded-md border">
+      <div className={'rounded-md border'}>
         <TableRoot>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
