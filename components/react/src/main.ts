@@ -57,6 +57,8 @@ export {
 } from '@components/atoms/collapsible';
 export { Collapsible } from '@components/molecules/collapsible';
 export type { CollapsibleProps } from '@components/molecules/collapsible';
+export { DatePicker } from '@components/molecules/date-picker';
+export type { DatePickerProps } from '@components/molecules/date-picker';
 export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 export {
   DialogRoot,
