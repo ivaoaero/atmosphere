@@ -15,9 +15,14 @@ import { cn } from '@utils/styles';
 
 export type DatePickerProps = CalendarProps & {
   trigger?: ReactNode;
+  disabled?: boolean;
 };
 
-export const DatePicker = ({ trigger, ...props }: DatePickerProps) => {
+export const DatePicker = ({
+  trigger,
+  disabled,
+  ...props
+}: DatePickerProps) => {
   const SelectedDateOrDefault = () => {
     if (props.mode === 'range' && props.selected?.from && props.selected?.to) {
       return `${format(props.selected.from, 'PPP')} - ${format(props.selected.to, 'PPP')}`;
@@ -29,7 +34,7 @@ export const DatePicker = ({ trigger, ...props }: DatePickerProps) => {
   };
   return (
     <PopoverRoot>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild disabled={disabled}>
         {trigger || (
           <Button
             variant="outline"

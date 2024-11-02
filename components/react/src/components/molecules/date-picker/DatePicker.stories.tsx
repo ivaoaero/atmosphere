@@ -32,3 +32,9 @@ export const CustomTrigger = {
     trigger: <Button>Custom Trigger</Button>,
   },
 } satisfies Story;
+
+export const Disabled = {
+  args: {
+    disabled: true,
+  },
+} satisfies Story;
