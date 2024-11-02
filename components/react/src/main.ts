@@ -1,3 +1,14 @@
+export {
+  AccordionRoot,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@components/atoms/accordion';
+export { Accordion } from '@components/molecules/accordion';
+export type {
+  AccordionProps,
+  AccordionItemProps,
+} from '@components/molecules/accordion';
 export { alertVariants } from '@components/atoms/alert/alertVariants';
 export {
   AlertRoot,
@@ -80,6 +91,8 @@ export type {
   CommandSeparatorProps,
   CommandContentProps,
 } from '@components/molecules/command/CommandContent';
+export { DatePicker } from '@components/molecules/date-picker';
+export type { DatePickerProps } from '@components/molecules/date-picker';
 export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 export {
   DialogRoot,

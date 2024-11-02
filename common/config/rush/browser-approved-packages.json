@@ -27,6 +27,10 @@
       "allowedCategories": [ "brand", "react", "tools" ]
     },
     {
+      "name": "@radix-ui/react-accordion",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-alert-dialog",
       "allowedCategories": [ "react" ]
     },
