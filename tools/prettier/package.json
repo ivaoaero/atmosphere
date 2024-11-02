@@ -1,7 +1,7 @@
 {
   "name": "@ivaoaero/prettier-config",
   "description": "IVAO prettier config.",
-  "version": "2.1.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6",
+  "version": "2.1.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -45,7 +45,7 @@
     "format": "prettier . --write --cache"
   },
   "devDependencies": {
-    "@ivaoaero/eslint-config": "workspace:2.0.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6",
+    "@ivaoaero/eslint-config": "workspace:2.0.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0",
     "@types/node": "22.5.5",
     "eslint": "9.11.0",
     "typescript": "5.6.2"
