@@ -18,7 +18,7 @@ export const Command = forwardRef<ElementRef<typeof CommandRoot>, CommandProps>(
       inputProps,
       groups,
       isLoading,
-      loadingText,
+      loadingNode = 'Loading...',
       ...props
     },
     ref,
@@ -30,7 +30,7 @@ export const Command = forwardRef<ElementRef<typeof CommandRoot>, CommandProps>(
         inputProps={inputProps}
         groups={groups}
         isLoading={isLoading}
-        loadingText={loadingText}
+        loadingNode={loadingNode}
       />
     </CommandRoot>
   ),
