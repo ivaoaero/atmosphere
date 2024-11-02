@@ -15,7 +15,7 @@ export const CommandDialog = ({
   inputProps,
   groups,
   isLoading,
-  loadingText,
+  loadingNode,
   ...props
 }: CommandDialogProps) => (
   <CommandDialogRoot {...props}>
@@ -25,7 +25,7 @@ export const CommandDialog = ({
       inputProps={inputProps}
       groups={groups}
       isLoading={isLoading}
-      loadingText={loadingText}
+      loadingNode={loadingNode}
     />
   </CommandDialogRoot>
 );

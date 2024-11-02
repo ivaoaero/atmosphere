@@ -50,7 +50,7 @@ export const Default = {} satisfies Story;
 export const Loading = {
   args: {
     isLoading: true,
-    loadingText: 'Loading...',
+    loadingNode: 'Loading...',
     groups: [],
   },
 } satisfies Story;

@@ -25,7 +25,7 @@ export interface CommandContentProps {
   inputProps: ComponentPropsWithoutRef<typeof CommandInput>;
   groups: CommandGroupOrSeparator[];
   isLoading?: boolean;
-  loadingText?: ReactNode;
+  loadingNode?: ReactNode;
 }
 
 const isGroupSeparator = (
@@ -38,14 +38,14 @@ export const CommandContent = ({
   inputProps,
   groups,
   isLoading,
-  loadingText,
+  loadingNode,
 }: CommandContentProps) => {
   return (
     <>
       <CommandInput placeholder={placeholder} {...inputProps} />
       <CommandList>
         {isLoading ? (
-          <CommandEmpty>{loadingText}</CommandEmpty>
+          <CommandEmpty>{loadingNode}</CommandEmpty>
         ) : (
           <CommandEmpty>{emptyResult}</CommandEmpty>
         )}
