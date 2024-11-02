@@ -1,7 +1,7 @@
 {
   "name": "@ivaoaero/eslint-config",
   "description": "IVAO eslint config.",
-  "version": "2.0.0-next-1b6579981ec4e7ceb08715a0bb1af1ade8c10544",
+  "version": "2.0.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
