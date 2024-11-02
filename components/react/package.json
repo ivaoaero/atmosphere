@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@ivaoaero/atmosphere-brand": "workspace:1.1.0-next-1b6579981ec4e7ceb08715a0bb1af1ade8c10544",
+    "@radix-ui/react-accordion": "1.2.1",
     "@radix-ui/react-alert-dialog": "1.1.1",
     "@radix-ui/react-checkbox": "1.1.1",
     "@radix-ui/react-collapsible": "1.1.0",
