@@ -187,6 +187,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "cmdk",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "date-fns",
       "allowedCategories": [ "react" ]
     },
