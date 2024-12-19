@@ -16,10 +16,10 @@ importers:
         specifier: 4.3.1
         version: 4.3.1(prettier@3.3.3)
       '@ivaoaero/eslint-config':
-        specifier: workspace:2.0.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6
+        specifier: workspace:2.0.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0
         version: link:../tools/eslint
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6
+        specifier: workspace:2.1.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0
         version: link:../tools/prettier
       eslint:
         specifier: 9.11.0
@@ -40,7 +40,7 @@ importers:
   ../../components/react:
     dependencies:
       '@ivaoaero/atmosphere-brand':
-        specifier: workspace:1.1.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6
+        specifier: workspace:1.1.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0
         version: link:../../brand
       '@radix-ui/react-accordion':
         specifier: 1.2.1
@@ -146,10 +146,10 @@ importers:
         specifier: 4.3.1
         version: 4.3.1(prettier@3.3.3)
       '@ivaoaero/eslint-config':
-        specifier: workspace:2.0.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6
+        specifier: workspace:2.0.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0
         version: link:../../tools/eslint
       '@ivaoaero/prettier-config':
-        specifier: workspace:2.1.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6
+        specifier: workspace:2.1.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0
         version: link:../../tools/prettier
       '@storybook/addon-essentials':
         specifier: 8.3.2
@@ -325,7 +325,7 @@ importers:
         version: 0.6.6(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier@3.3.3)
     devDependencies:
       '@ivaoaero/eslint-config':
-        specifier: workspace:2.0.0-next-0472f2417b5748be5ddfb6817ed856a75f4a5ca6
+        specifier: workspace:2.0.0-next-4776627cfc633509a4012a5e322d5e09ddfbe5e0
         version: link:../eslint
       '@types/node':
         specifier: 22.5.5
