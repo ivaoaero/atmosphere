@@ -1,5 +1,5 @@
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { themes } from '@storybook/theming';
+import { background, themes } from '@storybook/theming';
 
 import type { Preview, ReactRenderer } from '@storybook/react';
 
@@ -19,6 +19,13 @@ const preview: Preview = {
     docs: {
       theme: themes.dark,
     },
+    backgrounds: {
+      default: 'light',
+      values: [
+        { name: 'light', value: `rgb(var(--background))` },
+        { name: 'dark', value: `rgb(var(--background))` },
+      ]
+    }
   },
 };
 
