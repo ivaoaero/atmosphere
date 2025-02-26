@@ -132,6 +132,13 @@ export type {
   DropdownMenuProps,
   DropdownMenuItemsProps,
 } from '@components/molecules/dropdown-menu';
+export {
+  HoverCardRoot,
+  HoverCardTrigger,
+  HoverCardContent,
+} from '@components/atoms/hover-card';
+export { HoverCard } from '@components/molecules/hover-card';
+export type { HoverCardProps } from '@components/molecules/hover-card';
 export { IconButton } from '@components/atoms/icon-button';
 export { Input } from '@components/atoms/input';
 export { IVAOLogo } from '@components/atoms/ivao-logo';

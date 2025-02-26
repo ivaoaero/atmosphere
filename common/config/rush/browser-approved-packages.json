@@ -51,6 +51,10 @@
       "allowedCategories": [ "react" ]
     },
     {
+      "name": "@radix-ui/react-hover-card",
+      "allowedCategories": [ "react" ]
+    },
+    {
       "name": "@radix-ui/react-label",
       "allowedCategories": [ "react" ]
     },
