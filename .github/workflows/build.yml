@@ -1,31 +1,39 @@
-name: Build
+name: _reusable build workflow
+
 on:
-  push:
-    branches: [ "main", "develop" ]
+  workflow_call:
+    inputs:
+      package:
+        type: string
+        required: true
+        description: 'Which package to build'
 
 jobs:
   build:
-    name: Build
+    name: Build TypeScript files
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      - name: Git config user
-        uses: snow-actions/git-config-user@v1.0.0
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
         with:
-          name: AtmospherePublishBot
-          email: atmosphere-publish@ivao.aero
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
+          node-version: 22
           registry-url: 'https://npm.pkg.github.com'
           scope: '@ivaoaero'
-      - uses: actions/cache@v3
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+
+      - name: Build config package
+        run: pnpm -r --filter="${{ inputs.package }}" build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
         with:
-          path: common/temp/pnpm-store
-          key: common/config/rush/pnpm-lock.yaml
-      - name: Rush Install
-        run: node common/scripts/install-run-rush.js install
-      - name: Rush build
-        run: node common/scripts/install-run-rush.js rebuild --verbose
+          name: eslint-config-build
+          path: dist

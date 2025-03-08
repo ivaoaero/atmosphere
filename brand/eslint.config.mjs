@@ -1,4 +1,4 @@
-import ivaoConfig from '@ivaoaero/eslint-config';
+import ivaoConfig from '@ivao/eslint-config';
 
 export default [
   ...ivaoConfig.configs.base,
