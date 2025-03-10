@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
 import { Button } from '@components/atoms/button';
 import {
@@ -14,11 +14,11 @@ import {
 
 export interface DialogProps
   extends ComponentPropsWithoutRef<typeof DialogRoot> {
-  trigger?: React.ReactNode;
+  trigger?: ReactNode;
   title: string;
   description?: string;
   topRighCloseButton?: boolean;
-  footer?: React.ReactNode;
+  footer?: ReactNode;
 }
 
 export const Dialog = ({

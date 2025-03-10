@@ -248,6 +248,20 @@ export {
   SliderRange,
 } from '@components/atoms/slider';
 export { useSidebar } from '@hooks/useSidebar';
+export {
+  SheetRoot,
+  SheetTrigger,
+  SheetPortal,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetOverlay,
+  SheetTitle,
+} from '@components/atoms/sheet';
+export { Sheet } from '@components/molecules/sheet';
+export type { SheetProps } from '@components/molecules/sheet';
 export { Skeleton } from '@components/atoms/skeleton';
 export { SwitchRoot, SwitchThumb, Switch } from '@components/atoms/switch';
 export {
