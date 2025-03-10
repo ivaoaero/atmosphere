@@ -37,15 +37,21 @@
     "dev": "tsup --watch",
     "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
     "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix",
-    "format": "prettier . --write --cache"
+    "format": "prettier . --write --cache",
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.4.1",
     "@ivao/eslint-config": "1.0.1",
     "@ivao/prettier-config": "1.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
     "eslint": "9.21.0",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
+    "semantic-release": "^24.2.3",
+    "semantic-release-monorepo": "^8.0.2",
     "tsup": "8.4.0",
     "typescript": "5.7.3"
   },

@@ -1,16 +1,11 @@
-name: _reusable build workflow
+name: _reusable lint workflow
 
 on:
   workflow_call:
-    inputs:
-      package:
-        type: string
-        required: true
-        description: 'Which package to build'
 
 jobs:
-  build:
-    name: Build TypeScript files
+  lint:
+    name: Lint project files
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
@@ -29,11 +24,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
 
-      - name: Build config package
-        run: pnpm -r --filter="${{ inputs.package }}" build
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: eslint-config-build
-          path: dist
+      - name: Lint files
+        run: pnpm lint
