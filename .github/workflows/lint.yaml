@@ -25,4 +25,4 @@ jobs:
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
 
       - name: Lint files
-        run: pnpm lint
+        run: pnpm -r lint
