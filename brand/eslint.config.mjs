@@ -6,7 +6,11 @@ export default [
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['eslint.config.mjs', 'tsup.config.ts'],
+          allowDefaultProject: [
+            'eslint.config.mjs',
+            'release.config.js',
+            'tsup.config.ts',
+          ],
         },
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         tsconfigRootDir: import.meta.dirname,

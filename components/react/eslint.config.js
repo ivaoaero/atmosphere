@@ -13,6 +13,7 @@ export default [
             'eslint.config.js',
             'generate-colors-css.ts',
             'postcss.config.js',
+            'release.config.js',
             'tailwind.config.ts',
             'vite.build.config.ts',
           ],
