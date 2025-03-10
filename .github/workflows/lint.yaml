@@ -24,5 +24,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
 
+      - name: Build dependency packages
+        run: pnpm --filter="@ivao/atmosphere-brand" build
+
       - name: Lint files
         run: pnpm -r lint
