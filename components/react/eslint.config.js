@@ -17,7 +17,7 @@ export default [
             'tailwind.config.ts',
             'vite.build.config.ts',
           ],
-          maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 10,
+          maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 11,
         },
         tsconfigRootDir: import.meta.dirname,
       },
