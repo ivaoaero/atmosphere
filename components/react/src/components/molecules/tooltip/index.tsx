@@ -15,9 +15,10 @@ export interface TooltipProps
 export const Tooltip: ComponentType<TooltipProps> = ({
   children,
   content,
+  delayDuration = 300,
   ...props
 }) => (
-  <TooltipRoot {...props}>
+  <TooltipRoot delayDuration={delayDuration} {...props}>
     <TooltipTrigger
       asChild={typeof children === 'object' || typeof children === 'function'}
     >
