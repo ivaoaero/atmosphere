@@ -1,0 +1,33 @@
+name: _reusable build workflow
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    name: Build TypeScript files
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+
+      - name: Build atmosphere packages
+        run: pnpm -r build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: |
+            brand/dist
+            components/react/dist

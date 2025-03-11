@@ -236,10 +236,8 @@ export type {
 } from '@components/atoms/sidebar';
 export { Sidebar } from '@components/molecules/sidebar';
 export type { SidebarProps } from '@components/molecules/sidebar';
-export {
-  SidebarContext,
-  SidebarProvider,
-} from 'src/lib/contexts/SidebarContext';
+export { SidebarContext } from 'src/lib/contexts/SidebarContext';
+export { SidebarProvider } from 'src/lib/contexts/SidebarProvider';
 export { Slider } from '@components/molecules/slider';
 export {
   SliderRoot,
@@ -306,10 +304,10 @@ export {
 export { Tabs } from '@components/molecules/tabs';
 export type { TabsProps } from '@components/molecules/tabs';
 export { Textarea } from '@components/atoms/textarea';
-export { ThemeProvider } from 'src/lib/contexts/ThemeContext';
+export { ThemeProvider } from 'src/lib/contexts/ThemeProvider';
 export { useTheme } from '@hooks/useTheme';
 export { Toast } from '@components/molecules/toast';
-export { ToastProvider } from 'src/lib/contexts/ToastContext';
+export { ToastProvider } from 'src/lib/contexts/ToastProvider';
 export { useToast } from '@hooks/useToast';
 export { Toggle } from '@components/atoms/toggle';
 export { toggleVariants } from '@components/atoms/toggle/toggleVariants';

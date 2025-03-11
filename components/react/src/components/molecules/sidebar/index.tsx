@@ -6,7 +6,7 @@ import {
   SidebarItemProps,
 } from '@components/atoms/sidebar/SidebarItem';
 
-import { SidebarProvider } from 'src/lib/contexts/SidebarContext';
+import { SidebarProvider } from 'src/lib/contexts/SidebarProvider';
 
 export interface SidebarProps extends Pick<SidebarItemProps, 'asLink'> {
   /**

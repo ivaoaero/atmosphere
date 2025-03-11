@@ -1,0 +1,34 @@
+name: Storybook
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  storybook:
+    name: Storybook
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+
+      - name: Build & Publish Storybook
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          checkout: false
+          install_command: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+          build_command: pnpm --filter=atmosphere-react build-storybook
+          path: components/react/storybook-static/
