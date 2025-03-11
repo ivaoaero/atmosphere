@@ -21,5 +21,7 @@ jobs:
           scope: '@ivaoaero'
           cache: 'pnpm'
 
+      - run: pnpm store path
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
