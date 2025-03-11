@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
 
-      - name: Build packages
+      - name: Build atmosphere packages
         run: pnpm -r build
 
       - name: Upload build artifacts

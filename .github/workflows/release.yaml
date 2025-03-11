@@ -27,7 +27,7 @@ jobs:
       - commitlint
       - build
     if: success('commitlint') && success('build')
-    name: Release packages
+    name: Release atmosphere packages
     runs-on: self-hosted
     environment: default # environment with NPM_TOKEN
     permissions:
@@ -59,7 +59,7 @@ jobs:
             brand/dist
             components/react/dist
 
-      - name: Release eslint-config package
+      - name: Release atmosphere packages
         run: pnpm release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
