@@ -42,6 +42,7 @@
     "build": "tsc && vite build --config vite.build.config.ts",
     "build:color-css": "node --loader ts-node/esm generate-colors-css.ts",
     "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
+    "lint:ci": "eslint . --report-unused-disable-directives --max-warnings 0",
     "lint-fix": "eslint . --cache --fix --report-unused-disable-directives --max-warnings 0",
     "format": "prettier . --write --cache",
     "storybook": "storybook dev -p 6006",
