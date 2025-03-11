@@ -1,0 +1,18 @@
+name: Verify build on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yaml
+
+  commitlint:
+    uses: ./.github/workflows/commitlint.yaml
+
+  build:
+    uses: ./.github/workflows/build.yaml

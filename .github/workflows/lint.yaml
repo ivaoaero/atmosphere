@@ -1,0 +1,28 @@
+name: _reusable lint workflow
+
+on:
+  workflow_call:
+
+jobs:
+  lint:
+    name: Lint project files
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+
+      - name: Build dependency packages
+        run: pnpm --filter="@ivao/atmosphere-brand" build
+
+      - name: Lint files
+        run: pnpm -r lint:ci

@@ -5,7 +5,7 @@ import { Toast } from '@components/molecules/toast';
 
 import { useToast } from '@hooks/useToast';
 
-import { ToastProvider } from 'src/lib/contexts/ToastContext';
+import { ToastProvider } from 'src/lib/contexts/ToastProvider';
 
 const meta = {
   title: 'Components/Toast',

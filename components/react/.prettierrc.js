@@ -1,4 +1,4 @@
-import { generateImportOrder } from '@ivaoaero/prettier-config/generateImportOrder';
+import { generateImportOrder } from '@ivao/prettier-config/generateImportOrder';
 
 export default generateImportOrder([
   '@components',

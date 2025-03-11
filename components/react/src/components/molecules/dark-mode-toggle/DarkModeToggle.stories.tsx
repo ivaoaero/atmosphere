@@ -1,10 +1,10 @@
-import { ThemeProvider } from 'lib/contexts/ThemeContext';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
 
 import { useTheme } from '@hooks/useTheme';
+
+import { ThemeProvider } from 'src/lib/contexts/ThemeProvider';
 
 const ThemeDisplay = () => {
   const { theme } = useTheme();

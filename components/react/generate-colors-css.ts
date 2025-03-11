@@ -1,4 +1,4 @@
-import { colors } from '@ivaoaero/atmosphere-brand';
+import { colors } from '@ivao/atmosphere-brand';
 
 import { writeFileSync } from 'fs';
 

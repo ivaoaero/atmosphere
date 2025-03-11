@@ -1,4 +1,4 @@
-import ivaoConfig from '@ivaoaero/eslint-config';
+import ivaoConfig from '@ivao/eslint-config';
 
 export default [
   ...ivaoConfig.setups.reactRecommended,
@@ -13,10 +13,11 @@ export default [
             'eslint.config.js',
             'generate-colors-css.ts',
             'postcss.config.js',
+            'release.config.js',
             'tailwind.config.ts',
             'vite.build.config.ts',
           ],
-          maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 10,
+          maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 11,
         },
         tsconfigRootDir: import.meta.dirname,
       },

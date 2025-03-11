@@ -1,0 +1,61 @@
+name: Release package
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+permissions:
+  contents: read # for checkout
+
+jobs:
+  commitlint:
+    uses: ./.github/workflows/commitlint.yaml
+
+  build:
+    uses: ./.github/workflows/build.yaml
+
+  release:
+    needs:
+      - commitlint
+      - build
+    if: success('commitlint') && success('build')
+    name: Release atmosphere packages
+    runs-on: self-hosted
+    environment: default # environment with NPM_TOKEN
+    permissions:
+      contents: write # publish a GitHub release
+      id-token: write # use OIDC for npm provenance
+      issues: write # comment on released issues
+      packages: write # publish a NPM package
+      pull-requests: write # comment on released pull requests
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: |
+            brand/dist
+            components/react/dist
+
+      - name: Release atmosphere packages
+        run: pnpm release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

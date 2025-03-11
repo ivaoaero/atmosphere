@@ -1,4 +1,4 @@
-import { colors, fonts } from '@ivaoaero/atmosphere-brand';
+import { colors, fonts } from '@ivao/atmosphere-brand';
 
 import { type Config } from 'tailwindcss';
 import animatePlugin from 'tailwindcss-animate';
