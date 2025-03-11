@@ -11,15 +11,10 @@ permissions:
   contents: read # for checkout
 
 jobs:
-  install:
-    uses: ./.github/workflows/install.yaml
-
   commitlint:
     uses: ./.github/workflows/commitlint.yaml
 
   build:
-    needs: install
-    if: success('install')
     uses: ./.github/workflows/build.yaml
 
   release:
@@ -46,7 +41,6 @@ jobs:
           node-version: 22
           registry-url: 'https://npm.pkg.github.com'
           scope: '@ivaoaero'
-          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies

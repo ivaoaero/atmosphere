@@ -8,18 +8,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  install:
-    uses: ./.github/workflows/install.yaml
-
   lint:
-    needs: install
-    if: success('install')
     uses: ./.github/workflows/lint.yaml
 
   commitlint:
     uses: ./.github/workflows/commitlint.yaml
 
   build:
-    needs: install
-    if: success('install')
     uses: ./.github/workflows/build.yaml

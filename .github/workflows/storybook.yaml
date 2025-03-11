@@ -24,7 +24,6 @@ jobs:
           node-version: 22
           registry-url: 'https://npm.pkg.github.com'
           scope: '@ivaoaero'
-          cache: 'pnpm'
 
       - name: Build & Publish Storybook
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
