@@ -1,9 +1,9 @@
-import { ComponentType, DetailedHTMLProps } from 'react';
+import { ComponentType, DetailedHTMLProps, HTMLAttributes } from 'react';
 
 import { cn } from '@utils/styles';
 
 export const NavbarContainer: ComponentType<
-  DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+  DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
 > = ({ className, children, ...pros }) => {
   return (
     <nav
