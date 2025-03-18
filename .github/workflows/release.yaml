@@ -54,7 +54,7 @@ jobs:
             components/react/dist
 
       - name: Release atmosphere packages
-        run: pnpm release
+        run: pnpm -r release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
