@@ -53,6 +53,9 @@ jobs:
             brand/dist
             components/react/dist
 
+      - name: Delete local tags
+        run: git tag -d $(git tag -l)
+
       - name: Release atmosphere packages
         run: pnpm -r release
         env:
