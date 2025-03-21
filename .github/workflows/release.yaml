@@ -50,8 +50,8 @@ jobs:
         with:
           name: build
           path: |
-            brand/dist
-            components/react/dist
+            if test -d brand/dist; then echo "exists react"; fi
+            if test -d components/react/dist; then echo "exists react"; fi
 
       - name: Verify build downloaded
         run: |
