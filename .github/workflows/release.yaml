@@ -57,10 +57,6 @@ jobs:
           name: react-components-build
           path: components/react/dist
 
-      - name: Verify build downloaded
-        run: |
-          if test -d brand/dist; then exit 1; fi
-
       - name: Release atmosphere packages
         run: pnpm -r release
         env:
