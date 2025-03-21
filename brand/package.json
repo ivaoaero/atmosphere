@@ -43,21 +43,21 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.4.1",
-    "@ivao/eslint-config": "1.0.1",
-    "@ivao/prettier-config": "1.0.3",
+    "@ivao/eslint-config": "1.1.1",
+    "@ivao/prettier-config": "1.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.1",
     "@semantic-release/npm": "^12.0.1",
-    "eslint": "9.21.0",
+    "eslint": "9.22.0",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "semantic-release": "^24.2.3",
-    "semantic-release-monorepo": "^8.0.2",
+    "semantic-release": "24.2.3",
+    "semantic-release-monorepo": "8.0.2",
     "tsup": "8.4.0",
     "typescript": "5.7.3"
   },
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
+  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
 }
