@@ -55,8 +55,7 @@ jobs:
 
       - name: Verify build downloaded
         run: |
-          if test -d brand/dist; then echo "exists react"; fi
-          if test -d components/react/dist; then echo "exists react"; fi
+          if test -d brand/dist; then exit 1; fi
 
       - name: Release atmosphere packages
         run: pnpm -r release
