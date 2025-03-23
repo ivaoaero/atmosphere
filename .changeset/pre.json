@@ -5,5 +5,7 @@
     "@ivao/atmosphere-brand": "0.0.0",
     "@ivao/atmosphere-react": "0.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "purple-hands-watch"
+  ]
 }
