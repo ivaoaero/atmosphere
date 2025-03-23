@@ -52,15 +52,13 @@ jobs:
           name: react-components-build
           path: components/react/dist
 
-      - name: Switch to prerelease
-        run: pnpm changeset pre enter next
-
       - name: Release atmosphere packages
         uses: changesets/action@v1
         with:
           commit: "chore: update versions"
           title: "chore: update versions"
           publish: "pnpm publish -r"
+          version: "pnpm changeset version --snapshot next"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
