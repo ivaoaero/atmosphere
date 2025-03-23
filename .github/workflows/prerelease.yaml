@@ -60,7 +60,8 @@ jobs:
         with:
           commit: "chore: update versions"
           title: "chore: update versions"
-          publish: "npm_config_//registry.npmjs.org/:_authToken=${NPM_TOKEN} pnpm ci:prerelease"
+          publish: pnpm ci:prerelease
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          "npm_config_//registry.npmjs.org/:_authToken": ${{ secrets.NPM_TOKEN }}
