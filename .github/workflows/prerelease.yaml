@@ -1,9 +1,9 @@
-name: Release package
+name: Pre-Release package
 
 on:
   push:
     branches:
-      - main
+      - develop
   workflow_dispatch:
 
 permissions:
@@ -51,6 +51,9 @@ jobs:
         with:
           name: react-components-build
           path: components/react/dist
+
+      - name: Switch to prerelease
+        run: pnpm changeset pre enter next
 
       - name: Release atmosphere packages
         uses: changesets/action@v1
