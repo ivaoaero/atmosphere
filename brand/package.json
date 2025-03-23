@@ -42,10 +42,10 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@glzr/semantic-release-npm": "^1.5.0",
     "@ianvs/prettier-plugin-sort-imports": "4.4.1",
     "@ivao/eslint-config": "1.1.1",
     "@ivao/prettier-config": "1.1.0",
+    "@mctom234/semantic-release-pnpm": "^1.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.1",
     "eslint": "9.22.0",

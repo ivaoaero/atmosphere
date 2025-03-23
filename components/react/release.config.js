@@ -16,7 +16,7 @@ export default {
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
-    ['@glzr/semantic-release-npm', { packageManager: 'pnpm' }],
+    '@mctom234/semantic-release-pnpm',
     '@semantic-release/github',
   ],
 };
