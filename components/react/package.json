@@ -46,8 +46,7 @@
     "lint-fix": "eslint . --cache --fix --report-unused-disable-directives --max-warnings 0",
     "format": "prettier . --write --cache",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "release": "semantic-release"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@ivao/atmosphere-brand": "workspace:*",
@@ -88,9 +87,6 @@
     "@ianvs/prettier-plugin-sort-imports": "4.4.1",
     "@ivao/eslint-config": "1.1.1",
     "@ivao/prettier-config": "1.1.0",
-    "@mctom234/semantic-release-pnpm": "1.0.1",
-    "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "11.0.1",
     "@storybook/addon-essentials": "8.6.7",
     "@storybook/addon-interactions": "8.6.7",
     "@storybook/addon-links": "8.6.7",
@@ -113,8 +109,6 @@
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
     "rollup-plugin-analyzer": "4.0.0",
-    "semantic-release": "24.2.3",
-    "semantic-release-monorepo": "8.0.2",
     "storybook": "8.6.7",
     "tailwindcss": "3.4.17",
     "tailwindcss-radix": "3.0.5",
