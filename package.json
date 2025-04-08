@@ -1,7 +1,9 @@
 {
 	"scripts": {
 		"ci:release": "pnpm publish -r",
-		"ci:prerelease": "pnpm publish -r --tag next --no-git-checks"
+		"ci:prerelease": "pnpm publish -r --tag next --no-git-checks",
+		"prebuild": "pnpm -C brand build",
+		"dev:react:storybook": "pnpm -C components/react storybook"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.28.1",

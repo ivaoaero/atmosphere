@@ -162,3 +162,5 @@ Temporary Items
 # build outputs
 dist
 build
+
+.npmrc
