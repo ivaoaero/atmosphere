@@ -53,6 +53,20 @@ export const Primary = {
   },
 } satisfies Story;
 
+export const PrimaryAsChild = {
+  name: 'Primary as Child',
+  args: {
+    variant: 'primary',
+    size: 'md',
+    asChild: true,
+    children: (
+      <a href="https://ivao.aero" rel="noreferrer" target="_blank">
+        Go to IVAO Website
+      </a>
+    ),
+  },
+} satisfies Story;
+
 export const Secondary = {
   args: {
     variant: 'secondary',

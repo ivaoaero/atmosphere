@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, forwardRef } from 'react';
 
-import { Slot } from '@radix-ui/react-slot';
+import { Root, Slottable } from '@radix-ui/react-slot';
 import { VariantProps } from 'class-variance-authority';
 import { Loader2 } from 'lucide-react';
 
@@ -29,7 +29,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
-    const Comp = asChild ? Slot : 'button';
+    const Comp = asChild ? Root : 'button';
     const isDisabled = disabled || isLoading;
 
     return (
@@ -40,7 +40,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {children}
+        <Slottable>{children}</Slottable>
         {isLoading ? <Loader2 className="size-4 animate-spin" /> : null}
       </Comp>
     );
