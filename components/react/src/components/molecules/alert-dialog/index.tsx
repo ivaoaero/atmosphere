@@ -18,7 +18,7 @@ import { Button } from '@components/atoms/button';
 interface AlertDialogProps
   extends Pick<
     ComponentProps<typeof AlertDialogRoot>,
-    'defaultOpen' | 'open' | 'onOpenChange'
+    'defaultOpen' | 'open' | 'onOpenChange' | 'children'
   > {
   title: string;
   description?: string;

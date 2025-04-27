@@ -20,17 +20,14 @@ type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 type CarouselOptions = UseCarouselParameters[0];
 type CarouselPlugin = UseCarouselParameters[1];
 
-export type CarouselRootProps = {
+export interface CarouselRootProps extends HTMLAttributes<HTMLDivElement> {
   opts?: CarouselOptions;
   plugins?: CarouselPlugin;
   orientation?: 'horizontal' | 'vertical';
   setApi?: (api: CarouselApi) => void;
-};
+}
 
-export const CarouselRoot = forwardRef<
-  HTMLDivElement,
-  HTMLAttributes<HTMLDivElement> & CarouselRootProps
->(
+export const CarouselRoot = forwardRef<HTMLDivElement, CarouselRootProps>(
   (
     {
       orientation = 'horizontal',

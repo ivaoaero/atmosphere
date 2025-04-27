@@ -17,7 +17,7 @@ export interface DialogProps
   trigger?: ReactNode;
   title: string;
   description?: string;
-  topRighCloseButton?: boolean;
+  topRightCloseButton?: boolean;
   footer?: ReactNode;
 }
 
@@ -26,7 +26,7 @@ export const Dialog = ({
   title,
   description,
   children,
-  topRighCloseButton = true,
+  topRightCloseButton = true,
   footer,
   ...props
 }: DialogProps) => {
@@ -47,7 +47,7 @@ export const Dialog = ({
           {description && <DialogDescription>{description}</DialogDescription>}
         </DialogHeader>
         {children}
-        {topRighCloseButton && <DialogTopRightClose />}
+        {topRightCloseButton && <DialogTopRightClose />}
         {footer && <DialogFooter>{footer}</DialogFooter>}
       </DialogContent>
     </DialogRoot>

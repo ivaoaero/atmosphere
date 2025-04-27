@@ -24,7 +24,7 @@ export const CheckboxIndicator = forwardRef<
       className={cn('flex items-center justify-center text-current', className)}
       {...props}
     >
-      {children ?? <Check />}
+      {children ?? <Check className={'size-full'} />}
     </RadixIndicator>
   );
 });

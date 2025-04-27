@@ -34,6 +34,7 @@ export const badgeVariants = cva(
     },
     defaultVariants: {
       variant: 'filled',
+      color: 'gray',
       size: 'sm',
     },
   },

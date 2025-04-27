@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ComponentType, ReactNode } from 'react';
 
 import {
   PopoverContent,
@@ -6,16 +6,35 @@ import {
   PopoverTrigger,
 } from '@components/atoms/popover';
 
-export interface PopoverProps {
+export type PopoverProps = {
   trigger: ReactNode;
   children: ReactNode;
-}
+} & Omit<ComponentPropsWithoutRef<typeof PopoverRoot>, 'children'> &
+  Pick<
+    ComponentPropsWithoutRef<typeof PopoverContent>,
+    'side' | 'sideOffset' | 'align' | 'alignOffset'
+  >;
 
-export const Popover: FC<PopoverProps> = ({ trigger, children }) => {
+export const Popover: ComponentType<PopoverProps> = ({
+  trigger,
+  children,
+  side,
+  sideOffset,
+  align,
+  alignOffset,
+  ...props
+}) => {
   return (
-    <PopoverRoot>
+    <PopoverRoot {...props}>
       <PopoverTrigger asChild>{trigger}</PopoverTrigger>
-      <PopoverContent>{children}</PopoverContent>
+      <PopoverContent
+        side={side}
+        sideOffset={sideOffset}
+        align={align}
+        alignOffset={alignOffset}
+      >
+        {children}
+      </PopoverContent>
     </PopoverRoot>
   );
 };

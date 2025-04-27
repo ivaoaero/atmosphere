@@ -7,7 +7,10 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
   darkMode: 'class',
-  content: ['./src/components/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/components/**/*.{js,jsx,ts,tsx}',
+    './src/stories/**/*.{js,jsx,ts,tsx,mdx}',
+  ],
   safelist: ['dark'],
   theme: {
     screens: {
