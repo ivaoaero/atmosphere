@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 
 import {
   CardContent,
@@ -14,10 +14,10 @@ interface CardProps
     ComponentProps<typeof CardRoot>,
     'children' | 'title' | 'content'
   > {
-  title: ComponentProps<typeof CardTitle>['children'];
-  description?: ComponentProps<typeof CardDescription>['children'];
-  content: ComponentProps<typeof CardContent>['children'];
-  footer?: ComponentProps<typeof CardFooter>['children'];
+  title: ReactNode;
+  description?: ReactNode;
+  content: ReactNode;
+  footer?: ReactNode;
 }
 
 export const Card = ({

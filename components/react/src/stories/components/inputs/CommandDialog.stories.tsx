@@ -1,0 +1,72 @@
+import { action } from '@storybook/addon-actions';
+
+import type { Meta, StoryObj } from '@storybook/react';
+
+import { CommandDialog } from '@components/molecules/command';
+
+const meta = {
+  title: 'Components/Inputs/CommandDialog',
+  component: CommandDialog,
+  tags: ['autodocs'],
+  args: {
+    defaultOpen: true,
+    placeholder: 'Command placeholder',
+    emptyResult: 'No results',
+    onOpenChange: action('open change'),
+    groups: [
+      {
+        key: '1',
+        heading: 'Group 1',
+        items: [
+          {
+            key: '1',
+            value: 'Item 1',
+          },
+          {
+            key: '2',
+            value: 'Item 2',
+          },
+        ],
+      },
+      {
+        key: '2',
+        heading: 'Group 2',
+        items: [
+          {
+            key: '3',
+            value: 'Item 3',
+          },
+          {
+            key: '4',
+            value: 'Item 4',
+          },
+        ],
+      },
+    ],
+  },
+  argTypes: {
+    open: {
+      type: 'boolean',
+      description:
+        'Whether the dialog is open. Cannot be used with `defaultOpen`!',
+      if: {
+        arg: 'defaultOpen',
+        exists: false,
+      },
+    },
+    defaultOpen: {
+      type: 'boolean',
+      description:
+        'Sets the dialog initially open. Cannot be used with `open`!',
+      if: {
+        arg: 'open',
+        exists: false,
+      },
+    },
+  },
+} satisfies Meta<typeof CommandDialog>;
+
+export default meta;
+type Story = StoryObj<typeof CommandDialog>;
+
+export const Default = {} satisfies Story;

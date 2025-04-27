@@ -41,7 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         <Slottable>{children}</Slottable>
-        {isLoading ? <Loader2 className="size-4 animate-spin" /> : null}
+        {isLoading && <Loader2 className="size-4 animate-spin" />}
       </Comp>
     );
   },

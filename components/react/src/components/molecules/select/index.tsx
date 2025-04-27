@@ -23,7 +23,8 @@ export interface SelectProps
   extends Omit<ComponentProps<typeof SelectRoot>, 'children'>,
     Pick<ComponentProps<typeof SelectValue>, 'placeholder' | 'className'>,
     // Omit the `dir` and `defaultValue` props from `SelectContentProps` to avoid collisions
-    Omit<SelectContentProps, 'dir' | 'defaultValue'> {
+    // Omit the `children` prop from `SelectContentProps` to avoid collisions and developer confusion
+    Omit<SelectContentProps, 'dir' | 'defaultValue' | 'children'> {
   items: SelectItemProps[] | { [key: string]: SelectItemProps[] };
 }
 

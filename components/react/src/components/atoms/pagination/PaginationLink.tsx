@@ -2,12 +2,13 @@ import { Button, ButtonProps } from '@components/atoms/button';
 
 export type PaginationLinkProps = {
   isActive?: boolean;
-} & ButtonProps;
+  size?: ButtonProps['size'];
+} & Omit<ButtonProps, 'variant' | 'size' | 'aria-current'>;
 
 export const PaginationLink = ({
   className,
   isActive,
-  size = 'icon',
+  size,
   ...props
 }: PaginationLinkProps) => {
   return (
