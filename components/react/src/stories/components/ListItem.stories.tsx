@@ -155,7 +155,7 @@ export const WithoutDescription = {
   },
 } satisfies Story;
 
-export const WithOutImageAndIcon = {
+export const WithOutImageOrIcon = {
   args: {
     imageSrc: undefined,
     icon: undefined,
@@ -166,7 +166,6 @@ export const WithIcon = {
   args: {
     imageSrc: undefined,
     icon: Plane,
-    onClick: () => alert('Icon clicked'),
   },
 } satisfies Story;
 
@@ -213,5 +212,17 @@ export const WithPrimaryAndSecondaryAction = {
         </Button>
       </>
     ),
+  },
+} satisfies Story;
+
+export const InteractiveOnClick = {
+  args: {
+    onClick: () => alert('List item clicked'),
+  },
+} satisfies Story;
+
+export const InteractiveHref = {
+  args: {
+    href: 'https://ivao.aero',
   },
 } satisfies Story;
