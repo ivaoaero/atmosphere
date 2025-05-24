@@ -64,6 +64,24 @@ export const WithImage = {
   },
 } satisfies Story;
 
+export const Loading = {
+  args: {
+    isLoading: true,
+  },
+} satisfies Story;
+
+export const LoadingWithAction = {
+  args: {
+    isLoading: true,
+    children: (
+      <Button variant={'secondary'}>
+        Install
+        <CloudDownload className="size-4" />
+      </Button>
+    ),
+  },
+} satisfies Story;
+
 export const WithAction = {
   args: {
     children: (
