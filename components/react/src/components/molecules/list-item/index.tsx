@@ -1,15 +1,22 @@
-import { createElement, useId } from 'react';
+import {
+  createElement,
+  ElementType,
+  HTMLAttributes,
+  KeyboardEvent,
+  ReactNode,
+  useId,
+} from 'react';
 
 import { Skeleton } from '@components/atoms/skeleton';
 
-export interface ListItemProps extends React.HTMLAttributes<HTMLLIElement> {
+export interface ListItemProps extends HTMLAttributes<HTMLLIElement> {
   title: string;
   description?: string;
   isLoading?: boolean;
-  children?: React.ReactNode;
+  children?: ReactNode;
   imageSrc?: string;
   imageAlt?: string;
-  icon?: React.ElementType;
+  icon?: ElementType;
   iconAriaLabel?: string;
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   onClick?: () => void;
@@ -45,7 +52,7 @@ export const ListItem = ({
       role: 'button',
       tabIndex: 0,
       onClick,
-      onKeyDown: (e: React.KeyboardEvent) => {
+      onKeyDown: (e: KeyboardEvent) => {
         if ((e.key === 'Enter' || e.key === ' ') && onClick) {
           e.preventDefault();
           onClick();
