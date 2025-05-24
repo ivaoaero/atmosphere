@@ -3,4 +3,4 @@
 "@ivao/atmosphere-brand": minor
 ---
 
-Updated fuselage 50, 100 and 150 colors. Added new ListItem component.
+Updated fuselage 50 and 100 colors. Added new ListItem component.
