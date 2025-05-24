@@ -1,4 +1,4 @@
-import { CloudDownload, Settings2 } from 'lucide-react';
+import { CloudDownload, Plane, Settings2 } from 'lucide-react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -50,6 +50,12 @@ type Story = StoryObj<typeof ListItem>;
 
 export const Default = {} satisfies Story;
 
+export const WithoutDescription = {
+  args: {
+    description: undefined,
+  },
+} satisfies Story;
+
 export const WithOutImageAndIcon = {
   args: {
     imageSrc: undefined,
@@ -57,10 +63,10 @@ export const WithOutImageAndIcon = {
   },
 } satisfies Story;
 
-export const WithImage = {
+export const WithIcon = {
   args: {
-    imageSrc: image,
-    icon: undefined,
+    imageSrc: undefined,
+    icon: Plane,
   },
 } satisfies Story;
 
