@@ -17,12 +17,13 @@ export const ListItem = ({
   icon,
 }: ListItemProps) => {
   return (
-    <li className="flex min-h-20 list-none items-center justify-between rounded-md border border-fuselage-100 bg-fuselage-100 p-4 dark:border-fuselage-900 dark:bg-fuselage-900">
+    <li className="flex list-none flex-col justify-between gap-4 rounded-md border border-fuselage-100 bg-fuselage-100 p-2 dark:border-fuselage-900 dark:bg-fuselage-900 md:min-h-20 md:flex-row md:items-center md:p-4">
       <div className="flex items-center gap-6">
         {icon && (
-          <div className="flex size-12 items-center justify-center rounded-md bg-fuselage-150 dark:bg-fuselage-700">
+          <div className="flex size-10 items-center justify-center rounded-md bg-fuselage-150 dark:bg-fuselage-700 md:size-12">
             {createElement(icon, {
-              className: 'size-6 text-fuselage-600 dark:text-fuselage-500',
+              className:
+                'size-4 md:size-6 text-fuselage-600 dark:text-fuselage-500',
             })}
           </div>
         )}
@@ -30,22 +31,26 @@ export const ListItem = ({
           <img
             src={imageSrc}
             alt={title}
-            className="size-12 rounded-md"
+            className="size-10 rounded-md md:size-12"
             loading="lazy"
           />
         )}
         <div>
-          <h3 className="text-xl font-bold text-fuselage-600 dark:text-fuselage-100">
+          <h3 className="text-lg font-medium text-fuselage-600 dark:text-fuselage-100 md:text-xl md:font-bold">
             {title}
           </h3>
           {description && (
-            <p className="text-base text-fuselage-500 dark:text-fuselage-400">
+            <p className="text-sm text-fuselage-500 dark:text-fuselage-400 md:text-base">
               {description}
             </p>
           )}
         </div>
       </div>
-      <div className="flex items-center gap-4">{children}</div>
+      {children && (
+        <div className="flex w-full flex-col justify-stretch gap-2 md:w-fit md:flex-row md:items-center md:gap-4">
+          {children}
+        </div>
+      )}
     </li>
   );
 };

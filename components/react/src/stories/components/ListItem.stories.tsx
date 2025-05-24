@@ -12,6 +12,14 @@ const meta = {
   title: 'Components/ListItem',
   component: ListItem,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'The ListItem component is used to display a list item with an optional image and icon. It can also contain actions like buttons. It must be used inside a `<ul>`.',
+      },
+    },
+  },
   args: {
     title: 'List Item',
     description: 'This is a list item',
