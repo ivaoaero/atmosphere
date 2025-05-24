@@ -32,6 +32,76 @@ const meta = {
         type: {
           summary: 'ReactNode',
         },
+        category: 'Actions',
+      },
+    },
+    title: {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        category: 'Content',
+      },
+    },
+    description: {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        category: 'Content',
+      },
+    },
+    isLoading: {
+      control: 'boolean',
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        category: 'Content',
+      },
+    },
+    headingLevel: {
+      control: 'select',
+      options: [1, 2, 3, 4, 5, 6],
+      table: {
+        type: {
+          summary: '1 | 2 | 3 | 4 | 5 | 6',
+        },
+        category: 'Content',
+      },
+    },
+    'aria-label': {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        category: 'Content',
+      },
+    },
+
+    onClick: {
+      control: 'object',
+      table: {
+        type: {
+          summary: '() => void',
+          detail:
+            "When using onClick, `children` won't render as the link will take precedence.",
+        },
+        category: 'Actions',
+      },
+    },
+    href: {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+          detail:
+            "When using href, `children` won't render as the link will take precedence.",
+        },
+        category: 'Actions',
       },
     },
     icon: {
@@ -39,7 +109,36 @@ const meta = {
       table: {
         type: {
           summary: 'ReactNode',
+          detail: `LucideIcon`,
         },
+        category: 'Icon',
+      },
+    },
+    iconAriaLabel: {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        category: 'Icon',
+      },
+    },
+    imageSrc: {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        category: 'Image',
+      },
+    },
+    imageAlt: {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        category: 'Image',
       },
     },
   },
@@ -67,6 +166,7 @@ export const WithIcon = {
   args: {
     imageSrc: undefined,
     icon: Plane,
+    onClick: () => alert('Icon clicked'),
   },
 } satisfies Story;
 
