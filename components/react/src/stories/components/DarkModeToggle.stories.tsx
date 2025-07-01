@@ -24,10 +24,12 @@ const meta = {
   tags: ['autodocs'],
   decorators: (Story) => (
     <ThemeProvider>
-      <TooltipProvider>
-        <Story />
-      </TooltipProvider>
-      <ThemeDisplay />
+      <div className="flex items-center">
+        <TooltipProvider>
+          <Story />
+        </TooltipProvider>
+        <ThemeDisplay />
+      </div>
     </ThemeProvider>
   ),
   args: {
@@ -36,6 +38,23 @@ const meta = {
   argTypes: {
     className: {
       table: { disable: true },
+    },
+    variant: {
+      description: 'Appearance variant of the button.',
+      control: 'select',
+      options: [
+        'primary',
+        'secondary',
+        'outline',
+        'destructive',
+        'ghost',
+        'link',
+      ],
+      table: {
+        defaultValue: {
+          summary: 'primary',
+        },
+      },
     },
     title: {
       type: 'string',

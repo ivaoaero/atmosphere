@@ -37,7 +37,7 @@ export const DarkModeToggle: ComponentType<DarkModeToggleProps> = ({
       alignOffset={alignOffset}
     >
       <IconButton title={title} onClick={() => toggleTheme()} {...props}>
-        <Icon />
+        <Icon size={18} />
       </IconButton>
     </Tooltip>
   );
