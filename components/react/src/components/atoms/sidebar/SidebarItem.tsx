@@ -52,8 +52,8 @@ export const SidebarItem = ({
         className={cn(
           'rounded-md p-2 transition-all',
           isActive
-            ? 'bg-semantic-green-500 text-white dark:bg-semantic-green-500/10 dark:text-semantic-green-500'
-            : 'bg-fuselage-50/40 text-fuselage-300 group-hover:bg-fuselage-50/75 group-hover:text-fuselage-400 dark:bg-fuselage-700 dark:text-fuselage-400 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
+            ? 'bg-atmos-700 text-atmos-50 group-hover:bg-atmos-600 group-hover:text-atmos-100 dark:bg-atmos-500 dark:text-atmos-50'
+            : 'bg-fuselage-100 text-fuselage-500 group-hover:bg-fuselage-200/50 group-hover:text-fuselage-600 dark:bg-fuselage-700 dark:text-fuselage-500 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
         )}
       >
         <Icon />
@@ -66,13 +66,25 @@ export const SidebarItem = ({
         )}
       >
         <span
-          className={
-            'font-head font-semibold leading-tight text-fuselage-500 dark:text-fuselage-50'
-          }
+          className={cn(
+            'font-head font-semibold leading-tight',
+            isActive
+              ? 'font-bold text-fuselage-800 dark:text-fuselage-50'
+              : 'font-semibold text-fuselage-600 dark:text-fuselage-100',
+          )}
         >
           {title}
         </span>
-        <span className={'text-sm'}>{description}</span>
+        <span
+          className={cn(
+            'text-sm',
+            isActive
+              ? 'text-fuselage-700 dark:text-fuselage-100'
+              : 'text-fuselage-400 dark:text-fuselage-400',
+          )}
+        >
+          {description}
+        </span>
       </div>
     </LinkComponent>
   );
