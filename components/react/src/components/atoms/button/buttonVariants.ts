@@ -6,7 +6,7 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'border-fuselage-700 bg-atmos-700 text-fuselage-50 shadow hover:bg-atmos-800 disabled:text-atmos-300 dark:border-fuselage-50 dark:bg-fuselage-50 dark:text-fuselage-800 hover:dark:bg-fuselage-150 dark:disabled:border-fuselage-150 dark:disabled:bg-fuselage-150 dark:disabled:text-fuselage-400',
+          'border-atmos-700 bg-atmos-700 text-fuselage-50 shadow hover:bg-atmos-800 disabled:text-atmos-300 dark:border-fuselage-50 dark:bg-fuselage-50 dark:text-fuselage-800 hover:dark:bg-fuselage-150 dark:disabled:border-fuselage-150 dark:disabled:bg-fuselage-150 dark:disabled:text-fuselage-400',
         secondary:
           'border-fuselage-100 bg-fuselage-150 text-fuselage-700 shadow-sm hover:bg-fuselage-200 disabled:text-fuselage-300 dark:border-fuselage-500 dark:bg-fuselage-500 dark:text-fuselage-50 dark:hover:bg-fuselage-600 dark:disabled:border-fuselage-500 dark:disabled:bg-fuselage-600 dark:disabled:text-fuselage-300',
         destructive:
