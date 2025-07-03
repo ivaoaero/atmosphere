@@ -1,15 +1,15 @@
 import { cva } from 'class-variance-authority';
 
-export const IVAOlogoVariants = cva('', {
+export const IVAOLogoVariants = cva('', {
   variants: {
     color: {
       white: 'text-white',
-      atmos: 'text-atmos-500 dark:text-white',
+      atmos: 'text-atmos-700 dark:text-white',
     },
     size: {
-      sm: 'w-24',
-      md: 'w-28',
-      lg: 'w-40',
+      sm: 'h-8',
+      md: 'h-9',
+      lg: 'h-14',
     },
   },
   defaultVariants: {
