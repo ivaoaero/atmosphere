@@ -1,21 +1,25 @@
-# Contribute
-## Create new components
-### Color convert guide
+# Atmosphere Component Library by IVAO
 
-The fuselage color changed after atmodash was created.
+## React
 
-The table provided below helps you to convert the old color to the new one.
+### Requirements
 
-| Old color | New color |
-|-----------|-----------|
-| 50        | 200       |
-| 100       | 250       |
-| 150       | 400       |
-| 200       | 450       |
-| 300       | 500       |
-| 400       | 550       |
-| 500       | 600       |
-| 600       | 700       |
-| 700       | 800       |
-| 800       | 900       |
-| 900       | 950       |
+React version: > 18.3
+
+### How to install
+
+```bash
+npm i @ivao/atmosphere-react
+```
+
+```bash
+pnpm add @ivao/atmosphere-react
+```
+
+### Configure
+
+Import our CSS by adding this line to your index file.
+
+```typescript
+import '@ivao/atmosphere-react/dist/styles/index.css';
+```
