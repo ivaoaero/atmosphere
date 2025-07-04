@@ -50,7 +50,7 @@ export const SidebarItem = ({
     >
       <div
         className={cn(
-          'rounded-md p-2 transition-all',
+          'flex size-10 items-center justify-center rounded-md p-2 transition-all',
           isActive
             ? 'bg-atmos-700 text-atmos-50 group-hover:bg-atmos-600 group-hover:text-atmos-100 dark:bg-atmos-500 dark:text-atmos-50'
             : 'bg-fuselage-100 text-fuselage-500 group-hover:bg-fuselage-200/50 group-hover:text-fuselage-600 dark:bg-fuselage-700 dark:text-fuselage-500 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
