@@ -118,9 +118,15 @@ export const DropdownMenuItems = ({
           </DropdownMenuPortal>
         </DropdownMenuSub>
       ) : (
-        <DropdownMenuItem key={index} {...props}>
-          {icon}
-          <span>{label}</span>
+        <DropdownMenuItem
+          key={index}
+          {...props}
+          className="flex items-center justify-between"
+        >
+          <div className="flex w-full gap-2">
+            {icon}
+            <span>{label}</span>
+          </div>
           {shortcut && <DropdownMenuLabel>{shortcut}</DropdownMenuLabel>}
         </DropdownMenuItem>
       ),

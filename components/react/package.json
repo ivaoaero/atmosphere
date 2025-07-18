@@ -1,7 +1,7 @@
 {
   "name": "@ivao/atmosphere-react",
   "description": "React component library for the IVAO Atmosphere design system.",
-  "version": "0.0.1-next.0",
+  "version": "0.1.0-next.3",
   "type": "module",
   "main": "./dist/atmosphere-react.js",
   "types": "./dist/react-components.d.ts",
@@ -28,6 +28,11 @@
     {
       "name": "Ruy Monteiro (595866)",
       "email": "ruy.monteiro@ivao.aero"
+    },
+    {
+      "name": "Felipe Lobo (379491)",
+      "email": "juan.felipe.lobo.mejia@ivao.aero",
+      "url": "https://github.com/wolfmaster8"
     }
   ],
   "maintainers": [
@@ -35,11 +40,16 @@
       "name": "Jonas Bellmann (533870)",
       "email": "jonas.bellmann@ivao.aero",
       "url": "https://github.com/CptnJon"
+    },
+    {
+      "name": "Felipe Lobo (379491)",
+      "email": "juan.felipe.lobo.mejia@ivao.aero",
+      "url": "https://github.com/wolfmaster8"
     }
   ],
   "scripts": {
     "dev": "vite --config vite.build.config.ts",
-    "build": "tsc && vite build --config vite.build.config.ts",
+    "build": "tsc && vite build --config vite.build.config.ts && tailwindcss -i ./src/styles/index.css -o ./dist/styles/index.css --minify",
     "build:color-css": "node --loader ts-node/esm generate-colors-css.ts",
     "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
     "lint:ci": "eslint . --report-unused-disable-directives --max-warnings 0",

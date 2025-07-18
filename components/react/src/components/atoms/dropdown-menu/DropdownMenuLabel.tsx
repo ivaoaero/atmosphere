@@ -13,7 +13,7 @@ export const DropdownMenuLabel = forwardRef<
   <Label
     ref={ref}
     className={cn(
-      'px-2 py-1.5 text-sm font-semibold',
+      'p-0 px-2 text-sm font-semibold text-fuselage-800 dark:text-fuselage-50',
       inset && 'pl-8',
       className,
     )}

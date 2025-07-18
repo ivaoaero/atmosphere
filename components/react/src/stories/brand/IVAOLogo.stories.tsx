@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { IVAOLogo } from '@components/atoms/ivao-logo';
 
 const meta = {
-  title: 'Components/IVAOLogo',
+  title: 'Brand/Logo',
   component: IVAOLogo,
   tags: ['autodocs'],
   args: {
@@ -11,6 +11,15 @@ const meta = {
     size: 'md',
   },
   argTypes: {
+    onlyIcon: {
+      description: 'Only show the Icon',
+      control: 'boolean',
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
     color: {
       description: 'Color of the icon.',
       control: 'inline-radio',

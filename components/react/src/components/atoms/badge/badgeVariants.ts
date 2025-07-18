@@ -24,7 +24,7 @@ export const badgeVariants = cva(
           'bg-indigo-50 fill-indigo-700 text-indigo-700 ring-indigo-700/10 dark:bg-indigo-400/10 dark:fill-indigo-400 dark:text-indigo-400 dark:ring-indigo-400/30',
         purple:
           'bg-purple-50 fill-purple-700 text-purple-700 ring-purple-700/10 dark:bg-purple-400/10 dark:fill-purple-400 dark:text-purple-400 dark:ring-purple-400/30',
-        pink: 'bg-pink-50 fill-purple-700 text-pink-700 ring-pink-700/10 dark:bg-pink-400/10 dark:fill-pink-400 dark:text-pink-400 dark:ring-pink-400/20',
+        pink: 'bg-pink-50 fill-pink-700 text-pink-700 ring-pink-700/10 dark:bg-pink-400/10 dark:fill-pink-400 dark:text-pink-400 dark:ring-pink-400/20',
       },
       size: {
         sm: 'px-1.5 py-0.5 text-xs',
