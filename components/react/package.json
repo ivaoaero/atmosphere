@@ -28,6 +28,11 @@
     {
       "name": "Ruy Monteiro (595866)",
       "email": "ruy.monteiro@ivao.aero"
+    },
+    {
+      "name": "Felipe Lobo (379491)",
+      "email": "juan.felipe.lobo.mejia@ivao.aero",
+      "url": "https://github.com/wolfmaster8"
     }
   ],
   "maintainers": [
@@ -35,6 +40,11 @@
       "name": "Jonas Bellmann (533870)",
       "email": "jonas.bellmann@ivao.aero",
       "url": "https://github.com/CptnJon"
+    },
+    {
+      "name": "Felipe Lobo (379491)",
+      "email": "juan.felipe.lobo.mejia@ivao.aero",
+      "url": "https://github.com/wolfmaster8"
     }
   ],
   "scripts": {
