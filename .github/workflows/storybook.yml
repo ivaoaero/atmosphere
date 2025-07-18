@@ -1,0 +1,56 @@
+name: Storybook
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+      - develop
+      - chore/*
+
+concurrency:
+  group: "pages-${{ github.ref_name }}"
+  cancel-in-progress: true
+
+jobs:
+  storybook:
+    name: Storybook
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: "https://ivaoaero.github.io/atmosphere/${{github.ref_name}}"
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: node_modules-${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@ivaoaero"
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Install & Build Atmosphere
+        env:
+          VITE_BASE_PATH: "/atmosphere/${{github.ref_name}}"
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+          pnpm prebuild
+          pnpm --filter=atmosphere-react build-storybook
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          target-folder: ${{ github.ref_name }}
+          folder: components/react/storybook-static/
