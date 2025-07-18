@@ -4,7 +4,6 @@ import { Meta } from '@storybook/react';
 import type { StoryObj } from '@storybook/react';
 
 import { Button } from '@components/atoms/button';
-import { H3 } from '@components/atoms/typography';
 import { Popover } from '@components/molecules/popover';
 
 const meta = {
@@ -15,7 +14,7 @@ const meta = {
     trigger: <Button>Click me</Button>,
     children: (
       <>
-        <H3>This is the content of a Popover</H3>
+        <h5>This is the content of a Popover</h5>
         <p>You can do anything in here!</p>
       </>
     ),

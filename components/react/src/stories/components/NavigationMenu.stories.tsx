@@ -38,6 +38,7 @@ const meta: Meta = {
   title: 'Components/NavigationMenu',
   component: NavigationMenu,
   tags: ['autodocs'],
+
   args: {
     sections: [
       {
@@ -126,4 +127,13 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof NavigationMenu>;
 
-export const Default = {} satisfies Story;
+export const Default = {
+  parameters: {
+    docs: {
+      story: {
+        inline: false,
+        iframeHeight: 400,
+      },
+    },
+  },
+} satisfies Story;

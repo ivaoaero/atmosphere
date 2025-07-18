@@ -16,19 +16,19 @@
     --popover: var(--fuselage-50);
     --popover-foreground: var(--fuselage-800);
 
-    --primary: var(--atmos-500);
-    --primary-foreground: var(--atmos-100);
+    --primary: var(--atmos-700);
+    --primary-foreground: var(--atmos-50);
 
     --secondary: var(--fuselage-100);
     --secondary-foreground: var(--fuselage-800);
 
-    --muted: var(--fuselage-250);
+    --muted: var(--fuselage-200);
     --muted-foreground: var(--fuselage-500);
 
     --accent: var(--fuselage-250);
     --accent-foreground: var(--fuselage-500);
 
-    --destructive: var(--semantic-red-500);
+    --destructive: var(--semantic-red-600);
     --destructive-foreground: var(--semantic-red-50);
 
     --border: var(--fuselage-150);
@@ -54,17 +54,48 @@
     --secondary: var(--fuselage-800);
     --secondary-foreground: var(--fuselage-100);
 
-    --muted: var(--fuselage-900);
+    --muted: var(--fuselage-700);
     --muted-foreground: var(--fuselage-500);
 
-    --accent: var(--fuselage-800);
+    --accent: var(--fuselage-700);
     --accent-foreground: var(--fuselage-300);
 
     --destructive: var(--semantic-red-600);
     --destructive-foreground: var(--semantic-red-50);
 
-    --border: var(--fuselage-900);
+    --border: var(--fuselage-700);
     --input: var(--fuselage-900);
     --ring: var(--fuselage-800);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply dark:text-fuselage-50 text-fuselage-800 font-bold text-4xl;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply dark:text-fuselage-300 text-fuselage-400 font-semibold;
+  }
+  h2{
+    @apply text-3xl;
+  }
+  h3{
+    @apply text-2xl;
+  }
+  h4{
+    @apply text-xl;
+  }
+  h5{
+    @apply text-lg;
+  }
+  h6{
+    @apply text-base;
+  }  
+
+  .border, .border-color-default{
+    @apply border-fuselage-150 dark:border-fuselage-700;
   }
 }
