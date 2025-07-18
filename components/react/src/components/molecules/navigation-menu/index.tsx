@@ -64,7 +64,7 @@ export const NavigationMenu: ComponentType<NavigationMenuProps> = ({
               <>
                 <NavigationMenuTrigger>{section.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <ul className="grid list-none gap-3 bg-red-600 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     {section.links.map((link) => (
                       <NavigationMenuListItem
                         key={link.title}

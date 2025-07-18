@@ -50,7 +50,7 @@ export const SidebarItem = ({
     >
       <div
         className={cn(
-          'flex size-10 items-center justify-center rounded-md p-2 transition-all',
+          'flex size-9 items-center justify-center rounded-md p-2 transition-all',
           isActive
             ? 'bg-atmos-700 text-atmos-50 group-hover:bg-atmos-600 group-hover:text-atmos-100 dark:bg-atmos-500 dark:text-atmos-50'
             : 'bg-fuselage-100 text-fuselage-500 group-hover:bg-fuselage-200/50 group-hover:text-fuselage-600 dark:bg-fuselage-700 dark:text-fuselage-500 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
@@ -67,7 +67,7 @@ export const SidebarItem = ({
       >
         <span
           className={cn(
-            'font-head font-semibold leading-tight',
+            'font-head text-base font-semibold leading-tight',
             isActive
               ? 'font-bold text-fuselage-800 dark:text-fuselage-50'
               : 'font-semibold text-fuselage-600 dark:text-fuselage-100',

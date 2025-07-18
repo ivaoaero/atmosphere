@@ -4,7 +4,6 @@ import { themes } from '@storybook/theming';
 import type { Preview, ReactRenderer } from '@storybook/react';
 
 import '../src/styles/index.css';
-import '../src/styles/storybook.css';
 
 const preview: Preview = {
   parameters: {
