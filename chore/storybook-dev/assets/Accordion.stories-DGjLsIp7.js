@@ -1,0 +1,13 @@
+import{a as y}from"./index-B-lxVbXh.js";import{A as b}from"./index-OniNM3cP.js";import"./v4-CtRu48qb.js";import"./jsx-runtime-DiklIkkE.js";import"./index-DRjF_FHU.js";import"./index-DRtXj63t.js";import"./index-2PLgWUiy.js";import"./index-zZ8-XE7G.js";import"./index-DNjz5F53.js";import"./index-CB2Ck3t8.js";import"./index-BHDKhPUC.js";import"./index-DHHUZ-3A.js";import"./index-S1NTqsaj.js";import"./index-DSPJRkee.js";import"./index-CVyrcOig.js";import"./index-be71vEei.js";import"./index-CwIEgGhy.js";import"./styles-CytzSlOG.js";import"./chevron-down-BTxBlyiS.js";import"./createLucideIcon-B1d7gGsx.js";const B={title:"Components/Accordion",component:b,tags:["autodocs"],args:{type:"single",collapsible:!0,items:[{value:"1",trigger:"Accordion Trigger 1",children:"Accordion Content 1"},{value:"2",trigger:"Accordion Trigger 2",children:"Accordion Content 2"}],onValueChange:y("value change")},argTypes:{value:{type:"string",description:"Controls the value. Cannot be used with `defaultValue`!",if:{arg:"defaultValue",exists:!1},table:{type:{summary:"string | string[]"}}},defaultValue:{type:"string",description:"Sets the initial value. Cannot be used with `value`!",if:{arg:"value",exists:!1},table:{type:{summary:"string | string[]"}}},type:{description:"Type of the accordion.",control:"inline-radio",options:["single","multiple"]},collapsible:{description:"Whether the accordion is collapsible. Only works with `type`: `single`.",if:{arg:"type",eq:"single"}},disabled:{type:"boolean"}}},e={},r={args:{collapsible:!1}},t={args:{type:"multiple"}},o={args:{defaultValue:"2"}};var a,s,i;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:"{} satisfies Story",...(i=(s=e.parameters)==null?void 0:s.docs)==null?void 0:i.source}}};var l,n,p;r.parameters={...r.parameters,docs:{...(l=r.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    collapsible: false
+  }
+} satisfies Story`,...(p=(n=r.parameters)==null?void 0:n.docs)==null?void 0:p.source}}};var c,m,u;t.parameters={...t.parameters,docs:{...(c=t.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    type: 'multiple'
+  }
+} satisfies Story`,...(u=(m=t.parameters)==null?void 0:m.docs)==null?void 0:u.source}}};var d,g,f;o.parameters={...o.parameters,docs:{...(d=o.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  args: {
+    defaultValue: '2'
+  }
+} satisfies Story`,...(f=(g=o.parameters)==null?void 0:g.docs)==null?void 0:f.source}}};const F=["Default","NotCollapsible","Multiple","DefaultOpen"];export{e as Default,o as DefaultOpen,t as Multiple,r as NotCollapsible,F as __namedExportsOrder,B as default};

@@ -1,0 +1,1 @@
+import{r as e}from"./index-DRjF_FHU.js";function p(u,s,{checkForDefaultPrevented:f=!0}={}){return function(c){if(u==null||u(c),f===!1||!c.defaultPrevented)return s==null?void 0:s(c)}}function o(u){const s=e.useRef(u);return e.useEffect(()=>{s.current=u}),e.useMemo(()=>(...f)=>{var t;return(t=s.current)==null?void 0:t.call(s,...f)},[])}export{p as c,o as u};
