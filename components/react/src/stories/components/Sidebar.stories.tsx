@@ -1,4 +1,4 @@
-import { Home, SettingsIcon, UsersIcon } from 'lucide-react';
+import { History, Home, Power, SettingsIcon, UsersIcon, WifiOff } from 'lucide-react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -80,5 +80,37 @@ export const DefaultClosed = {
 export const CustonActiveCheck = {
   args: {
     isActiveCheck: () => true,
+  },
+} satisfies Story;
+
+export const WithGroups = {
+  args: {
+    items: [
+      {
+        title: 'Dashboard',
+        description: 'Dashboard',
+        Icon: Home,
+        href: '/dashboard',
+      },
+      {
+        type: 'group',
+        title: 'Disconnections',
+        Icon: WifiOff,
+        items: [
+          {
+            title: 'History',
+            description: 'Recent disconnects',
+            Icon: History,
+            href: '/disconnections',
+          },
+          {
+            title: 'Force Disconnect',
+            description: 'Kill connection',
+            Icon: Power,
+            href: '/disconnections/force',
+          },
+        ],
+      },
+    ],
   },
 } satisfies Story;

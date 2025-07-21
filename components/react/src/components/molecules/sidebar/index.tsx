@@ -7,6 +7,7 @@ import {
 } from '@components/atoms/sidebar/SidebarItem';
 
 import { SidebarProvider } from 'src/lib/contexts/SidebarProvider';
+import { SidebarGroup, SidebarGroupProps } from '@components/atoms/sidebar/SidebarGroup';
 
 export interface SidebarProps extends Pick<SidebarItemProps, 'asLink'> {
   /**
@@ -14,7 +15,7 @@ export interface SidebarProps extends Pick<SidebarItemProps, 'asLink'> {
    * Default: true
    */
   isDefaultOpen?: boolean;
-  items: SidebarItemProps[];
+  items: (SidebarItemProps | SidebarGroupProps)[];
   /**
    * Override the default active check to determine if the link is active
    * @param href Link rendered in the sidebar
@@ -32,14 +33,23 @@ export const Sidebar: ComponentType<SidebarProps> = ({
   return (
     <SidebarProvider isDefaultOpen={isDefaultOpen}>
       <SidebarContainer>
-        {items.map((item) => (
-          <SidebarItem
-            key={item.title}
-            asLink={asLink}
-            isActive={isActiveCheck(item.href)}
-            {...item}
-          />
-        ))}
+        {items.map((item) =>
+          'type' in item && item.type === 'group' ? (
+            <SidebarGroup
+              key={item.title}
+              {...item}
+              asLink={asLink}
+              isActiveCheck={isActiveCheck}
+            />
+          ) : (
+            <SidebarItem
+              key={item.href}
+              {...item}
+              asLink={asLink}
+              isActive={item.isActive ?? isActiveCheck(item.href)}
+            />
+          )
+        )}
       </SidebarContainer>
     </SidebarProvider>
   );
