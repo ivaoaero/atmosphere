@@ -5,7 +5,11 @@ import { ChevronRight } from 'lucide-react';
 import { cn } from '@utils/styles';
 import { useSidebar } from '@hooks/useSidebar';
 
-import { SidebarAsLinkProps, SidebarItem, SidebarItemProps } from './SidebarItem';
+import {
+  SidebarAsLinkProps,
+  SidebarItem,
+  SidebarItemProps,
+} from './SidebarItem';
 
 export interface SidebarGroupProps {
   type: 'group';
