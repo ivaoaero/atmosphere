@@ -1,4 +1,11 @@
-import { History, Home, Power, SettingsIcon, UsersIcon, WifiOff } from 'lucide-react';
+import {
+  History,
+  Home,
+  Power,
+  SettingsIcon,
+  UsersIcon,
+  WifiOff,
+} from 'lucide-react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 

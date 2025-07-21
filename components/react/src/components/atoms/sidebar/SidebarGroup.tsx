@@ -5,14 +5,14 @@ import { ChevronRight } from 'lucide-react';
 import { cn } from '@utils/styles';
 import { useSidebar } from '@hooks/useSidebar';
 
-import { SidebarItem, SidebarItemProps } from './SidebarItem';
+import { SidebarAsLinkProps, SidebarItem, SidebarItemProps } from './SidebarItem';
 
 export interface SidebarGroupProps {
   type: 'group';
   title: string;
   Icon: ComponentType;
   items: SidebarItemProps[];
-  asLink?: ComponentType<any>;
+  asLink?: ComponentType<SidebarAsLinkProps>;
   isActiveCheck?: (href: string) => boolean;
 }
 
@@ -41,7 +41,7 @@ export const SidebarGroup = ({
           className={cn(
             'flex size-9 items-center justify-center rounded-md p-2 transition-all',
             'bg-fuselage-100 text-fuselage-500 group-hover:bg-fuselage-200/50',
-            'group-hover:text-fuselage-600 dark:bg-fuselage-700 dark:text-fuselage-500 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100'
+            'group-hover:text-fuselage-600 dark:bg-fuselage-700 dark:text-fuselage-500 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
           )}
         >
           <Icon />
