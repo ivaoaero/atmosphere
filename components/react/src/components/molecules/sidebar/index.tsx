@@ -2,12 +2,15 @@ import { ComponentType } from 'react';
 
 import { SidebarContainer } from '@components/atoms/sidebar';
 import {
+  SidebarGroup,
+  SidebarGroupProps,
+} from '@components/atoms/sidebar/SidebarGroup';
+import {
   SidebarItem,
   SidebarItemProps,
 } from '@components/atoms/sidebar/SidebarItem';
 
 import { SidebarProvider } from 'src/lib/contexts/SidebarProvider';
-import { SidebarGroup, SidebarGroupProps } from '@components/atoms/sidebar/SidebarGroup';
 
 export interface SidebarProps extends Pick<SidebarItemProps, 'asLink'> {
   /**
@@ -48,7 +51,7 @@ export const Sidebar: ComponentType<SidebarProps> = ({
               asLink={asLink}
               isActive={item.isActive ?? isActiveCheck(item.href)}
             />
-          )
+          ),
         )}
       </SidebarContainer>
     </SidebarProvider>
