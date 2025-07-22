@@ -420,7 +420,7 @@ const data: Task[] = [
 ];
 
 const meta = {
-  title: 'Components/DataTable',
+  title: 'DataDisplay/Lists/DataTable',
   component: DataTable,
   tags: ['autodocs'],
   args: {

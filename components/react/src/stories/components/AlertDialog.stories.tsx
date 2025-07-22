@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AlertDialog } from '@components/molecules/alert-dialog';
 
 const meta: Meta = {
-  title: 'Components/AlertDialog',
+  title: 'Feedback/AlertDialog',
   component: AlertDialog,
   tags: ['autodocs'],
   args: {

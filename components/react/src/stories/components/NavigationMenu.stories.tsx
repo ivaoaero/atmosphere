@@ -35,7 +35,7 @@ const NavLinkComponent = forwardRef<
 NavLinkComponent.displayName = ReactRouterLink.displayName;
 
 const meta: Meta = {
-  title: 'Components/NavigationMenu',
+  title: 'Navigation/NavigationMenu',
   component: NavigationMenu,
   tags: ['autodocs'],
 

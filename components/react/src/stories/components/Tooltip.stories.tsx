@@ -7,7 +7,7 @@ import { TooltipProvider } from '@components/atoms/tooltip';
 import { Tooltip } from '@components/molecules/tooltip';
 
 const meta = {
-  title: 'Components/Tooltip',
+  title: 'Feedback/Tooltip',
   component: Tooltip,
   decorators: (Story) => (
     <TooltipProvider>

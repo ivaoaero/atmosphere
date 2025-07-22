@@ -6,7 +6,7 @@ import { Checkbox } from '@components/atoms/checkbox';
 import { Label } from '@components/atoms/label';
 
 const meta = {
-  title: 'Components/Inputs/Checkbox',
+  title: 'Forms/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   args: {
