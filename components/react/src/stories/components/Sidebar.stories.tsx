@@ -100,7 +100,6 @@ export const WithGroups = {
         href: '/dashboard',
       },
       {
-        type: 'group',
         title: 'Disconnections',
         Icon: WifiOff,
         items: [
