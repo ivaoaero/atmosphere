@@ -36,23 +36,27 @@ export const Sidebar: ComponentType<SidebarProps> = ({
   return (
     <SidebarProvider isDefaultOpen={isDefaultOpen}>
       <SidebarContainer>
-        {items.map((item) =>
-          'type' in item && item.type === 'group' ? (
-            <SidebarGroup
-              key={item.title}
-              {...item}
-              asLink={asLink}
-              isActiveCheck={isActiveCheck}
-            />
-          ) : (
-            <SidebarItem
-              key={item.href}
-              {...item}
-              asLink={asLink}
-              isActive={item.isActive ?? isActiveCheck(item.href)}
-            />
-          ),
-        )}
+        {items.map((item) => {
+          if ('items' in item) {
+            return (
+              <SidebarGroup
+                key={item.title}
+                {...item}
+                asLink={asLink}
+                isActiveCheck={isActiveCheck}
+              />
+            );
+          } else {
+            return (
+              <SidebarItem
+                key={item.href}
+                {...item}
+                asLink={asLink}
+                isActive={item.isActive ?? isActiveCheck(item.href)}
+              />
+            );
+          }
+        })}
       </SidebarContainer>
     </SidebarProvider>
   );
