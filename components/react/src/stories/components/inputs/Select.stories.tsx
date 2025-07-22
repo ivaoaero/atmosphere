@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Select } from '@components/molecules/select';
 
 const meta = {
-  title: 'Forms/Inputs/Select',
+  title: 'Forms/Select',
   component: Select,
   tags: ['autodocs'],
   args: {

@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Command } from '@components/molecules/command';
 
 const meta = {
-  title: 'Forms/Inputs/Command',
+  title: 'Forms/Command',
   component: Command,
   tags: ['autodocs'],
   args: {
