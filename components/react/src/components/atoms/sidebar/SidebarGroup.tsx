@@ -32,7 +32,7 @@ export const SidebarGroup = ({
   const [isGroupOpen, setIsGroupOpen] = useState(false);
   const sidebarContext = useSidebar();
   const { isSidebarOpen, setIsSidebarOpen } = sidebarContext;
- 
+
   const isAnyChildActive = items.some((item) => isActiveCheck(item.href));
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export const SidebarGroup = ({
       setIsGroupOpen(true);
     }
   }, [isAnyChildActive]);
-  
+
   useEffect(() => {
     if (!isSidebarOpen) setIsGroupOpen(false);
   }, [isSidebarOpen]);
@@ -51,7 +51,6 @@ export const SidebarGroup = ({
     }
     setIsGroupOpen((prev) => !prev);
   };
-
 
   const SidebarGroupButton = (
     <button

@@ -4,7 +4,7 @@ export interface ISidebarContext {
   isSidebarOpen: boolean;
   setIsSidebarOpen: (value: boolean) => void;
   toggleSidebar: () => void;
-  isGroupOpen?: boolean,
+  isGroupOpen?: boolean;
 }
 
 export const SidebarContext = createContext<ISidebarContext>({
@@ -19,5 +19,5 @@ export const SidebarContext = createContext<ISidebarContext>({
       'SidebarContext not initialized. Use SidebarProvider to initialize.',
     );
   },
-  isGroupOpen: false
+  isGroupOpen: false,
 });
