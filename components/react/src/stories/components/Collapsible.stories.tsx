@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Collapsible } from '@components/molecules/collapsible';
 
 const meta = {
-  title: 'Components/Collapsible',
+  title: 'DataDisplay/Collapsible',
   component: Collapsible,
   tags: ['autodocs'],
   args: {

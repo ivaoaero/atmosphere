@@ -8,7 +8,7 @@ import { useToast } from '@hooks/useToast';
 import { ToastProvider } from 'src/lib/contexts/ToastProvider';
 
 const meta = {
-  title: 'Components/Toast',
+  title: 'Feedback/Toast',
   component: Toast,
   decorators: (Story) => (
     <div className={'min-h-96'}>

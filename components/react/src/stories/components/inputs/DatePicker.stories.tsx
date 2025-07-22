@@ -6,7 +6,7 @@ import { Button } from '@components/atoms/button';
 import { DatePicker } from '@components/molecules/date-picker';
 
 const meta = {
-  title: 'Components/Inputs/DatePicker',
+  title: 'Forms/Inputs/DatePicker',
   component: DatePicker,
   tags: ['autodocs'],
   args: {

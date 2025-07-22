@@ -6,7 +6,7 @@ import { DialogClose } from '@components/atoms/dialog';
 import { Dialog } from '@components/molecules/dialog';
 
 const meta = {
-  title: 'Components/Dialog',
+  title: 'Feedback/Dialog',
   component: Dialog,
   tags: ['autodocs'],
   args: {

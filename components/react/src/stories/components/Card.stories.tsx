@@ -7,7 +7,7 @@ import { Alert } from '@components/molecules/alert';
 import { Card } from '@components/molecules/card';
 
 const meta = {
-  title: 'Components/Card',
+  title: 'DataDisplay/Card',
   component: Card,
   tags: ['autodocs'],
   args: {

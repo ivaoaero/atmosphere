@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Toggle } from '@components/atoms/toggle';
 
 const meta = {
-  title: 'Components/Inputs/Toggle',
+  title: 'Forms/Inputs/Toggle',
   component: Toggle,
   tags: ['autodocs'],
   args: {

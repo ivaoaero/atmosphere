@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Table } from '@components/molecules/table';
 
 const meta = {
-  title: 'Components/Table',
+  title: 'DataDisplay/Lists/Table',
   component: Table,
   tags: ['autodocs'],
   args: {

@@ -9,7 +9,7 @@ const image =
   'https://virtualsky.ivao.aero/content/images/size/w300/2022/01/183607355_10159966568413689_568014047533682934_n.png';
 
 const meta = {
-  title: 'Components/ListItem',
+  title: 'DataDisplay/Lists/ListItem',
   component: ListItem,
   tags: ['autodocs'],
   parameters: {

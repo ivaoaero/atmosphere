@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Label } from '@components/atoms/label';
 
 const meta = {
-  title: 'Components/Inputs/Label',
+  title: 'Forms/Inputs/Label',
   component: Label,
   tags: ['autodocs'],
   args: {

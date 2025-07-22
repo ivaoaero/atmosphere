@@ -19,7 +19,7 @@ const ThemeDisplay = () => {
 };
 
 const meta = {
-  title: 'Components/DarkModeToggle',
+  title: 'Theme/DarkModeToggle',
   component: DarkModeToggle,
   tags: ['autodocs'],
   decorators: (Story) => (
