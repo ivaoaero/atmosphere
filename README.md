@@ -16,13 +16,21 @@
 
 ## Usage
 
-1. Add our CSS into your index file.
+1. Install it.
+
+```bash
+npm install @ivao/atmosphere-react
+yarn add @ivao/atmosphere-react
+pnpm add @ivao/atmosphere-react
+```
+
+2. Add our CSS into your index file.
 
 ```typescript
 import "@ivao/atmosphere-react/dist/styles/index.css";
 ```
 
-2. Use our components.
+3. Use our components.
 
 ```typescript
 import { Button } from "@ivao/atmosphere-react";
