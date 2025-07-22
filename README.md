@@ -1,12 +1,47 @@
-# Atmosphere Design System
+<p align="center">
+  <img src="https://static.ivao.aero/img/logos/logo.svg" />
+</p>
 
-## First Steps
+<div align="center" width="100%">
+<h1>Atmosphere Design System</h1>
+<p>This is IVAO Atmosphere Components library that are based on the excellent<a href='https://ui.shadcn.com/'>shadcn/ui</a> library.</p>
+<a src="https://www.npmjs.com/package/@ivao/atmosphere-react"><img alt="NPM Version" src="https://img.shields.io/npm/v/%40ivao%2Fatmosphere-react?link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40ivao%2Fatmosphere-react"></a>
 
-1. Enable corepack `corepack enable`.
+</div>
 
-2. Run `pnpm i` to install node_modules.
-   If you got an error when installing the node_modules with pnpm, you need to update corepack running `npm i -g corepack`.
+## Requirements
 
-3. Run `pnpm prebuild` to build the workspace required components.
+1. Node > 18.
+2. React 18. _React 19 is not tested_.
 
-4. Go to `cd components/react` and run `pnpm storybook` to start Storybook.
+## Usage
+
+1. Add our CSS into your index file.
+
+```typescript
+import "@ivao/atmosphere-react/dist/styles/index.css";
+```
+
+2. Use our components.
+
+```typescript
+import { Button } from "@ivao/atmosphere-react";
+
+function MyComponent() {
+  return (
+    <div>
+      <Button>Filter</Button>
+    </div>
+  );
+}
+```
+
+3. See our [documentation and components here](https://ivaoaero.github.io/atmosphere/main).
+
+## Contributing
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting changes.
+
+---
+
+Built with ❤️ by the IVAO Web Developer Team from around the world.
