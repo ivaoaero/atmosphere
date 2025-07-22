@@ -104,7 +104,7 @@ const meta = {
         category: 'Actions',
       },
     },
-    icon: {
+    Icon: {
       control: 'object',
       table: {
         type: {
@@ -158,14 +158,14 @@ export const WithoutDescription = {
 export const WithOutImageOrIcon = {
   args: {
     imageSrc: undefined,
-    icon: undefined,
+    Icon: undefined,
   },
 } satisfies Story;
 
 export const WithIcon = {
   args: {
     imageSrc: undefined,
-    icon: Plane,
+    Icon: Plane,
   },
 } satisfies Story;
 
