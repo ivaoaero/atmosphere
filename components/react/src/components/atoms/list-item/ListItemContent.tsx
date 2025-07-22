@@ -1,9 +1,8 @@
 import { ComponentType, HTMLAttributes, ReactNode, useId } from 'react';
 
 import { ListItemActions } from '@components/atoms/list-item/ListItemActions';
+import { ListItemHeader } from '@components/atoms/list-item/ListItemHeader';
 import { ListItemMedia } from '@components/atoms/list-item/ListItemMedia';
-
-import { ListItemHeader } from './ListItemHeader';
 
 export interface ListItemProps extends HTMLAttributes<HTMLLIElement> {
   title: string;

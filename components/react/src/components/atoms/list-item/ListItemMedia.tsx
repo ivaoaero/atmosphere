@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 
-import { Skeleton } from '../skeleton';
+import { Skeleton } from '@components/atoms/skeleton';
 
 export interface ListItemMediaProps {
   title: string;
