@@ -1,1 +1,0 @@
-import{j as s}from"./jsx-runtime-DiklIkkE.js";import{c as t}from"./styles-CytzSlOG.js";const m=({className:e,...o})=>s.jsx("div",{className:t("animate-pulse rounded-md bg-muted",e),...o});m.__docgenInfo={description:"",methods:[],displayName:"Skeleton"};export{m as S};

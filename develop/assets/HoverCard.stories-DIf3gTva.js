@@ -1,0 +1,14 @@
+import{j as y}from"./jsx-runtime-DiklIkkE.js";import{a as h}from"./index-B-lxVbXh.js";import{B as b}from"./index-Ag7AXzbb.js";import{H as S}from"./index-DmD6xdiK.js";import"./index-DRjF_FHU.js";import"./v4-CtRu48qb.js";import"./index-zZ8-XE7G.js";import"./buttonVariants-DQwTeNM8.js";import"./index-BywojM7u.js";import"./styles-Dj5kSLHa.js";import"./createLucideIcon-B1d7gGsx.js";import"./index-DNjz5F53.js";import"./index-DRtXj63t.js";import"./index-CB2Ck3t8.js";import"./index-BOGxT6Z4.js";import"./index-DHHUZ-3A.js";import"./index-BHDKhPUC.js";import"./index-DSPJRkee.js";import"./index-Dd68SkXN.js";import"./index-CVyrcOig.js";import"./index-BCnQyZYr.js";const F={title:"Components/HoverCard",component:S,tags:["autodocs"],args:{trigger:"Hover to open card",children:"Card content",onOpenChange:h("open change")},argTypes:{open:{type:"boolean",description:"Whether the card is open. Cannot be used with `defaultOpen`!",if:{arg:"defaultOpen",exists:!1}},defaultOpen:{type:"boolean",description:"Sets the card initially open. Cannot be used with `open`!",if:{arg:"open",exists:!1}},triggerAsChild:{description:"Pass `asChild` prop to the trigger component.",type:"boolean"},openDelay:{description:"Delay in milliseconds before the card opens.",type:"number"},closeDelay:{description:"Delay in milliseconds before the card closes.",type:"number"},side:{control:"inline-radio",options:["top","right","bottom","left"],table:{type:{summary:"Side"}}},sideOffset:{type:"number",table:{type:{summary:"number"}}},align:{control:"inline-radio",options:["start","center","end"],table:{defaultValue:{summary:"center"},type:{summary:"Align"}}},alignOffset:{type:"number",table:{type:{summary:"number"}}}}},e={},r={args:{trigger:y.jsx(b,{children:"Hover here"}),triggerAsChild:!0}},t={args:{open:!0}},o={args:{defaultOpen:!0}};var a,s,n;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:"{} satisfies Story",...(n=(s=e.parameters)==null?void 0:s.docs)==null?void 0:n.source}}};var i,p,m;r.parameters={...r.parameters,docs:{...(i=r.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  args: {
+    trigger: <Button>Hover here</Button>,
+    triggerAsChild: true
+  }
+} satisfies Story`,...(m=(p=r.parameters)==null?void 0:p.docs)==null?void 0:m.source}}};var c,d,l;t.parameters={...t.parameters,docs:{...(c=t.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    open: true
+  }
+} satisfies Story`,...(l=(d=t.parameters)==null?void 0:d.docs)==null?void 0:l.source}}};var u,g,f;o.parameters={...o.parameters,docs:{...(u=o.parameters)==null?void 0:u.docs,source:{originalSource:`{
+  args: {
+    defaultOpen: true
+  }
+} satisfies Story`,...(f=(g=o.parameters)==null?void 0:g.docs)==null?void 0:f.source}}};const G=["Default","WithButtonTrigger","ManagedState","DefaultOpen"];export{e as Default,o as DefaultOpen,t as ManagedState,r as WithButtonTrigger,G as __namedExportsOrder,F as default};
