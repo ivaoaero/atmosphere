@@ -26,8 +26,8 @@ export const colors = {
     900: '#10172F',
   },
   fuselage: {
-    50: '#f9faff',
-    100: '#eeeffc',
+    50: '#fafaff',
+    100: '#eeeff5',
     150: '#e0e1ec',
     200: '#d2d3e0',
     250: '#babbcc',
