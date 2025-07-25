@@ -5,8 +5,6 @@ import { ChevronRight } from 'lucide-react';
 import { cn } from '@utils/styles';
 import { useSidebar } from '@hooks/useSidebar';
 
-import { SidebarContext } from 'src/main';
-
 import {
   SidebarAsLinkProps,
   SidebarItem,
@@ -29,8 +27,8 @@ export const SidebarGroup = ({
   isActiveCheck = (href) =>
     typeof window !== 'undefined' && window.location.pathname === href,
 }: SidebarGroupProps) => {
-  const [isGroupOpen, setIsGroupOpen] = useState(false);
   const sidebarContext = useSidebar();
+  const [isGroupOpen, setIsGroupOpen] = useState<boolean>();
   const { isSidebarOpen, setIsSidebarOpen } = sidebarContext;
 
   const isAnyChildActive = items.some((item) => isActiveCheck(item.href));
@@ -49,7 +47,7 @@ export const SidebarGroup = ({
     if (!isSidebarOpen) {
       setIsSidebarOpen(true);
     }
-    setIsGroupOpen((prev) => !prev);
+    setIsGroupOpen(!isGroupOpen);
   };
 
   const SidebarGroupButton = (
@@ -87,15 +85,11 @@ export const SidebarGroup = ({
     </button>
   );
 
-  if (!isGroupOpen) {
-    return <div>{SidebarGroupButton}</div>;
-  }
-
   return (
-    <SidebarContext.Provider value={{ ...sidebarContext, isGroupOpen }}>
-      <div>
-        {SidebarGroupButton}
+    <div>
+      {SidebarGroupButton}
 
+      {isGroupOpen && (
         <div className="ml-8 mt-3 flex flex-col gap-2">
           {items.map((item) => (
             <SidebarItem
@@ -103,11 +97,12 @@ export const SidebarGroup = ({
               {...item}
               asLink={asLink}
               isActive={item.isActive ?? isActiveCheck(item.href)}
+              isGroupOpen={isGroupOpen}
             />
           ))}
         </div>
-      </div>
-    </SidebarContext.Provider>
+      )}
+    </div>
   );
 };
 
