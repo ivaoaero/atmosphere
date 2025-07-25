@@ -59,6 +59,11 @@ export const Pagination = ({
       ),
       0,
     );
+
+    if (totalPages <= displayedPages) {
+      return Array.from({ length: totalPages }, (_, i) => i);
+    }
+
     return Array.from({ length: displayedPages }, (_, i) => startPage + i);
   }, [activePageIdxState, totalPages, displayedPages]);
 
