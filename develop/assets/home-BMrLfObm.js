@@ -1,3 +1,0 @@
-import{j as t}from"./jsx-runtime-DiklIkkE.js";import{useMDXComponents as r}from"./index-ChEI-nsM.js";import{M as m}from"./index-Dk0xjA35.js";import"./index-DRjF_FHU.js";import"./iframe-DAemF8V1.js";import"./index-CiicFVJS.js";import"./index-DHHUZ-3A.js";import"./index-FTTXbSiM.js";import"./index-DrFu-skq.js";function n(o){const e={h1:"h1",p:"p",...r(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Home"}),`
-`,t.jsx(e.h1,{id:"atomosphere-",children:"Atomosphere ☁"}),`
-`,t.jsx(e.p,{children:"IVAO's Design system!"})]})}function d(o={}){const{wrapper:e}={...r(),...o.components};return e?t.jsx(e,{...o,children:t.jsx(n,{...o})}):n(o)}export{d as default};
