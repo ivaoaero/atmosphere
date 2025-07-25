@@ -20,6 +20,7 @@ export interface SidebarItemProps extends HTMLAttributes<HTMLAnchorElement> {
   href: string;
   asLink?: ComponentType<SidebarAsLinkProps>;
   isActive?: boolean;
+  isGroupOpen?: boolean;
 }
 
 export const SidebarItem = ({
@@ -38,7 +39,6 @@ export const SidebarItem = ({
 
   // Default match active link
   if (isActive === undefined) isActive = window.location.pathname === href;
-
   return (
     <LinkComponent
       href={href}
@@ -62,7 +62,9 @@ export const SidebarItem = ({
       <div
         className={cn(
           'flex shrink-0 flex-col items-start whitespace-nowrap transition-all',
-          isSidebarOpen ? 'ml-4 w-48 opacity-100' : 'invisible w-0 opacity-0',
+          isSidebarOpen
+            ? `ml-4 ${props.isGroupOpen ? 'w-fit' : 'w-48'} opacity-100`
+            : 'invisible w-0 opacity-0',
         )}
       >
         <span
