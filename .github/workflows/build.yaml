@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Build TypeScript files
-    runs-on: self-hosted
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@ivaoaero'
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@ivaoaero"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies

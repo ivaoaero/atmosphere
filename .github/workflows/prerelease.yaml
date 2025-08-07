@@ -21,7 +21,7 @@ jobs:
       - build
     if: success('build')
     name: Release atmosphere packages
-    runs-on: self-hosted
+    runs-on: ubuntu-24.04
     environment: default # environment with NPM_TOKEN
     permissions:
       contents: write # publish a GitHub release
@@ -37,8 +37,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@ivaoaero'
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@ivaoaero"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
