@@ -12,7 +12,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Sidebar } from '@components/molecules/sidebar';
 
 const meta = {
-  title: 'Components/Sidebar',
+  title: 'Navigation/Sidebar',
   component: Sidebar,
   tags: ['autodocs'],
   decorators: (Story) => {

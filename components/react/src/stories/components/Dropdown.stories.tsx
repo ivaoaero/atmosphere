@@ -15,7 +15,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { DropdownMenu } from '@components/molecules/dropdown-menu';
 
 const meta = {
-  title: 'Components/DropdownMenu',
+  title: 'Navigation/DropdownMenu',
   component: DropdownMenu,
   tags: ['autodocs'],
   args: {

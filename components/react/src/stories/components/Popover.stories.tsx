@@ -7,7 +7,7 @@ import { Button } from '@components/atoms/button';
 import { Popover } from '@components/molecules/popover';
 
 const meta = {
-  title: 'Components/Popover',
+  title: 'DataDisplay/Popover',
   component: Popover,
   tags: ['autodocs'],
   args: {

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ScrollArea } from '@components/molecules/scroll-area';
 
 const meta = {
-  title: 'Components/ScrollArea',
+  title: 'DataDisplay/ScrollArea',
   component: ScrollArea,
   tags: ['autodocs'],
   args: {

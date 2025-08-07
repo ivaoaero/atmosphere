@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Carousel } from '@components/molecules/carousel';
 
 const meta = {
-  title: 'Components/Carousel',
+  title: 'DataDisplay/Carousel',
   component: Carousel,
   tags: ['autodocs'],
   decorators: (Story) => (

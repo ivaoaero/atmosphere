@@ -4,7 +4,7 @@ import { Button } from '@components/atoms/button';
 import { Navbar } from '@components/molecules/navbar';
 
 const meta = {
-  title: 'Components/Navbar',
+  title: 'Navigation/Navbar',
   component: Navbar,
   tags: ['autodocs'],
   args: {

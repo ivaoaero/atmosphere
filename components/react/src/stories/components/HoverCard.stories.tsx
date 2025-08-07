@@ -6,7 +6,7 @@ import { Button } from '@components/atoms/button';
 import { HoverCard } from '@components/molecules/hover-card';
 
 const meta = {
-  title: 'Components/HoverCard',
+  title: 'DataDisplay/HoverCard',
   component: HoverCard,
   tags: ['autodocs'],
   args: {

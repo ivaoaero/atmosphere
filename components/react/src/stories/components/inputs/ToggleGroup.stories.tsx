@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ToggleGroup } from '@components/molecules/toggle-group';
 
 const meta = {
-  title: 'Components/Inputs/ToggleGroup',
+  title: 'Forms/ToggleGroup',
   component: ToggleGroup,
   tags: ['autodocs'],
   args: {

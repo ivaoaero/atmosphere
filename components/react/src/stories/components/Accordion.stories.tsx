@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Accordion } from '@components/molecules/accordion';
 
 const meta = {
-  title: 'Components/Accordion',
+  title: 'DataDisplay/Accordion',
   component: Accordion,
   tags: ['autodocs'],
   args: {

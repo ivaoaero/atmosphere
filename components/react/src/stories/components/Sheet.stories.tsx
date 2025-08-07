@@ -7,7 +7,7 @@ import { Sheet } from '@components/molecules/sheet';
 import { Tooltip } from '@components/molecules/tooltip';
 
 const meta = {
-  title: 'Components/Sheet',
+  title: 'Feedback/Sheet',
   component: Sheet,
   tags: ['autodocs'],
   parameters: {

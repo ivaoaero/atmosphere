@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { IconButton } from '@components/atoms/icon-button';
 
 const meta = {
-  title: 'Components/IconButton',
+  title: 'General/Button/IconButton',
   component: IconButton,
   tags: ['autodocs'],
   args: {

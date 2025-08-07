@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Slider } from '@components/molecules/slider';
 
 const meta = {
-  title: 'Components/Inputs/Slider',
+  title: 'Forms/Slider',
   component: Slider,
   tags: ['autodocs'],
   args: {
