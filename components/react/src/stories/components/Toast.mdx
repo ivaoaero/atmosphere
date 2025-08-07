@@ -1,0 +1,36 @@
+import { Controls, Meta, Primary } from '@storybook/blocks';
+
+import * as ToastStories from './Toast.stories';
+
+<Meta of={ToastStories} />
+
+# Toast
+
+## How to use
+
+```tsx
+import { ComponentType } from 'react';
+
+import { useToast } from '@ivao/atmosphere-react';
+
+const Component: ComponentType = () => {
+  const toast = useToast();
+
+  toast({
+    action: 'Toast Action',
+    actionAltText: 'Screen reader text for the action',
+    title: 'Toast Title',
+    description: 'Toast Description',
+  });
+};
+```
+
+## Result
+
+<Primary />
+
+## Types
+
+The following props can be passed to the first argument of the `toast` function:
+
+<Controls />

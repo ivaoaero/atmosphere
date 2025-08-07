@@ -1,15 +1,15 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { forwardRef, QuoteHTMLAttributes } from 'react';
 
 import { cn } from '@utils/styles';
 
 export const BlockQuote = forwardRef<
   HTMLQuoteElement,
-  ComponentPropsWithoutRef<'blockquote'>
+  QuoteHTMLAttributes<HTMLQuoteElement>
 >(({ className, ...props }, ref) => (
   <blockquote
     ref={ref}
     className={cn(
-      'mt-6 border-l-2 border-fuselage-50 pl-6 italic text-fuselage-400 dark:border-fuselage-600 dark:text-fuselage-200',
+      'mt-6 border-l-2 border-fuselage-200 pl-6 italic text-fuselage-550 dark:border-fuselage-700 dark:text-fuselage-450',
       className,
     )}
     {...props}

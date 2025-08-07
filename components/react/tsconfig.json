@@ -28,13 +28,14 @@
     "paths": {
       "@components/*": ["components/*"],
       "@utils/*": ["lib/utils/*"],
+      "@hooks/*": ["lib/hooks/*"],
       "@stories/*": ["stories/*"],
       "@styles/*": ["styles/*"],
       "src/*": ["./*"],
       "static/*": ["../static/*"]
     }
   },
-  "include": ["src", "*.config.ts", "*.config.js"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

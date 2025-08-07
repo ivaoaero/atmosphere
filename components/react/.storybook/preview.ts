@@ -1,27 +1,24 @@
-import { withThemeByClassName } from '@storybook/addon-styling';
+import { withThemeByClassName } from '@storybook/addon-themes';
 import { themes } from '@storybook/theming';
 
-import type { Preview } from '@storybook/react';
+import type { Preview, ReactRenderer } from '@storybook/react';
 
 import '../src/styles/index.css';
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
     docs: {
       theme: themes.dark,
+    },
+    backgrounds: {
+      default: 'theme',
+      values: [{ name: 'theme', value: `rgb(var(--background))` }],
     },
   },
 };
 
 export const decorators = [
-  withThemeByClassName({
+  withThemeByClassName<ReactRenderer>({
     themes: {
       light: '',
       dark: 'dark',

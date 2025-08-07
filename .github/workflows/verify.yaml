@@ -1,0 +1,15 @@
+name: Verify build on PR
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yaml
+
+  commitlint:
+    uses: ./.github/workflows/commitlint.yaml
+
+  build:
+    uses: ./.github/workflows/build.yaml

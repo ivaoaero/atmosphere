@@ -1,4 +1,4 @@
-import path from 'node:path';
+import { resolve } from 'path';
 
 import react from '@vitejs/plugin-react';
 import analyzer from 'rollup-plugin-analyzer';
@@ -10,35 +10,34 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      insertTypesEntry: true,
-      exclude: ['node_modules/**', 'dist/**', '**/*.stories.tsx'],
+      rollupTypes: true,
+      exclude: [
+        'node_modules/**',
+        'dist/**',
+        '**/*.stories.tsx',
+        './*.config.ts',
+      ],
     }),
     tsconfigPaths(),
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/main.ts'),
+      entry: resolve(__dirname, 'src/main.ts'),
       name: 'atmosphere-react',
       formats: ['es'],
       fileName: 'atmosphere-react',
     },
     rollupOptions: {
-      external: [
-        'react',
-        'react/jsx-runtime',
-        'react-dom',
-        '@carbon/icons-react',
-      ],
+      external: ['react', 'react/jsx-runtime', 'react-dom'],
       output: {
         globals: {
           react: 'react',
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': 'react/jsx-runtime',
-          '@carbon/icons-react': '@carbon/icons-react',
         },
         sourcemapExcludeSources: false,
       },
-      plugins: [analyzer({ stdout: true })],
+      plugins: [analyzer({ stdout: true, limit: 10 })],
     },
     sourcemap: true,
     minify: true,

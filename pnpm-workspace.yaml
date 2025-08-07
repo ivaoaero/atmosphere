@@ -1,0 +1,5 @@
+packages:
+  - brand
+  - components/*
+onlyBuiltDependencies:
+  - esbuild

@@ -1,0 +1,66 @@
+name: Release package
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read # for checkout
+
+env:
+  CI: true
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+
+  release:
+    needs:
+      - build
+    if: success('build')
+    name: Release atmosphere packages
+    runs-on: ubuntu-24.04
+    environment: default # environment with NPM_TOKEN
+    permissions:
+      contents: write # publish a GitHub release
+      id-token: write # use OIDC for npm provenance
+      issues: write # comment on released issues
+      packages: write # publish a NPM package
+      pull-requests: write # comment on released pull requests
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@ivaoaero"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+
+      - name: Downloading brand artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: brand-build
+          path: brand/dist
+
+      - name: Downloading react-components artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: react-components-build
+          path: components/react/dist
+
+      - name: Release atmosphere packages
+        uses: changesets/action@v1
+        with:
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm ci:release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

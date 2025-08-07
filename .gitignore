@@ -52,16 +52,6 @@ jspm_packages/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next
-
-# Rush temporary files
-common/deploy/
-common/temp/
-common/autoinstallers/*/.npmrc
-**/.rush/temp/
-*.lock
-
 # Heft temporary files
 .cache
 .heft
@@ -172,3 +162,5 @@ Temporary Items
 # build outputs
 dist
 build
+
+.npmrc

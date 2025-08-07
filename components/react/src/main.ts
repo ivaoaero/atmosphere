@@ -1,5 +1,337 @@
-export { Button } from '@components/atoms/button';
+export {
+  AccordionRoot,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@components/atoms/accordion';
+export { Accordion } from '@components/molecules/accordion';
+export type {
+  AccordionProps,
+  AccordionItemProps,
+} from '@components/molecules/accordion';
+export { alertVariants } from '@components/atoms/alert/alertVariants';
+export {
+  AlertRoot,
+  AlertTitle,
+  AlertDescription,
+} from '@components/atoms/alert';
+export { Alert } from '@components/molecules/alert';
+export type { AlertProps } from '@components/molecules/alert';
+export {
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  AlertDialogPortal,
+  AlertDialogRoot,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@components/atoms/alert-dialog';
+export { AlertDialog } from '@components/molecules/alert-dialog';
 export { Badge } from '@components/atoms/badge';
+export { Button } from '@components/atoms/button';
+export type { ButtonProps } from '@components/atoms/button';
+export { Calendar } from '@components/atoms/calendar';
+export type { DateRange } from 'react-day-picker';
+export type { CalendarProps } from '@components/atoms/calendar';
+export {
+  CardRoot,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@components/atoms/card';
+export {
+  CarouselRoot,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  CarouselContent,
+} from '@components/atoms/carousel';
+export type { CarouselApi } from '@components/atoms/carousel';
+export { Carousel } from '@components/molecules/carousel';
+export type { CarouselProps } from '@components/molecules/carousel';
+export {
+  Checkbox,
+  CheckboxRoot,
+  CheckboxIndicator,
+  CheckboxCheck,
+} from '@components/atoms/checkbox';
+export {
+  CollapsibleRoot,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from '@components/atoms/collapsible';
+export { Collapsible } from '@components/molecules/collapsible';
+export type { CollapsibleProps } from '@components/molecules/collapsible';
+export {
+  CommandRoot,
+  CommandDialogRoot,
+  CommandEmpty,
+  CommandLoading,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from '@components/atoms/command';
+export { Command, CommandDialog } from '@components/molecules/command';
+export type { CommandProps } from '@components/molecules/command/Command';
+export type { CommandDialogProps } from '@components/molecules/command/CommandDialog';
+export type {
+  CommandItemProps,
+  CommandGroupProps,
+} from '@components/molecules/command/CommandGroupContent';
+export type {
+  CommandSeparatorProps,
+  CommandContentProps,
+} from '@components/molecules/command/CommandContent';
+export { DatePicker } from '@components/molecules/date-picker';
+export type { DatePickerProps } from '@components/molecules/date-picker';
+export { DarkModeToggle } from '@components/molecules/dark-mode-toggle';
+export {
+  DialogRoot,
+  DialogTrigger,
+  DialogTopRightClose,
+  DialogPortal,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogTitle,
+} from '@components/atoms/dialog';
+export { Dialog } from '@components/molecules/dialog';
+export type { DialogProps } from '@components/molecules/dialog';
+export {
+  DropdownMenuRoot,
+  DropdownMenuTrigger,
+  DropdownMenuGroup,
+  DropdownMenuPortal,
+  DropdownMenuSub,
+  DropdownMenuRadioGroup,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuItemIndicator,
+  DropdownMenuLabel,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+} from '@components/atoms/dropdown-menu';
+export { DropdownMenu } from '@components/molecules/dropdown-menu';
+export type {
+  DropdownMenuProps,
+  DropdownMenuItemsProps,
+} from '@components/molecules/dropdown-menu';
+export {
+  HoverCardRoot,
+  HoverCardTrigger,
+  HoverCardContent,
+} from '@components/atoms/hover-card';
+export { HoverCard } from '@components/molecules/hover-card';
+export type { HoverCardProps } from '@components/molecules/hover-card';
+export { IconButton } from '@components/atoms/icon-button';
+export { Input } from '@components/atoms/input';
+export { IVAOLogo } from '@components/atoms/ivao-logo';
+export { Label } from '@components/atoms/label';
+export { ListItemRoot, ListItemContent } from '@components/atoms/list-item';
+export { ListItem } from '@components/molecules/list-item';
+export type { ListItemProps } from '@components/molecules/list-item';
+export { NavbarContainer } from '@components/atoms/navbar';
+export { Navbar } from '@components/molecules/navbar';
+export { navigationMenuTriggerStyle } from '@components/atoms/navigation-menu/navigationMenuTriggerStyle';
+export {
+  NavigationMenuRoot,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuList,
+  NavigationMenuListItem,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from '@components/atoms/navigation-menu';
+export type {
+  NavigationMenuAsLinkProps,
+  NavigationMenuLinkProps,
+} from '@components/atoms/navigation-menu';
+export type {
+  NavigationMenuSectionProps,
+  NavigationMenuProps,
+} from '@components/molecules/navigation-menu';
+export { NavigationMenu } from '@components/molecules/navigation-menu';
+export {
+  PaginationRoot,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@components/atoms/pagination';
+export type { PaginationLinkProps } from '@components/atoms/pagination/PaginationLink';
+export { Pagination } from '@components/molecules/pagination';
+export type { PaginationProps } from '@components/molecules/pagination';
+export {
+  PopoverAnchor,
+  PopoverContent,
+  PopoverRoot,
+  PopoverPortal,
+  PopoverTrigger,
+} from '@components/atoms/popover';
+export { Popover } from '@components/molecules/popover';
+export type { PopoverProps } from '@components/molecules/popover';
+export { Progress } from '@components/atoms/progress';
+export { RadioGroupRoot, RadioGroupItem } from '@components/atoms/radio-group';
+export { RadioGroup } from '@components/molecules/radio-group';
+export type {
+  RadioGroupProps,
+  RadioGroupItemProps,
+} from '@components/molecules/radio-group';
+export {
+  ScrollAreaCorner,
+  ScrollAreaScrollbar,
+  ScrollAreaThumb,
+  ScrollAreaViewport,
+  ScrollAreaRoot,
+  ScrollBar,
+} from '@components/atoms/scroll-area';
+export { ScrollArea } from '@components/molecules/scroll-area';
+export {
+  SelectRoot,
+  SelectPortal,
+  SelectContent,
+  SelectViewport,
+  SelectGroup,
+  SelectIcon,
+  SelectItem,
+  SelectItemIndicator,
+  SelectItemText,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectChevronUp,
+  SelectChevronDown,
+  SelectCheck,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from '@components/atoms/select';
+export { Select, SelectItemGroup } from '@components/molecules/select';
+export { Separator } from '@components/atoms/separator';
+export {
+  SidebarContainer,
+  SidebarCollapseButton,
+  SidebarItem,
+} from '@components/atoms/sidebar';
+export type {
+  SidebarItemProps,
+  SidebarAsLinkProps,
+} from '@components/atoms/sidebar';
+export { Sidebar } from '@components/molecules/sidebar';
+export type { SidebarProps } from '@components/molecules/sidebar';
+export { SidebarContext } from 'src/lib/contexts/SidebarContext';
+export { SidebarProvider } from 'src/lib/contexts/SidebarProvider';
+export { Slider } from '@components/molecules/slider';
+export {
+  SliderRoot,
+  SliderTrack,
+  SliderThumb,
+  SliderRange,
+} from '@components/atoms/slider';
+export { useSidebar } from '@hooks/useSidebar';
+export {
+  SheetRoot,
+  SheetTrigger,
+  SheetPortal,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetOverlay,
+  SheetTitle,
+} from '@components/atoms/sheet';
+export { Sheet } from '@components/molecules/sheet';
+export type { SheetProps } from '@components/molecules/sheet';
+export { Skeleton } from '@components/atoms/skeleton';
+export { SwitchRoot, SwitchThumb, Switch } from '@components/atoms/switch';
+export {
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRoot,
+  TableRow,
+} from '@components/atoms/table';
+export { Table } from '@components/molecules/table';
+export type {
+  TableColumnProps,
+  TableCellProps,
+  TableRowProps,
+  TableProps,
+} from '@components/molecules/table';
+export {
+  DataTable,
+  DataTableColumnHeader,
+  DataTablePagination,
+  DataTableViewOptions,
+  DataTableRowActions,
+  DataTableToolbar,
+} from '@components/molecules/data-table';
+export type {
+  DataTableProps,
+  DataTableColumnHeaderProps,
+  DataTablePaginationProps,
+  DataTableViewOptionsProps,
+  DataTableRowActionsProps,
+  DataTableToolbarProps,
+} from '@components/molecules/data-table';
+export {
+  TabsRoot,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@components/atoms/tabs';
+export { Tabs } from '@components/molecules/tabs';
+export type { TabsProps } from '@components/molecules/tabs';
+export { Textarea } from '@components/atoms/textarea';
+export { ThemeProvider } from 'src/lib/contexts/ThemeProvider';
+export { useTheme } from '@hooks/useTheme';
+export { Toast } from '@components/molecules/toast';
+export { ToastProvider } from 'src/lib/contexts/ToastProvider';
+export { useToast } from '@hooks/useToast';
+export { Toggle } from '@components/atoms/toggle';
+export { toggleVariants } from '@components/atoms/toggle/toggleVariants';
+export {
+  ToggleGroupRoot,
+  ToggleGroupItem,
+} from '@components/atoms/toggle-group';
+export { ToggleGroupContext } from '@components/atoms/toggle-group/ToggleGroupContext';
+export { ToggleGroup } from '@components/molecules/toggle-group';
+export type {
+  ToggleGroupProps,
+  ToggleGroupItemProps,
+} from '@components/molecules/toggle-group';
+export {
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
+  TooltipContent,
+} from '@components/atoms/tooltip';
+export { Tooltip } from '@components/molecules/tooltip';
+export type { TooltipProps } from '@components/molecules/tooltip';
 export {
   BlockQuote,
   H1,
@@ -7,6 +339,7 @@ export {
   H3,
   H4,
   InlineCode,
+  CodeBlock,
   Large,
   Lead,
   OL,
