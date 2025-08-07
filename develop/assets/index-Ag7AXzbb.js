@@ -1,6 +1,0 @@
-import{j as e}from"./jsx-runtime-DiklIkkE.js";import{r as u}from"./index-DRjF_FHU.js";import{R as f,a as b}from"./index-zZ8-XE7G.js";import{b as x}from"./buttonVariants-DQwTeNM8.js";import{a as j}from"./styles-Dj5kSLHa.js";import{c as y}from"./createLucideIcon-B1d7gGsx.js";/**
- * @license lucide-react v0.483.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const B=[["path",{d:"M21 12a9 9 0 1 1-6.219-8.56",key:"13zald"}]],N=y("LoaderCircle",B),o=u.forwardRef(({className:t,variant:r,size:i,asChild:l=!1,isLoading:a=!1,children:n,disabled:d,...m},p)=>{const c=l?f:"button",s=d||a;return e.jsxs(c,{className:j(x({variant:r,size:i,className:t})),disabled:s,"aria-disabled":s,ref:p,...m,children:[e.jsx(b,{children:n}),a&&e.jsx(N,{className:"size-4 animate-spin"})]})});o.displayName="Button";o.__docgenInfo={description:"",methods:[],displayName:"Button",props:{asChild:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},isLoading:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}}},composes:["ButtonHTMLAttributes","VariantProps"]};export{o as B};
