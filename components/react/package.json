@@ -1,15 +1,13 @@
 {
   "name": "@ivao/atmosphere-react",
   "description": "React component library for the IVAO Atmosphere design system.",
-  "version": "1.0.0",
+  "version": "1.0.1-next.0",
   "type": "module",
   "main": "./dist/atmosphere-react.js",
   "types": "./dist/react-components.d.ts",
   "style": "./src/styles/index.css",
   "files": [
-    "dist",
-    "src/styles/colors.css",
-    "src/styles/index.css"
+    "dist"
   ],
   "repository": {
     "type": "git",
