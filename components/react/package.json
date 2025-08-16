@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./dist/atmosphere-react.js",
   "types": "./dist/react-components.d.ts",
-  "style": "./src/styles/index.css",
+  "style": "./dist/styles/index.css",
   "files": [
     "dist"
   ],
