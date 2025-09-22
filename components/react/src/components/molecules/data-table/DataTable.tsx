@@ -24,7 +24,8 @@ import {
 
 // Use the same props as the tanstack component
 export interface DataTableProps<TData>
-  extends TableOptions<TData>,
+  extends Omit<TableOptions<TData>, 'getCoreRowModel'>,
+    Partial<Pick<TableOptions<TData>, 'getCoreRowModel'>>,
     Omit<DataTableToolbarProps<TData>, 'table'> {
   displayPagination?: boolean;
   /**
@@ -41,7 +42,6 @@ export const DataTable = <TData,>({
   ...props
 }: DataTableProps<TData>) => {
   const table = useReactTable({
-    // @ts-expect-error Will be overridden by props if provided
     getCoreRowModel: getCoreRowModel(),
     // Default models for client side data. Not needed for server side data.
     ...(isClientSideData && {
