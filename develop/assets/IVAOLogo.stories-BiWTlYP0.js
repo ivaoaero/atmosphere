@@ -1,5 +1,0 @@
-import{I as c}from"./index-CDV7Hgac.js";import"./jsx-runtime-DiklIkkE.js";import"./index-DRjF_FHU.js";import"./styles-CytzSlOG.js";import"./index-bksmFdny.js";const f={title:"Brand/Logo",component:c,tags:["autodocs"],args:{color:"atmos",size:"md"},argTypes:{onlyIcon:{description:"Only show the Icon",control:"boolean",table:{defaultValue:{summary:"false"}}},color:{description:"Color of the icon.",control:"inline-radio",options:["white","atmos"],table:{defaultValue:{summary:"atmos"}}},size:{description:"Size of the icon.",control:"inline-radio",options:["sm","md","lg"],table:{defaultValue:{summary:"md"}}}}},o={},r={args:{color:"white"}};var e,t,a;o.parameters={...o.parameters,docs:{...(e=o.parameters)==null?void 0:e.docs,source:{originalSource:"{} satisfies Story",...(a=(t=o.parameters)==null?void 0:t.docs)==null?void 0:a.source}}};var s,i,n;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
-  args: {
-    color: 'white'
-  }
-} satisfies Story`,...(n=(i=r.parameters)==null?void 0:i.docs)==null?void 0:n.source}}};const g=["Primary","White"];export{o as Primary,r as White,g as __namedExportsOrder,f as default};
