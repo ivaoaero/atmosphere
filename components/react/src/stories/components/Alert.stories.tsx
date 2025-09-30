@@ -1,6 +1,6 @@
 import { AlertCircle, Check, Terminal } from 'lucide-react';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Alert } from '@components/molecules/alert';
 

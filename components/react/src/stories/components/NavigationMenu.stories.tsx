@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ElementRef, forwardRef } from 'react';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { NavigationMenuAsLinkProps } from '@components/atoms/navigation-menu/NavigationMenuLink';
 import { NavigationMenu } from '@components/molecules/navigation-menu';

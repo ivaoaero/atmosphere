@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions';
 import {
   CreditCard,
   Mail,
@@ -9,8 +8,9 @@ import {
   UserPlus,
   Users,
 } from 'lucide-react';
+import { action } from 'storybook/actions';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { DropdownMenu } from '@components/molecules/dropdown-menu';
 

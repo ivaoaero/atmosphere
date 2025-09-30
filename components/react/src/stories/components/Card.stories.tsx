@@ -1,6 +1,6 @@
 import { AlertCircleIcon } from 'lucide-react';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@components/atoms/button';
 import { Alert } from '@components/molecules/alert';
