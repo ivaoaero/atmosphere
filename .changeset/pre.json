@@ -6,7 +6,9 @@
     "@ivao/atmosphere-react": "0.0.0"
   },
   "changesets": [
+    "clear-planets-kneel",
     "every-clubs-send",
-    "ninety-squids-train"
+    "ninety-squids-train",
+    "salty-stars-watch"
   ]
 }
