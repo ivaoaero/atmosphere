@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TooltipProvider } from '@components/atoms/tooltip';
 import { DarkModeToggle } from '@components/molecules/dark-mode-toggle';

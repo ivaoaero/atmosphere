@@ -1,6 +1,6 @@
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@components/atoms/button';
 import { TooltipProvider } from '@components/atoms/tooltip';

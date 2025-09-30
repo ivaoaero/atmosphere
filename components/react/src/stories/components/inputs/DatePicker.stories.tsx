@@ -1,6 +1,6 @@
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@components/atoms/button';
 import { DatePicker } from '@components/molecules/date-picker';
@@ -13,7 +13,7 @@ const meta = {
     onSelect: action('select'),
   },
   argTypes: {
-    initialFocus: {
+    autoFocus: {
       type: 'boolean',
       description:
         'See the `react-day-picker` for mor information on how to use this component. It is a visual wrapper around the `react-day-picker` component.',

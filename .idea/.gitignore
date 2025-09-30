@@ -9,3 +9,4 @@
 # GitHub Copilot persisted chat sessions
 /copilot/chatSessions
 git_toolbox_blame.xml
+copilot.*.xml

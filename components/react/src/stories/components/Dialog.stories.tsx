@@ -1,6 +1,6 @@
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { DialogClose } from '@components/atoms/dialog';
 import { Dialog } from '@components/molecules/dialog';

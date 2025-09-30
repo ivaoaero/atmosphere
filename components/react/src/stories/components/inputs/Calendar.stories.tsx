@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Calendar } from '@components/atoms/calendar';
 
@@ -6,6 +6,10 @@ const meta = {
   title: 'Forms/Calendar',
   component: Calendar,
   tags: ['autodocs'],
+  args: {
+    showOutsideDays: true,
+    captionLayout: 'dropdown',
+  },
   argTypes: {
     showOutsideDays: {
       description:
