@@ -27,7 +27,7 @@ export const DatePicker = ({
     if (props.mode === 'range' && props.selected?.from && props.selected?.to) {
       return `${format(props.selected.from, 'PPP')} - ${format(props.selected.to, 'PPP')}`;
     }
-    if (props.selected instanceof Date) {
+    if ('selected' in props && props.selected instanceof Date) {
       return format(props.selected, 'PPP');
     }
     return <span>Pick a date</span>;
@@ -40,7 +40,7 @@ export const DatePicker = ({
             variant="outline"
             className={cn(
               'w-[280px] justify-start text-left font-normal',
-              !props.selected && 'text-muted-foreground',
+              'selected' in props && !props.selected && 'text-muted-foreground',
             )}
           >
             <CalendarIcon className="mr-2 size-4" />

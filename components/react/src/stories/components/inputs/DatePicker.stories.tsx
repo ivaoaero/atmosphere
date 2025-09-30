@@ -13,7 +13,7 @@ const meta = {
     onSelect: action('select'),
   },
   argTypes: {
-    initialFocus: {
+    autoFocus: {
       type: 'boolean',
       description:
         'See the `react-day-picker` for mor information on how to use this component. It is a visual wrapper around the `react-day-picker` component.',

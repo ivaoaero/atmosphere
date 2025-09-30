@@ -6,6 +6,10 @@ const meta = {
   title: 'Forms/Calendar',
   component: Calendar,
   tags: ['autodocs'],
+  args: {
+    showOutsideDays: true,
+    captionLayout: 'dropdown',
+  },
   argTypes: {
     showOutsideDays: {
       description:
