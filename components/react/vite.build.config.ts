@@ -11,6 +11,7 @@ export default defineConfig({
     react(),
     dts({
       rollupTypes: true,
+      tsconfigPath: './tsconfig.build.json',
       exclude: [
         'node_modules/**',
         'dist/**',
