@@ -1,1 +1,2 @@
 pnpm lint
+changeset status --since=develop
