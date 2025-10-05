@@ -9,7 +9,7 @@
     --background: var(--fuselage-50);
     --foreground: var(--fuselage-800);
 
-    --card: var(--fuselage-50);
+    --card: var(--fuselage-100);
     --card-foreground: var(--fuselage-800);
 
     --popover: var(--fuselage-50);
@@ -41,7 +41,7 @@
     --background: var(--fuselage-950);
     --foreground: var(--fuselage-100);
 
-    --card: var(--fuselage-950);
+    --card: var(--fuselage-900);
     --card-foreground: var(--fuselage-200);
 
     --popover: var(--fuselage-950);
