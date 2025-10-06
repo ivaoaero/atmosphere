@@ -18,11 +18,44 @@ pnpm add @ivao/atmosphere-react
 
 ### Configure
 
+#### tailwindcss
+
+If you want to use tailwindcss classes, customizations or overrides,
+you need to add our [tailwind preset](https://v3.tailwindcss.com/docs/presets) to your `tailwind.config.ts` file.
+
+```typescript
+import ivaoPreset from '@ivao/atmosphere-react/tailwind.preset.ts'; // import the preset
+
+import { Config } from 'tailwindcss';
+
+export default {
+  content: [
+    './src/**/*.tsx', // your files here...
+    './node_modules/@ivao/atmosphere-react/dist/atmosphere-react.js', // let tailwind know about our components
+  ],
+  presets: [ivaoPreset], // add the preset here
+} satisfies Config;
+```
+
+Additionally, you need to import our source CSS file that adds the color variables to your project.
+In your app CSS file, add this line:
+
+```css
+@import '@ivao/atmosphere-react/src/styles/index.css';
+```
+
+You can extend your CSS file (e.g. add utilities or base classes)
+and tailwind config (e.g. add colors) as you prefer.
+
+#### CSS only
+
 Import our CSS by adding this line to your index file.
 
 ```typescript
 import '@ivao/atmosphere-react/dist/styles/index.css';
 ```
+
+> This approach is sufficient if no further tailwind classes, customizations or overrides are needed.
 
 ## Contributing
 
