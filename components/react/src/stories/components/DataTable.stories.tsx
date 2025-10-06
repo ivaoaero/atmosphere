@@ -489,3 +489,9 @@ export const Loading = {
     isLoading: true,
   },
 } satisfies Story;
+
+export const Empty = {
+  args: {
+    data: [],
+  },
+} satisfies Story;

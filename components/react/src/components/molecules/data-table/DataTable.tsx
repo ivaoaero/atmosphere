@@ -37,6 +37,11 @@ export interface DataTableProps<TData>
    * If true, a loading column will be displayed.
    */
   isLoading?: boolean;
+  /**
+   * Message to display when there are no results.
+   * @default 'No results.'
+   */
+  noResultsMessage?: string;
 }
 
 export const DataTable = <TData,>({
@@ -45,6 +50,7 @@ export const DataTable = <TData,>({
   displayViewOptions = true,
   ToolbarContent,
   isLoading,
+  noResultsMessage,
   ...props
 }: DataTableProps<TData>) => {
   const table = useReactTable({
@@ -119,7 +125,7 @@ export const DataTable = <TData,>({
                   colSpan={headerIds.length}
                   className="h-24 text-center"
                 >
-                  No results.
+                  {noResultsMessage ?? 'No results.'}
                 </TableCell>
               </TableRow>
             )}
