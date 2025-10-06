@@ -7,10 +7,22 @@
   "types": "./dist/react-components.d.ts",
   "style": "./dist/styles/index.css",
   "files": [
+    "tailwind.preset.ts",
     "dist",
     "src/styles/colors.css",
     "src/styles/index.css"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/atmosphere-react.js",
+      "types": "./dist/react-components.d.ts",
+      "style": "./dist/styles/index.css"
+    },
+    "./tailwind.preset": {
+      "import": "./tailwind.preset.ts",
+      "types": "./tailwind.preset.ts"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ivaoaero/atmosphere.git"

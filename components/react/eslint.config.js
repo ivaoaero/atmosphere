@@ -13,6 +13,7 @@ export default [
             'eslint.config.js',
             'postcss.config.js',
             'release.config.js',
+            'tailwind.preset.ts',
           ],
         },
         tsconfigRootDir: import.meta.dirname,
