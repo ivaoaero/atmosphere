@@ -1,5 +1,0 @@
-import{I as e}from"./index-CiK6_PEL.js";import"./jsx-runtime-D02XIDed.js";import"./iframe-D8I3vx8i.js";import"./preload-helper-PPVm8Dsz.js";import"./styles-BEHD0UYf.js";import"./index-CcvLvwC_.js";const c={title:"Brand/Logo",component:e,tags:["autodocs"],args:{color:"atmos",size:"md"},argTypes:{onlyIcon:{description:"Only show the Icon",control:"boolean",table:{defaultValue:{summary:"false"}}},color:{description:"Color of the icon.",control:"inline-radio",options:["white","atmos"],table:{defaultValue:{summary:"atmos"}}},size:{description:"Size of the icon.",control:"inline-radio",options:["sm","md","lg"],table:{defaultValue:{summary:"md"}}}}},o={},r={args:{color:"white"}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:"{} satisfies Story",...o.parameters?.docs?.source}}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
-  args: {
-    color: 'white'
-  }
-} satisfies Story`,...r.parameters?.docs?.source}}};const l=["Primary","White"];export{o as Primary,r as White,l as __namedExportsOrder,c as default};
