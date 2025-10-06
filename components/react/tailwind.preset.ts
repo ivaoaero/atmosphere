@@ -58,6 +58,7 @@ export default {
          * Shadcn UI Color Palette for components
          * @see ui.shadcn.com
          */
+        body: 'rgb(var(--body) / <alpha-value>)',
         border: 'rgb(var(--border) / <alpha-value>)',
         input: 'rgb(var(--input) / <alpha-value>)',
         ring: 'rgb(var(--ring) / <alpha-value>)',

@@ -6,6 +6,8 @@
 
 @layer base {
   :root {
+    --body: 255 255 255;
+
     --background: var(--fuselage-50);
     --foreground: var(--fuselage-800);
 
@@ -38,13 +40,15 @@
   }
 
   .dark {
-    --background: var(--fuselage-950);
+    --body: var(--fuselage-950);
+
+    --background: var(--fuselage-900);
     --foreground: var(--fuselage-100);
 
     --card: var(--fuselage-900);
     --card-foreground: var(--fuselage-200);
 
-    --popover: var(--fuselage-950);
+    --popover: var(--fuselage-900);
     --popover-foreground: var(--fuselage-200);
 
     --primary: var(--fuselage-50);
@@ -68,7 +72,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-body text-foreground;
   }
 
   h1 {
