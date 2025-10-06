@@ -469,6 +469,13 @@ const meta = {
         },
       },
     },
+    noResultsMessage: {
+      table: {
+        defaultValue: {
+          summary: 'No results.',
+        },
+      },
+    },
   },
 } satisfies Meta<typeof DataTable>;
 
@@ -476,3 +483,9 @@ export default meta;
 type Story = StoryObj<typeof DataTable>;
 
 export const Default = {} satisfies Story;
+
+export const Loading = {
+  args: {
+    isLoading: true,
+  },
+} satisfies Story;
