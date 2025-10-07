@@ -13,7 +13,7 @@ export const Navbar: ComponentType<PropsWithChildren<NavbarProps>> = ({
   children,
 }) => {
   return (
-    <NavbarContainer className="dark">
+    <NavbarContainer>
       <div className={'flex items-center gap-3'}>
         <div className="block md:hidden">
           <IVAOLogo color={'white'} onlyIcon />
