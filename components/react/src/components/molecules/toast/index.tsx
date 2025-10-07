@@ -1,4 +1,4 @@
-import { ComponentType, ReactNode } from 'react';
+import { ComponentProps, ComponentType, ReactNode } from 'react';
 
 import {
   ToastAction,
@@ -12,7 +12,7 @@ export interface ToastProps {
   title: string;
   description?: string;
   duration?: number;
-  toastProps?: ToastProps;
+  toastProps?: ComponentProps<typeof ToastRoot>;
   actionAltText: string;
   action?: ReactNode;
 }
