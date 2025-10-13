@@ -13,7 +13,7 @@ const preview: Preview = {
     backgrounds: {
       default: 'theme',
       options: {
-        theme: { name: 'theme', value: `rgb(var(--background))` },
+        theme: { name: 'theme', value: `rgb(var(--body))` },
       },
     },
   },
