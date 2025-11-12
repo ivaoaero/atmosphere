@@ -75,6 +75,7 @@ This command creates a `.tgz` file on the root of the `/components/react` folder
 3. To use it on your repo, add this line to your `package.json`. Replace the `.tgz` file name.
 
 ```json
-"@ivao/atmosphere-react": "file:../atmosphere/components/react/ivao-atmosphere-react-0.1.0-next.2.tgz",
+// Remember to change the version <FILE_NAME> to the file that was created
+"@ivao/atmosphere-react": "file:../atmosphere/components/react/<FILE_NAME>",
 
 ```
