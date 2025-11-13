@@ -6,15 +6,20 @@
     "@ivao/atmosphere-react": "0.0.0"
   },
   "changesets": [
+    "clean-rings-relax",
     "clear-planets-kneel",
     "curvy-otters-clean",
     "every-clubs-send",
     "fair-horses-care",
     "famous-wombats-sip",
+    "flat-hounds-kneel",
     "great-rivers-push",
     "ninety-squids-train",
     "purple-wombats-retire",
     "rare-cycles-lick",
-    "salty-stars-watch"
+    "salty-eels-lie",
+    "salty-stars-watch",
+    "slimy-spoons-shout",
+    "stale-rings-look"
   ]
 }
