@@ -392,3 +392,5 @@ export {
   Subtle,
   UL,
 } from '@components/atoms/typography';
+
+export { ErrorBoundary } from '@components/molecules/error-boundary';
