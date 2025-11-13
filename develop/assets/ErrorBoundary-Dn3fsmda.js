@@ -1,0 +1,11 @@
+import{j as e}from"./jsx-runtime-CnF9G3Hy.js";import{B as o}from"./index-DQnlAEMm.js";import{c as r}from"./createLucideIcon-CjWZbxcw.js";/**
+ * @license lucide-react v0.544.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const n=[["path",{d:"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8",key:"v9h5vc"}],["path",{d:"M21 3v5h-5",key:"1q7to0"}],["path",{d:"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16",key:"3uifl3"}],["path",{d:"M8 16H3v5",key:"1cv678"}]],l=r("refresh-cw",n);/**
+ * @license lucide-react v0.544.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const c=[["path",{d:"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",key:"wmoenq"}],["path",{d:"M12 9v4",key:"juzpu7"}],["path",{d:"M12 17h.01",key:"p32p05"}]],d=r("triangle-alert",c),i=({error:t,debugMode:s})=>{const a=()=>{window.location.reload()};return e.jsx("div",{className:"flex min-h-screen flex-col items-center justify-center bg-gray-50 bg-gradient-to-b from-fuselage-50 to-fuselage-100 p-6 text-center",children:e.jsxs("div",{className:"flex w-full max-w-md flex-col items-center space-y-6 rounded-2xl bg-white p-8 shadow-md",children:[e.jsx(d,{className:"h-14 w-14 text-red-500"}),e.jsx("h1",{className:"text-2xl font-semibold text-gray-800",children:"Something went wrong"}),e.jsx("p",{className:"text-sm text-gray-600 sm:text-base",children:"An unexpected error occurred. You can try reloading the page or clearing your cookies and cache."}),s&&t&&e.jsx("pre",{className:"max-h-64 w-full overflow-auto rounded-lg bg-gray-100 p-4 text-left text-xs text-red-600 sm:text-sm",children:t.message||String(t)}),e.jsx("div",{className:"mt-4 flex w-full flex-col justify-center gap-4 sm:flex-row",children:e.jsxs(o,{onClick:a,className:"flex w-auto items-center justify-center gap-2 sm:w-full",size:"lg",children:[e.jsx(l,{className:"h-4 w-4"}),"Reload"]})})]})})};i.__docgenInfo={description:"",methods:[],displayName:"ErrorBoundaryComponent",props:{debugMode:{required:!0,tsType:{name:"boolean"},description:""},error:{required:!1,tsType:{name:"Error"},description:""}}};export{i as E};
