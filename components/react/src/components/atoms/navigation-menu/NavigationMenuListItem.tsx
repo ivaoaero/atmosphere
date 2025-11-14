@@ -16,7 +16,7 @@ export const NavigationMenuListItem = forwardRef<
       <NavigationMenuLink
         ref={ref}
         className={cn(
-          'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+          'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/20 hover:text-fuselage-800 focus:bg-accent focus:text-accent-foreground dark:hover:text-fuselage-50',
           className,
         )}
         {...props}
