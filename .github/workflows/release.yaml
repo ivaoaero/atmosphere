@@ -39,8 +39,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@ivaoaero"
+          registry-url: https://registry.npmjs.org # https://github.com/changesets/changesets/issues/1152#issuecomment-3593077008
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
