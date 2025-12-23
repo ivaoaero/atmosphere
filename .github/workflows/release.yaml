@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - develop
   workflow_dispatch:
 
 permissions:
+  id-token: write # for npm OIDC
   contents: read # for checkout
 
 env:
@@ -60,7 +62,6 @@ jobs:
         with:
           commit: "chore: update versions"
           title: "chore: update versions"
-          publish: pnpm ci:release
+          publish: ${{ github.ref == 'refs/heads/main' && 'pnpm ci:release' || 'pnpm ci:prerelease'}}
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
