@@ -8,11 +8,11 @@ jobs:
     name: Build TypeScript files
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: pnpm/action-setup@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org # https://github.com/changesets/changesets/issues/1152#issuecomment-3593077008
@@ -24,13 +24,13 @@ jobs:
         run: pnpm -r build
 
       - name: Upload brand artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: brand-build
           path: brand/dist
 
       - name: Upload react-components artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: react-components-build
           path: components/react/dist
