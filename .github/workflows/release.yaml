@@ -45,9 +45,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
 
-      - name: Debug NPM
-        run: npm -v
-
       - name: Downloading brand artifacts
         uses: actions/download-artifact@v7
         with:
