@@ -14,7 +14,9 @@ export const SidebarContainer: ComponentType<PropsWithChildren> = ({
       <div className="flex flex-col items-start gap-4 px-4 py-5">
         {children}
       </div>
-      <SidebarCollapseButton />
+      <div className="hidden md:block">
+        <SidebarCollapseButton />
+      </div>
     </aside>
   );
 };

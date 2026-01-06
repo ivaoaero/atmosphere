@@ -63,7 +63,7 @@ export const SidebarItem = ({
         className={cn(
           'flex shrink-0 flex-col items-start whitespace-nowrap transition-all',
           isSidebarOpen
-            ? `ml-4 ${props.isGroupOpen ? 'w-fit' : 'w-48'} opacity-100`
+            ? `ml-4 w-fit min-w-48 opacity-100`
             : 'invisible w-0 opacity-0',
         )}
       >
