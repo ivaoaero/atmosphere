@@ -1,27 +1,43 @@
-import { ComponentType, PropsWithChildren } from 'react';
+import { ComponentType, PropsWithChildren, ReactNode } from 'react';
 
 import { NavbarContainer } from '@components/atoms/navbar';
 
 import { IVAOLogo } from 'src/main';
+import { cn } from '@utils/styles';
 
 interface NavbarProps {
-  title: string;
+  title: ReactNode;
+  logoVariant?: 'icon-only';
+  diagonalDivider?: boolean;
 }
 
 export const Navbar: ComponentType<PropsWithChildren<NavbarProps>> = ({
   title,
   children,
+  logoVariant,
+  diagonalDivider = false,
 }) => {
   return (
     <NavbarContainer className="dark">
       <div className={'flex items-center gap-3'}>
-        <div className="block md:hidden">
+        {logoVariant === 'icon-only' ? (
           <IVAOLogo color={'white'} onlyIcon />
-        </div>
-        <div className="hidden md:block">
-          <IVAOLogo color={'white'} />
-        </div>
-        <div className={'h-6 w-px bg-ocean-400 dark:bg-fuselage-400'} />
+        ) : (
+          <>
+            <div className="block md:hidden">
+              <IVAOLogo color={'white'} onlyIcon />
+            </div>
+            <div className="hidden md:block">
+              <IVAOLogo color={'white'} />
+            </div>
+          </>
+        )}
+        <div
+          className={cn(
+            'h-8 w-0.5 bg-ocean-400 dark:bg-fuselage-400',
+            diagonalDivider && 'rotate-12',
+          )}
+        />
         <h1 className={'text-lg font-semibold text-white'}>{title}</h1>
       </div>
 
