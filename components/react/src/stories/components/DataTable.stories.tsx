@@ -10,7 +10,7 @@ import {
   TimerIcon,
 } from 'lucide-react';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Badge } from '@components/atoms/badge';
 import { Checkbox } from '@components/atoms/checkbox';
@@ -469,6 +469,13 @@ const meta = {
         },
       },
     },
+    noResultsMessage: {
+      table: {
+        defaultValue: {
+          summary: 'No results.',
+        },
+      },
+    },
   },
 } satisfies Meta<typeof DataTable>;
 
@@ -476,3 +483,15 @@ export default meta;
 type Story = StoryObj<typeof DataTable>;
 
 export const Default = {} satisfies Story;
+
+export const Loading = {
+  args: {
+    isLoading: true,
+  },
+} satisfies Story;
+
+export const Empty = {
+  args: {
+    data: [],
+  },
+} satisfies Story;

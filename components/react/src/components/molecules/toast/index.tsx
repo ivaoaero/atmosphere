@@ -1,4 +1,4 @@
-import { ComponentType, ReactNode } from 'react';
+import { ComponentProps, ComponentType, ReactNode } from 'react';
 
 import {
   ToastAction,
@@ -8,14 +8,22 @@ import {
   ToastTitle,
 } from '@components/atoms/toast';
 
-export interface ToastProps {
+export type ToastProps = {
   title: string;
   description?: string;
   duration?: number;
-  toastProps?: ToastProps;
-  actionAltText: string;
-  action?: ReactNode;
-}
+  toastProps?: ComponentProps<typeof ToastRoot>;
+} & (
+  | {
+      actionAltText: string;
+      action: ReactNode;
+    }
+  | {
+      actionAltText?: never;
+      action?: never;
+    }
+);
+
 export const Toast: ComponentType<ToastProps> = ({
   title,
   description,

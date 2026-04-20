@@ -4,13 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
+    --body: 255 255 255;
+
     --background: var(--fuselage-50);
     --foreground: var(--fuselage-800);
 
-    --card: var(--fuselage-50);
+    --card: var(--fuselage-100);
     --card-foreground: var(--fuselage-800);
 
     --popover: var(--fuselage-50);
@@ -39,13 +40,15 @@
   }
 
   .dark {
-    --background: var(--fuselage-950);
+    --body: var(--fuselage-950);
+
+    --background: var(--fuselage-900);
     --foreground: var(--fuselage-100);
 
-    --card: var(--fuselage-950);
+    --card: var(--fuselage-900);
     --card-foreground: var(--fuselage-200);
 
-    --popover: var(--fuselage-950);
+    --popover: var(--fuselage-900);
     --popover-foreground: var(--fuselage-200);
 
     --primary: var(--fuselage-50);
@@ -69,33 +72,38 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-body text-foreground;
   }
 
   h1 {
-    @apply dark:text-fuselage-50 text-fuselage-800 font-bold text-4xl;
+    @apply text-4xl font-bold text-fuselage-800 dark:text-fuselage-50;
   }
 
-  h2, h3, h4, h5, h6 {
-    @apply dark:text-fuselage-300 text-fuselage-400 font-semibold;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-fuselage-400 dark:text-fuselage-300;
   }
-  h2{
+  h2 {
     @apply text-3xl;
   }
-  h3{
+  h3 {
     @apply text-2xl;
   }
-  h4{
+  h4 {
     @apply text-xl;
   }
-  h5{
+  h5 {
     @apply text-lg;
   }
-  h6{
+  h6 {
     @apply text-base;
-  }  
+  }
 
-  .border, .border-color-default{
+  .border,
+  .border-color-default {
     @apply border-fuselage-150 dark:border-fuselage-700;
   }
 }

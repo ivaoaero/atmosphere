@@ -1,4 +1,4 @@
-import { ComponentProps, ComponentType } from 'react';
+import { ComponentProps, ComponentType, ReactNode } from 'react';
 
 import {
   AlertDescription,
@@ -10,7 +10,7 @@ export interface AlertProps
   extends Omit<ComponentProps<typeof AlertRoot>, 'children'> {
   Icon?: ComponentType<{ className?: string }>;
   title: string;
-  description?: string;
+  description?: ReactNode;
 }
 
 export const Alert = ({ title, description, Icon, ...props }: AlertProps) => (

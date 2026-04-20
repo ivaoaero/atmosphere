@@ -1,7 +1,7 @@
-import { action } from '@storybook/addon-actions';
-import { Meta } from '@storybook/react';
+import { Meta } from '@storybook/react-vite';
+import { action } from 'storybook/actions';
 
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@components/atoms/button';
 import { Popover } from '@components/molecules/popover';

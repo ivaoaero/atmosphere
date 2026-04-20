@@ -1,7 +1,7 @@
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { themes } from '@storybook/theming';
+import { themes } from 'storybook/theming';
 
-import type { Preview, ReactRenderer } from '@storybook/react';
+import type { Preview, ReactRenderer } from '@storybook/react-vite';
 
 import '../src/styles/index.css';
 
@@ -12,8 +12,13 @@ const preview: Preview = {
     },
     backgrounds: {
       default: 'theme',
-      values: [{ name: 'theme', value: `rgb(var(--background))` }],
+      options: {
+        theme: { name: 'theme', value: `rgb(var(--body))` },
+      },
     },
+  },
+  initialGlobals: {
+    backgrounds: { value: 'theme' },
   },
 };
 

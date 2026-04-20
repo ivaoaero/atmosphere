@@ -1,6 +1,6 @@
 import { CloudDownload, Plane, Settings2 } from 'lucide-react';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@components/atoms/button';
 import { ListItem } from '@components/molecules/list-item';

@@ -16,6 +16,7 @@ import {
   TableRoot,
   TableRow,
 } from '@components/atoms/table';
+import { DataTableEmptyRow } from '@components/molecules/data-table/DataTableEmptyRow.tsx';
 import { DataTablePagination } from '@components/molecules/data-table/DataTablePagination';
 import {
   DataTableToolbar,
@@ -24,13 +25,23 @@ import {
 
 // Use the same props as the tanstack component
 export interface DataTableProps<TData>
-  extends TableOptions<TData>,
+  extends Omit<TableOptions<TData>, 'getCoreRowModel'>,
+    Partial<Pick<TableOptions<TData>, 'getCoreRowModel'>>,
     Omit<DataTableToolbarProps<TData>, 'table'> {
   displayPagination?: boolean;
   /**
    * If true, the data will be paginated, sorted, and filtered on the client side.
    */
   isClientSideData?: boolean;
+  /**
+   * If true, a loading column will be displayed.
+   */
+  isLoading?: boolean;
+  /**
+   * Message to display when there are no results.
+   * @default 'No results.'
+   */
+  noResultsMessage?: string;
 }
 
 export const DataTable = <TData,>({
@@ -38,10 +49,11 @@ export const DataTable = <TData,>({
   isClientSideData = false,
   displayViewOptions = true,
   ToolbarContent,
+  isLoading,
+  noResultsMessage,
   ...props
 }: DataTableProps<TData>) => {
   const table = useReactTable({
-    // @ts-expect-error Will be overridden by props if provided
     getCoreRowModel: getCoreRowModel(),
     // Default models for client side data. Not needed for server side data.
     ...(isClientSideData && {
@@ -51,6 +63,15 @@ export const DataTable = <TData,>({
     }),
     ...props,
   });
+
+  const headerIds = table
+    .getHeaderGroups()
+    .reduce<string[]>((acc, headerGroup) => {
+      for (const header of headerGroup.headers) {
+        acc.push(header.id);
+      }
+      return acc;
+    }, []);
 
   return (
     <div className={'space-y-4'}>
@@ -80,7 +101,9 @@ export const DataTable = <TData,>({
             ))}
           </TableHeader>
           <TableBody>
-            {table.getRowModel().rows?.length ? (
+            {isLoading ? (
+              <DataTableEmptyRow columns={headerIds} />
+            ) : table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   key={row.id}
@@ -99,10 +122,10 @@ export const DataTable = <TData,>({
             ) : (
               <TableRow>
                 <TableCell
-                  colSpan={props.columns.length}
+                  colSpan={headerIds.length}
                   className="h-24 text-center"
                 >
-                  No results.
+                  {noResultsMessage ?? 'No results.'}
                 </TableCell>
               </TableRow>
             )}

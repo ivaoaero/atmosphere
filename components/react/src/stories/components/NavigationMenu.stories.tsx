@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ElementRef, forwardRef } from 'react';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { NavigationMenuAsLinkProps } from '@components/atoms/navigation-menu/NavigationMenuLink';
 import { NavigationMenu } from '@components/molecules/navigation-menu';
@@ -28,7 +28,7 @@ const NavLinkComponent = forwardRef<
       console.log('clicked a link');
       onClick?.(event);
     }}
-    className={cn(className, 'text-destructive')}
+    className={cn(className, '')}
     {...props}
   />
 ));
@@ -131,9 +131,9 @@ export const Default = {
   parameters: {
     docs: {
       story: {
-        inline: false,
-        iframeHeight: 400,
+        iframeHeight: 800,
       },
     },
   },
+  decorators: [(story) => <div className="h-96 w-full">{story()}</div>],
 } satisfies Story;
