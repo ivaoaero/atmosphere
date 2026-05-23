@@ -11,7 +11,7 @@ export const SidebarContainer: ComponentType<PropsWithChildren> = ({
         'flex h-full flex-col justify-between border-r border-fuselage-200 bg-fuselage-50 dark:border-fuselage-700 dark:bg-fuselage-900'
       }
     >
-      <div className="flex flex-col items-start gap-4 px-4 py-5">
+      <div className="flex flex-col items-start gap-4 overflow-y-auto px-4 py-5">
         {children}
       </div>
       <SidebarCollapseButton />
