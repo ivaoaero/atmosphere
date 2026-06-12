@@ -112,10 +112,7 @@ export const DataTable = <TData,>({
                   {row.getVisibleCells().map((cell) => (
                     <TableCell
                       key={cell.id}
-                      className={
-                        (cell.column.columnDef.meta as { className?: string })
-                          ?.className
-                      }
+                      className={cell.column.columnDef.meta?.className}
                     >
                       {flexRender(
                         cell.column.columnDef.cell,
