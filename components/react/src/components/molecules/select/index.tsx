@@ -48,11 +48,12 @@ export const Select: ComponentType<SelectProps> = ({
   className,
   items,
   placeholder = 'Select an option',
+  id,
   ...props
 }: SelectProps) => {
   return (
     <SelectRoot {...props}>
-      <SelectTrigger className={className}>
+      <SelectTrigger className={className} id={id}>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectPortal>
