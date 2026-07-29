@@ -427,7 +427,7 @@ const meta = {
     data,
     // Open issue: https://github.com/TanStack/table/issues/4382
     columns: columns as ColumnDef<unknown>[],
-    isClientSideData: true,
+    isClientSideData: false,
     ToolbarContent: ({ table }) => (
       <Input
         placeholder="Filter tasks..."
@@ -473,6 +473,13 @@ const meta = {
       table: {
         defaultValue: {
           summary: 'No results.',
+        },
+      },
+    },
+    selectedRowsFooterText: {
+      table: {
+        defaultValue: {
+          summary: 'false',
         },
       },
     },

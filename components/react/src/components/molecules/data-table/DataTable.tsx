@@ -43,6 +43,11 @@ export interface DataTableProps<TData>
    * @default 'No results.'
    */
   noResultsMessage?: string;
+  /**
+   * If true, will hide the number of selected rows in the table footer.
+   * @default false
+   */
+  selectedRowsFooterText?: boolean;
 }
 
 export const DataTable = <TData,>({
@@ -52,14 +57,15 @@ export const DataTable = <TData,>({
   ToolbarContent,
   isLoading,
   noResultsMessage,
+  selectedRowsFooterText = false,
   ...props
 }: DataTableProps<TData>) => {
   const table = useReactTable({
     getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
     // Default models for client side data. Not needed for server side data.
     ...(isClientSideData && {
       getPaginationRowModel: getPaginationRowModel(),
-      getSortedRowModel: getSortedRowModel(),
       getFilteredRowModel: getFilteredRowModel(),
     }),
     ...props,
@@ -136,7 +142,12 @@ export const DataTable = <TData,>({
           </TableBody>
         </TableRoot>
       </div>
-      {displayPagination && <DataTablePagination table={table} />}
+      {displayPagination && (
+        <DataTablePagination
+          table={table}
+          selectedRowsFooterText={selectedRowsFooterText}
+        />
+      )}
     </div>
   );
 };
