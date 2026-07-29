@@ -14,8 +14,10 @@ import {
 
 import { cn } from '@utils/styles';
 
-export interface DataTableColumnHeaderProps<TData, TValue>
-  extends HTMLAttributes<HTMLDivElement> {
+export interface DataTableColumnHeaderProps<
+  TData,
+  TValue,
+> extends HTMLAttributes<HTMLDivElement> {
   column: Column<TData, TValue>;
   title: string;
 }

@@ -1,5 +1,6 @@
 import { Command } from 'cmdk';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const CommandLoading = Command.Loading;
 
 export { CommandRoot } from '@components/atoms/command/CommandRoot';

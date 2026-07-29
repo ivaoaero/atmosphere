@@ -20,7 +20,8 @@ import { sheetVariants } from '@components/atoms/sheet/sheetVariants';
 import { cn } from '@utils/styles';
 
 export interface SheetContentProps
-  extends ComponentPropsWithoutRef<typeof Content>,
+  extends
+    ComponentPropsWithoutRef<typeof Content>,
     VariantProps<typeof sheetVariants> {
   description?: string;
   footerCloseButton?: boolean;

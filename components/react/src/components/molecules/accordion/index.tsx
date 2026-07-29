@@ -7,8 +7,9 @@ import {
   AccordionTrigger,
 } from '@components/atoms/accordion';
 
-export interface AccordionItemProps
-  extends ComponentProps<typeof AccordionItem> {
+export interface AccordionItemProps extends ComponentProps<
+  typeof AccordionItem
+> {
   trigger: ReactNode;
 }
 

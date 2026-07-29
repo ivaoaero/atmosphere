@@ -25,7 +25,8 @@ import {
 
 // Use the same props as the tanstack component
 export interface DataTableProps<TData>
-  extends Omit<TableOptions<TData>, 'getCoreRowModel'>,
+  extends
+    Omit<TableOptions<TData>, 'getCoreRowModel'>,
     Partial<Pick<TableOptions<TData>, 'getCoreRowModel'>>,
     Omit<DataTableToolbarProps<TData>, 'table'> {
   displayPagination?: boolean;

@@ -14,13 +14,16 @@ import {
   SelectViewport,
 } from '@components/atoms/select';
 
-export interface SelectItemProps
-  extends Omit<ComponentProps<typeof SelectItem>, 'asChild' | 'children'> {
+export interface SelectItemProps extends Omit<
+  ComponentProps<typeof SelectItem>,
+  'asChild' | 'children'
+> {
   label?: string;
 }
 
 export interface SelectProps
-  extends Omit<ComponentProps<typeof SelectRoot>, 'children'>,
+  extends
+    Omit<ComponentProps<typeof SelectRoot>, 'children'>,
     Pick<ComponentProps<typeof SelectValue>, 'placeholder' | 'className'>,
     // Omit the `dir` and `defaultValue` props from `SelectContentProps` to avoid collisions
     // Omit the `children` prop from `SelectContentProps` to avoid collisions and developer confusion
@@ -48,11 +51,12 @@ export const Select: ComponentType<SelectProps> = ({
   className,
   items,
   placeholder = 'Select an option',
+  id,
   ...props
 }: SelectProps) => {
   return (
     <SelectRoot {...props}>
-      <SelectTrigger className={className}>
+      <SelectTrigger className={className} id={id}>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectPortal>

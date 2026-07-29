@@ -14,8 +14,10 @@ import {
 
 import { cn } from '@utils/styles';
 
-export interface TabsProps
-  extends Omit<ComponentPropsWithoutRef<typeof TabsRoot>, 'children'> {
+export interface TabsProps extends Omit<
+  ComponentPropsWithoutRef<typeof TabsRoot>,
+  'children'
+> {
   tabs: {
     [key: string]: {
       trigger: ReactNode;

@@ -13,7 +13,7 @@ const meta = {
   argTypes: {
     showOutsideDays: {
       description:
-        'See the `react-day-picker` for mor information on how to use this component. It is a visual wrapper around the `react-day-picker` component.',
+        'See the `@daypicker/react` for mor information on how to use this component. It is a visual wrapper around the `@daypicker/react` component.',
       type: 'boolean',
     },
   },

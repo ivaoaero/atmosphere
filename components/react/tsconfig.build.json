@@ -29,15 +29,14 @@
     "noUncheckedSideEffectImports": true,
 
     /* Paths */
-    "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@utils/*": ["lib/utils/*"],
-      "@hooks/*": ["lib/hooks/*"],
-      "@stories/*": ["stories/*"],
-      "@styles/*": ["styles/*"],
-      "src/*": ["./*"],
-      "static/*": ["../static/*"]
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/lib/utils/*"],
+      "@hooks/*": ["./src/lib/hooks/*"],
+      "@stories/*": ["./src/stories/*"],
+      "@styles/*": ["./src/styles/*"],
+      "src/*": ["./src/*"],
+      "static/*": ["./static/*"]
     }
   },
   "include": ["src"],

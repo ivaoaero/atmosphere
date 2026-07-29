@@ -17,18 +17,15 @@ interface NavigationMenuBaseSectionProps {
   asLink?: ComponentType<NavigationMenuAsLinkProps>;
 }
 
-interface NavigationMenuSimpleLinkSectionProps
-  extends NavigationMenuBaseSectionProps {
+interface NavigationMenuSimpleLinkSectionProps extends NavigationMenuBaseSectionProps {
   href: string;
 }
 
-interface NavigationMenuExtendedLinkProps
-  extends NavigationMenuSimpleLinkSectionProps {
+interface NavigationMenuExtendedLinkProps extends NavigationMenuSimpleLinkSectionProps {
   description: string;
 }
 
-interface NavigationMenuMultipleLinksSectionProps
-  extends NavigationMenuBaseSectionProps {
+interface NavigationMenuMultipleLinksSectionProps extends NavigationMenuBaseSectionProps {
   links: NavigationMenuExtendedLinkProps[];
 }
 
@@ -36,8 +33,10 @@ export type NavigationMenuSectionProps =
   | NavigationMenuSimpleLinkSectionProps
   | NavigationMenuMultipleLinksSectionProps;
 
-export interface NavigationMenuProps
-  extends Omit<ComponentProps<typeof NavigationMenuRoot>, 'children'> {
+export interface NavigationMenuProps extends Omit<
+  ComponentProps<typeof NavigationMenuRoot>,
+  'children'
+> {
   sections: NavigationMenuSectionProps[];
   asLink?: ComponentType<NavigationMenuAsLinkProps>;
 }

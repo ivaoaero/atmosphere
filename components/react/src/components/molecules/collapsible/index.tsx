@@ -11,8 +11,9 @@ import {
   CollapsibleTrigger,
 } from '@components/atoms/collapsible';
 
-export interface CollapsibleProps
-  extends ComponentPropsWithoutRef<typeof CollapsibleRoot> {
+export interface CollapsibleProps extends ComponentPropsWithoutRef<
+  typeof CollapsibleRoot
+> {
   trigger: ReactNode;
 }
 

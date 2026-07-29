@@ -24,6 +24,7 @@
     "vite.config.ts",
     "vite.build.config.ts",
     "tailwind.config.ts",
-    "generate-colors-css.ts"
+    "generate-colors-css.ts",
+    ".storybook/*.ts"
   ]
 }

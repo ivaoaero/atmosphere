@@ -2,4 +2,5 @@
 "@ivao/atmosphere-react": minor
 ---
 
-Add error boundary component
+add React 19 support
+  

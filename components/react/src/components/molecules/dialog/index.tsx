@@ -12,8 +12,9 @@ import {
   DialogTrigger,
 } from '@components/atoms/dialog';
 
-export interface DialogProps
-  extends ComponentPropsWithoutRef<typeof DialogRoot> {
+export interface DialogProps extends ComponentPropsWithoutRef<
+  typeof DialogRoot
+> {
   trigger?: ReactNode;
   title: string;
   description?: string;

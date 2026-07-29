@@ -7,8 +7,10 @@ import { NavigationMenu } from '@components/molecules/navigation-menu';
 
 import { cn } from '@utils/styles';
 
-interface ReactRouterLinkProps
-  extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+interface ReactRouterLinkProps extends Omit<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  'href'
+> {
   to: string;
 }
 

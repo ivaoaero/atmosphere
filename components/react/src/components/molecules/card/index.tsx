@@ -9,11 +9,10 @@ import {
   CardTitle,
 } from '@components/atoms/card';
 
-interface CardProps
-  extends Omit<
-    ComponentProps<typeof CardRoot>,
-    'children' | 'title' | 'content'
-  > {
+interface CardProps extends Omit<
+  ComponentProps<typeof CardRoot>,
+  'children' | 'title' | 'content'
+> {
   title: ReactNode;
   description?: ReactNode;
   content: ReactNode;

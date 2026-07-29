@@ -7,8 +7,9 @@ import { CheckboxIndeterminate } from '@components/atoms/checkbox/CheckboxIndete
 
 import { cn } from '@utils/styles';
 
-interface CheckboxIndicatorProps
-  extends ComponentPropsWithoutRef<typeof RadixIndicator> {
+interface CheckboxIndicatorProps extends ComponentPropsWithoutRef<
+  typeof RadixIndicator
+> {
   checked?: boolean | 'indeterminate';
 }
 
