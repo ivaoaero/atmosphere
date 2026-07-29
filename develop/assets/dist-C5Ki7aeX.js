@@ -1,0 +1,1 @@
+import{i as e,s as t}from"./preload-helper-BdFrVu1K.js";import{t as n}from"./react-B82b4cNX.js";import{t as r}from"./jsx-runtime-f3rHp9ZU.js";function i(e){let t=a.useContext(c);return e||t||`ltr`}var a,o,s,c,l=e((()=>{a=t(n(),1),r(),o=Object.defineProperty,s=(e,t)=>o(e,`name`,{value:t,configurable:!0}),c=a.createContext(void 0),s(i,`useDirection`)}));export{i as n,l as t};
