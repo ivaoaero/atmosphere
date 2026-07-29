@@ -40,7 +40,7 @@ export { Button } from '@components/atoms/button';
 export type { ButtonProps } from '@components/atoms/button';
 
 export { Calendar } from '@components/atoms/calendar';
-export type { DateRange } from 'react-day-picker';
+export type { DateRange } from '@daypicker/react';
 export type { CalendarProps } from '@components/atoms/calendar';
 
 export {

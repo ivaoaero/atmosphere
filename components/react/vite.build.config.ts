@@ -2,15 +2,14 @@ import { resolve } from 'path';
 
 import react from '@vitejs/plugin-react';
 import analyzer from 'rollup-plugin-analyzer';
+import dts from 'unplugin-dts/vite';
 import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [
     react(),
     dts({
-      rollupTypes: true,
+      bundleTypes: true,
       tsconfigPath: './tsconfig.build.json',
       exclude: [
         'node_modules/**',
@@ -19,8 +18,10 @@ export default defineConfig({
         './*.config.ts',
       ],
     }),
-    tsconfigPaths(),
   ],
+  resolve: {
+    tsconfigPaths: true,
+  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),

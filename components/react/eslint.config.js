@@ -2,13 +2,17 @@ import ivaoConfig from '@ivao/eslint-config';
 
 export default [
   ...ivaoConfig.setups.reactRecommended,
-  ...ivaoConfig.configs.storybook,
+  ...ivaoConfig.configs.storybook(),
   {
+    settings: {
+      react: {
+        version: '18',
+      },
+    },
     languageOptions: {
       parserOptions: {
         projectService: {
           allowDefaultProject: [
-            '.storybook/*.ts',
             '.prettierrc.js',
             'eslint.config.js',
             'postcss.config.js',

@@ -9,7 +9,7 @@ export default [
           allowDefaultProject: [
             'eslint.config.mjs',
             'release.config.js',
-            'tsup.config.ts',
+            'tsdown.config.ts',
           ],
         },
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
