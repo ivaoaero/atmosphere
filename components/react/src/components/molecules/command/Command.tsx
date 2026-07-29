@@ -7,7 +7,8 @@ import {
 } from '@components/molecules/command/CommandContent';
 
 export interface CommandProps
-  extends CommandContentProps,
+  extends
+    CommandContentProps,
     Omit<ComponentPropsWithoutRef<typeof CommandRoot>, 'children'> {}
 
 export const Command = forwardRef<ElementRef<typeof CommandRoot>, CommandProps>(

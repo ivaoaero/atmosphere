@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { JSX, useId } from 'react';
 
 import { Skeleton } from '@components/atoms/skeleton';
 

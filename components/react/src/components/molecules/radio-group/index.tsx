@@ -8,13 +8,16 @@ import {
 import { Label } from '@components/atoms/label';
 import { RadioGroupItem, RadioGroupRoot } from '@components/atoms/radio-group';
 
-export interface RadioGroupItemProps
-  extends ComponentProps<typeof RadioGroupItem> {
+export interface RadioGroupItemProps extends ComponentProps<
+  typeof RadioGroupItem
+> {
   label: string;
 }
 
-export interface RadioGroupProps
-  extends Omit<ComponentPropsWithoutRef<typeof RadioGroupRoot>, 'children'> {
+export interface RadioGroupProps extends Omit<
+  ComponentPropsWithoutRef<typeof RadioGroupRoot>,
+  'children'
+> {
   items: RadioGroupItemProps[];
 }
 

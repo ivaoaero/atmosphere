@@ -10,23 +10,31 @@ import {
   TableRow,
 } from '@components/atoms/table';
 
-export interface TableColumnProps
-  extends Omit<ComponentProps<typeof TableHead>, 'children'> {
+export interface TableColumnProps extends Omit<
+  ComponentProps<typeof TableHead>,
+  'children'
+> {
   label: ReactNode;
 }
 
-export interface TableCellProps
-  extends Omit<ComponentProps<typeof TableCell>, 'children'> {
+export interface TableCellProps extends Omit<
+  ComponentProps<typeof TableCell>,
+  'children'
+> {
   value: ReactNode;
 }
 
-export interface TableRowProps
-  extends Omit<ComponentProps<typeof TableRow>, 'children'> {
+export interface TableRowProps extends Omit<
+  ComponentProps<typeof TableRow>,
+  'children'
+> {
   columns: TableCellProps[];
 }
 
-export interface TableProps
-  extends Omit<ComponentProps<typeof TableRoot>, 'children'> {
+export interface TableProps extends Omit<
+  ComponentProps<typeof TableRoot>,
+  'children'
+> {
   caption?: string;
   columns: TableColumnProps[];
   rows: TableRowProps[];

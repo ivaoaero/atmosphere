@@ -7,7 +7,8 @@ import {
 } from '@components/molecules/command/CommandContent';
 
 export interface CommandDialogProps
-  extends CommandContentProps,
+  extends
+    CommandContentProps,
     Omit<ComponentPropsWithoutRef<typeof CommandDialogRoot>, 'children'> {}
 export const CommandDialog = ({
   placeholder,

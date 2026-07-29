@@ -7,7 +7,8 @@ import {
 } from '@components/atoms/hover-card';
 
 export interface HoverCardProps
-  extends ComponentProps<typeof HoverCardRoot>,
+  extends
+    ComponentProps<typeof HoverCardRoot>,
     Pick<
       ComponentProps<typeof HoverCardContent>,
       'side' | 'sideOffset' | 'align' | 'alignOffset'

@@ -7,7 +7,8 @@ import {
 } from '@components/atoms/tooltip';
 
 export interface TooltipProps
-  extends Omit<ComponentPropsWithoutRef<typeof TooltipRoot>, 'children'>,
+  extends
+    Omit<ComponentPropsWithoutRef<typeof TooltipRoot>, 'children'>,
     Pick<
       ComponentPropsWithoutRef<typeof TooltipContent>,
       'side' | 'sideOffset' | 'align' | 'alignOffset'

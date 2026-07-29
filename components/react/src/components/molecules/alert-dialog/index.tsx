@@ -15,11 +15,10 @@ import {
 } from '@components/atoms/alert-dialog';
 import { Button } from '@components/atoms/button';
 
-interface AlertDialogProps
-  extends Pick<
-    ComponentProps<typeof AlertDialogRoot>,
-    'defaultOpen' | 'open' | 'onOpenChange' | 'children'
-  > {
+interface AlertDialogProps extends Pick<
+  ComponentProps<typeof AlertDialogRoot>,
+  'defaultOpen' | 'open' | 'onOpenChange' | 'children'
+> {
   title: string;
   description?: string;
   triggerText: string;

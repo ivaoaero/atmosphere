@@ -6,8 +6,10 @@ import {
   AlertTitle,
 } from '@components/atoms/alert';
 
-export interface AlertProps
-  extends Omit<ComponentProps<typeof AlertRoot>, 'children'> {
+export interface AlertProps extends Omit<
+  ComponentProps<typeof AlertRoot>,
+  'children'
+> {
   Icon?: ComponentType<{ className?: string }>;
   title: string;
   description?: ReactNode;

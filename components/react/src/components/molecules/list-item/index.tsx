@@ -2,8 +2,10 @@ import { ComponentType, HTMLAttributes, ReactNode } from 'react';
 
 import { ListItemContent, ListItemRoot } from '@components/atoms/list-item';
 
-interface BaseListItemProps
-  extends Omit<HTMLAttributes<HTMLLIElement>, 'onClick'> {
+interface BaseListItemProps extends Omit<
+  HTMLAttributes<HTMLLIElement>,
+  'onClick'
+> {
   title: string;
   description?: string;
   isLoading?: boolean;

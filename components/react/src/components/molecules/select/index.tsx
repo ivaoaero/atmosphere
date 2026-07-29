@@ -14,13 +14,16 @@ import {
   SelectViewport,
 } from '@components/atoms/select';
 
-export interface SelectItemProps
-  extends Omit<ComponentProps<typeof SelectItem>, 'asChild' | 'children'> {
+export interface SelectItemProps extends Omit<
+  ComponentProps<typeof SelectItem>,
+  'asChild' | 'children'
+> {
   label?: string;
 }
 
 export interface SelectProps
-  extends Omit<ComponentProps<typeof SelectRoot>, 'children'>,
+  extends
+    Omit<ComponentProps<typeof SelectRoot>, 'children'>,
     Pick<ComponentProps<typeof SelectValue>, 'placeholder' | 'className'>,
     // Omit the `dir` and `defaultValue` props from `SelectContentProps` to avoid collisions
     // Omit the `children` prop from `SelectContentProps` to avoid collisions and developer confusion

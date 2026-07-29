@@ -9,7 +9,8 @@ import { buttonVariants } from '@components/atoms/button/buttonVariants';
 import { cn } from '@utils/styles';
 
 export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   isLoading?: boolean;

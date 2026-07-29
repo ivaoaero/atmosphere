@@ -18,16 +18,20 @@ import {
   DropdownMenuTrigger,
 } from '@components/atoms/dropdown-menu';
 
-interface DropdownMenuButtonItemProps
-  extends Omit<ComponentProps<typeof DropdownMenuItem>, 'children'> {
+interface DropdownMenuButtonItemProps extends Omit<
+  ComponentProps<typeof DropdownMenuItem>,
+  'children'
+> {
   label: ReactNode;
   shortcut?: string;
   icon?: ReactNode;
   subItems?: DropdownMenuButtonItemProps[];
 }
 
-interface DropdownMenuCheckboxItemProps
-  extends Omit<ComponentProps<typeof DropdownMenuCheckboxItem>, 'children'> {
+interface DropdownMenuCheckboxItemProps extends Omit<
+  ComponentProps<typeof DropdownMenuCheckboxItem>,
+  'children'
+> {
   label: string;
 }
 
@@ -36,13 +40,17 @@ interface DropdownMenuCheckboxItemsProps {
   items: DropdownMenuCheckboxItemProps[];
 }
 
-interface DropdownMenuRadionItemProps
-  extends Omit<ComponentProps<typeof DropdownMenuRadioItem>, 'children'> {
+interface DropdownMenuRadionItemProps extends Omit<
+  ComponentProps<typeof DropdownMenuRadioItem>,
+  'children'
+> {
   label?: string;
 }
 
-interface DropdownMenuRadioItemsProps
-  extends Omit<ComponentProps<typeof DropdownMenuRadioGroup>, 'children'> {
+interface DropdownMenuRadioItemsProps extends Omit<
+  ComponentProps<typeof DropdownMenuRadioGroup>,
+  'children'
+> {
   type: 'radio';
   items: DropdownMenuRadionItemProps[];
 }
@@ -53,8 +61,10 @@ export type DropdownMenuItemsProps =
   | DropdownMenuRadioItemsProps
   | DropdownMenuItemsProps[];
 
-export interface DropdownMenuProps
-  extends Omit<ComponentProps<typeof DropdownMenuRoot>, 'children'> {
+export interface DropdownMenuProps extends Omit<
+  ComponentProps<typeof DropdownMenuRoot>,
+  'children'
+> {
   trigger: ReactNode;
   label?: ReactNode;
   items: DropdownMenuItemsProps;
