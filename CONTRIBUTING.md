@@ -22,7 +22,7 @@ This approach ensures consistency, reusability, and maintainability across the d
 
 ## How to Contribute
 
-1. **Fork the repository** and create your branch from `main`.
+1. **Fork the repository** and create your branch from `develop`.
 2. **Describe your changes** clearly in your pull request.
 3. **Write tests** for new components or features (WIP).
 4. **Follow coding standards** and existing patterns.
