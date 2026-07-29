@@ -1,5 +1,14 @@
 # @ivao/atmosphere-react
 
+## 2.1.0
+### Minor Changes
+
+- 167c383: add React 19 support
+
+### Patch Changes
+
+- 0c446e8: select: forward id to SelectTrigger instead of leaking to SelectRoot
+
 ## 2.0.0
 
 ### Major Changes
