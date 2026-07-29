@@ -45,9 +45,9 @@ export interface DataTableProps<TData>
   noResultsMessage?: string;
   /**
    * If true, will hide the number of selected rows in the table footer.
-   * @default false
+   * @default true
    */
-  selectedRowsFooterText?: boolean;
+  hideSelectedRowsCount?: boolean;
 }
 
 export const DataTable = <TData,>({
@@ -57,7 +57,7 @@ export const DataTable = <TData,>({
   ToolbarContent,
   isLoading,
   noResultsMessage,
-  selectedRowsFooterText = false,
+  hideSelectedRowsCount = true,
   ...props
 }: DataTableProps<TData>) => {
   const table = useReactTable({
@@ -145,7 +145,7 @@ export const DataTable = <TData,>({
       {displayPagination && (
         <DataTablePagination
           table={table}
-          selectedRowsFooterText={selectedRowsFooterText}
+          hideSelectedRowsCount={hideSelectedRowsCount}
         />
       )}
     </div>

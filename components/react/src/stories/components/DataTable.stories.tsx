@@ -427,7 +427,7 @@ const meta = {
     data,
     // Open issue: https://github.com/TanStack/table/issues/4382
     columns: columns as ColumnDef<unknown>[],
-    isClientSideData: false,
+    isClientSideData: true,
     ToolbarContent: ({ table }) => (
       <Input
         placeholder="Filter tasks..."
@@ -476,10 +476,10 @@ const meta = {
         },
       },
     },
-    selectedRowsFooterText: {
+    hideSelectedRowsCount: {
       table: {
         defaultValue: {
-          summary: 'false',
+          summary: 'true',
         },
       },
     },
