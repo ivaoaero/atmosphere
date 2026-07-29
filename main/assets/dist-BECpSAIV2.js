@@ -1,0 +1,1 @@
+import{i as e}from"./preload-helper-BdFrVu1K.js";function t(e,[t,n]){return Math.min(n,Math.max(t,e))}var n,r,i=e((()=>{n=Object.defineProperty,r=(e,t)=>n(e,`name`,{value:t,configurable:!0}),r(t,`clamp`)}));export{i as n,t};
