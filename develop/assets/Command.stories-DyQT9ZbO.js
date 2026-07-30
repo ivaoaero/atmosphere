@@ -1,0 +1,7 @@
+import{i as e}from"./preload-helper-BdFrVu1K.js";import{i as t,t as n}from"./command-BmqUT-sI.js";var r,i,a,o,s;e((()=>{n(),{action:r}=__STORYBOOK_MODULE_ACTIONS__,i={title:`Forms/Command`,component:t,tags:[`autodocs`],args:{placeholder:`Command placeholder`,emptyResult:`No results`,groups:[{key:`1`,heading:`Group 1`,items:[{key:`1`,value:`Item 1`},{key:`2`,value:`Item 2`}]},{key:`2`,heading:`Group 2`,items:[{key:`3`,value:`Item 3`},{key:`4`,value:`Item 4`}]}],onValueChange:r(`value change`)},argTypes:{inputProps:{table:{type:{summary:`ComponentPropsWithoutRef<typeof CommandInput>`}}},value:{type:`string`,description:"Controls the value. Cannot be used with `defaultValue`!",if:{arg:`defaultValue`,exists:!1}},defaultValue:{type:`string`,description:"Sets the initial value. Cannot be used with `value`!",if:{arg:`value`,exists:!1}}}},a={},o={args:{isLoading:!0,loadingNode:`Loading...`,groups:[]}},a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{} satisfies Story`,...a.parameters?.docs?.source}}},o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  args: {
+    isLoading: true,
+    loadingNode: 'Loading...',
+    groups: []
+  }
+} satisfies Story`,...o.parameters?.docs?.source}}},s=[`Default`,`Loading`]}))();export{a as Default,o as Loading,s as __namedExportsOrder,i as default};

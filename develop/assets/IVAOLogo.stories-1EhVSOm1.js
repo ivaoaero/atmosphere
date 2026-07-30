@@ -1,5 +1,0 @@
-import{i as e}from"./preload-helper-BdFrVu1K.js";import{n as t,t as n}from"./ivao-logo-D7pTmVIU.js";var r,i,a,o;e((()=>{t(),r={title:`Brand/Logo`,component:n,tags:[`autodocs`],args:{color:`atmos`,size:`md`},argTypes:{onlyIcon:{description:`Only show the Icon`,control:`boolean`,table:{defaultValue:{summary:`false`}}},color:{description:`Color of the icon.`,control:`inline-radio`,options:[`white`,`atmos`],table:{defaultValue:{summary:`atmos`}}},size:{description:`Size of the icon.`,control:`inline-radio`,options:[`sm`,`md`,`lg`],table:{defaultValue:{summary:`md`}}}}},i={},a={args:{color:`white`}},i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`{} satisfies Story`,...i.parameters?.docs?.source}}},a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{
-  args: {
-    color: 'white'
-  }
-} satisfies Story`,...a.parameters?.docs?.source}}},o=[`Primary`,`White`]}))();export{i as Primary,a as White,o as __namedExportsOrder,r as default};

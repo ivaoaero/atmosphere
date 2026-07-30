@@ -1,0 +1,5 @@
+import{i as e}from"./preload-helper-BdFrVu1K.js";import{n as t,t as n}from"./radio-group-DVvNByPs.js";var r,i,a,o,s;e((()=>{t(),{action:r}=__STORYBOOK_MODULE_ACTIONS__,i={title:`Forms/RadioGroup`,component:n,tags:[`autodocs`],args:{items:[{value:`option-one`,label:`Option one`},{value:`option-two`,label:`Option two`},{value:`option-three`,label:`Option three`}],onValueChange:r(`value change`)},argTypes:{value:{type:`string`,description:"The controlled value of the radio group. Cannot be used with `defaultValue`!",if:{arg:`defaultValue`,exists:!1}},defaultValue:{type:`string`,description:"The initial value of the radio group. Cannot be used with `value`!",if:{arg:`value`,exists:!1}}}},a={},o={args:{defaultValue:`option-one`}},a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{} satisfies Story`,...a.parameters?.docs?.source}}},o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  args: {
+    defaultValue: 'option-one'
+  }
+} satisfies Story`,...o.parameters?.docs?.source}}},s=[`Default`,`DefaultValue`]}))();export{a as Default,o as DefaultValue,s as __namedExportsOrder,i as default};
