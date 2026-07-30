@@ -1,5 +1,24 @@
 # @ivao/atmosphere-react
 
+## 3.0.0-next.1
+### Major Changes
+
+- 7596195: TailwindCSS v4 bump
+
+### Minor Changes
+
+- 0f64e8e: data-table: unrestrict view options dropdown width
+- 0f64e8e: data-table: add option to hide selected row count
+
+### Patch Changes
+
+- c1c59d0: data-table: display meta.name in view options
+- 6d56c68: alert: no background for non-default variants
+- 3ec9c6e: sidebar: make overflowing content accesible
+- 2d1ac20: data-table: apply meta-className to table cells
+- Updated dependencies [7596195]
+  - @ivao/atmosphere-brand@2.0.0-next.0
+
 ## 2.1.0-next.0
 ### Minor Changes
 
