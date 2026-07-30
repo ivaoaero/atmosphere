@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import {
   Icon as RadixIcon,
@@ -12,7 +12,7 @@ import { cn } from '@utils/styles';
 const SelectIcon = RadixIcon;
 
 const SelectTrigger = forwardRef<
-  ElementRef<typeof RadixTrigger>,
+  ComponentRef<typeof RadixTrigger>,
   ComponentPropsWithoutRef<typeof RadixTrigger>
 >(({ className, children, ...props }, ref) => (
   <RadixTrigger

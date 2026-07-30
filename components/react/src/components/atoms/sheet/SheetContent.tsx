@@ -1,6 +1,6 @@
 import {
   ComponentPropsWithoutRef,
-  ElementRef,
+  ComponentRef,
   forwardRef,
   ReactNode,
 } from 'react';
@@ -29,7 +29,7 @@ export interface SheetContentProps
 }
 
 export const SheetContent = forwardRef<
-  ElementRef<typeof Content>,
+  ComponentRef<typeof Content>,
   SheetContentProps
 >(
   (

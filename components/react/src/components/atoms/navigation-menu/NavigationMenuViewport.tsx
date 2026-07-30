@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Viewport } from '@radix-ui/react-navigation-menu';
 
 import { cn } from '@utils/styles';
 
 export const NavigationMenuViewport = forwardRef<
-  ElementRef<typeof Viewport>,
+  ComponentRef<typeof Viewport>,
   ComponentPropsWithoutRef<typeof Viewport>
 >(({ className, ...props }, ref) => (
   <div className={cn('absolute top-full left-0 flex justify-center')}>

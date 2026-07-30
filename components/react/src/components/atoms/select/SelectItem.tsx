@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import {
   Item as RadixItem,
@@ -11,7 +11,7 @@ import { SelectCheck } from '@components/atoms/select/SelectIcons';
 import { cn } from '@utils/styles';
 
 const SelectItem = forwardRef<
-  ElementRef<typeof RadixItem>,
+  ComponentRef<typeof RadixItem>,
   ComponentPropsWithoutRef<typeof RadixItem>
 >(({ className, children, ...props }, ref) => (
   <RadixItem

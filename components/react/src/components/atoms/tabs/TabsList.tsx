@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { List } from '@radix-ui/react-tabs';
 
 import { cn } from '@utils/styles';
 
 export const TabsList = forwardRef<
-  ElementRef<typeof List>,
+  ComponentRef<typeof List>,
   ComponentPropsWithoutRef<typeof List>
 >(({ className, ...props }, ref) => (
   <List

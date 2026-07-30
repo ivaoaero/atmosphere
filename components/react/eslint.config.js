@@ -26,6 +26,7 @@ export default [
     rules: {
       'jsx-a11y/heading-has-content': 'off',
       'jsx-a11y/anchor-has-content': 'off',
+      '@typescript-eslint/no-deprecated': 'error',
     },
   },
   {

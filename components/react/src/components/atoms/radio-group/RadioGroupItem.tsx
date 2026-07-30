@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Indicator, Item } from '@radix-ui/react-radio-group';
 import { Circle } from 'lucide-react';
@@ -6,7 +6,7 @@ import { Circle } from 'lucide-react';
 import { cn } from '@utils/styles';
 
 export const RadioGroupItem = forwardRef<
-  ElementRef<typeof Item>,
+  ComponentRef<typeof Item>,
   ComponentPropsWithoutRef<typeof Item>
 >(({ className, ...props }, ref) => {
   return (

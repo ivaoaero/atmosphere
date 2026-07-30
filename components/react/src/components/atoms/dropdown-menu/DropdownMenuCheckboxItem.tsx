@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { CheckboxItem, ItemIndicator } from '@radix-ui/react-dropdown-menu';
 import { Check } from 'lucide-react';
@@ -6,7 +6,7 @@ import { Check } from 'lucide-react';
 import { cn } from '@utils/styles';
 
 export const DropdownMenuCheckboxItem = forwardRef<
-  ElementRef<typeof CheckboxItem>,
+  ComponentRef<typeof CheckboxItem>,
   ComponentPropsWithoutRef<typeof CheckboxItem>
 >(({ className, children, checked, ...props }, ref) => (
   <CheckboxItem

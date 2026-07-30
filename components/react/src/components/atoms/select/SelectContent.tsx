@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Content as RadixContent } from '@radix-ui/react-select';
 
@@ -11,7 +11,7 @@ import { SelectViewport } from '@components/atoms/select/SelectViewport';
 import { cn } from '@utils/styles';
 
 export const SelectContent = forwardRef<
-  ElementRef<typeof RadixContent>,
+  ComponentRef<typeof RadixContent>,
   ComponentPropsWithoutRef<typeof RadixContent>
 >(({ className, children, position = 'popper', ...props }, ref) => (
   <RadixContent

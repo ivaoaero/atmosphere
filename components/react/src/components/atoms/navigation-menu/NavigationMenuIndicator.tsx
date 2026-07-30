@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Indicator } from '@radix-ui/react-navigation-menu';
 
 import { cn } from '@utils/styles';
 
 export const NavigationMenuIndicator = forwardRef<
-  ElementRef<typeof Indicator>,
+  ComponentRef<typeof Indicator>,
   ComponentPropsWithoutRef<typeof Indicator>
 >(({ className, ...props }, ref) => (
   <Indicator

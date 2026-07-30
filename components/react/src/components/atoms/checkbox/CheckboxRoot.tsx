@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Root as RadixRoot } from '@radix-ui/react-checkbox';
 
 import { cn } from '@utils/styles';
 
 export const CheckboxRoot = forwardRef<
-  ElementRef<typeof RadixRoot>,
+  ComponentRef<typeof RadixRoot>,
   ComponentPropsWithoutRef<typeof RadixRoot>
 >(({ className, ...props }, ref) => (
   <RadixRoot

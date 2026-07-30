@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Track as RadixTrack } from '@radix-ui/react-slider';
 
 import { cn } from '@utils/styles';
 
 export const SliderTrack = forwardRef<
-  ElementRef<typeof RadixTrack>,
+  ComponentRef<typeof RadixTrack>,
   ComponentPropsWithoutRef<typeof RadixTrack>
 >(({ className, ...props }, ref) => (
   <RadixTrack

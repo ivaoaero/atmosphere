@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Thumb as RadixThumb } from '@radix-ui/react-slider';
 
 import { cn } from '@utils/styles';
 
 export const SliderThumb = forwardRef<
-  ElementRef<typeof RadixThumb>,
+  ComponentRef<typeof RadixThumb>,
   ComponentPropsWithoutRef<typeof RadixThumb>
 >(({ className, ...props }, ref) => (
   <RadixThumb

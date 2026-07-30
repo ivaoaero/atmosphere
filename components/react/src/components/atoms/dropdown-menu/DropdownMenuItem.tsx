@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Item } from '@radix-ui/react-dropdown-menu';
 
 import { cn } from '@utils/styles';
 
 export const DropdownMenuItem = forwardRef<
-  ElementRef<typeof Item>,
+  ComponentRef<typeof Item>,
   ComponentPropsWithoutRef<typeof Item> & {
     inset?: boolean;
   }

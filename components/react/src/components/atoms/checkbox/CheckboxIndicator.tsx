@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Indicator as RadixIndicator } from '@radix-ui/react-checkbox';
 
@@ -14,7 +14,7 @@ interface CheckboxIndicatorProps extends ComponentPropsWithoutRef<
 }
 
 export const CheckboxIndicator = forwardRef<
-  ElementRef<typeof RadixIndicator>,
+  ComponentRef<typeof RadixIndicator>,
   CheckboxIndicatorProps
 >(({ className, children, ...props }, ref) => {
   const Check =

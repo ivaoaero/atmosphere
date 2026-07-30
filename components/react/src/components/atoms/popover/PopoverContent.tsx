@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Content as RadixContent } from '@radix-ui/react-popover';
 
@@ -7,7 +7,7 @@ import { PopoverPortal } from '@components/atoms/popover';
 import { cn } from '@utils/styles';
 
 export const PopoverContent = forwardRef<
-  ElementRef<typeof RadixContent>,
+  ComponentRef<typeof RadixContent>,
   ComponentPropsWithoutRef<typeof RadixContent>
 >(({ className, align = 'center', sideOffset = 4, ...props }, ref) => (
   <PopoverPortal>

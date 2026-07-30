@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Close } from '@radix-ui/react-toast';
 import { X } from 'lucide-react';
@@ -8,7 +8,7 @@ import { cn } from '@utils/styles';
 type CloseProps = ComponentPropsWithoutRef<typeof Close>;
 
 export const ToastClose = forwardRef<
-  ElementRef<typeof Close>,
+  ComponentRef<typeof Close>,
   Omit<CloseProps, 'children'> & Partial<Pick<CloseProps, 'children'>>
 >(
   (

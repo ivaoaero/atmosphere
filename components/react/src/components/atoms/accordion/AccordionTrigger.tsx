@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Header, Trigger } from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 import { cn } from '@utils/styles';
 
 export const AccordionTrigger = forwardRef<
-  ElementRef<typeof Trigger>,
+  ComponentRef<typeof Trigger>,
   ComponentPropsWithoutRef<typeof Trigger>
 >(({ className, children, ...props }, ref) => (
   <Header className="flex">

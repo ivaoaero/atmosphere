@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { ItemIndicator, RadioItem } from '@radix-ui/react-dropdown-menu';
 import { Circle } from 'lucide-react';
@@ -6,7 +6,7 @@ import { Circle } from 'lucide-react';
 import { cn } from '@utils/styles';
 
 export const DropdownMenuRadioItem = forwardRef<
-  ElementRef<typeof RadioItem>,
+  ComponentRef<typeof RadioItem>,
   ComponentPropsWithoutRef<typeof RadioItem>
 >(({ className, children, ...props }, ref) => (
   <RadioItem

@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { SubContent } from '@radix-ui/react-dropdown-menu';
 
 import { cn } from '@utils/styles';
 
 export const DropdownMenuSubContent = forwardRef<
-  ElementRef<typeof SubContent>,
+  ComponentRef<typeof SubContent>,
   ComponentPropsWithoutRef<typeof SubContent>
 >(({ className, ...props }, ref) => (
   <SubContent

@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Content, Portal } from '@radix-ui/react-dialog';
 
@@ -7,7 +7,7 @@ import { DialogOverlay } from '@components/atoms/dialog/DialogOverlay';
 import { cn } from '@utils/styles';
 
 export const DialogContent = forwardRef<
-  ElementRef<typeof Content>,
+  ComponentRef<typeof Content>,
   ComponentPropsWithoutRef<typeof Content>
 >(({ className, children, ...props }, ref) => (
   <Portal>

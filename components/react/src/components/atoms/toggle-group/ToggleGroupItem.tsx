@@ -1,6 +1,6 @@
 import {
   ComponentPropsWithoutRef,
-  ElementRef,
+  ComponentRef,
   forwardRef,
   useContext,
 } from 'react';
@@ -14,7 +14,7 @@ import { toggleVariants } from '@components/atoms/toggle/toggleVariants';
 import { cn } from '@utils/styles';
 
 export const ToggleGroupItem = forwardRef<
-  ElementRef<typeof Item>,
+  ComponentRef<typeof Item>,
   ComponentPropsWithoutRef<typeof Item> & VariantProps<typeof toggleVariants>
 >(({ className, children, variant, size, ...props }, ref) => {
   const context = useContext(ToggleGroupContext);

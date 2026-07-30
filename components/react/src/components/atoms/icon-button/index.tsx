@@ -1,4 +1,4 @@
-import { ComponentProps, ElementRef, forwardRef, ReactNode } from 'react';
+import { ComponentProps, ComponentRef, forwardRef, ReactNode } from 'react';
 
 import { Button, ButtonProps } from '@components/atoms/button';
 
@@ -10,7 +10,7 @@ interface IconButtonProps extends ComponentProps<typeof Button> {
 }
 
 export const IconButton = forwardRef<
-  ElementRef<typeof Button>,
+  ComponentRef<typeof Button>,
   IconButtonProps
 >(({ children, className, buttonVariant = 'primary', ...props }, ref) => (
   <Button

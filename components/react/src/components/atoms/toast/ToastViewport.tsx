@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Viewport } from '@radix-ui/react-toast';
 
 import { cn } from '@utils/styles';
 
 export const ToastViewport = forwardRef<
-  ElementRef<typeof Viewport>,
+  ComponentRef<typeof Viewport>,
   ComponentPropsWithoutRef<typeof Viewport>
 >(({ className, ...props }, ref) => (
   <Viewport

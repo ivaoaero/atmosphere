@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Action } from '@radix-ui/react-toast';
 
 import { cn } from '@utils/styles';
 
 export const ToastAction = forwardRef<
-  ElementRef<typeof Action>,
+  ComponentRef<typeof Action>,
   ComponentPropsWithoutRef<typeof Action>
 >(({ asChild = false, className, ...props }, ref) => (
   <Action

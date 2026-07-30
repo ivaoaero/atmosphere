@@ -1,10 +1,10 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { SwitchRoot } from '@components/atoms/switch/SwitchRoot';
 import { SwitchThumb } from '@components/atoms/switch/SwitchThumb';
 
 export const Switch = forwardRef<
-  ElementRef<typeof SwitchRoot>,
+  ComponentRef<typeof SwitchRoot>,
   ComponentPropsWithoutRef<typeof SwitchRoot>
 >(({ ...props }, ref) => (
   <SwitchRoot {...props} ref={ref}>

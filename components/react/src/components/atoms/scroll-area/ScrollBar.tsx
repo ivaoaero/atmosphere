@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import {
   ScrollAreaScrollbar,
@@ -8,7 +8,7 @@ import {
 import { cn } from '@utils/styles';
 
 export const ScrollBar = forwardRef<
-  ElementRef<typeof ScrollAreaScrollbar>,
+  ComponentRef<typeof ScrollAreaScrollbar>,
   ComponentPropsWithoutRef<typeof ScrollAreaScrollbar>
 >(({ className, orientation = 'vertical', ...props }, ref) => (
   <ScrollAreaScrollbar

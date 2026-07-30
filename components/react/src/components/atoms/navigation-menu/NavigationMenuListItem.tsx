@@ -1,4 +1,4 @@
-import { ElementRef, forwardRef } from 'react';
+import { ComponentRef, forwardRef } from 'react';
 
 import {
   NavigationMenuLink,
@@ -8,7 +8,7 @@ import {
 import { cn } from '@utils/styles';
 
 export const NavigationMenuListItem = forwardRef<
-  ElementRef<typeof NavigationMenuLink>,
+  ComponentRef<typeof NavigationMenuLink>,
   NavigationMenuLinkProps
 >(({ className, title, children, ...props }, ref) => {
   return (

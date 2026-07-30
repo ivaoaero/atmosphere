@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Root } from '@radix-ui/react-navigation-menu';
 
@@ -7,7 +7,7 @@ import { NavigationMenuViewport } from '@components/atoms/navigation-menu/Naviga
 import { cn } from '@utils/styles';
 
 export const NavigationMenuRoot = forwardRef<
-  ElementRef<typeof Root>,
+  ComponentRef<typeof Root>,
   ComponentPropsWithoutRef<typeof Root>
 >(({ className, children, ...props }, ref) => (
   <Root

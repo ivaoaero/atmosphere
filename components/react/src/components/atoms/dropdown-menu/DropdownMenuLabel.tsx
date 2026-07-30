@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Label } from '@radix-ui/react-dropdown-menu';
 
 import { cn } from '@utils/styles';
 
 export const DropdownMenuLabel = forwardRef<
-  ElementRef<typeof Label>,
+  ComponentRef<typeof Label>,
   ComponentPropsWithoutRef<typeof Label> & {
     inset?: boolean;
   }

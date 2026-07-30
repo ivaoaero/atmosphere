@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { SubTrigger } from '@radix-ui/react-dropdown-menu';
 import { ChevronRight } from 'lucide-react';
@@ -6,7 +6,7 @@ import { ChevronRight } from 'lucide-react';
 import { cn } from '@utils/styles';
 
 export const DropdownMenuSubTrigger = forwardRef<
-  ElementRef<typeof SubTrigger>,
+  ComponentRef<typeof SubTrigger>,
   ComponentPropsWithoutRef<typeof SubTrigger> & {
     inset?: boolean;
   }

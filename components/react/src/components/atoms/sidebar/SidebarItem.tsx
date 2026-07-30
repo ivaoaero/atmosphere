@@ -1,16 +1,11 @@
-import {
-  AnchorHTMLAttributes,
-  ComponentType,
-  HTMLAttributes,
-  PropsWithRef,
-} from 'react';
+import { AnchorHTMLAttributes, ComponentType, HTMLAttributes } from 'react';
 
 import { cn } from '@utils/styles';
 import { useSidebar } from '@hooks/useSidebar';
 
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export type SidebarAsLinkProps = PropsWithRef<AnchorProps> &
+export type SidebarAsLinkProps = AnchorProps &
   Required<Pick<AnchorProps, 'href'>>;
 
 export interface SidebarItemProps extends HTMLAttributes<HTMLAnchorElement> {

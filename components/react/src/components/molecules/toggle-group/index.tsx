@@ -1,4 +1,4 @@
-import { ComponentProps, ElementRef, forwardRef, ReactNode } from 'react';
+import { ComponentProps, ComponentRef, forwardRef, ReactNode } from 'react';
 
 import {
   ToggleGroupItem,
@@ -21,7 +21,7 @@ export interface ToggleGroupProps extends Omit<
 }
 
 export const ToggleGroup = forwardRef<
-  ElementRef<typeof ToggleGroupRoot>,
+  ComponentRef<typeof ToggleGroupRoot>,
   ToggleGroupProps
 >(({ items, ...props }, ref) => (
   // @ts-expect-error for some reason there is a collision between ToggleGroupSingleProps and ToggleGroupMultipleProps

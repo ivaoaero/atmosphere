@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { CommandRoot } from '@components/atoms/command';
 import {
@@ -11,7 +11,10 @@ export interface CommandProps
     CommandContentProps,
     Omit<ComponentPropsWithoutRef<typeof CommandRoot>, 'children'> {}
 
-export const Command = forwardRef<ElementRef<typeof CommandRoot>, CommandProps>(
+export const Command = forwardRef<
+  ComponentRef<typeof CommandRoot>,
+  CommandProps
+>(
   (
     {
       placeholder,

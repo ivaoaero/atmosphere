@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Close } from '@radix-ui/react-dialog';
 import { X } from 'lucide-react';
@@ -6,7 +6,7 @@ import { X } from 'lucide-react';
 import { cn } from '@utils/styles';
 
 export const DialogTopRightClose = forwardRef<
-  ElementRef<typeof Close>,
+  ComponentRef<typeof Close>,
   ComponentPropsWithoutRef<typeof Close>
 >(({ className, ...props }, ref) => {
   return (
