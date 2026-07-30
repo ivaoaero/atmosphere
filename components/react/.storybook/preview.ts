@@ -15,7 +15,7 @@ const preview: Preview = {
     backgrounds: {
       default: 'theme',
       options: {
-        theme: { name: 'theme', value: `rgb(var(--body))` },
+        theme: { name: 'theme', value: `var(--body)` },
       },
     },
   },
