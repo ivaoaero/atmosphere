@@ -11,7 +11,7 @@ export const DialogDescription = forwardRef<
   <Description
     ref={ref}
     className={cn(
-      'text-sm text-fuselage-500 dark:text-fuselage-450',
+      'text-fuselage-500 dark:text-fuselage-450 text-sm',
       className,
     )}
     {...props}

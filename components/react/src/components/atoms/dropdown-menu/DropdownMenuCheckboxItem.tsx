@@ -12,7 +12,7 @@ export const DropdownMenuCheckboxItem = forwardRef<
   <CheckboxItem
     ref={ref}
     className={cn(
-      'relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-fuselage-100 focus:text-fuselage-800 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-fuselage-700 dark:focus:text-fuselage-50',
+      'focus:bg-fuselage-100 focus:text-fuselage-800 radix-disabled:pointer-events-none radix-disabled:opacity-50 dark:focus:bg-fuselage-700 dark:focus:text-fuselage-50 relative flex cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden transition-colors select-none',
       className,
     )}
     checked={checked}

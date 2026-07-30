@@ -9,7 +9,7 @@ export const SliderRange = forwardRef<
   ComponentPropsWithoutRef<typeof RadixRange>
 >(({ className, ...props }, ref) => (
   <RadixRange
-    className={cn('absolute h-full bg-primary', className)}
+    className={cn('bg-primary absolute h-full', className)}
     {...props}
     ref={ref}
   />

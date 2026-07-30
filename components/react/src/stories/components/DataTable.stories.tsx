@@ -135,7 +135,7 @@ const columns: ColumnDef<Task>[] = [
       const label = labels.find((label) => label.value === row.original.label);
 
       return (
-        <div className="flex space-x-2">
+        <div className="flex gap-2">
           {label && <Badge variant="leaked" text={label.label} />}
           <span className="max-w-[500px] truncate font-medium">
             {row.getValue('title')}
@@ -161,7 +161,7 @@ const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex w-[100px] items-center">
           {status.icon && (
-            <status.icon className="mr-2 size-4 text-muted-foreground" />
+            <status.icon className="text-muted-foreground mr-2 size-4" />
           )}
           <span>{status.label}</span>
         </div>
@@ -188,7 +188,7 @@ const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex items-center">
           {priority.icon && (
-            <priority.icon className="mr-2 size-4 text-muted-foreground" />
+            <priority.icon className="text-muted-foreground mr-2 size-4" />
           )}
           <span>{priority.label}</span>
         </div>

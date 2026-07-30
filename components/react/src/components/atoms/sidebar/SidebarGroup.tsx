@@ -52,7 +52,7 @@ export const SidebarGroup = ({
 
   const SidebarGroupButton = (
     <button
-      className="group flex items-center text-fuselage-300 hover:text-fuselage-700 dark:text-fuselage-400 dark:hover:text-fuselage-200"
+      className="group text-fuselage-300 hover:text-fuselage-700 dark:text-fuselage-400 dark:hover:text-fuselage-200 flex items-center"
       onClick={handleGroupToggle}
     >
       <div
@@ -71,7 +71,7 @@ export const SidebarGroup = ({
           isSidebarOpen ? 'ml-4 w-48 opacity-100' : 'invisible w-0 opacity-0',
         )}
       >
-        <span className="font-head text-base font-semibold leading-tight text-fuselage-600 dark:text-fuselage-100">
+        <span className="font-head text-fuselage-600 dark:text-fuselage-100 text-base leading-tight font-semibold">
           {title}
         </span>
         <ChevronRight
@@ -90,7 +90,7 @@ export const SidebarGroup = ({
       {SidebarGroupButton}
 
       {isGroupOpen && (
-        <div className="ml-8 mt-3 flex flex-col gap-2">
+        <div className="mt-3 ml-8 flex flex-col gap-2">
           {items.map((item) => (
             <SidebarItem
               key={item.href}

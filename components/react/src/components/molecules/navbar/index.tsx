@@ -35,7 +35,7 @@ export const Navbar: ComponentType<PropsWithChildren<NavbarProps>> = ({
         )}
         <div
           className={cn(
-            'h-8 w-0.5 bg-ocean-400 dark:bg-fuselage-400',
+            'bg-ocean-400 dark:bg-fuselage-400 h-8 w-0.5',
             diagonalDivider && 'rotate-12',
           )}
         />

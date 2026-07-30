@@ -10,7 +10,7 @@ const SelectSeparator = forwardRef<
 >(({ className, ...props }, ref) => (
   <RadixSeparator
     ref={ref}
-    className={cn('-mx-1 my-1 h-px bg-muted', className)}
+    className={cn('bg-muted -mx-1 my-1 h-px', className)}
     {...props}
   />
 ));

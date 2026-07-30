@@ -9,7 +9,7 @@ export const TableFooter = forwardRef<
   <tfoot
     ref={ref}
     className={cn(
-      'border-t bg-muted/50 font-medium [&>tr]:last:border-b-0',
+      'bg-muted/50 border-t font-medium [&>tr]:last:border-b-0',
       className,
     )}
     {...props}

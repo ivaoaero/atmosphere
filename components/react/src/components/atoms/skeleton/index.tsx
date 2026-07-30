@@ -9,7 +9,7 @@ export const Skeleton = ({
   return (
     <div
       className={cn(
-        'animate-pulse rounded-md bg-muted dark:bg-muted-foreground',
+        'bg-muted dark:bg-muted-foreground animate-pulse rounded-md',
         className,
       )}
       {...props}

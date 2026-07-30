@@ -11,7 +11,7 @@ export const TabsList = forwardRef<
   <List
     ref={ref}
     className={cn(
-      'inline-flex h-10 items-center justify-center rounded-md bg-fuselage-100 p-1 text-fuselage-700 dark:bg-fuselage-700 dark:text-fuselage-200',
+      'bg-fuselage-100 text-fuselage-700 dark:bg-fuselage-700 dark:text-fuselage-200 inline-flex h-10 items-center justify-center rounded-md p-1',
       className,
     )}
     {...props}

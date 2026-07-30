@@ -13,7 +13,7 @@ export const ToastRoot = forwardRef<
 >(({ className, variant, ...props }, ref) => (
   <Root
     className={cn(
-      // 'relative rounded-md p-3 flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-6 shadow-sm',
+      // 'relative rounded-md p-3 flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-6 shadow-xs',
       // 'radix-state-open:animate-toast-slide-in-bottom md:radix-state-open:animate-toast-slide-in-right',
       // 'radix-state-closed:animate-toast-hide',
       // 'radix-swipe-direction-right:radix-swipe-end:animate-toast-swipe-out-x',

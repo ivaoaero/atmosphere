@@ -9,7 +9,7 @@ export const TR = forwardRef<
   <tr
     ref={ref}
     className={cn(
-      'm-0 border-t border-fuselage-200 p-0 even:bg-semantic-blue-100 dark:border-fuselage-700 dark:even:bg-fuselage-900',
+      'border-fuselage-200 even:bg-semantic-blue-100 dark:border-fuselage-700 dark:even:bg-fuselage-900 m-0 border-t p-0',
       className,
     )}
     {...props}

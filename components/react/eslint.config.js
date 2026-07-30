@@ -15,9 +15,7 @@ export default [
           allowDefaultProject: [
             '.prettierrc.js',
             'eslint.config.js',
-            'postcss.config.js',
             'release.config.js',
-            'tailwind.preset.ts',
           ],
         },
         tsconfigRootDir: import.meta.dirname,

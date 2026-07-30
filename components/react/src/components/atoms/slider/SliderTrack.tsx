@@ -11,7 +11,7 @@ export const SliderTrack = forwardRef<
   <RadixTrack
     {...props}
     className={cn(
-      'relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20',
+      'bg-primary/20 relative h-1.5 w-full grow overflow-hidden rounded-full',
       className,
     )}
     ref={ref}

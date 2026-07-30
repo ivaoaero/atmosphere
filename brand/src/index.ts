@@ -1,2 +1,1 @@
-export * from './colors';
-export * from './fonts';
+export { colors, fonts, tokens } from './tokens';

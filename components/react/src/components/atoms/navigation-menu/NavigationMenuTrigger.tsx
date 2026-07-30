@@ -19,7 +19,7 @@ export const NavigationMenuTrigger = forwardRef<
     {children}{' '}
     <ChevronDown
       className={
-        'relative top-px ml-1 size-3 transition duration-200 group-data-[state=open]:rotate-180'
+        'group-radix-state-open:rotate-180 relative top-px ml-1 size-3 transition duration-200'
       }
       aria-hidden={'true'}
     />

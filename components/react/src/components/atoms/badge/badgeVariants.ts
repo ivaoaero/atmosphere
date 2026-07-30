@@ -8,7 +8,7 @@ export const badgeVariants = cva(
         flat: 'ring-0',
         filled: 'ring-1 ring-inset',
         leaked:
-          '!bg-transparent !text-fuselage-550 ring-1 ring-inset !ring-fuselage-600/10 dark:!text-fuselage-450 dark:!ring-fuselage-500/20',
+          'text-fuselage-550! ring-fuselage-600/10! dark:text-fuselage-450! dark:ring-fuselage-500/20! bg-transparent! ring-1 ring-inset',
       },
       color: {
         gray: 'bg-fuselage-200/20 fill-fuselage-500 text-fuselage-500 ring-fuselage-600/10 dark:bg-fuselage-500/10 dark:fill-fuselage-500 dark:text-fuselage-500 dark:ring-fuselage-500/20',

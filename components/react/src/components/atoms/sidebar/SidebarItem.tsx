@@ -43,7 +43,7 @@ export const SidebarItem = ({
     <LinkComponent
       href={href}
       className={cn(
-        'group flex text-fuselage-300 dark:text-fuselage-400',
+        'group text-fuselage-300 dark:text-fuselage-400 flex',
         className,
       )}
       {...props}
@@ -69,10 +69,10 @@ export const SidebarItem = ({
       >
         <span
           className={cn(
-            'font-head text-base font-semibold leading-tight',
+            'font-head text-base leading-tight font-semibold',
             isActive
-              ? 'font-bold text-fuselage-800 dark:text-fuselage-50'
-              : 'font-semibold text-fuselage-600 dark:text-fuselage-100',
+              ? 'text-fuselage-800 dark:text-fuselage-50 font-bold'
+              : 'text-fuselage-600 dark:text-fuselage-100 font-semibold',
           )}
         >
           {title}

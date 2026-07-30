@@ -10,7 +10,7 @@ export const SheetTitle = forwardRef<
 >(({ className, ...props }, ref) => (
   <Title
     ref={ref}
-    className={cn('text-lg font-semibold text-foreground', className)}
+    className={cn('text-foreground text-lg font-semibold', className)}
     {...props}
   />
 ));

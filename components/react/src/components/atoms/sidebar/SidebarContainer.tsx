@@ -8,7 +8,7 @@ export const SidebarContainer: ComponentType<PropsWithChildren> = ({
   return (
     <aside
       className={
-        'flex h-full flex-col justify-between border-r border-fuselage-200 bg-fuselage-50 dark:border-fuselage-700 dark:bg-fuselage-900'
+        'border-fuselage-200 bg-fuselage-50 dark:border-fuselage-700 dark:bg-fuselage-900 flex h-full flex-col justify-between border-r'
       }
     >
       <div className="flex flex-col items-start gap-4 px-4 py-5">

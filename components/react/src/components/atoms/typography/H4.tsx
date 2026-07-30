@@ -8,7 +8,7 @@ export const H4 = forwardRef<
 >(({ className, ...props }, ref) => (
   <h4
     ref={ref}
-    className={cn('scroll-m-20 font-head text-xl font-semibold', className)}
+    className={cn('font-head scroll-m-20 text-xl font-semibold', className)}
     {...props}
   />
 ));

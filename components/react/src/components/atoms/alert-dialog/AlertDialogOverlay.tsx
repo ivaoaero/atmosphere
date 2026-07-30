@@ -11,9 +11,9 @@ export const AlertDialogOverlay = forwardRef<
   <Overlay
     {...props}
     className={cn(
-      'fixed inset-0 z-50 bg-fuselage-950/80',
-      'data-[state=open]:animate-in data-[state=closed]:animate-out',
-      'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      'bg-fuselage-950/80 fixed inset-0 z-50',
+      'radix-state-open:animate-in radix-state-closed:animate-out',
+      'radix-state-closed:fade-out-0 radix-state-open:fade-in-0',
       className,
     )}
     ref={ref}

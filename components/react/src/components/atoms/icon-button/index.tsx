@@ -18,7 +18,7 @@ export const IconButton = forwardRef<
     ref={ref}
     type={'button'}
     className={cn(
-      '!flex min-h-9 min-w-9 gap-1 rounded-md p-1 transition-all',
+      'flex! min-h-9 min-w-9 gap-1 rounded-md p-1 transition-all',
       className,
     )}
     {...props}

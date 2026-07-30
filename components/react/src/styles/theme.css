@@ -1,0 +1,207 @@
+@import '@ivao/atmosphere-brand/theme.css';
+@import 'tw-animate-css';
+
+@plugin 'tailwindcss-radix';
+@source '../atmosphere-react.js';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --breakpoint-xs: 25rem;
+
+  --color-body: var(--body);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 96rem) {
+    max-width: 87.5rem;
+  }
+}
+
+@layer base {
+  :root {
+    --body: #fff;
+
+    --background: var(--ivao-color-fuselage-50);
+    --foreground: var(--ivao-color-fuselage-800);
+
+    --card: var(--ivao-color-fuselage-100);
+    --card-foreground: var(--ivao-color-fuselage-800);
+
+    --popover: var(--ivao-color-fuselage-50);
+    --popover-foreground: var(--ivao-color-fuselage-800);
+
+    --primary: var(--ivao-color-atmos-700);
+    --primary-foreground: var(--ivao-color-atmos-50);
+
+    --secondary: var(--ivao-color-fuselage-100);
+    --secondary-foreground: var(--ivao-color-fuselage-800);
+
+    --muted: var(--ivao-color-fuselage-200);
+    --muted-foreground: var(--ivao-color-fuselage-500);
+
+    --accent: var(--ivao-color-fuselage-250);
+    --accent-foreground: var(--ivao-color-fuselage-500);
+
+    --destructive: var(--ivao-color-semantic-red-600);
+    --destructive-foreground: var(--ivao-color-semantic-red-50);
+
+    --border: var(--ivao-color-fuselage-150);
+    --input: var(--ivao-color-fuselage-150);
+    --ring: var(--ivao-color-fuselage-200);
+
+    --radius: 0.6rem;
+  }
+
+  .dark {
+    --body: var(--ivao-color-fuselage-950);
+
+    --background: var(--ivao-color-fuselage-900);
+    --foreground: var(--ivao-color-fuselage-100);
+
+    --card: var(--ivao-color-fuselage-900);
+    --card-foreground: var(--ivao-color-fuselage-200);
+
+    --popover: var(--ivao-color-fuselage-900);
+    --popover-foreground: var(--ivao-color-fuselage-200);
+
+    --primary: var(--ivao-color-fuselage-50);
+    --primary-foreground: var(--ivao-color-fuselage-800);
+
+    --secondary: var(--ivao-color-fuselage-800);
+    --secondary-foreground: var(--ivao-color-fuselage-100);
+
+    --muted: var(--ivao-color-fuselage-700);
+    --muted-foreground: var(--ivao-color-fuselage-500);
+
+    --accent: var(--ivao-color-fuselage-700);
+    --accent-foreground: var(--ivao-color-fuselage-300);
+
+    --destructive: var(--ivao-color-semantic-red-600);
+    --destructive-foreground: var(--ivao-color-semantic-red-50);
+
+    --border: var(--ivao-color-fuselage-700);
+    --input: var(--ivao-color-fuselage-900);
+    --ring: var(--ivao-color-fuselage-800);
+  }
+
+  body {
+    background-color: var(--body);
+    color: var(--foreground);
+  }
+
+  h1 {
+    color: var(--ivao-color-fuselage-800);
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--ivao-color-fuselage-400);
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .dark h1 {
+    color: var(--ivao-color-fuselage-50);
+  }
+
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    color: var(--ivao-color-fuselage-300);
+  }
+
+  .border,
+  .border-color-default {
+    border-color: var(--ivao-color-fuselage-150);
+  }
+
+  .dark .border,
+  .dark .border-color-default {
+    border-color: var(--ivao-color-fuselage-700);
+  }
+
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}

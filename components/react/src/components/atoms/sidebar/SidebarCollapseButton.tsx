@@ -10,12 +10,12 @@ export const SidebarCollapseButton = () => {
       aria-label="Toggle sidebar"
       onClick={toggleSidebar}
       className={
-        'flex w-full items-center justify-center gap-2 border-t border-fuselage-200 bg-fuselage-100 py-3 text-fuselage-400 transition-all hover:bg-fuselage-200 hover:text-fuselage-500 dark:border-fuselage-700 dark:bg-fuselage-800 dark:text-fuselage-500 dark:hover:bg-fuselage-700'
+        'border-fuselage-200 bg-fuselage-100 text-fuselage-400 hover:bg-fuselage-200 hover:text-fuselage-500 dark:border-fuselage-700 dark:bg-fuselage-800 dark:text-fuselage-500 dark:hover:bg-fuselage-700 flex w-full items-center justify-center gap-2 border-t py-3 transition-all'
       }
     >
       <ChevronRight
         size={24}
-        className={isSidebarOpen ? 'rotate-180 text-fuselage-400' : ''}
+        className={isSidebarOpen ? 'text-fuselage-400 rotate-180' : ''}
       />
       {isSidebarOpen && (
         <span className={'shrink-0 font-semibold'}>Close sidebar</span>

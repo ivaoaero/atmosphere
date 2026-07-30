@@ -21,7 +21,7 @@ export function DataTableRowActions({ actions }: DataTableRowActionsProps) {
       <DropdownMenuTrigger asChild>
         <Button
           variant={'ghost'}
-          className="flex size-8 p-0 data-[state=open]:bg-muted"
+          className="radix-state-open:bg-muted flex size-8 p-0"
         >
           <Ellipsis className="size-4" />
           <span className="sr-only">Open actions</span>

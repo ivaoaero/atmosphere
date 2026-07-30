@@ -3,6 +3,8 @@ import { themes } from 'storybook/theming';
 
 import type { Preview, ReactRenderer } from '@storybook/react-vite';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import '../src/styles/index.css';
 
 const preview: Preview = {
