@@ -1,0 +1,12 @@
+import{i as e}from"./preload-helper-BdFrVu1K.js";import{n as t,t as n}from"./slider-DVuQsgn-.js";var r,i,a,o,s,c;e((()=>{t(),{action:r}=__STORYBOOK_MODULE_ACTIONS__,i={title:`Forms/Slider`,component:n,tags:[`autodocs`],args:{defaultValue:[20],min:0,max:100,step:1,onValueChange:r(`value change`),onValueCommit:r(`value commit`)},argTypes:{defaultValue:{description:"The default value of the slider. Cannot be used with `value`!",table:{type:{summary:`number[]`}}},value:{description:"The controlled value of the slider. Cannot be used with `defaultValue`!",table:{type:{summary:`number[]`}}},min:{description:`The minimum value of the slider.`,type:`number`},max:{description:`The maximum value of the slider.`,type:`number`},step:{description:`The step value of the slider.`,type:`number`},minStepsBetweenThumbs:{description:"The minimum permitted `step`s beteween multiple thumbs/values.",type:`number`},orientation:{description:`The orientation of the slider.`,options:[`horizontal`,`vertical`],control:`inline-radio`,table:{type:{summary:`horizontal | vertical`}}},dir:{description:`The direction of the slider.`,options:[`ltr`,`rtl`],control:`inline-radio`,table:{type:{summary:`ltr | rtl`}}},onValueChange:{description:`Callback when the value changes.`},onValueCommit:{description:`Callback when the value changes at the end of an interaction. Useful when you only need to capture a final value e.g. to update a backend service.`}}},a={},o={name:`Multiple thumbs / Range`,args:{defaultValue:[10,20]}},s={name:`Minimum range with multiple thumbs`,args:{defaultValue:[10,20],minStepsBetweenThumbs:10}},a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{} satisfies Story`,...a.parameters?.docs?.source}}},o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  name: 'Multiple thumbs / Range',
+  args: {
+    defaultValue: [10, 20]
+  }
+} satisfies Story`,...o.parameters?.docs?.source}}},s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  name: 'Minimum range with multiple thumbs',
+  args: {
+    defaultValue: [10, 20],
+    minStepsBetweenThumbs: 10
+  }
+} satisfies Story`,...s.parameters?.docs?.source}}},c=[`Default`,`MultipleThumbs`,`MinRange`]}))();export{a as Default,s as MinRange,o as MultipleThumbs,c as __namedExportsOrder,i as default};
