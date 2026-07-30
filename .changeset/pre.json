@@ -5,8 +5,5 @@
     "@ivao/atmosphere-brand": "0.0.0",
     "@ivao/atmosphere-react": "0.0.0"
   },
-  "changesets": [
-    "loud-bats-jump",
-    "tasty-days-push"
-  ]
+  "changesets": []
 }
