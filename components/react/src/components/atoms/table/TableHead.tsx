@@ -9,7 +9,7 @@ export const TableHead = forwardRef<
   <th
     ref={ref}
     className={cn(
-      'h-12 px-4 text-left align-middle font-bold text-fuselage-800 dark:text-fuselage-50 [&:has([role=checkbox])]:pr-0',
+      'text-fuselage-800 dark:text-fuselage-50 h-12 px-4 text-left align-middle font-bold [&:has([role=checkbox])]:pr-0',
       className,
     )}
     {...props}

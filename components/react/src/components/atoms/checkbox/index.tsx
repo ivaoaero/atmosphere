@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { CheckboxCheck } from './CheckboxCheck';
 import { CheckboxIndicator } from './CheckboxIndicator';
 import { CheckboxRoot } from './CheckboxRoot';
 
 const Checkbox = forwardRef<
-  ElementRef<typeof CheckboxRoot>,
+  ComponentRef<typeof CheckboxRoot>,
   ComponentPropsWithoutRef<typeof CheckboxRoot>
 >(({ ...props }, ref) => (
   <CheckboxRoot ref={ref} {...props}>

@@ -2,7 +2,25 @@
   "name": "@ivao/atmosphere-brand",
   "description": "IVAO Atmosphere design system brand package.",
   "version": "1.0.1",
-  "main": "dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "style": "./dist/tokens.css",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./tokens.json": "./dist/tokens.json",
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css"
+  },
   "files": [
     "dist"
   ],
@@ -33,7 +51,7 @@
     }
   ],
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && node scripts/build-token-assets.mjs",
     "dev": "tsdown --watch",
     "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
     "lint:ci": "eslint . --report-unused-disable-directives --max-warnings 0",
@@ -44,6 +62,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@ivao/eslint-config": "^4.0.0",
     "@ivao/prettier-config": "^1.4.0",
+    "@types/node": "22.18.7",
     "eslint": "^10.8.0",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "~0.8.1",

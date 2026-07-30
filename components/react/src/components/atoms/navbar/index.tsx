@@ -8,7 +8,7 @@ export const NavbarContainer: ComponentType<
   return (
     <nav
       className={cn(
-        'flex w-full items-center justify-between bg-atmos-700 px-4 py-3 dark:bg-fuselage-800',
+        'bg-atmos-700 dark:bg-fuselage-800 flex w-full items-center justify-between px-4 py-3',
         className,
       )}
       {...pros}

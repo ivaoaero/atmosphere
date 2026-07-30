@@ -9,7 +9,7 @@ export const Subtle = forwardRef<
   <p
     ref={ref}
     className={cn(
-      'text-sm text-fuselage-450 dark:text-fuselage-500',
+      'text-fuselage-450 dark:text-fuselage-500 text-sm',
       className,
     )}
     {...props}

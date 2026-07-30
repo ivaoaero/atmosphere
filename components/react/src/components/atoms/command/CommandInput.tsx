@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Command as CommandPrimitive } from 'cmdk';
 import { Search } from 'lucide-react';
@@ -6,7 +6,7 @@ import { Search } from 'lucide-react';
 import { cn } from '@utils/styles';
 
 export const CommandInput = forwardRef<
-  ElementRef<typeof CommandPrimitive.Input>,
+  ComponentRef<typeof CommandPrimitive.Input>,
   ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(({ className, ...props }, ref) => (
   // eslint-disable-next-line react/no-unknown-property -- `cmdk-input-wrapper` is a custom attribute
@@ -15,7 +15,7 @@ export const CommandInput = forwardRef<
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
-        'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50',
+        'placeholder:text-muted-foreground flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50',
         className,
       )}
       {...props}

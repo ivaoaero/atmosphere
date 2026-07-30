@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Item } from '@radix-ui/react-accordion';
 
 import { cn } from '@utils/styles';
 
 export const AccordionItem = forwardRef<
-  ElementRef<typeof Item>,
+  ComponentRef<typeof Item>,
   ComponentPropsWithoutRef<typeof Item>
 >(({ className, ...props }, ref) => (
   <Item

@@ -8,7 +8,7 @@ export const SheetHeader = ({
 }: HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      'mb-2 flex flex-col space-y-2 text-center sm:text-left',
+      'mb-2 flex flex-col gap-2 text-center sm:text-left',
       className,
     )}
     {...props}

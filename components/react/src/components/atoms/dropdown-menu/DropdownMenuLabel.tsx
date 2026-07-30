@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Label } from '@radix-ui/react-dropdown-menu';
 
 import { cn } from '@utils/styles';
 
 export const DropdownMenuLabel = forwardRef<
-  ElementRef<typeof Label>,
+  ComponentRef<typeof Label>,
   ComponentPropsWithoutRef<typeof Label> & {
     inset?: boolean;
   }
@@ -13,7 +13,7 @@ export const DropdownMenuLabel = forwardRef<
   <Label
     ref={ref}
     className={cn(
-      'p-0 px-2 text-sm font-semibold text-fuselage-800 dark:text-fuselage-50',
+      'text-fuselage-800 dark:text-fuselage-50 p-0 px-2 text-sm font-semibold',
       inset && 'pl-8',
       className,
     )}

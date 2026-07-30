@@ -1,17 +1,17 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Command as CommandPrimitive } from 'cmdk';
 
 import { cn } from '@utils/styles';
 
 export const CommandRoot = forwardRef<
-  ElementRef<typeof CommandPrimitive>,
+  ComponentRef<typeof CommandPrimitive>,
   ComponentPropsWithoutRef<typeof CommandPrimitive>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive
     ref={ref}
     className={cn(
-      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground',
+      'bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md',
       className,
     )}
     {...props}

@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Item } from '@radix-ui/react-dropdown-menu';
 
 import { cn } from '@utils/styles';
 
 export const DropdownMenuItem = forwardRef<
-  ElementRef<typeof Item>,
+  ComponentRef<typeof Item>,
   ComponentPropsWithoutRef<typeof Item> & {
     inset?: boolean;
   }
@@ -13,7 +13,7 @@ export const DropdownMenuItem = forwardRef<
   <Item
     ref={ref}
     className={cn(
-      'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-fuselage-100 focus:text-fuselage-800 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-fuselage-700 dark:focus:text-fuselage-50',
+      'focus:bg-fuselage-100 focus:text-fuselage-800 radix-disabled:pointer-events-none radix-disabled:opacity-50 dark:focus:bg-fuselage-700 dark:focus:text-fuselage-50 relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-hidden transition-colors select-none',
       inset && 'pl-8',
       className,
     )}

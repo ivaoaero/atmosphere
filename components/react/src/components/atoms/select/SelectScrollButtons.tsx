@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import {
   ScrollDownButton as RadixScrollDownButton,
@@ -13,7 +13,7 @@ import {
 import { cn } from '@utils/styles';
 
 const SelectScrollUpButton = forwardRef<
-  ElementRef<typeof RadixScrollUpButton>,
+  ComponentRef<typeof RadixScrollUpButton>,
   ComponentPropsWithoutRef<typeof RadixScrollUpButton>
 >(({ className, ...props }, ref) => (
   <RadixScrollUpButton
@@ -30,7 +30,7 @@ const SelectScrollUpButton = forwardRef<
 SelectScrollUpButton.displayName = RadixScrollUpButton.displayName;
 
 const SelectScrollDownButton = forwardRef<
-  ElementRef<typeof RadixScrollDownButton>,
+  ComponentRef<typeof RadixScrollDownButton>,
   ComponentPropsWithoutRef<typeof RadixScrollDownButton>
 >(({ className, ...props }, ref) => (
   <RadixScrollDownButton

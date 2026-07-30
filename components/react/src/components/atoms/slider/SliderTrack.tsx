@@ -1,17 +1,17 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Track as RadixTrack } from '@radix-ui/react-slider';
 
 import { cn } from '@utils/styles';
 
 export const SliderTrack = forwardRef<
-  ElementRef<typeof RadixTrack>,
+  ComponentRef<typeof RadixTrack>,
   ComponentPropsWithoutRef<typeof RadixTrack>
 >(({ className, ...props }, ref) => (
   <RadixTrack
     {...props}
     className={cn(
-      'relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20',
+      'bg-primary/20 relative h-1.5 w-full grow overflow-hidden rounded-full',
       className,
     )}
     ref={ref}

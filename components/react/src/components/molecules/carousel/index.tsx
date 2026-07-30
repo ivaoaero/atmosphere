@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef, Key } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef, Key } from 'react';
 
 import {
   CarouselContent,
@@ -16,7 +16,7 @@ export interface CarouselProps extends Omit<CarouselRootProps, 'children'> {
 }
 
 export const Carousel = forwardRef<
-  ElementRef<typeof CarouselRoot>,
+  ComponentRef<typeof CarouselRoot>,
   CarouselProps
 >(({ items, ...props }, ref) => {
   return (

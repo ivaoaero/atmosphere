@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Root } from '@radix-ui/react-separator';
 
 import { cn } from '@utils/styles';
 
 export const Separator = forwardRef<
-  ElementRef<typeof Root>,
+  ComponentRef<typeof Root>,
   ComponentPropsWithoutRef<typeof Root>
 >(
   (
@@ -17,7 +17,7 @@ export const Separator = forwardRef<
       decorative={decorative}
       orientation={orientation}
       className={cn(
-        'shrink-0 bg-border',
+        'bg-border shrink-0',
         orientation === 'horizontal'
           ? 'my-3 h-[1px] w-full'
           : 'mx-3 h-full w-[1px]',

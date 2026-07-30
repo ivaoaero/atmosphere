@@ -9,7 +9,7 @@ export const AlertTitle = forwardRef<
   <h5
     ref={ref}
     className={cn(
-      'font-medium leading-none tracking-tight text-inherit',
+      'leading-none font-medium tracking-tight text-inherit',
       className,
     )}
     {...props}

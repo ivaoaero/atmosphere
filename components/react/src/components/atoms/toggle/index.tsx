@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Root } from '@radix-ui/react-toggle';
 
@@ -9,7 +9,7 @@ import { toggleVariants } from '@components/atoms/toggle/toggleVariants';
 import { cn } from '@utils/styles';
 
 export const Toggle = forwardRef<
-  ElementRef<typeof Root>,
+  ComponentRef<typeof Root>,
   ComponentPropsWithoutRef<typeof Root> & VariantProps<typeof toggleVariants>
 >(({ className, variant, size, ...props }, ref) => (
   <Root

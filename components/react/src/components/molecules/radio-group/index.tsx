@@ -1,7 +1,7 @@
 import {
   ComponentProps,
   ComponentPropsWithoutRef,
-  ElementRef,
+  ComponentRef,
   forwardRef,
 } from 'react';
 
@@ -22,13 +22,13 @@ export interface RadioGroupProps extends Omit<
 }
 
 export const RadioGroup = forwardRef<
-  ElementRef<typeof RadioGroupRoot>,
+  ComponentRef<typeof RadioGroupRoot>,
   RadioGroupProps
 >(({ items, ...props }, ref) => {
   return (
     <RadioGroupRoot ref={ref} {...props}>
       {items.map(({ value, label, ...props }) => (
-        <div key={value} className="flex items-center space-x-2">
+        <div key={value} className="flex items-center gap-2">
           <RadioGroupItem id={value} value={value} {...props} />
           <Label htmlFor={value}>{label}</Label>
         </div>
