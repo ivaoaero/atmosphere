@@ -1,5 +1,10 @@
 # @ivao/atmosphere-brand
 
+## 2.0.0
+### Major Changes
+
+- 7596195: complete overhaul how design tokens are stored and distributed. use json format and generate distribution files for JS/TS, CSS and TailwindCSS
+
 ## 2.0.0-next.0
 ### Major Changes
 
