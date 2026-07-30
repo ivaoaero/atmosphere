@@ -1,4 +1,4 @@
-import { ComponentType, PropsWithChildren, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ComponentType, ReactNode } from 'react';
 
 import { NavbarContainer } from '@components/atoms/navbar';
 
@@ -6,20 +6,24 @@ import { cn } from '@utils/styles';
 
 import { IVAOLogo } from 'src/main';
 
-interface NavbarProps {
+interface NavbarProps extends Omit<
+  ComponentPropsWithoutRef<typeof NavbarContainer>,
+  'title'
+> {
   title: ReactNode;
   logoVariant?: 'icon-only';
   diagonalDivider?: boolean;
 }
 
-export const Navbar: ComponentType<PropsWithChildren<NavbarProps>> = ({
+export const Navbar: ComponentType<NavbarProps> = ({
   title,
   children,
   logoVariant,
   diagonalDivider = false,
+  ...props
 }) => {
   return (
-    <NavbarContainer>
+    <NavbarContainer {...props}>
       <div className={'flex items-center gap-3'}>
         {logoVariant === 'icon-only' ? (
           <IVAOLogo color={'white'} onlyIcon />
@@ -35,7 +39,7 @@ export const Navbar: ComponentType<PropsWithChildren<NavbarProps>> = ({
         )}
         <div
           className={cn(
-            'h-8 w-0.5 bg-ocean-400 dark:bg-fuselage-400',
+            'bg-ocean-400 dark:bg-fuselage-400 h-8 w-0.5',
             diagonalDivider && 'rotate-12',
           )}
         />

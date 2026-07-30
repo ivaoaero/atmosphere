@@ -15,9 +15,7 @@ export default [
           allowDefaultProject: [
             '.prettierrc.js',
             'eslint.config.js',
-            'postcss.config.js',
             'release.config.js',
-            'tailwind.preset.ts',
           ],
         },
         tsconfigRootDir: import.meta.dirname,
@@ -28,6 +26,7 @@ export default [
     rules: {
       'jsx-a11y/heading-has-content': 'off',
       'jsx-a11y/anchor-has-content': 'off',
+      '@typescript-eslint/no-deprecated': 'error',
     },
   },
   {

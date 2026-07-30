@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Root } from '@radix-ui/react-scroll-area';
 
 import { cn } from '@utils/styles';
 
 export const ScrollAreaRoot = forwardRef<
-  ElementRef<typeof Root>,
+  ComponentRef<typeof Root>,
   ComponentPropsWithoutRef<typeof Root>
 >(({ className, children, ...props }, ref) => (
   <Root

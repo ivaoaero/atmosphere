@@ -29,7 +29,7 @@ export const ListItemMedia = ({
   if (Icon) {
     return (
       <div
-        className="flex size-10 items-center justify-center rounded-md bg-fuselage-150 dark:bg-fuselage-700 md:size-12"
+        className="bg-fuselage-150 dark:bg-fuselage-700 flex size-10 items-center justify-center rounded-md md:size-12"
         aria-hidden={!iconAriaLabel}
         {...(iconAriaLabel && { 'aria-label': iconAriaLabel })}
       >

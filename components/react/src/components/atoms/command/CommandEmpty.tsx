@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Command as CommandPrimitive } from 'cmdk';
 
 import { cn } from '@utils/styles';
 
 export const CommandEmpty = forwardRef<
-  ElementRef<typeof CommandPrimitive.Empty>,
+  ComponentRef<typeof CommandPrimitive.Empty>,
   ComponentPropsWithoutRef<typeof CommandPrimitive.Empty>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Empty

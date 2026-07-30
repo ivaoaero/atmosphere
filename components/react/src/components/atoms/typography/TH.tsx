@@ -9,7 +9,7 @@ export const TH = forwardRef<
   <th
     ref={ref}
     className={cn(
-      'border border-fuselage-200 px-4 py-2 text-left font-bold dark:border-fuselage-700 [&[align=center]]:text-center [&[align=right]]:text-right',
+      'border-fuselage-200 dark:border-fuselage-700 border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right',
       className,
     )}
     {...props}

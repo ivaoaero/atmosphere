@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import {
   ScrollAreaCorner,
@@ -10,7 +10,7 @@ import {
 import { cn } from '@utils/styles';
 
 export const ScrollArea = forwardRef<
-  ElementRef<typeof ScrollAreaRoot>,
+  ComponentRef<typeof ScrollAreaRoot>,
   ComponentPropsWithoutRef<typeof ScrollAreaRoot>
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaRoot

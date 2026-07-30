@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import {
   Item as RadixItem,
@@ -11,13 +11,13 @@ import { SelectCheck } from '@components/atoms/select/SelectIcons';
 import { cn } from '@utils/styles';
 
 const SelectItem = forwardRef<
-  ElementRef<typeof RadixItem>,
+  ComponentRef<typeof RadixItem>,
   ComponentPropsWithoutRef<typeof RadixItem>
 >(({ className, children, ...props }, ref) => (
   <RadixItem
     ref={ref}
     className={cn(
-      'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      'focus:bg-accent focus:text-accent-foreground radix-disabled:pointer-events-none radix-disabled:opacity-50 relative flex w-full cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none',
       className,
     )}
     {...props}

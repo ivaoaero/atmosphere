@@ -1,21 +1,21 @@
 import { cva } from 'class-variance-authority';
 
 export const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fuselage-700 disabled:pointer-events-none dark:focus-visible:ring-fuselage-550',
+  'focus-visible:ring-fuselage-700 dark:focus-visible:ring-fuselage-550 inline-flex items-center justify-center gap-2 rounded-md border text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-hidden disabled:pointer-events-none',
   {
     variants: {
       variant: {
         primary:
-          'border-atmos-700 bg-atmos-700 text-fuselage-50 shadow hover:bg-atmos-800 disabled:text-atmos-300 dark:border-fuselage-50 dark:bg-fuselage-50 dark:text-fuselage-800 hover:dark:bg-fuselage-150 dark:disabled:border-fuselage-150 dark:disabled:bg-fuselage-150 dark:disabled:text-fuselage-400',
+          'border-atmos-700 bg-atmos-700 text-fuselage-50 hover:bg-atmos-800 disabled:text-atmos-300 dark:border-fuselage-50 dark:bg-fuselage-50 dark:text-fuselage-800 dark:hover:bg-fuselage-150 dark:disabled:border-fuselage-150 dark:disabled:bg-fuselage-150 dark:disabled:text-fuselage-400 shadow-sm',
         secondary:
-          'border-fuselage-100 bg-fuselage-150 text-fuselage-700 shadow-sm hover:bg-fuselage-200 disabled:text-fuselage-300 dark:border-fuselage-500 dark:bg-fuselage-500 dark:text-fuselage-50 dark:hover:bg-fuselage-600 dark:disabled:border-fuselage-500 dark:disabled:bg-fuselage-600 dark:disabled:text-fuselage-300',
+          'border-fuselage-100 bg-fuselage-150 text-fuselage-700 hover:bg-fuselage-200 disabled:text-fuselage-300 dark:border-fuselage-500 dark:bg-fuselage-500 dark:text-fuselage-50 dark:hover:bg-fuselage-600 dark:disabled:border-fuselage-500 dark:disabled:bg-fuselage-600 dark:disabled:text-fuselage-300 shadow-xs',
         destructive:
-          'border-semantic-red-600 bg-semantic-red-600 text-semantic-red-50 shadow-sm hover:bg-semantic-red-700 disabled:bg-semantic-red-700 disabled:text-semantic-red-300 dark:bg-semantic-red-600 dark:text-semantic-red-50 dark:hover:bg-semantic-red-700 dark:disabled:bg-semantic-red-700 dark:disabled:text-semantic-red-300',
+          'border-semantic-red-600 bg-semantic-red-600 text-semantic-red-50 hover:bg-semantic-red-700 disabled:bg-semantic-red-700 disabled:text-semantic-red-300 dark:bg-semantic-red-600 dark:text-semantic-red-50 dark:hover:bg-semantic-red-700 dark:disabled:bg-semantic-red-700 dark:disabled:text-semantic-red-300 shadow-xs',
         outline:
-          'border-fuselage-300 bg-transparent text-fuselage-500 shadow-sm hover:border-fuselage-500 hover:text-fuselage-800 disabled:border-fuselage-300 disabled:text-fuselage-300 dark:border-fuselage-400 dark:text-fuselage-100 dark:hover:text-fuselage-400 dark:disabled:border-fuselage-500 dark:disabled:text-fuselage-500',
+          'border-fuselage-300 text-fuselage-500 hover:border-fuselage-500 hover:text-fuselage-800 disabled:border-fuselage-300 disabled:text-fuselage-300 dark:border-fuselage-400 dark:text-fuselage-100 dark:hover:text-fuselage-400 dark:disabled:border-fuselage-500 dark:disabled:text-fuselage-500 bg-transparent shadow-xs',
         ghost:
-          'border-transparent text-fuselage-500 hover:text-fuselage-800 disabled:text-fuselage-300 dark:border-transparent dark:text-fuselage-300 dark:hover:text-fuselage-100 dark:disabled:text-fuselage-500',
-        link: 'text-atmos-700 underline-offset-4 hover:text-atmos-800 hover:underline disabled:text-atmos-100 dark:border-transparent dark:text-fuselage-50 dark:hover:text-fuselage-200 dark:disabled:text-fuselage-500',
+          'text-fuselage-500 hover:text-fuselage-800 disabled:text-fuselage-300 dark:text-fuselage-300 dark:hover:text-fuselage-100 dark:disabled:text-fuselage-500 border-transparent dark:border-transparent',
+        link: 'text-atmos-700 hover:text-atmos-800 disabled:text-atmos-100 dark:text-fuselage-50 dark:hover:text-fuselage-200 dark:disabled:text-fuselage-500 underline-offset-4 hover:underline dark:border-transparent',
       },
       size: {
         sm: 'h-8 px-3 text-xs',

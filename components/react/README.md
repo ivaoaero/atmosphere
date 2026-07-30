@@ -4,7 +4,10 @@
 
 ### Requirements
 
-React version: > 18.3
+React version: 18.2 or newer.
+
+The Tailwind CSS integration uses Tailwind CSS v4 and its modern browser
+baseline: Safari 16.4+, Chrome 111+, and Firefox 128+.
 
 ### How to install
 
@@ -18,41 +21,26 @@ pnpm add @ivao/atmosphere-react
 
 ### Configure
 
-#### tailwindcss
+#### Tailwind CSS v4
 
-If you want to use tailwindcss classes, customizations or overrides,
-you need to add our [tailwind preset](https://v3.tailwindcss.com/docs/presets) to your `tailwind.config.ts` file.
-
-```typescript
-import ivaoPreset from '@ivao/atmosphere-react/tailwind.preset.ts'; // import the preset
-
-import { Config } from 'tailwindcss';
-
-export default {
-  content: [
-    './src/**/*.tsx', // your files here...
-    './node_modules/@ivao/atmosphere-react/dist/atmosphere-react.js', // let tailwind know about our components
-  ],
-  presets: [ivaoPreset], // add the preset here
-} satisfies Config;
-```
-
-Additionally, you need to import our source CSS file that adds the color variables to your project.
-In your app CSS file, add this line:
+Import Tailwind and the Atmosphere theme adapter in your application CSS:
 
 ```css
-@import '@ivao/atmosphere-react/src/styles/index.css';
+@import 'tailwindcss';
+@import '@ivao/atmosphere-react/theme.css';
 ```
 
-You can extend your CSS file (e.g. add utilities or base classes)
-and tailwind config (e.g. add colors) as you prefer.
+The adapter includes the Atmosphere brand theme, the component semantic tokens,
+animations, `tailwindcss-radix`, and the component bundle as a Tailwind source.
+You can add your own CSS-first `@theme`, `@utility`, and `@custom-variant`
+directives in the same entry file.
 
 #### CSS only
 
 Import our CSS by adding this line to your index file.
 
 ```typescript
-import '@ivao/atmosphere-react/dist/styles/index.css';
+import '@ivao/atmosphere-react/styles.css';
 ```
 
 > This approach is sufficient if no further tailwind classes, customizations or overrides are needed.

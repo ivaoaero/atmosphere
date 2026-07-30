@@ -1,17 +1,17 @@
-import { ComponentType, DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ComponentPropsWithoutRef, ComponentType } from 'react';
 
 import { cn } from '@utils/styles';
 
 export const NavbarContainer: ComponentType<
-  DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
-> = ({ className, children, ...pros }) => {
+  ComponentPropsWithoutRef<'nav'>
+> = ({ className, children, ...props }) => {
   return (
     <nav
       className={cn(
-        'flex w-full items-center justify-between bg-atmos-700 px-4 py-3 dark:bg-fuselage-800',
+        'bg-atmos-700 dark:bg-fuselage-800 flex w-full items-center justify-between px-4 py-3',
         className,
       )}
-      {...pros}
+      {...props}
     >
       {children}
     </nav>

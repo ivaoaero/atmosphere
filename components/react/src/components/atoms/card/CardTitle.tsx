@@ -9,7 +9,7 @@ export const CardTitle = forwardRef<
   <h3
     ref={ref}
     className={cn(
-      'text-2xl font-semibold leading-none tracking-tight text-fuselage-800 dark:text-fuselage-50',
+      'text-fuselage-800 dark:text-fuselage-50 text-2xl leading-none font-semibold tracking-tight',
       className,
     )}
     {...props}

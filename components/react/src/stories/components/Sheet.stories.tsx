@@ -208,7 +208,7 @@ export const WithComplexFooter = {
     footerCloseButton: false,
     footer: (
       <div className="flex w-full items-center justify-between gap-2">
-        <p className="text-sm text-fuselage-450">v1.13.0</p>
+        <p className="text-fuselage-450 text-sm">v1.13.0</p>
         <div className="flex gap-2">
           <TooltipProvider>
             <Tooltip content="This will uninstall the app">

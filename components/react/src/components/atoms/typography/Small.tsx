@@ -6,7 +6,7 @@ export const Small = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(
   ({ className, ...props }, ref) => (
     <small
       ref={ref}
-      className={cn('text-sm font-medium leading-none', className)}
+      className={cn('text-sm leading-none font-medium', className)}
       {...props}
     />
   ),

@@ -6,16 +6,21 @@
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
+    "allowJs": true,
+    "checkJs": true,
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true,
+    "target": "ES2022",
+    "lib": ["ES2022"],
     "outDir": "./dist",
-    "module": "CommonJS",
+    "module": "ESNext",
     "types": ["node"]
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["src"]
+  "include": ["scripts", "src"]
 }

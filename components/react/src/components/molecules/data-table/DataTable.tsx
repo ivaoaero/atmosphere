@@ -43,6 +43,11 @@ export interface DataTableProps<TData>
    * @default 'No results.'
    */
   noResultsMessage?: string;
+  /**
+   * If true, will hide the number of selected rows in the table footer.
+   * @default true
+   */
+  hideSelectedRowsCount?: boolean;
 }
 
 export const DataTable = <TData,>({
@@ -52,14 +57,15 @@ export const DataTable = <TData,>({
   ToolbarContent,
   isLoading,
   noResultsMessage,
+  hideSelectedRowsCount = true,
   ...props
 }: DataTableProps<TData>) => {
   const table = useReactTable({
     getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
     // Default models for client side data. Not needed for server side data.
     ...(isClientSideData && {
       getPaginationRowModel: getPaginationRowModel(),
-      getSortedRowModel: getSortedRowModel(),
       getFilteredRowModel: getFilteredRowModel(),
     }),
     ...props,
@@ -75,7 +81,7 @@ export const DataTable = <TData,>({
     }, []);
 
   return (
-    <div className={'space-y-4'}>
+    <div className={'flex flex-col gap-4'}>
       <DataTableToolbar
         table={table}
         ToolbarContent={ToolbarContent}
@@ -111,7 +117,10 @@ export const DataTable = <TData,>({
                   data-state={row.getIsSelected() && 'selected'}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell
+                      key={cell.id}
+                      className={cell.column.columnDef.meta?.className}
+                    >
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext(),
@@ -133,7 +142,12 @@ export const DataTable = <TData,>({
           </TableBody>
         </TableRoot>
       </div>
-      {displayPagination && <DataTablePagination table={table} />}
+      {displayPagination && (
+        <DataTablePagination
+          table={table}
+          hideSelectedRowsCount={hideSelectedRowsCount}
+        />
+      )}
     </div>
   );
 };

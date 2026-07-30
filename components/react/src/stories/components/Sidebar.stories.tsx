@@ -19,7 +19,7 @@ const meta = {
     return (
       <div className={'flex h-screen'}>
         <Story />
-        <div className={'size-full bg-fuselage-50 dark:bg-fuselage-950'} />
+        <div className={'bg-fuselage-50 dark:bg-fuselage-950 size-full'} />
       </div>
     );
   },

@@ -9,7 +9,7 @@ export const BlockQuote = forwardRef<
   <blockquote
     ref={ref}
     className={cn(
-      'mt-6 border-l-2 border-fuselage-200 pl-6 italic text-fuselage-550 dark:border-fuselage-700 dark:text-fuselage-450',
+      'border-fuselage-200 text-fuselage-550 dark:border-fuselage-700 dark:text-fuselage-450 mt-6 border-l-2 pl-6 italic',
       className,
     )}
     {...props}

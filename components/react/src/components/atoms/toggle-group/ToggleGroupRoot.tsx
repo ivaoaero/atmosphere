@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Root } from '@radix-ui/react-toggle-group';
 import { VariantProps } from 'class-variance-authority';
@@ -12,7 +12,7 @@ export type ToggleGroupRootProps = ComponentPropsWithoutRef<typeof Root> &
   VariantProps<typeof toggleVariants>;
 
 export const ToggleGroupRoot = forwardRef<
-  ElementRef<typeof Root>,
+  ComponentRef<typeof Root>,
   ToggleGroupRootProps
 >(({ className, variant, size, children, ...props }, ref) => (
   <Root

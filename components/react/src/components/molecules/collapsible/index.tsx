@@ -1,6 +1,6 @@
 import {
   ComponentPropsWithoutRef,
-  ElementRef,
+  ComponentRef,
   forwardRef,
   ReactNode,
 } from 'react';
@@ -18,7 +18,7 @@ export interface CollapsibleProps extends ComponentPropsWithoutRef<
 }
 
 export const Collapsible = forwardRef<
-  ElementRef<typeof CollapsibleRoot>,
+  ComponentRef<typeof CollapsibleRoot>,
   CollapsibleProps
 >(({ children, trigger, ...props }, ref) => {
   return (

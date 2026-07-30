@@ -1,17 +1,17 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { List } from '@radix-ui/react-navigation-menu';
 
 import { cn } from '@utils/styles';
 
 export const NavigationMenuList = forwardRef<
-  ElementRef<typeof List>,
+  ComponentRef<typeof List>,
   ComponentPropsWithoutRef<typeof List>
 >(({ className, ...props }, ref) => (
   <List
     ref={ref}
     className={cn(
-      'group flex flex-1 list-none items-center justify-center space-x-1',
+      'group flex flex-1 list-none items-center justify-center gap-1',
       className,
     )}
     {...props}

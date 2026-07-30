@@ -1,4 +1,4 @@
-import { ElementRef, forwardRef } from 'react';
+import { ComponentRef, forwardRef } from 'react';
 
 import {
   NavigationMenuLink,
@@ -8,7 +8,7 @@ import {
 import { cn } from '@utils/styles';
 
 export const NavigationMenuListItem = forwardRef<
-  ElementRef<typeof NavigationMenuLink>,
+  ComponentRef<typeof NavigationMenuLink>,
   NavigationMenuLinkProps
 >(({ className, title, children, ...props }, ref) => {
   return (
@@ -16,14 +16,14 @@ export const NavigationMenuListItem = forwardRef<
       <NavigationMenuLink
         ref={ref}
         className={cn(
-          'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/20 hover:text-fuselage-800 focus:bg-accent focus:text-accent-foreground dark:hover:text-fuselage-50',
+          'hover:bg-accent/20 hover:text-fuselage-800 focus:bg-accent focus:text-accent-foreground dark:hover:text-fuselage-50 flex flex-col gap-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none',
           className,
         )}
         {...props}
       >
-        <div className={'text-sm font-medium leading-none'}>{title}</div>
+        <div className={'text-sm leading-none font-medium'}>{title}</div>
         <p
-          className={'line-clamp-2 text-sm leading-snug text-muted-foreground'}
+          className={'text-muted-foreground line-clamp-2 text-sm leading-snug'}
         >
           {children}
         </p>

@@ -1,11 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Title } from '@radix-ui/react-toast';
 
 import { cn } from '@utils/styles';
 
 export const ToastTitle = forwardRef<
-  ElementRef<typeof Title>,
+  ComponentRef<typeof Title>,
   ComponentPropsWithoutRef<typeof Title>
 >(({ className, ...props }, ref) => (
   <Title

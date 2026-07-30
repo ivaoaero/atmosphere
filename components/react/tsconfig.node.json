@@ -4,6 +4,8 @@
     "lib": ["ESNext"],
     "module": "ESNext",
     "types": ["node"],
+    "allowJs": true,
+    "checkJs": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -23,8 +25,7 @@
   "include": [
     "vite.config.ts",
     "vite.build.config.ts",
-    "tailwind.config.ts",
-    "generate-colors-css.ts",
-    ".storybook/*.ts"
+    ".storybook/*.ts",
+    "scripts/*.mjs"
   ]
 }

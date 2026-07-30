@@ -1,17 +1,17 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Root } from '@radix-ui/react-slider';
 
 import { cn } from '@utils/styles';
 
 export const SliderRoot = forwardRef<
-  ElementRef<typeof Root>,
+  ComponentRef<typeof Root>,
   ComponentPropsWithoutRef<typeof Root>
 >(({ className, ...props }, ref) => (
   <Root
     {...props}
     className={cn(
-      'relative flex w-full touch-none select-none items-center',
+      'relative flex w-full touch-none items-center select-none',
       className,
     )}
     ref={ref}

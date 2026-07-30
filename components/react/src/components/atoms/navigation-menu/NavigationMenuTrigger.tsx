@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Trigger } from '@radix-ui/react-navigation-menu';
 import { ChevronDown } from 'lucide-react';
@@ -8,7 +8,7 @@ import { navigationMenuTriggerStyle } from '@components/atoms/navigation-menu/na
 import { cn } from '@utils/styles';
 
 export const NavigationMenuTrigger = forwardRef<
-  ElementRef<typeof Trigger>,
+  ComponentRef<typeof Trigger>,
   ComponentPropsWithoutRef<typeof Trigger>
 >(({ className, children, ...props }, ref) => (
   <Trigger
@@ -19,7 +19,7 @@ export const NavigationMenuTrigger = forwardRef<
     {children}{' '}
     <ChevronDown
       className={
-        'relative top-px ml-1 size-3 transition duration-200 group-data-[state=open]:rotate-180'
+        'group-radix-state-open:rotate-180 relative top-px ml-1 size-3 transition duration-200'
       }
       aria-hidden={'true'}
     />

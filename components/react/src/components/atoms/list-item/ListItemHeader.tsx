@@ -40,7 +40,7 @@ export const ListItemHeader = ({
     <>
       <HeadingComponent
         id={titleId}
-        className="text-lg font-medium text-fuselage-600 dark:text-fuselage-100 md:text-xl md:font-bold"
+        className="text-fuselage-600 dark:text-fuselage-100 text-lg font-medium md:text-xl md:font-bold"
       >
         {title}
       </HeadingComponent>
@@ -48,7 +48,7 @@ export const ListItemHeader = ({
       {description ? (
         <p
           id={descriptionId}
-          className="text-sm text-fuselage-500 dark:text-fuselage-400 md:text-base"
+          className="text-fuselage-500 dark:text-fuselage-400 text-sm md:text-base"
         >
           {description}
         </p>

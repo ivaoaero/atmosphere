@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, ElementRef, forwardRef } from 'react';
+import { AnchorHTMLAttributes, ComponentRef, forwardRef } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
@@ -20,7 +20,7 @@ const ReactRouterLink = forwardRef<HTMLAnchorElement, ReactRouterLinkProps>(
 ReactRouterLink.displayName = 'ReactRouterLink';
 
 const NavLinkComponent = forwardRef<
-  ElementRef<typeof ReactRouterLink>,
+  ComponentRef<typeof ReactRouterLink>,
   NavigationMenuAsLinkProps
 >(({ href, className, onClick, ...props }, ref) => (
   <ReactRouterLink

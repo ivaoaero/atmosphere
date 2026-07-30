@@ -36,7 +36,7 @@ const RemoveButton = forwardRef<HTMLButtonElement, RemoveButtonProps>(
       type={'button'}
       onClick={callback}
       className={clsx(
-        'group relative -mr-0.5 size-3.5 hover:bg-fuselage-500/10 dark:hover:bg-white/5',
+        'group hover:bg-fuselage-500/10 relative -mr-0.5 size-3.5 dark:hover:bg-white/5',
         isPill ? 'rounded-full' : 'rounded-sm',
       )}
       ref={ref}
@@ -44,7 +44,7 @@ const RemoveButton = forwardRef<HTMLButtonElement, RemoveButtonProps>(
       <span className={'sr-only'}>Remove</span>
       <X
         className={
-          'size-3.5 scale-95 stroke-fuselage-450/50 transition-colors group-hover:stroke-fuselage-450 dark:stroke-white/20 group-hover:dark:stroke-fuselage-200'
+          'stroke-fuselage-450/50 group-hover:stroke-fuselage-450 dark:group-hover:stroke-fuselage-200 size-3.5 scale-95 transition-colors dark:stroke-white/20'
         }
       />
       <span className={'absolute -inset-1'} />

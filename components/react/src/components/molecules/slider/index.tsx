@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import {
   SliderRange,
@@ -8,7 +8,7 @@ import {
 } from '@components/atoms/slider';
 
 export const Slider = forwardRef<
-  ElementRef<typeof SliderRoot>,
+  ComponentRef<typeof SliderRoot>,
   ComponentPropsWithoutRef<typeof SliderRoot>
 >(({ ...props }, ref) => {
   const value = props.value || props.defaultValue || [0];

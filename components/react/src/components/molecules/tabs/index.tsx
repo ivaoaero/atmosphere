@@ -1,6 +1,6 @@
 import {
   ComponentPropsWithoutRef,
-  ElementRef,
+  ComponentRef,
   forwardRef,
   ReactNode,
 } from 'react';
@@ -26,7 +26,7 @@ export interface TabsProps extends Omit<
   };
 }
 
-export const Tabs = forwardRef<ElementRef<typeof TabsRoot>, TabsProps>(
+export const Tabs = forwardRef<ComponentRef<typeof TabsRoot>, TabsProps>(
   ({ className, tabs, ...props }, ref) => (
     <TabsRoot {...props} ref={ref} className={cn('w-[400px]', className)}>
       <TabsList>

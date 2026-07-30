@@ -1,9 +1,9 @@
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
 
 import { Trigger } from '@radix-ui/react-alert-dialog';
 
 export const AlertDialogTrigger = forwardRef<
-  ElementRef<typeof Trigger>,
+  ComponentRef<typeof Trigger>,
   ComponentPropsWithoutRef<typeof Trigger>
 >(({ asChild = true, ...props }, ref) => (
   <Trigger {...props} asChild={asChild} ref={ref} />
