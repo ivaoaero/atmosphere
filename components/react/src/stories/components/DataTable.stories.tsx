@@ -476,6 +476,13 @@ const meta = {
         },
       },
     },
+    hideSelectedRowsCount: {
+      table: {
+        defaultValue: {
+          summary: 'true',
+        },
+      },
+    },
   },
 } satisfies Meta<typeof DataTable>;
 

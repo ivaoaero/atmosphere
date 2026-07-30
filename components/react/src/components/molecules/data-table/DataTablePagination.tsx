@@ -17,18 +17,23 @@ import {
 
 export interface DataTablePaginationProps<TData> {
   table: Table<TData>;
+  hideSelectedRowsCount: boolean;
 }
 
 export const DataTablePagination = <TData,>({
   table,
+  hideSelectedRowsCount,
 }: DataTablePaginationProps<TData>) => {
   return (
-    <div className={'flex items-center justify-between px-2'}>
-      <div className={'text-muted-foreground flex-1 text-sm'}>
-        {table.getFilteredSelectedRowModel().rows.length} of{' '}
-        {table.getFilteredRowModel().rows.length} row(s) selected.
-      </div>
-      <div className={'flex items-center gap-6 lg:gap-8'}>
+    <div className={'flex items-center px-2'}>
+      {table.getFilteredSelectedRowModel().rows.length > 0 &&
+        !hideSelectedRowsCount && (
+          <div className={'text-muted-foreground flex-1 text-sm'}>
+            {table.getFilteredSelectedRowModel().rows.length} of{' '}
+            {table.getFilteredRowModel().rows.length} row(s) selected.
+          </div>
+        )}
+      <div className={'ml-auto flex items-center gap-6 lg:gap-8'}>
         <div className={'flex items-center gap-2'}>
           <p className="text-sm font-medium">Rows per page</p>
           <SelectRoot
