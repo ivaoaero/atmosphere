@@ -1,11 +1,53 @@
-import { AnchorHTMLAttributes, ComponentRef, forwardRef } from 'react';
+import {
+  AnchorHTMLAttributes,
+  ComponentRef,
+  ComponentType,
+  createContext,
+  Dispatch,
+  forwardRef,
+  SetStateAction,
+  useContext,
+  useState,
+} from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { NavigationMenuAsLinkProps } from '@components/atoms/navigation-menu/NavigationMenuLink';
+import { SidebarAsLinkProps } from '@components/atoms/sidebar';
 import { NavigationMenu } from '@components/molecules/navigation-menu';
 
 import { cn } from '@utils/styles';
+
+const StoryRouterContext = createContext<{
+  value: string;
+  setValue: Dispatch<SetStateAction<string>>;
+}>({
+  value: '/profile',
+  setValue: () => {
+    throw new Error('setValue function must be overridden in the provider');
+  },
+});
+
+const StoryLink: ComponentType<SidebarAsLinkProps> = ({
+  href,
+  className,
+  children,
+}) => {
+  const { value, setValue } = useContext(StoryRouterContext);
+
+  console.log(value, href);
+
+  return (
+    <button
+      className={className}
+      onClick={() => setValue(href)}
+      data-active={value === href ? true : undefined}
+      disabled={href === '/disabled'}
+    >
+      {children}
+    </button>
+  );
+};
 
 interface ReactRouterLinkProps extends Omit<
   AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -40,7 +82,15 @@ const meta: Meta = {
   title: 'Navigation/NavigationMenu',
   component: NavigationMenu,
   tags: ['autodocs'],
+  decorators: (Story) => {
+    const [value, setValue] = useState('/profile');
 
+    return (
+      <StoryRouterContext.Provider value={{ value, setValue }}>
+        <Story />
+      </StoryRouterContext.Provider>
+    );
+  },
   args: {
     sections: [
       {
@@ -102,8 +152,16 @@ const meta: Meta = {
         title: 'Documentation',
         href: '/docs',
       },
+      {
+        title: 'Profile',
+        href: '/profile',
+      },
+      {
+        title: 'Disabled',
+        href: '/disabled',
+      },
     ],
-    asLink: NavLinkComponent,
+    asLink: StoryLink,
   },
   argTypes: {
     sections: {
@@ -129,13 +187,11 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof NavigationMenu>;
 
-export const Default = {
-  parameters: {
-    docs: {
-      story: {
-        iframeHeight: 800,
-      },
-    },
+export const Default = {} satisfies Story;
+
+export const ReactRouterLinkStory = {
+  name: 'React Router Link',
+  args: {
+    asLink: NavLinkComponent,
   },
-  decorators: [(story) => <div className="h-96 w-full">{story()}</div>],
 } satisfies Story;

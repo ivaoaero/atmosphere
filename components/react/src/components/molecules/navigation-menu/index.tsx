@@ -63,7 +63,7 @@ export const NavigationMenu: ComponentType<NavigationMenuProps> = ({
               <>
                 <NavigationMenuTrigger>{section.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="bg-fuselage-100/20 dark:bg-accent/20 grid list-none gap-3 p-4 backdrop-blur-sm md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <ul className="bg-fuselage-100/20 dark:bg-accent/20 grid list-none gap-3 p-4 backdrop-blur-sm md:w-100 lg:w-125 lg:grid-cols-[1fr_1fr]">
                     {section.links.map((link) => (
                       <NavigationMenuListItem
                         key={link.title}
