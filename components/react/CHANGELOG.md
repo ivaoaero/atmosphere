@@ -1,5 +1,17 @@
 # @ivao/atmosphere-react
 
+## 3.1.0
+### Minor Changes
+
+- ed80851: navigation-menu: add option to force dark mode
+
+### Patch Changes
+
+- fa2e0eb: navigation-menu: font and background colors, and active state
+- 9b801c0: sidebar: fix overflow and adjust colors
+- Updated dependencies [b475ee6]
+  - @ivao/atmosphere-brand@3.0.0
+
 ## 3.0.0
 ### Major Changes
 
