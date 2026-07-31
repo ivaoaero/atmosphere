@@ -1,8 +1,12 @@
 # Atmosphere Brand
 
 The brand package is the framework-neutral source of truth for Atmosphere
-design tokens. Its canonical source is a DTCG 2025.10 token document, and the
-package exposes generated formats for different consumers.
+design tokens. Its canonical source uses plain color strings and font-family
+arrays, and the package exposes generated formats for different consumers.
+
+Color groups can define a default by referencing another option in the same
+group. For example, `"DEFAULT": "700"` makes Atmos 700 the group's default
+without duplicating its value.
 
 ## JavaScript
 
@@ -10,7 +14,7 @@ package exposes generated formats for different consumers.
 import { colors, fonts, tokens } from '@ivao/atmosphere-brand';
 ```
 
-`tokens` is the canonical DTCG document. `colors` and `fonts` retain the
+`tokens` is the canonical token document. `colors` and `fonts` retain the
 convenience API used by existing JavaScript consumers.
 
 ## CSS custom properties
