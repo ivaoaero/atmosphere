@@ -2,6 +2,9 @@ import { ComponentType, useEffect, useState } from 'react';
 
 import { ChevronRight } from 'lucide-react';
 
+import { SidebarIcon } from '@components/atoms/sidebar/SidebarIcon.tsx';
+import { sidebarItemStyle } from '@components/atoms/sidebar/sidebarItemStyle.ts';
+
 import { cn } from '@utils/styles';
 import { useSidebar } from '@hooks/useSidebar';
 
@@ -11,7 +14,10 @@ import {
   SidebarItemProps,
 } from './SidebarItem';
 
-export interface SidebarGroupProps {
+export interface SidebarGroupProps extends Pick<
+  SidebarItemProps,
+  'title' | 'Icon' | 'asLink'
+> {
   title: string;
   Icon: ComponentType;
   items: SidebarItemProps[];
@@ -27,9 +33,9 @@ export const SidebarGroup = ({
   isActiveCheck = (href) =>
     typeof window !== 'undefined' && window.location.pathname === href,
 }: SidebarGroupProps) => {
-  const sidebarContext = useSidebar();
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
+  const [wasSidebarOpen, setWasSidebarOpen] = useState(isSidebarOpen);
   const [isGroupOpen, setIsGroupOpen] = useState<boolean>();
-  const { isSidebarOpen, setIsSidebarOpen } = sidebarContext;
 
   const isAnyChildActive = items.some((item) => isActiveCheck(item.href));
 
@@ -39,58 +45,42 @@ export const SidebarGroup = ({
     }
   }, [isAnyChildActive]);
 
-  useEffect(() => {
-    if (!isSidebarOpen) setIsGroupOpen(false);
-  }, [isSidebarOpen]);
+  if (isSidebarOpen !== wasSidebarOpen) {
+    setWasSidebarOpen(isSidebarOpen);
+  }
+  if (!isSidebarOpen && isGroupOpen) setIsGroupOpen(false);
 
   const handleGroupToggle = () => {
-    if (!isSidebarOpen) {
-      setIsSidebarOpen(true);
-    }
+    setIsSidebarOpen(true);
     setIsGroupOpen(!isGroupOpen);
   };
 
-  const SidebarGroupButton = (
-    <button
-      className="group text-fuselage-300 hover:text-fuselage-700 dark:text-fuselage-400 dark:hover:text-fuselage-200 flex items-center"
-      onClick={handleGroupToggle}
-    >
-      <div
-        className={cn(
-          'flex size-9 items-center justify-center rounded-md p-2 transition-all',
-          'bg-fuselage-100 text-fuselage-500 group-hover:bg-fuselage-200/50',
-          'group-hover:text-fuselage-600 dark:bg-fuselage-700 dark:text-fuselage-500 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
-        )}
-      >
-        <Icon />
-      </div>
-
-      <div
-        className={cn(
-          'flex shrink-0 items-center transition-all',
-          isSidebarOpen ? 'ml-4 w-48 opacity-100' : 'invisible w-0 opacity-0',
-        )}
-      >
-        <span className="font-head text-fuselage-600 dark:text-fuselage-100 text-base leading-tight font-semibold">
-          {title}
-        </span>
-        <ChevronRight
-          size={20}
-          className={cn(
-            'ml-auto transition-transform',
-            isGroupOpen && 'rotate-90',
-          )}
-        />
-      </div>
-    </button>
-  );
-
   return (
-    <div>
-      {SidebarGroupButton}
+    <div className={'w-full'}>
+      <button className={sidebarItemStyle} onClick={handleGroupToggle}>
+        <SidebarIcon Icon={Icon} />
+
+        <div
+          className={cn(
+            'ml-4 flex grow items-center transition-all',
+            !isSidebarOpen && 'hidden',
+          )}
+        >
+          <span className="font-head text-fuselage-600 dark:text-fuselage-100 mr-2 text-base leading-tight font-semibold">
+            {title}
+          </span>
+          <ChevronRight
+            size={20}
+            className={cn(
+              'ml-auto shrink-0 transition-transform',
+              isGroupOpen && 'rotate-90',
+            )}
+          />
+        </div>
+      </button>
 
       {isGroupOpen && (
-        <div className="mt-3 ml-8 flex flex-col gap-2">
+        <div className="before:bg-fuselage-100 dark:before:bg-fuselage-700 relative flex flex-col gap-2 pt-3 pl-4.5 before:absolute before:top-2 before:left-0 before:h-[calc(100%-8px)] before:w-px before:content-['']">
           {items.map((item) => (
             <SidebarItem
               key={item.href}

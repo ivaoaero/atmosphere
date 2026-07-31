@@ -1,4 +1,4 @@
-import { ComponentType, PropsWithChildren, useState } from 'react';
+import { ComponentType, PropsWithChildren, useCallback, useState } from 'react';
 
 import { SidebarContext } from 'src/lib/contexts/SidebarContext';
 
@@ -10,9 +10,11 @@ export const SidebarProvider: ComponentType<
   PropsWithChildren<SidebarProviderProps>
 > = ({ isDefaultOpen = true, children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(isDefaultOpen);
-  const toggleSidebar = () => {
+
+  const toggleSidebar = useCallback(() => {
     setIsSidebarOpen((prev) => !prev);
-  };
+  }, []);
+
   return (
     <SidebarContext.Provider
       value={{ isSidebarOpen, setIsSidebarOpen, toggleSidebar }}

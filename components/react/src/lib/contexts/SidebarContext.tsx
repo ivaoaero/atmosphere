@@ -1,8 +1,8 @@
-import { createContext } from 'react';
+import { createContext, Dispatch, SetStateAction } from 'react';
 
 export interface ISidebarContext {
   isSidebarOpen: boolean;
-  setIsSidebarOpen: (value: boolean) => void;
+  setIsSidebarOpen: Dispatch<SetStateAction<boolean>>;
   toggleSidebar: () => void;
 }
 
