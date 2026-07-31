@@ -1,5 +1,8 @@
 import { AnchorHTMLAttributes, ComponentType, HTMLAttributes } from 'react';
 
+import { SidebarIcon } from '@components/atoms/sidebar/SidebarIcon.tsx';
+import { sidebarItemStyle } from '@components/atoms/sidebar/sidebarItemStyle.ts';
+
 import { cn } from '@utils/styles';
 import { useSidebar } from '@hooks/useSidebar';
 
@@ -26,6 +29,7 @@ export const SidebarItem = ({
   asLink,
   isActive,
   className,
+  isGroupOpen,
   ...props
 }: SidebarItemProps) => {
   const { isSidebarOpen } = useSidebar();
@@ -37,36 +41,23 @@ export const SidebarItem = ({
   return (
     <LinkComponent
       href={href}
-      className={cn(
-        'group text-fuselage-300 dark:text-fuselage-400 flex',
-        className,
-      )}
+      className={cn(sidebarItemStyle, className)}
       {...props}
     >
-      <div
-        className={cn(
-          'flex size-9 items-center justify-center rounded-md p-2 transition-all',
-          isActive
-            ? 'bg-atmos-700 text-atmos-50 group-hover:bg-atmos-600 group-hover:text-atmos-100 dark:bg-atmos-500 dark:text-atmos-50'
-            : 'bg-fuselage-100 text-fuselage-500 group-hover:bg-fuselage-200/50 group-hover:text-fuselage-600 dark:bg-fuselage-700 dark:text-fuselage-500 dark:group-hover:bg-fuselage-600 dark:group-hover:text-fuselage-100',
-        )}
-      >
-        <Icon />
-      </div>
+      <SidebarIcon Icon={Icon} isActive={isActive} />
 
       <div
         className={cn(
-          'flex shrink-0 flex-col items-start whitespace-nowrap transition-all',
-          isSidebarOpen
-            ? `ml-4 ${props.isGroupOpen ? 'w-fit' : 'w-48'} opacity-100`
-            : 'invisible w-0 opacity-0',
+          'ml-4 flex flex-col items-start whitespace-nowrap transition-all',
+          isGroupOpen && 'w-fit',
+          !isSidebarOpen && 'hidden',
         )}
       >
         <span
           className={cn(
-            'font-head text-base leading-tight font-semibold',
+            'font-head text-base leading-tight font-semibold text-wrap',
             isActive
-              ? 'text-fuselage-800 dark:text-fuselage-50 font-bold'
+              ? 'text-fuselage-800 dark:text-fuselage-50 font-extrabold'
               : 'text-fuselage-600 dark:text-fuselage-100 font-semibold',
           )}
         >
@@ -74,7 +65,7 @@ export const SidebarItem = ({
         </span>
         <span
           className={cn(
-            'text-sm',
+            'text-sm text-wrap',
             isActive
               ? 'text-fuselage-700 dark:text-fuselage-100'
               : 'text-fuselage-400 dark:text-fuselage-400',

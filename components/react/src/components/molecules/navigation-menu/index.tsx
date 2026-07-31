@@ -39,6 +39,7 @@ export interface NavigationMenuProps extends Omit<
 > {
   sections: NavigationMenuSectionProps[];
   asLink?: ComponentType<NavigationMenuAsLinkProps>;
+  darkMode?: boolean;
 }
 
 const instanceOfMultipleLinksSections = (
@@ -50,6 +51,7 @@ const instanceOfMultipleLinksSections = (
 export const NavigationMenu: ComponentType<NavigationMenuProps> = ({
   sections,
   asLink,
+  darkMode,
   ...props
 }) => {
   const LinkComponent =
@@ -58,12 +60,14 @@ export const NavigationMenu: ComponentType<NavigationMenuProps> = ({
     <NavigationMenuRoot {...props}>
       <NavigationMenuList>
         {sections.map((section) => (
-          <NavigationMenuItem key={section.title}>
+          <NavigationMenuItem key={section.title} value={section.title}>
             {instanceOfMultipleLinksSections(section) ? (
               <>
-                <NavigationMenuTrigger>{section.title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger darkMode={darkMode}>
+                  {section.title}
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="bg-fuselage-100/20 dark:bg-accent/20 grid list-none gap-3 p-4 backdrop-blur-sm md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <ul className="bg-fuselage-100/20 dark:bg-accent/20 grid list-none gap-3 p-4 backdrop-blur-sm md:w-100 lg:w-125 lg:grid-cols-[1fr_1fr]">
                     {section.links.map((link) => (
                       <NavigationMenuListItem
                         key={link.title}
@@ -79,7 +83,7 @@ export const NavigationMenu: ComponentType<NavigationMenuProps> = ({
               </>
             ) : (
               <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
+                className={navigationMenuTriggerStyle({ darkMode })}
                 asLink={section.asLink ?? LinkComponent}
                 href={section.href}
               >
