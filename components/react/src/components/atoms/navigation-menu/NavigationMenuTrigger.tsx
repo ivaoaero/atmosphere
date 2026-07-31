@@ -9,11 +9,11 @@ import { cn } from '@utils/styles';
 
 export const NavigationMenuTrigger = forwardRef<
   ComponentRef<typeof Trigger>,
-  ComponentPropsWithoutRef<typeof Trigger>
->(({ className, children, ...props }, ref) => (
+  ComponentPropsWithoutRef<typeof Trigger> & { darkMode?: boolean }
+>(({ className, children, darkMode, ...props }, ref) => (
   <Trigger
     ref={ref}
-    className={cn(navigationMenuTriggerStyle(), 'group', className)}
+    className={cn(navigationMenuTriggerStyle({ darkMode }), 'group', className)}
     {...props}
   >
     {children}{' '}

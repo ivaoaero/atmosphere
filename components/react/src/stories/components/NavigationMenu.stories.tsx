@@ -14,6 +14,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { NavigationMenuAsLinkProps } from '@components/atoms/navigation-menu/NavigationMenuLink';
 import { SidebarAsLinkProps } from '@components/atoms/sidebar';
+import { Navbar } from '@components/molecules/navbar';
 import { NavigationMenu } from '@components/molecules/navigation-menu';
 
 import { cn } from '@utils/styles';
@@ -34,8 +35,6 @@ const StoryLink: ComponentType<SidebarAsLinkProps> = ({
   children,
 }) => {
   const { value, setValue } = useContext(StoryRouterContext);
-
-  console.log(value, href);
 
   return (
     <button
@@ -181,6 +180,16 @@ const meta: Meta = {
         },
       },
     },
+    darkMode: {
+      control: 'boolean',
+      description:
+        'If true, the navigation menu will be rendered in dark mode. If false, it will be rendered in light mode. If undefined, it will use the default styles.',
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+      },
+    },
   },
 };
 
@@ -193,5 +202,22 @@ export const ReactRouterLinkStory = {
   name: 'React Router Link',
   args: {
     asLink: NavLinkComponent,
+  },
+} satisfies Story;
+
+export const WithBlueBackground = {
+  decorators: (Story) => {
+    return (
+      <Navbar
+        title={'Navigation Menu'}
+        diagonalDivider={true}
+        logoVariant={'icon-only'}
+      >
+        <Story />
+      </Navbar>
+    );
+  },
+  args: {
+    darkMode: true,
   },
 } satisfies Story;
