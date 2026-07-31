@@ -1,5 +1,10 @@
 # @ivao/atmosphere-brand
 
+## 2.0.0-next.1
+### Major Changes
+
+- b475ee6: simplfy token format
+
 ## 2.0.0-next.0
 ### Major Changes
 
