@@ -5,9 +5,13 @@ export const toastVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-background text-foreground border',
-        destructive:
-          'group border-destructive bg-destructive text-destructive-foreground',
+        default: 'default bg-background text-foreground border',
+        success:
+          'success border-semantic-green-200 bg-semantic-green-50 text-semantic-green-900',
+        error:
+          'error border-semantic-red-100 bg-semantic-red-50 text-semantic-red-900',
+        warning:
+          'warning border-semantic-yellow-100 bg-semantic-yellow-50 text-semantic-yellow-900',
       },
     },
     defaultVariants: {
