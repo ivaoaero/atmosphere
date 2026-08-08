@@ -11,7 +11,7 @@ import {
 } from '@components/atoms/toast';
 import { toastVariants } from '@components/atoms/toast/toastVariants';
 
-type ToastVariant = NonNullable<VariantProps<typeof toastVariants>['variant']>;
+type ToastVariant = VariantProps<typeof toastVariants>['variant'];
 
 export type ToastProps = {
   title: string;
@@ -33,19 +33,23 @@ export type ToastProps = {
 export const Toast: ComponentType<ToastProps> = ({
   title,
   description,
-  duration = 5000,
-  variant = 'default',
+  duration,
+  variant,
   toastProps,
   actionAltText,
   action,
 }) => (
-  <ToastRoot duration={duration} variant={variant} {...toastProps}>
+  <ToastRoot {...toastProps} duration={duration} variant={variant}>
     <div className={'grid gap-1'}>
       <ToastTitle>{title}</ToastTitle>
       {description && <ToastDescription>{description}</ToastDescription>}
     </div>
 
-    {action && <ToastAction altText={actionAltText}>{action}</ToastAction>}
+    {action && (
+      <ToastAction altText={actionAltText} variant={variant}>
+        {action}
+      </ToastAction>
+    )}
     <ToastClose />
   </ToastRoot>
 );

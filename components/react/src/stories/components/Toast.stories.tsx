@@ -53,15 +53,18 @@ const meta = {
         type: {
           summary: 'number',
         },
+        defaultValue: {
+          summary: '5000',
+        },
       },
     },
     variant: {
       description: 'Color variant of the toast.',
       control: 'select',
-      options: ['default', 'success', 'error', 'warning'],
+      options: ['default', 'success', 'destructive', 'warning'],
       table: {
         type: {
-          summary: 'default | success | error | warning',
+          summary: 'string',
         },
         defaultValue: {
           summary: 'default',
