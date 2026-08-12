@@ -18,7 +18,7 @@ export type ToastProps = {
   description?: string;
   duration?: number;
   variant?: ToastVariant;
-  toastProps?: ComponentProps<typeof ToastRoot>;
+  toastProps?: Omit<ComponentProps<typeof ToastRoot>, 'duration' | 'variant'>;
 } & (
   | {
       actionAltText: string;
