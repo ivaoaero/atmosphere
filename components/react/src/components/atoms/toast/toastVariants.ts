@@ -7,11 +7,11 @@ export const toastVariants = cva(
       variant: {
         default: 'default bg-background text-foreground border',
         success:
-          'success border-semantic-green-200 bg-semantic-green-50 text-semantic-green-900',
+          'border-semantic-green-200 bg-semantic-green-50 text-semantic-green-900',
         destructive:
-          'destructive border-semantic-red-100 bg-semantic-red-50 text-semantic-red-900',
+          'border-semantic-red-100 bg-semantic-red-50 text-semantic-red-900',
         warning:
-          'warning border-semantic-yellow-100 bg-semantic-yellow-50 text-semantic-yellow-900',
+          'border-semantic-yellow-100 bg-semantic-yellow-50 text-semantic-yellow-900',
       },
     },
     defaultVariants: {
@@ -27,11 +27,11 @@ export const toastActionVariants = cva(
       variant: {
         default: '',
         success:
-          'group-[.success]:hover:bg-semantic-green-400/70 group-[.success]:hover:text-fuselage-700 group-[.success]:focus:ring-semantic-green-500 group-[.success]:border-green-400/60',
+          'hover:bg-semantic-green-400/70 hover:text-fuselage-700 focus:ring-semantic-green-500 border-green-400/60',
         destructive:
-          'group-[.destructive]:border-semantic-red-200/70 group-[.destructive]:hover:border-semantic-red-200 group-[.destructive]:hover:bg-semantic-red-200 group-[.destructive]:hover:text-fuselage-700 group-[.destructive]:focus:ring-semantic-red-500',
+          'border-semantic-red-200/70 hover:border-semantic-red-200 hover:bg-semantic-red-200 hover:text-fuselage-700 focus:ring-semantic-red-500',
         warning:
-          'group-[.warning]:border-semantic-yellow-500/40 group-[.warning]:hover:border-semantic-yellow-200/80 group-[.warning]:hover:bg-semantic-yellow-200/80 group-[.warning]:hover:text-semantic-yellow-900 group-[.warning]:focus:ring-semantic-yellow-500',
+          'border-semantic-yellow-500/40 hover:border-semantic-yellow-200/80 hover:bg-semantic-yellow-200/80 hover:text-semantic-yellow-900 focus:ring-semantic-yellow-500',
       },
     },
     defaultVariants: {
