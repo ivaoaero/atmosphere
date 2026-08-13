@@ -25,11 +25,11 @@ const meta = {
   },
   argTypes: {
     title: {
-      description: 'Title of the Toast.',
+      description: 'Title of the toast.',
       type: 'string',
     },
     description: {
-      description: 'Description of the Toast.',
+      description: 'Description of the toast.',
       type: 'string',
     },
     action: {
@@ -52,6 +52,22 @@ const meta = {
       table: {
         type: {
           summary: 'number',
+        },
+        defaultValue: {
+          summary: '5000',
+        },
+      },
+    },
+    variant: {
+      description: 'Color variant of the toast.',
+      control: 'select',
+      options: ['default', 'success', 'destructive', 'warning'],
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: 'default',
         },
       },
     },

@@ -1,5 +1,7 @@
 import { ComponentProps, ComponentType, ReactNode } from 'react';
 
+import { VariantProps } from 'class-variance-authority';
+
 import {
   ToastAction,
   ToastClose,
@@ -7,12 +9,16 @@ import {
   ToastRoot,
   ToastTitle,
 } from '@components/atoms/toast';
+import { toastVariants } from '@components/atoms/toast/toastVariants';
+
+type ToastVariant = VariantProps<typeof toastVariants>['variant'];
 
 export type ToastProps = {
   title: string;
   description?: string;
   duration?: number;
-  toastProps?: ComponentProps<typeof ToastRoot>;
+  variant?: ToastVariant;
+  toastProps?: Omit<ComponentProps<typeof ToastRoot>, 'duration' | 'variant'>;
 } & (
   | {
       actionAltText: string;
@@ -27,18 +33,23 @@ export type ToastProps = {
 export const Toast: ComponentType<ToastProps> = ({
   title,
   description,
-  duration = 5000,
+  duration,
+  variant,
   toastProps,
   actionAltText,
   action,
 }) => (
-  <ToastRoot duration={duration} {...toastProps}>
+  <ToastRoot {...toastProps} duration={duration} variant={variant}>
     <div className={'grid gap-1'}>
       <ToastTitle>{title}</ToastTitle>
       {description && <ToastDescription>{description}</ToastDescription>}
     </div>
 
-    {action && <ToastAction altText={actionAltText}>{action}</ToastAction>}
+    {action && (
+      <ToastAction altText={actionAltText} variant={variant}>
+        {action}
+      </ToastAction>
+    )}
     <ToastClose />
   </ToastRoot>
 );
