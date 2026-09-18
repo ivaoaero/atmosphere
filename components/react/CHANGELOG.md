@@ -1,5 +1,10 @@
 # @ivao/atmosphere-react
 
+## 3.0.0-next.3
+### Minor Changes
+
+- 8433665: toast: add 3 new color variants
+
 ## 3.0.0-next.2
 ### Minor Changes
 
