@@ -1,5 +1,10 @@
 # @ivao/atmosphere-react
 
+## 3.0.0-next.4
+### Patch Changes
+
+- 52575c1: Fix dark mode's `--input` colour, which matched the background: inputs, textareas and selects had no visible border, and an unchecked switch had no visible track. It now matches `--border`, as in light mode.
+
 ## 3.0.0-next.3
 ### Minor Changes
 
