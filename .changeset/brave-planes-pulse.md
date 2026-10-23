@@ -2,4 +2,4 @@
 "@ivao/atmosphere-react": minor
 ---
 
-ivao-logo: add a `loading` prop that renders the icon as an animated loading spinner
+ivao-logo-spinner: add `IVAOLogoSpinner`, an IVAO logo with a pulsing halo to use as a loading spinner

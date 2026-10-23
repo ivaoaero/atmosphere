@@ -4,11 +4,17 @@ import { VariantProps } from 'class-variance-authority';
 
 import { cn } from '@utils/styles';
 
-import { IVAOLogoVariants } from '../IVAOlogoVariants';
+import { IVAOLogoSpinnerVariants } from './IVAOLogoSpinnerVariants';
 
-type LogoProps = VariantProps<typeof IVAOLogoVariants>;
+type IVAOLogoSpinnerProps = VariantProps<typeof IVAOLogoSpinnerVariants> & {
+  label?: string;
+};
 
-export const SpinnerLogo = ({ color, size }: LogoProps) => {
+export const IVAOLogoSpinner = ({
+  color,
+  size,
+  label = 'Loading',
+}: IVAOLogoSpinnerProps) => {
   const haloMaskId = useId();
 
   return (
@@ -17,8 +23,11 @@ export const SpinnerLogo = ({ color, size }: LogoProps) => {
       fill={'none'}
       viewBox={'0 0 40 40'}
       role={'status'}
-      aria-label={'Loading'}
-      className={cn(IVAOLogoVariants({ color, size }), 'overflow-visible')}
+      aria-label={label}
+      className={cn(
+        IVAOLogoSpinnerVariants({ color, size }),
+        'overflow-visible',
+      )}
     >
       <mask id={haloMaskId} maskUnits={'userSpaceOnUse'}>
         <rect x={'-20'} y={'-20'} width={'80'} height={'80'} fill={'white'} />
@@ -52,4 +61,4 @@ export const SpinnerLogo = ({ color, size }: LogoProps) => {
     </svg>
   );
 };
-SpinnerLogo.displayName = 'SpinnerLogo';
+IVAOLogoSpinner.displayName = 'IVAOLogoSpinner';

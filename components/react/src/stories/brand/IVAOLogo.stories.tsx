@@ -20,16 +20,6 @@ const meta = {
         },
       },
     },
-    loading: {
-      description:
-        'Show the animated icon as a loading spinner. Takes precedence over `onlyIcon`.',
-      control: 'boolean',
-      table: {
-        defaultValue: {
-          summary: 'false',
-        },
-      },
-    },
     color: {
       description: 'Color of the icon.',
       control: 'inline-radio',
@@ -57,13 +47,6 @@ export default meta;
 type Story = StoryObj<typeof IVAOLogo>;
 
 export const Primary = {} satisfies Story;
-
-export const Loading = {
-  args: {
-    loading: true,
-    size: 'lg',
-  },
-} satisfies Story;
 
 export const White = {
   args: {
