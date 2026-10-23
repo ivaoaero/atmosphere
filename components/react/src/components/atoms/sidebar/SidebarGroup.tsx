@@ -33,8 +33,7 @@ export const SidebarGroup = ({
   isActiveCheck = (href) =>
     typeof window !== 'undefined' && window.location.pathname === href,
 }: SidebarGroupProps) => {
-  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
-  const [wasSidebarOpen, setWasSidebarOpen] = useState(isSidebarOpen);
+  const { isSidebarOpen } = useSidebar();
   const [isGroupOpen, setIsGroupOpen] = useState<boolean>();
 
   const isAnyChildActive = items.some((item) => isActiveCheck(item.href));
@@ -45,19 +44,27 @@ export const SidebarGroup = ({
     }
   }, [isAnyChildActive]);
 
-  if (isSidebarOpen !== wasSidebarOpen) {
-    setWasSidebarOpen(isSidebarOpen);
-  }
-  if (!isSidebarOpen && isGroupOpen) setIsGroupOpen(false);
-
+  // The group expands in place, so its child items can be reached whilst the sidebar is collapsed
   const handleGroupToggle = () => {
-    setIsSidebarOpen(true);
     setIsGroupOpen(!isGroupOpen);
   };
 
   return (
-    <div className={'w-full'}>
-      <button className={sidebarItemStyle} onClick={handleGroupToggle}>
+    <div
+      className={cn(
+        'w-full transition-all',
+        !isSidebarOpen &&
+          isGroupOpen &&
+          'bg-fuselage-100/60 ring-fuselage-200 dark:bg-fuselage-800 dark:ring-fuselage-700 -m-1 box-content rounded-lg p-1 ring-1',
+      )}
+    >
+      <button
+        className={sidebarItemStyle}
+        onClick={handleGroupToggle}
+        aria-expanded={!!isGroupOpen}
+        aria-label={isSidebarOpen ? undefined : title}
+        title={isSidebarOpen ? undefined : title}
+      >
         <SidebarIcon Icon={Icon} />
 
         <div
@@ -80,7 +87,14 @@ export const SidebarGroup = ({
       </button>
 
       {isGroupOpen && (
-        <div className="before:bg-fuselage-100 dark:before:bg-fuselage-700 relative flex flex-col gap-2 pt-3 pl-4.5 before:absolute before:top-2 before:left-0 before:h-[calc(100%-8px)] before:w-px before:content-['']">
+        <div
+          className={cn(
+            'flex flex-col gap-2',
+            isSidebarOpen
+              ? "before:bg-fuselage-100 dark:before:bg-fuselage-700 relative pt-3 pl-4.5 before:absolute before:top-2 before:left-0 before:h-[calc(100%-8px)] before:w-px before:content-['']"
+              : 'pt-2',
+          )}
+        >
           {items.map((item) => (
             <SidebarItem
               key={item.href}
