@@ -1,5 +1,10 @@
 # @ivao/atmosphere-react
 
+## 3.0.0-next.5
+### Minor Changes
+
+- 77f333a: Sidebar groups can now be expanded whilst the sidebar is collapsed, showing their child items as icons beneath the group without opening the sidebar.
+
 ## 3.0.0-next.4
 ### Patch Changes
 
