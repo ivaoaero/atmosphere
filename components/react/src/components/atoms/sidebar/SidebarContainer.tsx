@@ -14,7 +14,7 @@ export const SidebarContainer: ComponentType<PropsWithChildren> = ({
     <aside
       className={cn(
         'border-fuselage-200 bg-fuselage-50 dark:border-fuselage-700 dark:bg-fuselage-900 flex h-full flex-col justify-between border-r',
-        isSidebarOpen ? 'w-72' : 'box-content w-17',
+        isSidebarOpen ? 'w-72' : 'box-content w-18',
       )}
     >
       <div className="flex flex-col items-start gap-4 px-4 py-5">
