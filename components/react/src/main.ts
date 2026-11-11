@@ -161,6 +161,7 @@ export { IconButton } from '@components/atoms/icon-button';
 export { Input } from '@components/atoms/input';
 
 export { IVAOLogo } from '@components/atoms/ivao-logo';
+export { IVAOLogoSpinner } from '@components/atoms/ivao-logo-spinner';
 
 export { Label } from '@components/atoms/label';
 
