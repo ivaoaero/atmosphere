@@ -53,7 +53,7 @@ const UserDetails = ({
     </span>
     {vid !== undefined && (
       <span className="text-fuselage-500 dark:text-fuselage-300 text-xs leading-tight tabular-nums">
-        VID {vid}
+        {vid}
       </span>
     )}
   </span>
