@@ -6,11 +6,6 @@ import { cn } from '@utils/styles';
 
 export type PageProps = ComponentPropsWithoutRef<'main'>;
 
-/**
- * Main content wrapper for a page. Applies the common page spacing so every
- * page shares the same gutters and vertical rhythm, aligned with `PageNavbar`
- * and `Footer`.
- */
 export const Page: ComponentType<PageProps> = ({ className, ...props }) => (
   <main
     className={cn(

@@ -8,9 +8,7 @@ export type FooterAsLinkProps = AnchorProps &
 export interface FooterLinkProps {
   title: string;
   href: string;
-  /** Opens the link in a new tab. */
   isExternal?: boolean;
-  /** Accessible description, also shown as the native tooltip. */
   label?: string;
 }
 

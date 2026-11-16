@@ -13,17 +13,10 @@ import {
 import { cn } from '@utils/styles';
 
 export interface UserMenuProps {
-  /** Display name, e.g. the member's public nickname or full name. */
   name: string;
-  /** IVAO VID, shown under the name. */
   vid?: string | number;
   avatarUrl?: string;
-  /** Menu entries, e.g. `DropdownMenuItem`s and `DropdownMenuSeparator`s. */
   children?: ReactNode;
-  /**
-   * Shows the name and VID next to the avatar from the `md` breakpoint.
-   * Set to `false` to always render the avatar only.
-   */
   showDetails?: boolean;
   className?: string;
 }
@@ -66,10 +59,6 @@ const UserDetails = ({
   </span>
 );
 
-/**
- * Account trigger with a dropdown for the signed-in member. Collapses to the
- * avatar on small screens; the dropdown header always shows the full details.
- */
 export const UserMenu: ComponentType<UserMenuProps> = ({
   name,
   vid,

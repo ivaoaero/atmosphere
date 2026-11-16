@@ -13,7 +13,6 @@ import { PageNavbarMobileMenu } from './PageNavbarMobileMenu';
 
 type PageNavbarBreakpoint = 'md' | 'lg' | 'xl';
 
-// Full class names so Tailwind can detect them.
 const inlineNavClassName: Record<PageNavbarBreakpoint, string> = {
   md: 'hidden md:flex',
   lg: 'hidden lg:flex',
@@ -26,30 +25,15 @@ const mobileMenuClassName: Record<PageNavbarBreakpoint, string> = {
 };
 
 export interface PageNavbarProps extends ComponentPropsWithoutRef<'header'> {
-  /** Application name shown next to the logo, e.g. "Training". */
   appName?: ReactNode;
-  /** Navigation entries, rendered with `NavigationMenu`. */
   sections?: NavigationMenuSectionProps[];
-  /** Right-hand side content, e.g. a theme toggle and a `UserMenu`. */
   actions?: ReactNode;
-  /** Where the logo links to. */
   logoHref?: string;
-  /** Link component used for the logo and the navigation entries (e.g. a router `Link`). */
   asLink?: ComponentType<NavigationMenuAsLinkProps>;
-  /** Forces the dark variant, for better contrast over dark backgrounds or images. */
   darkMode?: boolean;
-  /**
-   * Below this breakpoint the sections move into a side menu opened from a
-   * menu button. Lower it when there are few sections and actions.
-   */
   collapseBelow?: PageNavbarBreakpoint;
 }
 
-/**
- * Floating navbar for public and marketing pages. For application headers use
- * `Navbar`. It is `sticky` by default; pass `className="fixed"` to overlay it
- * on top of the page content (e.g. a hero image).
- */
 export const PageNavbar: ComponentType<PageNavbarProps> = ({
   appName,
   sections = [],

@@ -23,19 +23,13 @@ export interface FooterProps extends Omit<
   ComponentPropsWithoutRef<'footer'>,
   'title'
 > {
-  /** Shown next to the logo, e.g. the department or app name. */
   title?: ReactNode;
   description?: ReactNode;
-  /** Link columns shown on the right. */
   sections?: Omit<FooterSectionProps, 'asLink'>[];
-  /** Defaults to the IVAO social networks. Pass an empty array to hide them. */
   socialLinks?: FooterSocialLinkProps[];
-  /** Links in the bottom bar, e.g. Privacy Policy and Terms of use. */
   legalLinks?: FooterLinkProps[];
-  /** Defaults to the IVAO copyright notice with the current year. */
   copyright?: ReactNode;
   logoHref?: string;
-  /** Link component used for internal links (e.g. a router `Link`). */
   asLink?: ComponentType<FooterAsLinkProps>;
 }
 
