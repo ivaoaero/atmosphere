@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Button } from '@components/atoms/button';
 import { PageContainer } from '@components/atoms/page';
 import { H1, Lead, P } from '@components/atoms/typography';
 import { Footer } from '@components/molecules/footer';
@@ -13,6 +12,7 @@ import {
   footerSections,
   navbarSections,
 } from './layoutStoryData';
+import { PageNavbarActions } from './PageNavbarActions';
 
 const meta = {
   title: 'Layout/Page',
@@ -51,15 +51,9 @@ export const FullLayout = {
   render: (args) => (
     <div className="flex min-h-screen flex-col">
       <PageNavbar
+        appName="Training"
         sections={navbarSections}
-        actions={
-          <>
-            <Button variant="outline" size="sm">
-              Log In
-            </Button>
-            <Button size="sm">Sign up</Button>
-          </>
-        }
+        actions={<PageNavbarActions />}
       />
       <Page {...args} />
       <section className="bg-atmos-700 dark:bg-fuselage-900 py-12">

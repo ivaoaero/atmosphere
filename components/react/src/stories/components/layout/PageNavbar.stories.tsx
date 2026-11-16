@@ -1,18 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Button } from '@components/atoms/button';
 import { PageNavbar } from '@components/molecules/page-navbar';
 
 import { navbarSections } from './layoutStoryData';
-
-const actions = (
-  <>
-    <Button variant="outline" size="sm">
-      Log In
-    </Button>
-    <Button size="sm">Sign up</Button>
-  </>
-);
+import { PageNavbarActions, PageNavbarGuestActions } from './PageNavbarActions';
 
 const meta = {
   title: 'Layout/PageNavbar',
@@ -23,15 +14,24 @@ const meta = {
     docs: {
       description: {
         component:
-          'Navbar for public and marketing pages. Shares its horizontal spacing with `Page` and `Footer`. For application headers use `Navbar`.',
+          'Floating navbar for public and marketing pages. For application headers use `Navbar`. It is `sticky` by default; pass `className="fixed"` to overlay it on top of a hero.',
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div className="from-ocean-300 to-fuselage-200 dark:from-fuselage-700 dark:to-fuselage-950 min-h-80 bg-linear-to-b">
+        <Story />
+      </div>
+    ),
+  ],
   args: {
+    appName: 'Training',
     sections: navbarSections,
-    actions,
+    actions: <PageNavbarActions />,
   },
   argTypes: {
+    appName: { control: 'text' },
     darkMode: {
       control: 'boolean',
       description:
@@ -47,17 +47,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Default = {} satisfies Story;
 
+export const Guest = {
+  args: { actions: <PageNavbarGuestActions /> },
+} satisfies Story;
+
+export const WithoutAppName = {
+  args: { appName: undefined },
+} satisfies Story;
+
 export const ForcedDarkMode = {
   args: { darkMode: true },
-  decorators: [
-    (Story) => (
-      <div className="bg-fuselage-950 min-h-80">
-        <Story />
-      </div>
-    ),
-  ],
 } satisfies Story;
 
 export const LogoOnly = {
-  args: { sections: [], actions: undefined },
+  args: { appName: undefined, sections: [], actions: undefined },
 } satisfies Story;
