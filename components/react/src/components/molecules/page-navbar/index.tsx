@@ -53,7 +53,7 @@ export const PageNavbar: ComponentType<PageNavbarProps> = ({
   return (
     <header
       className={cn(
-        'sticky top-0 left-0 z-50 w-full px-4 py-4 sm:px-10 sm:py-6',
+        'right-scroll-bar-position sticky top-0 right-0 left-0 z-50 px-4 py-4 sm:px-10 sm:py-6',
         darkMode && 'dark',
         className,
       )}

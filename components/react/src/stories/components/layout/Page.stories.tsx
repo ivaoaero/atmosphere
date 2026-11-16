@@ -39,13 +39,35 @@ const meta = {
       </>
     ),
   },
-  argTypes: { children: { control: false } },
+  argTypes: {
+    children: { control: false },
+    navbarOffset: {
+      control: 'boolean',
+      description:
+        'Adds top spacing for a `fixed` PageNavbar so the content starts below it.',
+    },
+  },
 } satisfies Meta<typeof Page>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default = {} satisfies Story;
+
+export const WithFixedNavbar = {
+  args: { navbarOffset: true },
+  render: (args) => (
+    <div className="flex min-h-screen flex-col">
+      <PageNavbar
+        className="fixed"
+        appName="Training"
+        sections={navbarSections}
+        actions={<PageNavbarActions />}
+      />
+      <Page {...args} />
+    </div>
+  ),
+} satisfies Story;
 
 export const FullLayout = {
   render: (args) => (

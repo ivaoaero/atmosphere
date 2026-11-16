@@ -67,7 +67,7 @@ export const UserMenu: ComponentType<UserMenuProps> = ({
   showDetails = true,
   className,
 }) => (
-  <DropdownMenuRoot>
+  <DropdownMenuRoot modal={false}>
     <DropdownMenuTrigger
       aria-label={`Account menu for ${name}`}
       className={cn(
