@@ -7,9 +7,3 @@ export type {
   FooterLinkProps,
   FooterSectionProps,
 } from '@components/atoms/footer/FooterSection';
-export {
-  DiscordIcon,
-  InstagramIcon,
-  XIcon,
-  YouTubeIcon,
-} from '@components/atoms/footer/SocialIcons';

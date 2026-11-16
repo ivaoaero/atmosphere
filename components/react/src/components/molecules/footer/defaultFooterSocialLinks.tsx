@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 
 import {
-  DiscordIcon,
-  InstagramIcon,
-  XIcon,
-  YouTubeIcon,
-} from '@components/atoms/footer';
+  SiDiscord,
+  SiInstagram,
+  SiX,
+  SiYoutube,
+} from '@icons-pack/react-simple-icons';
 
 export interface FooterSocialLinkProps {
   href: string;
@@ -17,21 +17,21 @@ export const defaultFooterSocialLinks: FooterSocialLinkProps[] = [
   {
     href: 'https://family.ivao.aero/',
     title: 'Join us on Discord',
-    icon: <DiscordIcon />,
+    icon: <SiDiscord size={16} />,
   },
   {
     href: 'https://x.com/ivaoaero',
     title: 'Follow us on X',
-    icon: <XIcon />,
+    icon: <SiX size={12} />,
   },
   {
     href: 'https://www.youtube.com/c/ivaoaero',
     title: 'Watch us on YouTube',
-    icon: <YouTubeIcon />,
+    icon: <SiYoutube size={16} />,
   },
   {
     href: 'https://www.instagram.com/ivaoaero/',
     title: 'Follow us on Instagram',
-    icon: <InstagramIcon />,
+    icon: <SiInstagram size={16} />,
   },
 ];

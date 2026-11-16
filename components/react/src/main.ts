@@ -148,14 +148,7 @@ export type {
   DropdownMenuItemsProps,
 } from '@components/molecules/dropdown-menu';
 
-export {
-  FooterLink,
-  FooterSection,
-  DiscordIcon,
-  InstagramIcon,
-  XIcon,
-  YouTubeIcon,
-} from '@components/atoms/footer';
+export { FooterLink, FooterSection } from '@components/atoms/footer';
 export type {
   FooterAsLinkProps,
   FooterLinkProps,
