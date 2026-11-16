@@ -32,6 +32,12 @@ const meta = {
   },
   argTypes: {
     appName: { control: 'text' },
+    collapseBelow: {
+      control: 'select',
+      options: ['md', 'lg', 'xl'],
+      description:
+        'Below this breakpoint the sections move into a side menu opened from a menu button.',
+    },
     darkMode: {
       control: 'boolean',
       description:
@@ -57,6 +63,15 @@ export const WithoutAppName = {
 
 export const ForcedDarkMode = {
   args: { darkMode: true },
+} satisfies Story;
+
+export const LongContent = {
+  args: {
+    appName: 'Flight Operations Department',
+    actions: (
+      <PageNavbarActions name="Maximiliano Alejandro de la Fuente Rodríguez" />
+    ),
+  },
 } satisfies Story;
 
 export const LogoOnly = {

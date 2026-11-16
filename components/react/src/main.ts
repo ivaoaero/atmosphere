@@ -377,6 +377,9 @@ export { Textarea } from '@components/atoms/textarea';
 export { ThemeProvider } from 'src/lib/contexts/ThemeProvider';
 export { useTheme } from '@hooks/useTheme';
 
+export { UserMenu } from '@components/molecules/user-menu';
+export type { UserMenuProps } from '@components/molecules/user-menu';
+
 export { Toast } from '@components/molecules/toast';
 export { ToastProvider } from 'src/lib/contexts/ToastProvider';
 export { useToast } from '@hooks/useToast';
