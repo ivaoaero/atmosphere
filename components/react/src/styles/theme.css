@@ -36,6 +36,21 @@
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-logo-halo: logo-halo 1.2s ease-out infinite;
+
+  @keyframes logo-halo {
+    0% {
+      opacity: 0;
+      scale: 1;
+    }
+    35% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 0;
+      scale: 1.35;
+    }
+  }
 
   @keyframes accordion-down {
     from {
