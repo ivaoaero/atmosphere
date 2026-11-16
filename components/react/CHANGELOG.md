@@ -1,6 +1,16 @@
 # @ivao/atmosphere-react
 
-## 3.1.0
+## 3.0.0-next.4
+### Patch Changes
+
+- 52575c1: Fix dark mode's `--input` colour, which matched the background: inputs, textareas and selects had no visible border, and an unchecked switch had no visible track. It now matches `--border`, as in light mode.
+
+## 3.0.0-next.3
+### Minor Changes
+
+- 8433665: toast: add 3 new color variants
+
+## 3.0.0-next.2
 ### Minor Changes
 
 - ed80851: navigation-menu: add option to force dark mode
@@ -10,9 +20,9 @@
 - fa2e0eb: navigation-menu: font and background colors, and active state
 - 9b801c0: sidebar: fix overflow and adjust colors
 - Updated dependencies [b475ee6]
-  - @ivao/atmosphere-brand@3.0.0
+  - @ivao/atmosphere-brand@2.0.0-next.1
 
-## 3.0.0
+## 3.0.0-next.1
 ### Major Changes
 
 - 7596195: TailwindCSS v4 bump
@@ -29,9 +39,9 @@
 - 3ec9c6e: sidebar: make overflowing content accesible
 - 2d1ac20: data-table: apply meta-className to table cells
 - Updated dependencies [7596195]
-  - @ivao/atmosphere-brand@2.0.0
+  - @ivao/atmosphere-brand@2.0.0-next.0
 
-## 2.1.0
+## 2.1.0-next.0
 ### Minor Changes
 
 - 167c383: add React 19 support

@@ -128,7 +128,7 @@
     --destructive-foreground: var(--ivao-color-semantic-red-50);
 
     --border: var(--ivao-color-fuselage-700);
-    --input: var(--ivao-color-fuselage-900);
+    --input: var(--ivao-color-fuselage-700);
     --ring: var(--ivao-color-fuselage-800);
   }
 

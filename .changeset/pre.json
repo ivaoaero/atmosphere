@@ -1,0 +1,26 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "@ivao/atmosphere-brand": "0.0.0",
+    "@ivao/atmosphere-react": "0.0.0"
+  },
+  "changesets": [
+    "dark-input-border",
+    "empty-pens-leave",
+    "fast-doors-raise",
+    "hot-emus-laugh",
+    "loud-bats-jump",
+    "lucky-lines-hug",
+    "mighty-candies-yell",
+    "orange-spoons-share",
+    "quick-glasses-shout",
+    "red-aliens-bathe",
+    "some-candles-dress",
+    "sweet-suns-guess",
+    "tasty-days-push",
+    "thick-jobs-talk",
+    "whole-trees-hope",
+    "witty-wings-bake"
+  ]
+}

@@ -42,6 +42,8 @@ export const SidebarItem = ({
     <LinkComponent
       href={href}
       className={cn(sidebarItemStyle, className)}
+      aria-label={isSidebarOpen ? undefined : title}
+      title={isSidebarOpen ? undefined : title}
       {...props}
     >
       <SidebarIcon Icon={Icon} isActive={isActive} />

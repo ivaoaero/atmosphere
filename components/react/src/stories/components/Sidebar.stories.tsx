@@ -198,6 +198,13 @@ export const WithGroups = {
   },
 } satisfies Story;
 
+export const WithGroupsClosed = {
+  args: {
+    ...WithGroups.args,
+    isDefaultOpen: false,
+  },
+} satisfies Story;
+
 export const WithOverflow = {
   args: {
     items: [
