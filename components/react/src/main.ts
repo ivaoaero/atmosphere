@@ -149,6 +149,26 @@ export type {
 } from '@components/molecules/dropdown-menu';
 
 export {
+  FooterLink,
+  FooterSection,
+  DiscordIcon,
+  InstagramIcon,
+  XIcon,
+  YouTubeIcon,
+} from '@components/atoms/footer';
+export type {
+  FooterAsLinkProps,
+  FooterLinkProps,
+  FooterSectionProps,
+} from '@components/atoms/footer';
+export { Footer } from '@components/molecules/footer';
+export { defaultFooterSocialLinks } from '@components/molecules/footer/defaultFooterSocialLinks';
+export type {
+  FooterProps,
+  FooterSocialLinkProps,
+} from '@components/molecules/footer';
+
+export {
   HoverCardRoot,
   HoverCardTrigger,
   HoverCardContent,
@@ -192,6 +212,13 @@ export type {
   NavigationMenuProps,
 } from '@components/molecules/navigation-menu';
 export { NavigationMenu } from '@components/molecules/navigation-menu';
+
+export { PageContainer } from '@components/atoms/page';
+export { Page } from '@components/molecules/page';
+export type { PageProps } from '@components/molecules/page';
+
+export { PageNavbar } from '@components/molecules/page-navbar';
+export type { PageNavbarProps } from '@components/molecules/page-navbar';
 
 export {
   PaginationRoot,
