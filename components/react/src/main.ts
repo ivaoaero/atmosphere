@@ -148,6 +148,9 @@ export type {
   DropdownMenuItemsProps,
 } from '@components/molecules/dropdown-menu';
 
+export { ExternalLink } from '@components/atoms/external-link';
+export type { ExternalLinkProps } from '@components/atoms/external-link';
+
 export { FooterLink, FooterSection } from '@components/atoms/footer';
 export type {
   FooterAsLinkProps,
@@ -207,6 +210,7 @@ export type {
 export { NavigationMenu } from '@components/molecules/navigation-menu';
 
 export { PageContainer } from '@components/atoms/page';
+export type { PageContainerProps } from '@components/atoms/page';
 export { Page } from '@components/molecules/page';
 export type { PageProps } from '@components/molecules/page';
 

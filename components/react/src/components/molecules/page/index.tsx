@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ComponentType } from 'react';
 
-import { pageContainerClassName } from '@components/atoms/page';
+import { PageContainer } from '@components/atoms/page';
 
 import { cn } from '@utils/styles';
 
@@ -13,14 +13,15 @@ export const Page: ComponentType<PageProps> = ({
   className,
   ...props
 }) => (
-  <main
+  <PageContainer
+    asChild
     className={cn(
-      pageContainerClassName,
       'flex flex-1 flex-col gap-8 py-12',
       navbarOffset && 'pt-36 sm:pt-42',
       className,
     )}
-    {...props}
-  />
+  >
+    <main {...props} />
+  </PageContainer>
 );
 Page.displayName = 'Page';

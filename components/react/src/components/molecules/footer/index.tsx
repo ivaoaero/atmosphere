@@ -1,5 +1,6 @@
 import { ComponentPropsWithoutRef, ComponentType, ReactNode } from 'react';
 
+import { ExternalLink } from '@components/atoms/external-link';
 import {
   FooterAsLinkProps,
   FooterLink,
@@ -8,7 +9,7 @@ import {
   FooterSectionProps,
 } from '@components/atoms/footer';
 import { IVAOLogo } from '@components/atoms/ivao-logo';
-import { pageContainerClassName } from '@components/atoms/page';
+import { PageContainer } from '@components/atoms/page';
 
 import { cn } from '@utils/styles';
 
@@ -56,7 +57,7 @@ export const Footer: ComponentType<FooterProps> = ({
       )}
       {...props}
     >
-      <div className={cn(pageContainerClassName, 'flex flex-col gap-6 py-12')}>
+      <PageContainer className="flex flex-col gap-6 py-12">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="flex max-w-104 flex-col gap-2">
             <div className="flex items-center gap-4">
@@ -90,16 +91,14 @@ export const Footer: ComponentType<FooterProps> = ({
               <ul className="flex items-center gap-4 py-2">
                 {socialLinks.map(({ href, title: socialTitle, icon }) => (
                   <li key={href} className="flex">
-                    <a
+                    <ExternalLink
                       href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       title={socialTitle}
                       aria-label={socialTitle}
                       className="text-fuselage-500 hover:text-fuselage-800 dark:text-fuselage-250 flex size-4 items-center justify-center transition-colors dark:hover:text-white"
                     >
                       {icon}
-                    </a>
+                    </ExternalLink>
                   </li>
                 ))}
               </ul>
@@ -129,13 +128,13 @@ export const Footer: ComponentType<FooterProps> = ({
             <ul className="flex items-center gap-4 leading-4">
               {legalLinks.map((link) => (
                 <li key={`${link.title}-${link.href}`}>
-                  <FooterLink {...link} asLink={asLink} />
+                  <FooterLink {...link} asLink={link.asLink ?? asLink} />
                 </li>
               ))}
             </ul>
           )}
         </div>
-      </div>
+      </PageContainer>
     </footer>
   );
 };

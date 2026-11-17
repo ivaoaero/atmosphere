@@ -1,3 +1,4 @@
+import { ExternalLink } from '@components/atoms/external-link';
 import { FooterProps } from '@components/molecules/footer';
 import { NavigationMenuSectionProps } from '@components/molecules/navigation-menu';
 
@@ -25,16 +26,16 @@ export const footerSections: FooterProps['sections'] = [
   {
     title: 'IVAO',
     links: [
-      { title: 'About us', href: 'https://ivao.aero/', isExternal: true },
+      { title: 'About us', href: 'https://ivao.aero/', asLink: ExternalLink },
       {
         title: 'Create your account',
         href: 'https://ivao.aero/members/person/register.htm',
-        isExternal: true,
+        asLink: ExternalLink,
       },
       {
         title: 'Heartbeat',
         href: 'https://heartbeat.ivao.aero/',
-        isExternal: true,
+        asLink: ExternalLink,
       },
     ],
   },
@@ -52,17 +53,17 @@ export const footerSections: FooterProps['sections'] = [
       {
         title: 'Training Site',
         href: 'https://wiki.ivao.aero/en/home/training/documentation',
-        isExternal: true,
+        asLink: ExternalLink,
       },
       {
         title: 'Pilot Career',
         href: 'https://wiki.ivao.aero/en/home/training/documentation',
-        isExternal: true,
+        asLink: ExternalLink,
       },
       {
         title: 'Controller Career',
         href: 'https://wiki.ivao.aero/en/home/training/documentation',
-        isExternal: true,
+        asLink: ExternalLink,
       },
     ],
   },
