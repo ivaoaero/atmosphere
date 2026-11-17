@@ -18,7 +18,7 @@ interface PageNavbarActionsProps {
 }
 
 export const PageNavbarActions = ({
-  name = 'Juan Felipe',
+  name = 'Felipe Lobo',
   vid = 379491,
   isStaff = true,
 }: PageNavbarActionsProps) => (
