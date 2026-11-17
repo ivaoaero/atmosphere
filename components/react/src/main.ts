@@ -148,6 +148,22 @@ export type {
   DropdownMenuItemsProps,
 } from '@components/molecules/dropdown-menu';
 
+export { ExternalLink } from '@components/atoms/external-link';
+export type { ExternalLinkProps } from '@components/atoms/external-link';
+
+export { FooterLink, FooterSection } from '@components/atoms/footer';
+export type {
+  FooterAsLinkProps,
+  FooterLinkProps,
+  FooterSectionProps,
+} from '@components/atoms/footer';
+export { Footer } from '@components/molecules/footer';
+export { defaultFooterSocialLinks } from '@components/molecules/footer/defaultFooterSocialLinks';
+export type {
+  FooterProps,
+  FooterSocialLinkProps,
+} from '@components/molecules/footer';
+
 export {
   HoverCardRoot,
   HoverCardTrigger,
@@ -192,6 +208,14 @@ export type {
   NavigationMenuProps,
 } from '@components/molecules/navigation-menu';
 export { NavigationMenu } from '@components/molecules/navigation-menu';
+
+export { PageContainer } from '@components/atoms/page';
+export type { PageContainerProps } from '@components/atoms/page';
+export { Page } from '@components/molecules/page';
+export type { PageProps } from '@components/molecules/page';
+
+export { PageNavbar } from '@components/molecules/page-navbar';
+export type { PageNavbarProps } from '@components/molecules/page-navbar';
 
 export {
   PaginationRoot,
@@ -349,6 +373,9 @@ export { Textarea } from '@components/atoms/textarea';
 
 export { ThemeProvider } from 'src/lib/contexts/ThemeProvider';
 export { useTheme } from '@hooks/useTheme';
+
+export { UserMenu } from '@components/molecules/user-menu';
+export type { UserMenuProps } from '@components/molecules/user-menu';
 
 export { Toast } from '@components/molecules/toast';
 export { ToastProvider } from 'src/lib/contexts/ToastProvider';

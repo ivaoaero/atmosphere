@@ -9,7 +9,7 @@ import { useTheme } from '@hooks/useTheme';
 
 type DarkModeToggleProps = Omit<
   ComponentProps<typeof IconButton>,
-  'onClick' | 'Icon'
+  'onClick' | 'Icon' | 'children'
 > &
   Pick<
     ComponentPropsWithoutRef<typeof Tooltip>,
